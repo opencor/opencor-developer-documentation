@@ -9,7 +9,8 @@ The following tools are required in order to develop, build , test, run and pack
 - `Ninja <https://ninja-build.org/>`_ (optional): a small build system with a focus on speed;
 - `clcache <https://github.com/frerich/clcache>`_ (optional and Windows only): a compiler cache;
 - `ccache <https://ccache.samba.org/>`_ (optional and Linux/macOS only): a compiler cache;
-- C++ toolchain: a set of C++ tools. The toolchain is different depending on the platform you are using:
+- C++ toolchain: a set of C++ tools.
+  The toolchain is different depending on the platform you are using:
 
   - **Windows:** `Visual Studio Community 2015 with Update 3 <https://www.visualstudio.com/downloads/download-visual-studio-vs>`_;
   - **Linux:** GCC/G++ 5.x (``g++-5`` package), as well as OpenGL and GStreamer (``mesa-common-dev`` and ``libgstreamer-plugins-base0.10-0`` packages, respectively) on Ubuntu; and

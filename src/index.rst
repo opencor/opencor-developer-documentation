@@ -2,7 +2,8 @@
  Developer documentation for OpenCOR
 =====================================
 
-OpenCOR is developed, built, tested, run and packaged on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`_, `Linux <https://en.wikipedia.org/wiki/Linux>`_ and `macOS <https://en.wikipedia.org/wiki/MacOS>`_ (see our `supported platforms <http://localhost/supportedPlatforms.html>`_ for more details). Information on those different aspects can be found in the following pages:
+OpenCOR is developed, built, tested, run and packaged on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`_, `Linux <https://en.wikipedia.org/wiki/Linux>`_ and `macOS <https://en.wikipedia.org/wiki/MacOS>`_ (see our `supported platforms <http://localhost/supportedPlatforms.html>`_ for more details).
+Information on those different aspects can be found in the following pages:
 
 .. toctree::
 
