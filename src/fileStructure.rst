@@ -13,14 +13,10 @@ Files are organised as follows:
     distrib                       // Files used to package OpenCOR
     doc                           // User and developer documentations
      ├─ 3rdparty                  // Third-party libraries used for the documentation
-     │   ├─ googleCodePrettify    // Google Code Prettify
-     │   ├─ jQuery                // jQuery
-     │   └─ KaTeX                 // KaTeX
+     │   └─ jQuery                // jQuery
      ├─ cor                       // COR
-     ├─ developer                 // The developer documentation
      ├─ downloads                 // Where the different releases of OpenCOR are stored
-     ├─ res                       // Resource files used by the documentation
-     └─ user                      // The user documentation
+     └─ res                       // Resource files used by the documentation
     ext                           // Where external packages are cloned
     formats                       // Some sample formats for CellML export
     i18n                          // Internationalisation files
