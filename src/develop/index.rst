@@ -5,3 +5,8 @@
 =========
 
 To be done...
+
+.. toctree::
+   :maxdepth: 1
+
+   tests
