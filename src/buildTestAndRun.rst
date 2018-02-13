@@ -1,3 +1,5 @@
+.. _buildTestAndRun:
+
 =====================
  Build, test and run
 =====================

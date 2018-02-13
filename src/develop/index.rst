@@ -1,3 +1,5 @@
+.. _develop_index:
+
 =========
  Develop
 =========

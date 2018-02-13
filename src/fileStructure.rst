@@ -1,3 +1,5 @@
+.. _fileStructure:
+
 ================
  File structure
 ================
