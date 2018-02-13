@@ -8,6 +8,7 @@ OpenCOR is developed, built, tested, run and packaged on `Windows <https://en.wi
 Information on those different aspects can be found in the following pages:
 
 .. toctree::
+   :maxdepth: 1
 
    prerequisites
    fileStructure
