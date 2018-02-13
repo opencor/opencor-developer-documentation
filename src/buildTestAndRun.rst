@@ -7,6 +7,8 @@
 OpenCOR (and its corresponding :ref:`tests <develop_tests>`) can be built, tested and run either from the command line or using `Qt Creator <https://www.qt.io/ide/>`_.
 By default, `Ninja <https://ninja-build.org/>`_ is used to build OpenCOR, but if it is not available on your system, then `JOM <https://wiki.qt.io/Jom>`_ (on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`_) or `Make <https://www.gnu.org/software/make/>`_ (on `Linux <https://en.wikipedia.org/wiki/Linux>`_ / `macOS <https://en.wikipedia.org/wiki/MacOS>`_) will be used instead.
 
+.. _buildTestAndRunFromTheCommandLine:
+
 From the command line
 ---------------------
 
