@@ -24,9 +24,9 @@ Here are also some direct links to OpenCOR's:
 - `Current bugs, feature requests, etc. <https://github.com/opencor/opencor/issues>`_
 - `Continuous integration <https://travis-ci.org/opencor/opencor>`_: |TravisCI|_
 
+.. |TravisCI| image:: https://travis-ci.org/opencor/opencor.svg?branch=master
+.. _TravisCI: https://travis-ci.org/opencor/opencor
+
 You might also be interested in our `published article <https://dx.doi.org/10.3389/fphys.2015.00026>`_.
 
 Finally, here is how you can `contact us <http://localhost/contactUs.html>`_.
-
-.. |TravisCI| image:: https://travis-ci.org/opencor/opencor.svg?branch=master
-.. _TravisCI: https://travis-ci.org/opencor/opencor
