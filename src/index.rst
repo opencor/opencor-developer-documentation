@@ -14,7 +14,7 @@ Information on those different aspects can be found in the following pages:
    fileStructure
    develop/index
    buildTestAndRun
-   functionalTests/index
+   functionalTests
    package
    thirdPartyLibraries
 
