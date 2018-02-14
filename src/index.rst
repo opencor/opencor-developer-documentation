@@ -11,11 +11,23 @@ Information on those different aspects can be found in the following pages:
    :maxdepth: 1
 
    prerequisites
+
+.. toctree::
+   :maxdepth: 1
+
    fileStructure
+
+.. toctree::
+   :maxdepth: 1
+
    develop/index
    buildTestAndRun
    functionalTests
    package
+
+.. toctree::
+   :maxdepth: 1
+
    thirdPartyLibraries
 
 Here are also some direct links to OpenCOR's:
