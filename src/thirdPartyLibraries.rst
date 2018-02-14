@@ -175,7 +175,7 @@ Software
 - `zlib <http://www.zlib.net/>`_ 1.2.11: a massively spiffy yet delicately unobtrusive compression library.
 
   - Location: |zlibSoftware|_.
-  - Licensing: `Zlib <https://opensource.org/licenses/Zlib>`_.
+  - Licensing: `Zlib <https://opensource.org/licenses/Zlib>`__.
 
 .. |zlibSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/zlib``
 .. _zlibSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/zlib
