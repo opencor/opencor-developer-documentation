@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="33.212890625" height="19">
+    <rect x="0" y="1" width="33.212890625" height="18" rx="3" fill="#e3d9ad" />
+    <rect x="0" y="0" width="33.212890625" height="18" rx="3" fill="#fef2c0" />
+    <text fill="#000" x="4" dy="0.39em" y="9" textLength="25.212890625" style="font-family:-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-size:12px;font-weight:600;text-rendering:geometricPrecision;">task</text>
+</svg>
