@@ -199,7 +199,7 @@ Images
 .. |FlagsImages| replace:: ``[OpenCOR]/res/flags``
 .. _FlagsImages: https://github.com/opencor/opencor/tree/master/res/flags
 
-- `Qt Creator <https://code.qt.io/cgit/qt-creator/qt-creator.git/tree/>`_: icons used in our `editor widget <https://github.com/opencor/opencor/tree/master/src/plugins/widget/EditorWidget>`_ plugin.
+- `Qt Creator <https://code.qt.io/cgit/qt-creator/qt-creator.git/tree/>`_: icons used in our `Editor <https://github.com/opencor/opencor/tree/master/src/plugins/widget/EditorWidget>`_ widget.
 
   - Location: |QtCreatorImages|_.
   - Licensing: `GPL v3.0 <https://opensource.org/licenses/GPL-3.0>`_.
