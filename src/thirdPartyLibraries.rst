@@ -48,3 +48,30 @@ APIs
 
 .. |SEDMLAPI| replace:: ``[OpenCOR]/src/plugins/api/CellMLAPI``
 .. _SEDMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/SEDMLAPI
+
+Images
+------
+
+- `Oxygen <https://packages.ubuntu.com/bionic/oxygen-icon-theme>`_ 5.43.0: icons used in various parts of OpenCOR.
+
+  - Location: |OxygenImages|_.
+  - Licensing: `LGPL v3.0 <https://opensource.org/licenses/LGPL-3.0>`_.
+
+- `Printable world flags <https://www.printableworldflags.com/flag-icon/>`_: flag icons used in our Language menu.
+
+  - Location: |FlagsImages|_.
+  - Licensing: none.
+
+- `Qt Creator <https://code.qt.io/cgit/qt-creator/qt-creator.git/tree/>`_: icons used in our `EditorWidget <https://github.com/opencor/opencor/tree/master/src/plugins/widget/EditorWidget>`_ plugin.
+
+  - Location: |QtCreatorImages|_.
+  - Licensing: `GPL v3.0 <https://opensource.org/licenses/GPL-3.0>`_.
+
+.. |OxygenImages| replace:: ``[OpenCOR]/res/oxygen``
+.. _OxygenImages: https://github.com/opencor/opencor/tree/master/res/oxygen
+
+.. |FlagsImages| replace:: ``[OpenCOR]/res/flags``
+.. _FlagsImages: https://github.com/opencor/opencor/tree/master/res/flags
+
+.. |QtCreatorImages| replace:: ``[OpenCOR]/src/plugins/widget/EditorWidget/res/qtCreator``
+.. _QtCreatorImages: https://github.com/opencor/opencor/tree/master/src/plugins/widget/EditorWidget/res/qtCreator
