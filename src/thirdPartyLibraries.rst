@@ -85,7 +85,7 @@ Software
 .. |LibXDiffSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/LibXDiff``
 .. _LibXDiffSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LibXDiff
 
-- `LLVM <http://www.llvm.org/>`_ + `Clang <http://clang.llvm.org/>`_ 5.0.1 a collection of modular and reusable compiler and toolchain technologies.
+- `LLVM <http://www.llvm.org/>`_\ +\ `Clang <http://clang.llvm.org/>`_ 5.0.1 a collection of modular and reusable compiler and toolchain technologies.
 
   - Location: |LLVM+ClangSoftware|_.
   - Licensing: `UoI/NCSA <https://opensource.org/licenses/UoI-NCSA>`_.
