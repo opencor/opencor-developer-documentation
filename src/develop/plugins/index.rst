@@ -123,6 +123,8 @@ Following those keywords are the parameters themselves, as can be seen in |CMake
 .. |CMakeLists.txt| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/CMakeLists.txt``
 .. _CMakeLists.txt: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Core/CMakeLists.txt
 
+.. _develop_plugins_index_pluginInformation:
+
 Plugin information
 ------------------
 
@@ -137,6 +139,8 @@ For this, we need a ``.cpp``, ``.h`` and ``.json`` file, such as |coreplugin.cpp
 
 .. |coreplugin.json| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/src/coreplugin.json``
 .. _coreplugin.json: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Core/src/coreplugin.json
+
+.. _develop_plugins_index_jsonFile:
 
 ``.json`` file
 """"""""""""""
@@ -263,6 +267,8 @@ Hence, its much simpler class definition:
        Q_PLUGIN_METADATA(IID "OpenCOR.LLVMClangPlugin" FILE "llvmclangplugin.json")
    };
    ...
+
+.. _develop_plugins_index_globalHeaderInformation:
 
 Global header file
 """"""""""""""""""
