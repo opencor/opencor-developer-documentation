@@ -19,9 +19,9 @@ There are two sets of language files to consider:
 
    .. code-block:: xml
 
-     <file>translations/qt_help_xx.qm</file>
-     <file>translations/qtbase_xx.qm</file>
-     <file>translations/qtxmlpatterns_xx.qm</file>
+      <file>translations/qt_help_xx.qm</file>
+      <file>translations/qtbase_xx.qm</file>
+      <file>translations/qtxmlpatterns_xx.qm</file>
 
    .. |translations| replace:: ``[OpenCOR]/res/translations``
    .. _translations: https://github.com/opencor/opencor/tree/master/res/translations
@@ -35,7 +35,7 @@ There are two sets of language files to consider:
 
    .. code-block:: xml
 
-     <TS version="2.1" language="xx_XX" sourcelanguage="en_GB">
+      <TS version="2.1" language="xx_XX" sourcelanguage="en_GB">
 
    .. |OpenCOR_fr.ts| replace:: ``[OpenCOR]/i18n/OpenCOR_fr.ts``
    .. _OpenCOR_fr.ts: https://github.com/opencor/opencor/tree/master/i18n/OpenCOR_fr.ts
@@ -44,7 +44,7 @@ There are two sets of language files to consider:
 
    .. code-block:: xml
 
-     <file alias="app_xx">${PROJECT_BUILD_DIR}/OpenCOR_xx.qm</file>
+      <file alias="app_xx">${PROJECT_BUILD_DIR}/OpenCOR_xx.qm</file>
 
    .. |i18n.qrc.in| replace:: ``[OpenCOR]/res/i18n.qrc.in``
    .. _i18n.qrc.in: https://github.com/opencor/opencor/tree/master/res/i18n.qrc.in
@@ -54,7 +54,7 @@ There are two sets of language files to consider:
 
    .. code-block:: cmake
 
-     set(LANGUAGES ... xx ...)
+      set(LANGUAGES ... xx ...)
 
    .. |common.cmake| replace:: ``[OpenCOR]/cmake/common.cmake``
    .. _common.cmake: https://github.com/opencor/opencor/tree/master/cmake/common.cmake
@@ -79,12 +79,12 @@ A file called ``[PluginName]_xx.ts`` must be created for each plugin that requir
 
 .. code-block:: xml
 
-  <?xml version="1.0" encoding="utf-8"?>
-  <!DOCTYPE TS>
-  <TS version="2.1" language="xx_XX" sourcelanguage="en_GB">
-  <context>
-  </context>
-  </TS>
+   <?xml version="1.0" encoding="utf-8"?>
+   <!DOCTYPE TS>
+   <TS version="2.1" language="xx_XX" sourcelanguage="en_GB">
+   <context>
+   </context>
+   </TS>
 
 .. |Core_fr.ts| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/i18n/Core_fr.ts``
 .. _Core_fr.ts: https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/i18n/Core_fr.ts
@@ -93,11 +93,11 @@ A ``[PluginName]_i18n.qrc.in`` file must also be created in ``[PluginName]/res``
 
 .. code-block:: xml
 
-  <RCC>
-      <qresource prefix="/">
-          <file alias="${PLUGIN_NAME}_xx">${PROJECT_BUILD_DIR}/${PLUGIN_NAME}_xx.qm</file>
-      </qresource>
-  </RCC>
+   <RCC>
+       <qresource prefix="/">
+           <file alias="${PLUGIN_NAME}_xx">${PROJECT_BUILD_DIR}/${PLUGIN_NAME}_xx.qm</file>
+       </qresource>
+   </RCC>
 
 .. |Core_i18n.qrc.in| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/res/Core_i18n.qrc.in``
 .. _Core_i18n.qrc.in: https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/res/Core_i18n.qrc.in
@@ -106,19 +106,19 @@ A plugin requires a :ref:`plugin class <develop_plugins_index_pluginClass>` and 
 
 .. code-block:: c++
 
-  ...
-  class PluginNamePlugin : ..., public I18nInterface, ...
-  {
-      ...
-      Q_INTERFACES(OpenCOR::I18nInterface)
-      ...
+   ...
+   class PluginNamePlugin : ..., public I18nInterface, ...
+   {
+       ...
+       Q_INTERFACES(OpenCOR::I18nInterface)
+       ...
 
-  public:
-  ...
-  #include "i18ninterface.inl"
-  ...
-  };
-  ...
+   public:
+   ...
+   #include "i18ninterface.inl"
+   ...
+   };
+   ...
 
 .. |I18nInterface| replace:: ``I18nInterface``
 .. _I18nInterface: https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.h
@@ -133,16 +133,16 @@ The internationalisation interface has only one method that needs to be implemen
 
 .. code-block:: c++
 
-  ...
-  //==============================================================================
-  // I18n interface
-  //==============================================================================
+   ...
+   //==============================================================================
+   // I18n interface
+   //==============================================================================
 
-  void PluginNamePlugin::retranslateUi()
-  {
-      ...
-  }
-  ...
+   void PluginNamePlugin::retranslateUi()
+   {
+       ...
+   }
+   ...
 
 .. |coreplugin.cpp| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/src/coreplugin.cpp``
 .. _coreplugin.cpp: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Core/src/coreplugin.cpp

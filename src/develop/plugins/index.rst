@@ -146,9 +146,9 @@ In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plu
 
 .. code-block:: json
 
-  {
-      "Keys": [ "CorePlugin" ]
-  }
+   {
+       "Keys": [ "CorePlugin" ]
+   }
 
 Namespace
 """""""""
@@ -159,13 +159,13 @@ Thus, in the case of the `Core <https://github.com/opencor/opencor/tree/master/s
 
 .. code-block:: c++
 
-  ...
-  namespace OpenCOR {
-  namespace Core {
-  ...
-  }   // namespace Core
-  }   // namespace OpenCOR
-  ...
+   ...
+   namespace OpenCOR {
+   namespace Core {
+   ...
+   }   // namespace Core
+   }   // namespace OpenCOR
+   ...
 
 .. _develop_plugins_index_basicInformation:
 
@@ -188,7 +188,7 @@ This information is made available to OpenCOR through a function, which in the c
 
 .. code-block:: c++
 
-  PLUGININFO_FUNC CorePluginInfo();
+   PLUGININFO_FUNC CorePluginInfo();
 
 **Note:** to ensure the uniqueness of a plugin, OpenCOR uses the name of a plugin to determine the name of its function.
 In other words, the name of the function is expected to be ``<PluginName>PluginInfo()``.
@@ -198,17 +198,17 @@ In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plu
 
 .. code-block:: c++
 
-  PLUGININFO_FUNC CorePluginInfo()
-  {
-      Descriptions descriptions;
+   PLUGININFO_FUNC CorePluginInfo()
+   {
+       Descriptions descriptions;
 
-      descriptions.insert("en", QString::fromUtf8("the core plugin."));
-      descriptions.insert("fr", QString::fromUtf8("l'extension de base."));
+       descriptions.insert("en", QString::fromUtf8("the core plugin."));
+       descriptions.insert("fr", QString::fromUtf8("l'extension de base."));
 
-      return new PluginInfo(PluginInfo::Miscellaneous, false, false,
-                            QStringList(),
-                            descriptions);
-  }
+       return new PluginInfo(PluginInfo::Miscellaneous, false, false,
+                             QStringList(),
+                             descriptions);
+   }
 
 **Note:** support for the internationalisation of a plugin's description would normally be done using `Qt <https://www.qt.io/>`_'s ``tr()`` function, but the C nature of the function means that it cannot be done.
 So, instead, we use a ``QMap``-based approach.
@@ -224,45 +224,45 @@ For example, the `Core <https://github.com/opencor/opencor/tree/master/src/plugi
 
 .. code-block:: c++
 
-  ...
-  class CorePlugin : public QObject, public CoreInterface,
-                     public FileHandlingInterface, public GuiInterface,
-                     public I18nInterface, public PluginInterface
-  {
-      Q_OBJECT
+   ...
+   class CorePlugin : public QObject, public CoreInterface,
+                      public FileHandlingInterface, public GuiInterface,
+                      public I18nInterface, public PluginInterface
+   {
+       Q_OBJECT
 
-      Q_PLUGIN_METADATA(IID "OpenCOR.CorePlugin" FILE "coreplugin.json")
+       Q_PLUGIN_METADATA(IID "OpenCOR.CorePlugin" FILE "coreplugin.json")
 
-      Q_INTERFACES(OpenCOR::CoreInterface)
-      Q_INTERFACES(OpenCOR::FileHandlingInterface)
-      Q_INTERFACES(OpenCOR::GuiInterface)
-      Q_INTERFACES(OpenCOR::I18nInterface)
-      Q_INTERFACES(OpenCOR::PluginInterface)
+       Q_INTERFACES(OpenCOR::CoreInterface)
+       Q_INTERFACES(OpenCOR::FileHandlingInterface)
+       Q_INTERFACES(OpenCOR::GuiInterface)
+       Q_INTERFACES(OpenCOR::I18nInterface)
+       Q_INTERFACES(OpenCOR::PluginInterface)
 
-  public:
-  ...
-  #include "coreinterface.inl"
-  #include "filehandlinginterface.inl"
-  #include "guiinterface.inl"
-  #include "i18ninterface.inl"
-  #include "plugininterface.inl"
-  ...
-  };
-  ...
+   public:
+   ...
+   #include "coreinterface.inl"
+   #include "filehandlinginterface.inl"
+   #include "guiinterface.inl"
+   #include "i18ninterface.inl"
+   #include "plugininterface.inl"
+   ...
+   };
+   ...
 
 On the other hand, our `LLVM+Clang <https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang/>`_ plugin does not need to implement any interface since its sole purpose is to provide other plugins with access to `LLVM <http://www.llvm.org/>`_ and `Clang <http://clang.llvm.org/>`_.
 Hence, its much simpler class definition:
 
 .. code-block:: c++
 
-  ...
-  class LLVMClangPlugin : public QObject
-  {
-      Q_OBJECT
+   ...
+   class LLVMClangPlugin : public QObject
+   {
+       Q_OBJECT
 
-      Q_PLUGIN_METADATA(IID "OpenCOR.LLVMClangPlugin" FILE "llvmclangplugin.json")
-  };
-  ...
+       Q_PLUGIN_METADATA(IID "OpenCOR.LLVMClangPlugin" FILE "llvmclangplugin.json")
+   };
+   ...
 
 Global header file
 """"""""""""""""""
@@ -272,36 +272,36 @@ On `Linux <https://en.wikipedia.org/wiki/Linux>`_ and `macOS <https://en.wikiped
 
 .. code-block:: c++
 
-  void __declspec(dllexport) myFunction();
-  class __declspec(dllexport) myClass;
+   void __declspec(dllexport) myFunction();
+   class __declspec(dllexport) myClass;
 
 and imported by the plugin that wants to use it:
 
 .. code-block:: c++
 
-  void __declspec(dllimport) myFunction();
-  class __declspec(dllimport) myClass;
+   void __declspec(dllimport) myFunction();
+   class __declspec(dllimport) myClass;
 
 Each plugin that exports functions and/or classes therefore defines a macro that refers either to ``__declspec(dllexport)`` or to ``__declspec(dllimport)``, depending on how the plugin's code is to be compiled.
 Thus, in the case of the `Compiler <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/>`_ plugin, we have:
 
 .. code-block:: c++
 
-  ...
-  #ifdef _WIN32
-      #ifdef Compiler_PLUGIN
-          #define COMPILER_EXPORT __declspec(dllexport)
-      #else
-          #define COMPILER_EXPORT __declspec(dllimport)
-      #endif
-  #else
-      #define COMPILER_EXPORT
-  #endif
-  ...
+   ...
+   #ifdef _WIN32
+       #ifdef Compiler_PLUGIN
+           #define COMPILER_EXPORT __declspec(dllexport)
+       #else
+           #define COMPILER_EXPORT __declspec(dllimport)
+       #endif
+   #else
+       #define COMPILER_EXPORT
+   #endif
+   ...
 
 ``_WIN32`` and ``Compiler_PLUGIN`` (or, more generally, ``<PluginName>_PLUGIN``) are automatically defined, if at all, at build time, and are used to determine the value of ``COMPILER_EXPORT`` (or, more generally, the value of ``<PLUGINNAME>_EXPORT``), which can then be used as follows without having to worry whether the function or class should be imported or exported:
 
 .. code-block:: c++
 
-  void COMPILER_EXPORT myFunction();
-  class COMPILER_EXPORT myClass;
+   void COMPILER_EXPORT myFunction();
+   class COMPILER_EXPORT myClass;

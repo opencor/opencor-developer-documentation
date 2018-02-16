@@ -24,18 +24,18 @@ Tests must:
 
     .. code-block:: cmake
 
-      project(MyPlugin)
+       project(MyPlugin)
 
-      # Add the plugin
+       # Add the plugin
 
-      add_plugin(MyPlugin
-          ...
-          TESTS
-              tests1
-              tests2
-              tests3
-              ...
-      )
+       add_plugin(MyPlugin
+           ...
+           TESTS
+               tests1
+               tests2
+               tests3
+               ...
+       )
 
     .. |add_plugin| replace:: ``add_plugin()``
     .. _add_plugin: https://github.com/opencor/opencor/blob/master/cmake/common.cmake

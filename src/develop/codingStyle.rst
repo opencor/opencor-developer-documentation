@@ -32,54 +32,54 @@ The following guidelines exist to make the code faster, clearer, and/or to take 
 
   .. code-block:: c++
 
-    ++i;
-    --j;
+     ++i;
+     --j;
 
   .. code-block:: c++
 
-    i++;
-    j--;
+     i++;
+     j--;
 
 - Try to minimise evaluation of the same code over and over.
   This is aimed especially at loops:
 
   .. code-block:: c++
 
-    for (Container::iterator iter = large.begin(), end = large.end(); iter != end; ++iter) {
-        ...
-    }
+     for (Container::iterator iter = large.begin(), end = large.end(); iter != end; ++iter) {
+         ...
+     }
 
   .. code-block:: c++
 
-    for (Container::iterator iter = large.begin(); iter != large.end(); ++iter) {
-        ...
-    }
+     for (Container::iterator iter = large.begin(); iter != large.end(); ++iter) {
+         ...
+     }
 
 - You can use the Qt ``foreach`` loop in non-time-critical code with a Qt container.
   It is a nice way to keep line noise down and to give the loop variable a proper name:
 
   .. code-block:: c++
 
-    foreach (QWidget *widget, container)
-        doSomething(widget);
+     foreach (QWidget *widget, container)
+         doSomething(widget);
 
   .. code-block:: c++
 
-    for (Container::iterator iter = container.begin(), end = container.end(); iter != end; ++iter)
-        doSomething(*iter);
+     for (Container::iterator iter = container.begin(), end = container.end(); iter != end; ++iter)
+         doSomething(*iter);
 
   Make the loop variable ``const``, if possible.
   This might prevent unnecessary detaching of shared data.
 
   .. code-block:: c++
 
-    foreach (const QString &name, someListOfNames)
-        doSomething(name);
+     foreach (const QString &name, someListOfNames)
+         doSomething(name);
 
   .. code-block:: c++
 
-    foreach (QString name, someListOfNames)
-        doSomething(name);
+     foreach (QString name, someListOfNames)
+         doSomething(name);
 
 Formatting
 ----------
@@ -92,40 +92,40 @@ Formatting
 
     .. code-block:: c++
 
-      int width;
-      int height;
-      char *nameOfThis;
-      char *nameOfThat;
+       int width;
+       int height;
+       char *nameOfThis;
+       char *nameOfThat;
 
     .. code-block:: c++
 
-      int a, b;
-      char *c, *d;
+       int a, b;
+       char *c, *d;
 
   - Class names and enums start with an upper-case letter while variables and functions start with a lower-case letter.
     Each consecutive word in a name starts with an upper-case letter.
 
     .. code-block:: c++
 
-      class MainWindow : public QMainWindow
-      {
-          ...
-          int mVariable;
-          ...
-          void function();
-          ...
-      }
+       class MainWindow : public QMainWindow
+       {
+           ...
+           int mVariable;
+           ...
+           void function();
+           ...
+       }
 
     .. code-block:: c++
 
-      class mainWindow : public QMainWindow
-      {
-          ...
-          int Variable;
-          ...
-          void Function();
-          ...
-      }
+       class mainWindow : public QMainWindow
+       {
+           ...
+           int Variable;
+           ...
+           void Function();
+           ...
+       }
 
     **Note:** class variables start with a lower-case ``m``.
 
@@ -133,19 +133,19 @@ Formatting
 
     .. code-block:: c++
 
-      int main(int pArgC, char *pArgV[])
-      {
-          int someVariable;
-          ...
-      }
+       int main(int pArgC, char *pArgV[])
+       {
+           int someVariable;
+           ...
+       }
 
     .. code-block:: c++
 
-      int main(int argc, char *argv[])
-      {
-          int pSomeVariable;
-          ...
-      }
+       int main(int argc, char *argv[])
+       {
+           int pSomeVariable;
+           ...
+       }
 
 - **Declarations:**
 
@@ -159,23 +159,23 @@ Formatting
 
     .. code-block:: c++
 
-      int width;
-      int height;
+       int width;
+       int height;
 
     .. code-block:: c++
 
-      int width, height;
+       int width, height;
 
     This is especially important when initialisation is done at the same time:
 
     .. code-block:: c++
 
-      QString firstName = "Joe";
-      QString lastName = "Foo";
+       QString firstName = "Joe";
+       QString lastName = "Foo";
 
     .. code-block:: c++
 
-      QString firstName = "Joe", lastName = "Foo";
+       QString firstName = "Joe", lastName = "Foo";
 
     **Note:** ``QString firstName = "Joe";`` is formally calling a copy constructor on a temporary string constructed from a string literal and therefore has the potential of being more expensive than direct construction by ``QString firstName("joe")``.
     However, the compiler is allowed to elide the copy (even if it has side effects), and modern compilers typically do so.
@@ -185,35 +185,35 @@ Formatting
 
   .. code-block:: c++
 
-    char *ptr = "flop";
-    char &c = *ptr;
+     char *ptr = "flop";
+     char &c = *ptr;
 
   .. code-block:: c++
 
-    char* ptr = "flop";
-    char & c = * ptr;
+     char* ptr = "flop";
+     char & c = * ptr;
 
   Also, we will have:
 
   .. code-block:: c++
 
-    const char *ptr;
+     const char *ptr;
 
   .. code-block:: c++
 
-    char const * ptr;
+     char const * ptr;
 
   Using a plain ``0`` for ``NULL`` pointer constants is always correct and least effort to type. So:
 
   .. code-block:: c++
 
-    void *ptr = 0;
+     void *ptr = 0;
 
   .. code-block:: c++
 
-    void *ptr = NULL;
-    void *ptr = '\0';
-    void *ptr = 42-7*6;
+     void *ptr = NULL;
+     void *ptr = '\0';
+     void *ptr = 42-7*6;
 
 - **Whitespace:**
 
@@ -224,45 +224,45 @@ Formatting
 
     .. code-block:: c++
 
-      operator==(type)
+       operator==(type)
 
     .. code-block:: c++
 
-      operator == (type)
+       operator == (type)
 
   - Function names and parentheses: do not use spaces between function names and parentheses:
 
     .. code-block:: c++
 
-      void mangle()
+       void mangle()
 
     .. code-block:: c++
 
-      void mangle ()
+       void mangle ()
 
   - Always use a single space after a keyword, and before a curly brace:
 
     .. code-block:: c++
 
-      if (foo) {
-      }
+       if (foo) {
+       }
 
     .. code-block:: c++
 
-      if(foo){
-      }
+       if(foo){
+       }
 
   - For pointers or references, always use a single space before ``*`` or ``&``, but never after.
 
     .. code-block:: c++
 
-      int *var1;
-      int &var2;
+       int *var1;
+       int &var2;
 
     .. code-block:: c++
 
-      int* var1;
-      int& var2;
+       int* var1;
+       int& var2;
 
 - **Braces:**
 
@@ -270,145 +270,145 @@ Formatting
 
     .. code-block:: c++
 
-      if (codec) {
-      }
+       if (codec) {
+       }
 
     .. code-block:: c++
 
-      if (codec)
-      {
-      }
+       if (codec)
+       {
+       }
 
     **Exception:** function implementations and class declarations always have the left curly brace in the beginning of a line:
 
     .. code-block:: c++
 
-      static void foo()
-      {
-      }
+       static void foo()
+       {
+       }
 
     .. code-block:: c++
 
-      static void foo() {
-      }
+       static void foo() {
+       }
 
     .. code-block:: c++
 
-      class Moo
-      {
-      };
+       class Moo
+       {
+       };
 
     .. code-block:: c++
 
-      class Moo {
-      };
+       class Moo {
+       };
 
   - Use curly braces when the body of a conditional statement contains more than one line, and also if a single line statement is somewhat complex.
     Otherwise, omit them:
 
     .. code-block:: c++
 
-      if (address.isEmpty())
-          return false;
+       if (address.isEmpty())
+           return false;
 
     .. code-block:: c++
 
-      if (address.isEmpty()) {
-          return false;
-      }
+       if (address.isEmpty()) {
+           return false;
+       }
 
     .. code-block:: c++
 
-      for (int i = 0; i < 10; ++i)
-          qDebug("%d", i);
+       for (int i = 0; i < 10; ++i)
+           qDebug("%d", i);
 
     .. code-block:: c++
 
-      for (int i = 0; i < 10; ++i) {
-          qDebug("%d", i);
-      }
+       for (int i = 0; i < 10; ++i) {
+           qDebug("%d", i);
+       }
 
     **Exception #1:** use braces also if the parent statement covers several lines or if it wraps:
 
     .. code-block:: c++
 
-      if (   address.isEmpty()
-          || !isValid()
-          || !codec) {
-          return false;
-      }
+       if (   address.isEmpty()
+           || !isValid()
+           || !codec) {
+           return false;
+       }
 
     .. code-block:: c++
 
-      if (   address.isEmpty()
-          || !isValid()
-          || !codec)
-          return false;
+       if (   address.isEmpty()
+           || !isValid()
+           || !codec)
+           return false;
 
     **Exception #2:** use braces also in ``if-then-else`` blocks where either the ``if`` code or the ``else`` code covers several lines:
 
     .. code-block:: c++
 
-      if (address.isEmpty()) {
-          --it;
-      } else {
-          qDebug("%s", qPrintable(address));
-          ++it;
-      }
+       if (address.isEmpty()) {
+           --it;
+       } else {
+           qDebug("%s", qPrintable(address));
+           ++it;
+       }
 
     .. code-block:: c++
 
-      if (address.isEmpty())
-          --it;
-      else {
-          qDebug("%s", qPrintable(address));
-          ++it;
-      }
+       if (address.isEmpty())
+           --it;
+       else {
+           qDebug("%s", qPrintable(address));
+           ++it;
+       }
 
     .. code-block:: c++
 
-      if (cond1) {
-          if (cond2)
-              ...
-          else
-              ...
-      }
+       if (cond1) {
+           if (cond2)
+               ...
+           else
+               ...
+       }
 
     .. code-block:: c++
 
-      if (cond1)
-          if (cond2)
-              ...
-          else
-              ...
+       if (cond1)
+           if (cond2)
+               ...
+           else
+               ...
 
   - Use curly braces when the body of a conditional statement is empty:
 
     .. code-block:: c++
 
-      while (cond) {}
+       while (cond) {}
 
     .. code-block:: c++
 
-      while (cond);
+       while (cond);
 
 - Parentheses: use parentheses to group expressions:
 
   .. code-block:: c++
 
-    if ((cond1 && cond2) || cond3)
+     if ((cond1 && cond2) || cond3)
 
   .. code-block:: c++
 
-    if (cond1 && cond2 || cond3)
+     if (cond1 && cond2 || cond3)
 
   .. code-block:: c++
 
-    (var1+var2) & var3
+     (var1+var2) & var3
 
   .. code-block:: c++
 
-    var1+var2 & var3
+     var1+var2 & var3
 
 - **Line Breaks:**
 
@@ -420,17 +420,17 @@ Formatting
 
     .. code-block:: c++
 
-      if (   longExpression
-          || otherLongExpression
-          || otherOtherLongExpression) {
-      }
+       if (   longExpression
+           || otherLongExpression
+           || otherOtherLongExpression) {
+       }
 
     .. code-block:: c++
 
-      if (longExpression ||
-          otherLongExpression ||
-          otherOtherLongExpression) {
-      }
+       if (longExpression ||
+           otherLongExpression ||
+           otherOtherLongExpression) {
+       }
 
 Patterns and practices
 ----------------------
@@ -446,50 +446,50 @@ Patterns and practices
 
     .. code-block:: c++
 
-      #include <QCoreApplication>
-      #include <QMessageBox>
-      #include <QSettings>
+       #include <QCoreApplication>
+       #include <QMessageBox>
+       #include <QSettings>
 
     .. code-block:: c++
 
-      #include <QSettings>
-      #include <QCoreApplication>
-      #include <QMessageBox>
+       #include <QSettings>
+       #include <QCoreApplication>
+       #include <QMessageBox>
 
   - Arrange includes in an order that goes from specific (to OpenCOR) to generic to ensure that the headers are self-contained.
     For example:
 
     .. code-block:: c++
 
-      #include "common.h"
-      #include "utils.h"
+       #include "common.h"
+       #include "utils.h"
 
-      #include <QCoreApplication>
-      #include <QFileInfo>
+       #include <QCoreApplication>
+       #include <QFileInfo>
 
-      #include <QxtCommandOptions>
+       #include <QxtCommandOptions>
 
-      #include <iostream>
+       #include <iostream>
 
   - Enclose headers from other plugins in ``<>`` rather than ``""`` to make it easier to spot external dependencies in the sources.
 
     .. code-block:: c++
 
-      #include <QxtCommandOptions>
+       #include <QxtCommandOptions>
 
     .. code-block:: c++
 
-      #include "QxtCommandOptions"
+       #include "QxtCommandOptions"
 
   - Prefer direct includes whenever possible:
 
     .. code-block:: c++
 
-      #include <QFileInfo>
+       #include <QFileInfo>
 
     .. code-block:: c++
 
-      #include <QCore/QFileInfo>
+       #include <QCore/QFileInfo>
 
 - **Casting:**
 
@@ -503,9 +503,9 @@ Patterns and practices
 
     .. code-block:: c++
 
-      QString str;
+       QString str;
 
-      return condition?str:"nothing";   // Crash at runtime - QString vs const char *
+       return condition?str:"nothing";   // Crash at runtime - QString vs const char *
 
   - Be extremely careful about alignment.
     Whenever a pointer is cast such that the required alignment of the target is increased, the resulting code might crash at runtime on some architectures.
@@ -515,57 +515,57 @@ Patterns and practices
 
     .. code-block:: c++
 
-      union AlignHelper
-      {
-          char c;
-          int i;
-      };
+       union AlignHelper
+       {
+           char c;
+           int i;
+       };
 
   - Anything that has a constructor or needs to run code to be initialised cannot be used as global object in library code since it is undefined when that constructor or code will be run (on first usage, on library load, before ``main()`` or not at all).
     Even if the execution time of the initialiser is defined for shared libraries, you will get into trouble when moving that code in a plugin or if the library is compiled statically:
 
     .. code-block:: c++
 
-      // The default constructor needs to be run to initialize x
+       // The default constructor needs to be run to initialize x
 
-      static const QString x;
+       static const QString x;
 
-      // The constructor that takes a const char * has to be run
+       // The constructor that takes a const char * has to be run
 
-      static const QString s = "Hello, World!";
+       static const QString s = "Hello, World!";
 
-      // The call time of foo() is undefined and might not be called at all
+       // The call time of foo() is undefined and might not be called at all
 
-      static const int i = foo();
+       static const int i = foo();
 
     Things you can do:
 
     .. code-block:: c++
 
-      // No constructor must be run, x is set at compile time
+       // No constructor must be run, x is set at compile time
 
-      static const char x[] = "someText";
+       static const char x[] = "someText";
 
-      // y will be set at compile time
+       // y will be set at compile time
 
-      static int y = 7;
+       static int y = 7;
 
-      // s will be initialised statically, i.e. no code is run
+       // s will be initialised statically, i.e. no code is run
 
-      static MyStruct s = {1, 2, 3};
+       static MyStruct s = {1, 2, 3};
 
-      // Pointers to objects are OK, no code needs to be run to initialise ptr
+       // Pointers to objects are OK, no code needs to be run to initialise ptr
 
-      static QString *ptr = 0;
+       static QString *ptr = 0;
 
-      // Use Q_GLOBAL_STATIC to create static global objects instead
+       // Use Q_GLOBAL_STATIC to create static global objects instead
 
-      Q_STATIC_GLOBAL(QString, s)
+       Q_STATIC_GLOBAL(QString, s)
 
-      void foo()
-      {
-          s()->append("moo");
-      }
+       void foo()
+       {
+           s()->append("moo");
+       }
 
     **Note #1:** static objects in function scope are not a problem.
     The constructor will be run the first time the function is entered.
@@ -575,22 +575,22 @@ Patterns and practices
 
     .. code-block:: c++
 
-      static const auto s = QStringLiteral("Hello, World!");
+       static const auto s = QStringLiteral("Hello, World!");
 
     .. code-block:: c++
 
-      static const QString s = "Hello, World!";
+       static const QString s = "Hello, World!";
 
   - A ``char`` is signed or unsigned, depending on the architecture. Use ``signed char`` or ``uchar`` if you explicitely want a signed or unsigned char.
     The following code will break on PowerPC, for example:
 
     .. code-block:: c++
 
-      // The condition is always true on platforms where the default is unsigned
+       // The condition is always true on platforms where the default is unsigned
 
-      if (c >= 0) {
-          ...
-      }
+       if (c >= 0) {
+           ...
+       }
 
   - Avoid 64-bit enum values.
     The AAPCS (Procedure Call Standard for the ARM Architecture) embedded ABI hard codes all enum values to a 32-bit integer.
@@ -599,11 +599,11 @@ Patterns and practices
 
     .. code-block:: c++
 
-      for (Container::const_iterator iter = c.constBegin(), end = c.constEnd(); iter != end; ++iter)
+       for (Container::const_iterator iter = c.constBegin(), end = c.constEnd(); iter != end; ++iter)
 
     .. code-block:: c++
 
-      for (Container::const_iterator iter = c.begin(), Container::iterator end = c.end(); iter != end; ++iter)
+       for (Container::const_iterator iter = c.begin(), Container::iterator end = c.end(); iter != end; ++iter)
 
 - Inheriting from template or tool classes: this has the following potential pitfalls:
 
@@ -631,40 +631,40 @@ OpenCOR specific
 
   .. code-block:: c++
 
-    a = 0.5*b;
+     a = 0.5*b;
 
   .. code-block:: c++
 
-    a = b/2.0;
+     a = b/2.0;
 
 - Use a reference rather than a pointer to pass a variable to a function, if you want that variable to be changed:
 
   .. code-block:: c++
 
-    void function(int &pVar)
-    {
-        pVar = 3;
-    }
+     void function(int &pVar)
+     {
+         pVar = 3;
+     }
 
   .. code-block:: c++
 
-    void function(int *pVar)
-    {
-        *pVar = 3;
-    }
+     void function(int *pVar)
+     {
+         *pVar = 3;
+     }
 
 - Use a constant reference to pass a variable to a function, if you do not intend to modify that variable:
 
   .. code-block:: c++
 
-    int function(const int &pVar)
-    {
-        return 3*pVar;
-    }
+     int function(const int &pVar)
+     {
+         return 3*pVar;
+     }
 
   .. code-block:: c++
 
-    void function(int pVar)
-    {
-        return 3*pVar;
-    }
+     void function(int pVar)
+     {
+         return 3*pVar;
+     }
