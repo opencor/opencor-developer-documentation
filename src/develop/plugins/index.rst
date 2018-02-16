@@ -126,7 +126,182 @@ Following those keywords are the parameters themselves, as can be seen in |CMake
 Plugin information
 ------------------
 
+For a plugin to be recognisable by OpenCOR, it must provide some :ref:`basic information <develop_plugins_index_basicInformation>` about itself, as well as define a :ref:`plugin class <develop_plugins_index_pluginClass>`.
+For this, we need a ``.cpp``, ``.h`` and ``.json`` file, such as |coreplugin.cpp|_, |coreplugin.h|_ and |coreplugin.json|_ for the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`_ plugin.
+
+.. |coreplugin.cpp| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/src/coreplugin.cpp``
+.. _coreplugin.cpp: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Core/src/coreplugin.cpp
+
+.. |coreplugin.h| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/src/coreplugin.h``
+.. _coreplugin.h: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Core/src/coreplugin.h
+
+.. |coreplugin.json| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/src/coreplugin.json``
+.. _coreplugin.json: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Core/src/coreplugin.json
+
+``.json`` file
+""""""""""""""
+
+The ``.json`` file is a simple `JSON <http://www.json.org/>`_ file, which sole purpose is to reference the name of the plugin class.
+In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`_ plugin, the contents of that file is:
+
+.. code-block:: json
+
+  {
+      "Keys": [ "CorePlugin" ]
+  }
+
+Namespace
+"""""""""
+
+The code for the :ref:`basic information <develop_plugins_index_basicInformation>` and :ref:`plugin class <develop_plugins_index_pluginClass>` must be in the plugin's own namespace within the ``OpenCOR`` namespace.
+More generally, any plugin-related code should be within those two namespaces, this to ensure the integrity of the plugin's code.
+Thus, in the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`_ plugin, we must have:
+
+.. code-block:: c++
+
+  ...
+  namespace OpenCOR {
+  namespace Core {
+  ...
+  }   // namespace Core
+  }   // namespace OpenCOR
+  ...
+
+.. _develop_plugins_index_basicInformation:
+
+Basic information
+"""""""""""""""""
+
+Plugins must provide the following basic information about themselves:
+
+- **Category:** category under which the plugin is to be listed.
+- **Selectable:** whether the plugin can be selected by the user (for loading upon starting OpenCOR).
+- |CLI|_ **support:** whether the plugin works from the command line.
+- **Dependencies:** plugins on which the plugin depends directly.
+- **Descriptions:** description of the plugin in various languages.
+- **Load before:** plugins before which the plugin should be loaded.
+
+.. |CLI| replace:: **CLI**
+.. _CLI: https://en.wikipedia.org/wiki/Command-line_interface
+
+This information is made available to OpenCOR through a function, which in the case of the Core plugin has the following declaration:
+
+.. code-block:: c++
+
+  PLUGININFO_FUNC CorePluginInfo();
+
+**Note:** to ensure the uniqueness of a plugin, OpenCOR uses the name of a plugin to determine the name of its function.
+In other words, the name of the function is expected to be ``<PluginName>PluginInfo()``.
+If it is not, OpenCOR will not be able to recognise the plugin.
+
+In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`_ plugin, the body of its function is:
+
+.. code-block:: c++
+
+  PLUGININFO_FUNC CorePluginInfo()
+  {
+      Descriptions descriptions;
+
+      descriptions.insert("en", QString::fromUtf8("the core plugin."));
+      descriptions.insert("fr", QString::fromUtf8("l'extension de base."));
+
+      return new PluginInfo(PluginInfo::Miscellaneous, false, false,
+                            QStringList(),
+                            descriptions);
+  }
+
+**Note:** support for the internationalisation of a plugin's description would normally be done using `Qt <https://www.qt.io/>`_'s ``tr()`` function, but the C nature of the function means that it cannot be done.
+So, instead, we use a ``QMap``-based approach.
+
 .. _develop_plugins_index_pluginClass:
 
 Plugin class
 """"""""""""
+
+We rely on `Qt <https://www.qt.io/>`_'s support for plugins, which means that plugins must define a specific class.
+The class must inherit from ``QObject``, as well as from any interface the plugin implements.
+For example, the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`_ plugin implements the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`_, `File Handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`_, `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`_, `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`_ and `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`_ interfaces, so its class definition is:
+
+.. code-block:: c++
+
+  ...
+  class CorePlugin : public QObject, public CoreInterface,
+                     public FileHandlingInterface, public GuiInterface,
+                     public I18nInterface, public PluginInterface
+  {
+      Q_OBJECT
+
+      Q_PLUGIN_METADATA(IID "OpenCOR.CorePlugin" FILE "coreplugin.json")
+
+      Q_INTERFACES(OpenCOR::CoreInterface)
+      Q_INTERFACES(OpenCOR::FileHandlingInterface)
+      Q_INTERFACES(OpenCOR::GuiInterface)
+      Q_INTERFACES(OpenCOR::I18nInterface)
+      Q_INTERFACES(OpenCOR::PluginInterface)
+
+  public:
+  ...
+  #include "coreinterface.inl"
+  #include "filehandlinginterface.inl"
+  #include "guiinterface.inl"
+  #include "i18ninterface.inl"
+  #include "plugininterface.inl"
+  ...
+  };
+  ...
+
+On the other hand, our `LLVM+Clang <https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang/>`_ plugin does not need to implement any interface since its sole purpose is to provide other plugins with access to `LLVM <http://www.llvm.org/>`_ and `Clang <http://clang.llvm.org/>`_.
+Hence, its much simpler class definition:
+
+.. code-block:: c++
+
+  ...
+  class LLVMClangPlugin : public QObject
+  {
+      Q_OBJECT
+
+      Q_PLUGIN_METADATA(IID "OpenCOR.LLVMClangPlugin" FILE "llvmclangplugin.json")
+  };
+  ...
+
+Global header file
+""""""""""""""""""
+
+There may be cases where a plugin declares a function or defines a class that we want to be able to use from another plugin.
+On `Linux <https://en.wikipedia.org/wiki/Linux>`_ and `macOS <https://en.wikipedia.org/wiki/MacOS>`_, nothing special needs to be done, but on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`_, the function or class needs to be exported by the original plugin:
+
+.. code-block:: c++
+
+  void __declspec(dllexport) myFunction();
+  class __declspec(dllexport) myClass;
+
+and imported by the plugin that wants to use it:
+
+.. code-block:: c++
+
+  void __declspec(dllimport) myFunction();
+  class __declspec(dllimport) myClass;
+
+Each plugin that exports functions and/or classes therefore defines a macro that refers either to ``__declspec(dllexport)`` or to ``__declspec(dllimport)``, depending on how the plugin's code is to be compiled.
+Thus, in the case of the `Compiler <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/>`_ plugin, we have:
+
+.. code-block:: c++
+
+  ...
+  #ifdef _WIN32
+      #ifdef Compiler_PLUGIN
+          #define COMPILER_EXPORT __declspec(dllexport)
+      #else
+          #define COMPILER_EXPORT __declspec(dllimport)
+      #endif
+  #else
+      #define COMPILER_EXPORT
+  #endif
+  ...
+
+``_WIN32`` and ``Compiler_PLUGIN`` (or, more generally, ``<PluginName>_PLUGIN``) are automatically defined, if at all, at build time, and are used to determine the value of ``COMPILER_EXPORT`` (or, more generally, the value of ``<PLUGINNAME>_EXPORT``), which can then be used as follows without having to worry whether the function or class should be imported or exported:
+
+.. code-block:: c++
+
+  void COMPILER_EXPORT myFunction();
+  class COMPILER_EXPORT myClass;
