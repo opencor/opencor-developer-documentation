@@ -80,7 +80,7 @@ Currently supported categories are:
 A category is used by OpenCOR to group plugins together to improve user experience.
 From a developer's perspective, a category determines where a plugin's code should be located.
 Thus, the different folders under |plugins|_ are for our different categories.
-For example, |miscellaneousDirectory|_ contains the code of our different `Miscellaneous <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/>`_ plugins and |coreDirectory|_ that of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`_ plugin in particular.
+For example, |miscellaneousDirectory|_ contains the code of our different `Miscellaneous <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/>`_ plugins and |coreDirectory|_ that of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin in particular.
 
 .. |plugins| replace:: ``[OpenCOR]/src/plugins/``
 .. _plugins: https://github.com/opencor/opencor/blob/master/src/plugins/
@@ -118,7 +118,7 @@ That information comes in the form of a series of parameters, some of which are 
 .. |common.cmake| replace:: ``[OpenCOR]/cmake/common.cmake``
 .. _common.cmake: https://github.com/opencor/opencor/blob/master/cmake/common.cmake
 
-Following those keywords are the parameters themselves, as can be seen in |CMakeLists.txt|_ for the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`_ plugin.
+Following those keywords are the parameters themselves, as can be seen in |CMakeLists.txt|_ for the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin.
 
 .. |CMakeLists.txt| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/CMakeLists.txt``
 .. _CMakeLists.txt: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Core/CMakeLists.txt
@@ -127,7 +127,7 @@ Plugin information
 ------------------
 
 For a plugin to be recognisable by OpenCOR, it must provide some :ref:`basic information <develop_plugins_index_basicInformation>` about itself, as well as define a :ref:`plugin class <develop_plugins_index_pluginClass>`.
-For this, we need a ``.cpp``, ``.h`` and ``.json`` file, such as |coreplugin.cpp|_, |coreplugin.h|_ and |coreplugin.json|_ for the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`_ plugin.
+For this, we need a ``.cpp``, ``.h`` and ``.json`` file, such as |coreplugin.cpp|_, |coreplugin.h|_ and |coreplugin.json|_ for the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin.
 
 .. |coreplugin.cpp| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/src/coreplugin.cpp``
 .. _coreplugin.cpp: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Core/src/coreplugin.cpp
@@ -142,7 +142,7 @@ For this, we need a ``.cpp``, ``.h`` and ``.json`` file, such as |coreplugin.cpp
 """"""""""""""
 
 The ``.json`` file is a simple `JSON <http://www.json.org/>`_ file, which sole purpose is to reference the name of the plugin class.
-In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`_ plugin, the contents of that file is:
+In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, the contents of that file is:
 
 .. code-block:: json
 
@@ -155,7 +155,7 @@ Namespace
 
 The code for the :ref:`basic information <develop_plugins_index_basicInformation>` and :ref:`plugin class <develop_plugins_index_pluginClass>` must be in the plugin's own namespace within the ``OpenCOR`` namespace.
 More generally, any plugin-related code should be within those two namespaces, this to ensure the integrity of the plugin's code.
-Thus, in the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`_ plugin, we must have:
+Thus, in the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, we must have:
 
 .. code-block:: c++
 
@@ -194,7 +194,7 @@ This information is made available to OpenCOR through a function, which in the c
 In other words, the name of the function is expected to be ``<PluginName>PluginInfo()``.
 If it is not, OpenCOR will not be able to recognise the plugin.
 
-In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`_ plugin, the body of its function is:
+In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, the body of its function is:
 
 .. code-block:: c++
 
@@ -220,7 +220,7 @@ Plugin class
 
 We rely on `Qt <https://www.qt.io/>`_'s support for plugins, which means that plugins must define a specific class.
 The class must inherit from ``QObject``, as well as from any interface the plugin implements.
-For example, the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`_ plugin implements the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`_, `File Handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`_, `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`_, `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`_ and `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`_ interfaces, so its class definition is:
+For example, the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin implements the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`_, `File Handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`_, `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`_, `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`_ and `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`_ interfaces, so its class definition is:
 
 .. code-block:: c++
 
