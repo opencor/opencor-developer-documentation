@@ -75,7 +75,7 @@ Then, a similar mimicking work must be done in |mainwindow.cpp|_ and |mainwindow
 Plugins
 -------
 
-A file called ``[PluginName]_xx.ts`` must be created for each plugin that requires internationalisation and it must be located in ``[PluginName]/i18n`` (e.g. |Core_fr.ts|_; see `here <http://doc.qt.io/qt-5/linguist-ts-file-format.html>`_ for more information on the TS file format):
+A file called ``[PluginName]_xx.ts`` must be created for each plugin that requires internationalisation and it must be located in ``[PluginName]/i18n`` (e.g. |Core_fr.ts|_; see `here <http://doc.qt.io/qt-5/linguist-ts-file-format.html>`__ for more information on the TS file format):
 
 .. code-block:: xml
 
@@ -151,7 +151,7 @@ Qt objects (e.g. menus, actions) need to be retranslated either by the plugin cl
 To help with this process, |I18nInterface|_ comes with two methods that ensure that menus and actions get properly retranslated: ``retranslateMenu(QMenu *pMenu, const QString &pTitle)`` and ``retranslateAction(QAction *pAction, const QString &pText, const QString &pStatusTip)``.
 
 It may happen that a plugin does not own any Qt objects, but still needs to support internationalisation.
-This is the case with our `Editor <https://github.com/opencor/opencor/tree/master/src/plugins/widget/EditorWidget>`_ widget, which implements a Qt widget that can be both instantiated and retranslated by others.
+This is the case with our `Editor <https://github.com/opencor/opencor/tree/master/src/plugins/widget/EditorWidget>`__ widget, which implements a Qt widget that can be both instantiated and retranslated by others.
 This means that its ``retranslateUi()`` method is empty (see |editorwidgetplugin.cpp|_).
 
 .. |editorwidgetplugin.cpp| replace:: ``[OpenCOR]/src/plugins/widget/EditorWidget/src/editorwidgetplugin.cpp``

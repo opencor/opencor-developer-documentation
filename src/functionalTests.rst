@@ -6,7 +6,7 @@
 
 Every new release of OpenCOR (be it a snapshot or an official release) should pass the following functional tests.
 
-**Note:** please `let us know <http://localhost/contactUs.html>`_ if you think a particular functional test is missing from the list above.
+**Note:** please `let us know <http://localhost/contactUs.html>`__ if you think a particular functional test is missing from the list above.
 
 Save / reload a file
 --------------------
@@ -26,7 +26,7 @@ Check that a given view looks right for a given file when:
 Edit / save a SED-ML file / COMBINE archive
 -------------------------------------------
 
-Using the `Simulation Experiment <http://opencor.ws/user/plugins/simulation/SimulationExperimentView.html>`_ view, check that we can:
+Using the `Simulation Experiment <http://opencor.ws/user/plugins/simulation/SimulationExperimentView.html>`__ view, check that we can:
 
 - SED-ML file:
 

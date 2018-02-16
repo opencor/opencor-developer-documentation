@@ -5,17 +5,17 @@
 ==============
 
 This page contains various rules, which anyone working on OpenCOR should (try to) respect.
-These rules were taken (paraphrased, if not simply copied/pasted) from the `Qt Coding Style <https://wiki.qt.io/Qt_Coding_Style>`_ document.
+These rules were taken (paraphrased, if not simply copied/pasted) from the `Qt Coding Style <https://wiki.qt.io/Qt_Coding_Style>`__ document.
 
 General
 -------
 
-- The most important rule of all: the `KISS principle <https://en.wikipedia.org/wiki/KISS_principle>`_, i.e. *Keep it simple, stupid!*
+- The most important rule of all: the `KISS principle <https://en.wikipedia.org/wiki/KISS_principle>`__, i.e. *Keep it simple, stupid!*
   Always use a simple implementation in favour of a more complicated one.
   This eases maintenance a lot!
 - Write good C++ code: readable, well commented when necessary, and object-oriented.
-- Adapt the code to the structures already existing in OpenCOR or, in the case that you have better ideas, discuss them with the `lead developer <http://localhost/team.html>`_ before implementing them.
-- Take advantage of `Qt <https://www.qt.io/>`_. Do not re-invent the wheel.
+- Adapt the code to the structures already existing in OpenCOR or, in the case that you have better ideas, discuss them with the `lead developer <http://localhost/team.html>`__ before implementing them.
+- Take advantage of `Qt <https://www.qt.io/>`__. Do not re-invent the wheel.
 
 Code constructs
 ---------------
@@ -413,7 +413,7 @@ Formatting
 - **Line Breaks:**
 
   - Keep lines shorter than 80 characters whenever possible.
-    **Note:** `Qt Creator <https://www.qt.io/ide/>`_ can be configured to display a right margin by selecting the ``Tools`` | ``Options...`` menu, then the ``Text Editor`` section, and finally the ``Display`` tab under the ``Text Wrapping`` group box.
+    **Note:** `Qt Creator <https://www.qt.io/ide/>`__ can be configured to display a right margin by selecting the ``Tools`` | ``Options...`` menu, then the ``Text Editor`` section, and finally the ``Display`` tab under the ``Text Wrapping`` group box.
   - Insert line breaks if necessary.
   - Commas go at the end of a broken line.
   - Operators start at the beginning of a new line.
@@ -571,7 +571,7 @@ Patterns and practices
     The constructor will be run the first time the function is entered.
     The code is not re-entrant, though.
 
-    **Note #2:** using `Qt <https://www.qt.io/>`_ 5 and `C++11 <https://en.wikipedia.org/wiki/C++11>`_, it is now possible to (indirectly) have a ``static const QString`` (see here for more information on ``QString``), thus making it possible for a variable to be both read-only and sharable.
+    **Note #2:** using `Qt <https://www.qt.io/>`__ 5 and `C++11 <https://en.wikipedia.org/wiki/C++11>`__, it is now possible to (indirectly) have a ``static const QString`` (see here for more information on ``QString``), thus making it possible for a variable to be both read-only and sharable.
 
     .. code-block:: c++
 
@@ -626,7 +626,7 @@ OpenCOR specific
 
 - Do not use ``inline`` functions.
   It is probably better to rely on the compiler to optimise the code, if necessary, not to mention that, if badly used, ``inline`` functions can result in slower code.
-  A good resource on the topic can be found `here <http://yosefk.com/c++fqa/inline.html>`_.
+  A good resource on the topic can be found `here <http://yosefk.com/c++fqa/inline.html>`__.
 - Divisions are costly, so replace them with multiplications wherever possible:
 
   .. code-block:: c++

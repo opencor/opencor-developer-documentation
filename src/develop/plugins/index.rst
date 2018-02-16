@@ -80,7 +80,7 @@ Currently supported categories are:
 A category is used by OpenCOR to group plugins together to improve user experience.
 From a developer's perspective, a category determines where a plugin's code should be located.
 Thus, the different folders under |plugins|_ are for our different categories.
-For example, |miscellaneousDirectory|_ contains the code of our different `Miscellaneous <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/>`_ plugins and |coreDirectory|_ that of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin in particular.
+For example, |miscellaneousDirectory|_ contains the code of our different `Miscellaneous <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/>`__ plugins and |coreDirectory|_ that of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin in particular.
 
 .. |plugins| replace:: ``[OpenCOR]/src/plugins/``
 .. _plugins: https://github.com/opencor/opencor/blob/master/src/plugins/
@@ -97,7 +97,7 @@ They should therefore only be used for plugins that are aimed at helping people 
 CMake project
 -------------
 
-OpenCOR is built and packaged using `CMake <https://www.cmake.org/>`_.
+OpenCOR is built and packaged using `CMake <https://www.cmake.org/>`__.
 When it comes to plugins, this requires creating a ``CMakeLists.txt`` file in the plugin's root folder and calling the ``add_plugin()`` macro, which is defined in |common.cmake|_.
 The ``add_plugin()`` macro uses information passed to it to build and package the plugin.
 That information comes in the form of a series of parameters, some of which are keywords:
@@ -145,7 +145,7 @@ For this, we need a ``.cpp``, ``.h`` and ``.json`` file, such as |coreplugin.cpp
 ``.json`` file
 """"""""""""""
 
-The ``.json`` file is a simple `JSON <http://www.json.org/>`_ file, which sole purpose is to reference the name of the plugin class.
+The ``.json`` file is a simple `JSON <http://www.json.org/>`__ file, which sole purpose is to reference the name of the plugin class.
 In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, the contents of that file is:
 
 .. code-block:: json
@@ -214,7 +214,7 @@ In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plu
                              descriptions);
    }
 
-**Note:** support for the internationalisation of a plugin's description would normally be done using `Qt <https://www.qt.io/>`_'s ``tr()`` function, but the C nature of the function means that it cannot be done.
+**Note:** support for the internationalisation of a plugin's description would normally be done using `Qt <https://www.qt.io/>`__'s ``tr()`` function, but the C nature of the function means that it cannot be done.
 So, instead, we use a ``QMap``-based approach.
 
 .. _develop_plugins_index_pluginClass:
@@ -222,9 +222,9 @@ So, instead, we use a ``QMap``-based approach.
 Plugin class
 """"""""""""
 
-We rely on `Qt <https://www.qt.io/>`_'s support for plugins, which means that plugins must define a specific class.
+We rely on `Qt <https://www.qt.io/>`__'s support for plugins, which means that plugins must define a specific class.
 The class must inherit from ``QObject``, as well as from any interface the plugin implements.
-For example, the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin implements the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`_, `File Handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`_, `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`_, `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`_ and `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`_ interfaces, so its class definition is:
+For example, the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin implements the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__, `File Handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`__, `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__, `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ and `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interfaces, so its class definition is:
 
 .. code-block:: c++
 
@@ -254,7 +254,7 @@ For example, the `Core <https://github.com/opencor/opencor/tree/master/src/plugi
    };
    ...
 
-On the other hand, our `LLVM+Clang <https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang/>`_ plugin does not need to implement any interface since its sole purpose is to provide other plugins with access to `LLVM <http://www.llvm.org/>`_ and `Clang <http://clang.llvm.org/>`_.
+On the other hand, our `LLVM+Clang <https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang/>`__ plugin does not need to implement any interface since its sole purpose is to provide other plugins with access to `LLVM <http://www.llvm.org/>`__ and `Clang <http://clang.llvm.org/>`__.
 Hence, its much simpler class definition:
 
 .. code-block:: c++
@@ -274,7 +274,7 @@ Global header file
 """"""""""""""""""
 
 There may be cases where a plugin declares a function or defines a class that we want to be able to use from another plugin.
-On `Linux <https://en.wikipedia.org/wiki/Linux>`_ and `macOS <https://en.wikipedia.org/wiki/MacOS>`_, nothing special needs to be done, but on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`_, the function or class needs to be exported by the original plugin:
+On `Linux <https://en.wikipedia.org/wiki/Linux>`__ and `macOS <https://en.wikipedia.org/wiki/MacOS>`__, nothing special needs to be done, but on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__, the function or class needs to be exported by the original plugin:
 
 .. code-block:: c++
 
@@ -289,7 +289,7 @@ and imported by the plugin that wants to use it:
    class __declspec(dllimport) myClass;
 
 Each plugin that exports functions and/or classes therefore defines a macro that refers either to ``__declspec(dllexport)`` or to ``__declspec(dllimport)``, depending on how the plugin's code is to be compiled.
-Thus, in the case of the `Compiler <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/>`_ plugin, we have:
+Thus, in the case of the `Compiler <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/>`__ plugin, we have:
 
 .. code-block:: c++
 
