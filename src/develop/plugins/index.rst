@@ -24,58 +24,58 @@ All plugins come under a given category.
 Currently supported categories are:
 
 - **Analysis**: plugins to analyse files.
-- |API|_: plugins to access various APIs.
-- |Data Store|_: plugins to store and manipulate data.
-- |Editing|_: plugins to edit files.
-- |Miscellaneous|_: plugins that do not fit in any other category.
-- |Organisation|_: plugins to organise files.
-- |Sample|_: plugins that illustrate various plugin-related aspects.
-- |Simulation|_: plugins to simulate files.
-- |Solver|_: plugins to access various solvers.
-- |Support|_: plugins to support various third-party libraries and APIs.
-- |Test|_: test plugins.
-- |Third-party|_: plugins to access various third-party libraries.
-- |Tools|_: plugins to access various tools.
-- |Widget|_: plugins to access various ad hoc widgets.
+- |APICategory|_: plugins to access various APIs.
+- |DataStoreCategory|_: plugins to store and manipulate data.
+- |EditingCategory|_: plugins to edit files.
+- |MiscellaneousCategory|_: plugins that do not fit in any other category.
+- |OrganisationCategory|_: plugins to organise files.
+- |SampleCategory|_: plugins that illustrate various plugin-related aspects.
+- |SimulationCategory|_: plugins to simulate files.
+- |SolverCategory|_: plugins to access various solvers.
+- |SupportCategory|_: plugins to support various third-party libraries and APIs.
+- |TestCategory|_: test plugins.
+- |ThirdPartyCategory|_: plugins to access various third-party libraries.
+- |ToolsCategory|_: plugins to access various tools.
+- |WidgetCategory|_: plugins to access various ad hoc widgets.
 
-.. |API| replace:: **API**
-.. _API: https://github.com/opencor/opencor/tree/master/src/plugins/api/
+.. |APICategory| replace:: **API**
+.. _APICategory: https://github.com/opencor/opencor/tree/master/src/plugins/api/
 
-.. |Data Store| replace:: **Data Store**
-.. _Data Store: https://github.com/opencor/opencor/tree/master/src/plugins/dataStore/
+.. |DataStoreCategory| replace:: **Data Store**
+.. _DataStoreCategory: https://github.com/opencor/opencor/tree/master/src/plugins/dataStore/
 
-.. |Editing| replace:: **Editing**
-.. _Editing: https://github.com/opencor/opencor/tree/master/src/plugins/editing/
+.. |EditingCategory| replace:: **Editing**
+.. _EditingCategory: https://github.com/opencor/opencor/tree/master/src/plugins/editing/
 
-.. |Miscellaneous| replace:: **Miscellaneous**
-.. _Miscellaneous: https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/
+.. |MiscellaneousCategory| replace:: **Miscellaneous**
+.. _MiscellaneousCategory: https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/
 
-.. |Organisation| replace:: **Organisation**
-.. _Organisation: https://github.com/opencor/opencor/tree/master/src/plugins/organisation/
+.. |OrganisationCategory| replace:: **Organisation**
+.. _OrganisationCategory: https://github.com/opencor/opencor/tree/master/src/plugins/organisation/
 
-.. |Sample| replace:: **Sample**
-.. _Sample: https://github.com/opencor/opencor/tree/master/src/plugins/sample/
+.. |SampleCategory| replace:: **Sample**
+.. _SampleCategory: https://github.com/opencor/opencor/tree/master/src/plugins/sample/
 
-.. |Simulation| replace:: **Simulation**
-.. _Simulation: https://github.com/opencor/opencor/tree/master/src/plugins/simulation/
+.. |SimulationCategory| replace:: **Simulation**
+.. _SimulationCategory: https://github.com/opencor/opencor/tree/master/src/plugins/simulation/
 
-.. |Solver| replace:: **Solver**
-.. _Solver: https://github.com/opencor/opencor/tree/master/src/plugins/solver/
+.. |SolverCategory| replace:: **Solver**
+.. _SolverCategory: https://github.com/opencor/opencor/tree/master/src/plugins/solver/
 
-.. |Support| replace:: **Support**
-.. _Support: https://github.com/opencor/opencor/tree/master/src/plugins/support/
+.. |SupportCategory| replace:: **Support**
+.. _SupportCategory: https://github.com/opencor/opencor/tree/master/src/plugins/support/
 
-.. |Test| replace:: **Test**
-.. _Test: https://github.com/opencor/opencor/tree/master/src/plugins/test/
+.. |TestCategory| replace:: **Test**
+.. _TestCategory: https://github.com/opencor/opencor/tree/master/src/plugins/test/
 
-.. |Third-party| replace:: **Third-party**
-.. _Third-party: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/
+.. |ThirdPartyCategory| replace:: **Third-party**
+.. _ThirdPartyCategory: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/
 
-.. |Tools| replace:: **Tools**
-.. _Tools: https://github.com/opencor/opencor/tree/master/src/plugins/tools/
+.. |ToolsCategory| replace:: **Tools**
+.. _ToolsCategory: https://github.com/opencor/opencor/tree/master/src/plugins/tools/
 
-.. |Widget| replace:: **Widget**
-.. _Widget: https://github.com/opencor/opencor/tree/master/src/plugins/widget/
+.. |WidgetCategory| replace:: **Widget**
+.. _WidgetCategory: https://github.com/opencor/opencor/tree/master/src/plugins/widget/
 
 A category is used by OpenCOR to group plugins together to improve user experience.
 From a developer's perspective, a category determines where a plugin's code should be located.
@@ -91,8 +91,72 @@ For example, |miscellaneousDirectory|_ contains the code of our different `Misce
 .. |coreDirectory| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/``
 .. _coreDirectory: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Core/
 
-**Note:** the |Sample|_ and |Test|_ categories are special categories in that they are only available when building OpenCOR with the ``ENABLE_SAMPLE_PLUGINS`` and/or ``ENABLE_TEST_PLUGINS`` options set to ``ON``.
+**Note:** the |SampleCategory|_ and |TestCategory|_ categories are special categories in that they are only available when building OpenCOR with the ``ENABLE_SAMPLE_PLUGINS`` and/or ``ENABLE_TEST_PLUGINS`` options set to ``ON``.
 They should therefore only be used for plugins that are aimed at helping people who want to learn how to write plugins for OpenCOR, and/or for test plugins.
+
+.. _develop_plugins_index_interfaces:
+
+Interfaces
+----------
+
+Plugins can implement different interfaces.
+Those interfaces allow a plugin, through the implementation of various methods, to interact with OpenCOR.
+Currently supported interfaces can be found under |plugins|_.
+They are:
+
+- |CLIInterface|_: to support command line execution.
+- |CoreInterface|_: to control some of OpenCOR's core aspects.
+- |DataStoreInterface|_: to let OpenCOR know about the name of our data store, as well as to provide OpenCOR with a new instance of that data store.
+- |FileHandlingInterface|_: to save a file, as well as to be told whenever a file has been opened, modified, closed, etc.
+- |FileTypeInterface|_: to let OpenCOR know about our supported file types and their description.
+- |GUIInterface|_: to let OpenCOR know about the menus and menu actions that we want to see added to the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__, as well as to be told whenever the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__ needs updating.
+- |InternationalisationInterface|_: to be told whenever we should retranslate ourselves.
+- |PluginInterface|_: to initialise/finalise a plugin, load/save its settings, etc.
+- |PreferencesInterface|_: to specify a plugin's default behaviour, settings, etc.
+- |SolverInterface|_: to let OpenCOR know about the type, name and properties of our solver, as well as to provide OpenCOR with a new instance of that solver.
+- |ViewInterface|_: to let OpenCOR know about the name of our view, its mode, the MIME types it supports, whether we have a view for the current file, etc.
+- |WindowInterface|_: to let OpenCOR know about the widget, action and default location of our window.
+
+.. |CLIInterface| replace:: **CLI**
+.. _CLIInterface: https://github.com/opencor/opencor/blob/master/src/plugins/cliinterface.inl
+
+.. |CoreInterface| replace:: **Core**
+.. _CoreInterface: https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl
+
+.. |DataStoreInterface| replace:: **Data Store**
+.. _DataStoreInterface: https://github.com/opencor/opencor/blob/master/src/plugins/datastoreinterface.inl
+
+.. |FileHandlingInterface| replace:: **File Handling**
+.. _FileHandlingInterface: https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl
+
+.. |FileTypeInterface| replace:: **File Type**
+.. _FileTypeInterface: https://github.com/opencor/opencor/blob/master/src/plugins/filetypeinterface.inl
+
+.. |GUIInterface| replace:: **GUI**
+.. _GUIInterface: https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl
+
+.. |InternationalisationInterface| replace:: **Internationalisation**
+.. _InternationalisationInterface: https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl
+
+.. |PluginInterface| replace:: **Plugin**
+.. _PluginInterface: https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl
+
+.. |PreferencesInterface| replace:: **Preferences**
+.. _PreferencesInterface: https://github.com/opencor/opencor/blob/master/src/plugins/preferencesinterface.inl
+
+.. |SolverInterface| replace:: **Solver**
+.. _SolverInterface: https://github.com/opencor/opencor/blob/master/src/plugins/solverinterface.inl
+
+.. |ViewInterface| replace:: **View**
+.. _ViewInterface: https://github.com/opencor/opencor/blob/master/src/plugins/viewinterface.inl
+
+.. |WindowInterface| replace:: **Window**
+.. _WindowInterface: https://github.com/opencor/opencor/blob/master/src/plugins/windowinterface.inl
+
+Some plugins do not implement any interface (e.g. the `LLVM+Clang <https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang/>`__ plugin) while others may implement one or several interfaces (e.g. the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin implements the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__, `File Handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`__, `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__, `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ and `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interfaces).
+
+**Note:** the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__ interface is a special interface in that it is only, and can only be, implemented by the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin.
+Any plugin, besides the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, that tries to implement the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__ interface will be reported by OpenCOR as being invalid.
 
 CMake project
 -------------
