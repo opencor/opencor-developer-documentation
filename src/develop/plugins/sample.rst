@@ -34,10 +34,10 @@ Category
 The first thing we need to do is to decide on the category of our plugin (click `here <file:///Users/Alan/Desktop/OpenCOR%20documentation/developer/develop/plugins/index.html#Category>`__ for some information on categories).
 Our plugin is aimed at helping people who want to learn how to write plugins for OpenCOR.
 So, it should be in the `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/>`__ category.
-This means that its code can be found under |SampleDirectory|_.
+This means that its code can be found under |Sample|_.
 
-.. |SampleDirectory| replace:: ``[OpenCOR]/src/plugins/sample/Sample/``
-.. _SampleDirectory: https://github.com/opencor/opencor/blob/master/src/plugins/sample/Sample/
+.. |Sample| replace:: ``[OpenCOR]/src/plugins/sample/Sample/``
+.. _Sample: https://github.com/opencor/opencor/blob/master/src/plugins/sample/Sample/
 
 Interfaces
 ----------
