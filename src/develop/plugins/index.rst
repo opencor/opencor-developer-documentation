@@ -17,8 +17,10 @@ They illustrate the basic concepts needed to develop plugins for OpenCOR:
 
 **Note:** these plugins only get built if the CMake ``ENABLE_SAMPLE_PLUGINS`` option is set to ``ON``.
 
-Category
---------
+.. _develop_plugins_index_categories:
+
+Categories
+----------
 
 All plugins come under a given category.
 Currently supported categories are:
@@ -157,6 +159,8 @@ Some plugins do not implement any interface (e.g. the `LLVM+Clang <https://githu
 
 **Note:** the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__ interface is a special interface in that it is only, and can only be, implemented by the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin.
 Any plugin, besides the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, that tries to implement the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__ interface will be reported by OpenCOR as being invalid.
+
+.. _develop_plugins_index_cmakeProject:
 
 CMake project
 -------------

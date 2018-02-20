@@ -38,7 +38,7 @@ Interfaces
 ----------
 
 Unlike for the :ref:`Sample <develop_plugins_sample>` plugin, we want our plugin to interact with OpenCOR.
-This means that it needs to implement some interfaces (click `here <file:///Users/Alan/Desktop/OpenCOR%20documentation/developer/develop/plugins/index.html#Interfaces>`__ for some information on interfaces).
+This means that it needs to implement some interfaces (click :ref:`here <develop_plugins_index_interfaces>` for some information on interfaces).
 
 More specifically, we want our plugin to work from the command line, so we need to implement the CLI interface.
 We also want our plugin to work through OpenCOR's ``Tools`` menu, which involves creating a menu item and making it available to OpenCOR so that it can add it for us to its ``Tools`` menu.
