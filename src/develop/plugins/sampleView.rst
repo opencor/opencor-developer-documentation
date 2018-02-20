@@ -44,7 +44,7 @@ While we are at it, we might as well internationalise our plugin, in which case 
 CMake project
 -------------
 
-As for any OpenCOR plugin, our plugin has a |CMakeLists.txt|_ file, which contents is:
+As for the :ref:`Sample <develop_plugins_sample>` plugin, our plugin has a |CMakeLists.txt|_ file, which contents is:
 
 .. code-block:: cmake
    :lineno-start: 1
