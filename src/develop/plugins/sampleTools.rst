@@ -84,15 +84,6 @@ Plugin information
 
 Our :ref:`plugin information <develop_plugins_index_pluginInformation>` can be found in |sampletoolsplugin.cpp|_, |sampletoolsplugin.h|_ and |sampletoolsplugin.json|_. Starting with sampletoolsplugin.h, its contents is:
 
-.. |sampletoolsplugin.cpp| replace:: ``sampletoolsplugin.cpp``
-.. _sampletoolsplugin.cpp: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleTools/src/sampletoolsplugin.cpp
-
-.. |sampletoolsplugin.h| replace:: ``sampletoolsplugin.h``
-.. _sampletoolsplugin.h: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleTools/src/sampletoolsplugin.h
-
-.. |sampletoolsplugin.json| replace:: ``sampletoolsplugin.json``
-.. _sampletoolsplugin.json: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleTools/src/sampletoolsplugin.json
-
 .. code-block:: c++
    :lineno-start: 28
 
@@ -146,6 +137,15 @@ Our :ref:`plugin information <develop_plugins_index_pluginInformation>` can be f
 
    }   // namespace SampleTools
    }   // namespace OpenCOR
+
+.. |sampletoolsplugin.cpp| replace:: ``sampletoolsplugin.cpp``
+.. _sampletoolsplugin.cpp: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleTools/src/sampletoolsplugin.cpp
+
+.. |sampletoolsplugin.h| replace:: ``sampletoolsplugin.h``
+.. _sampletoolsplugin.h: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleTools/src/sampletoolsplugin.h
+
+.. |sampletoolsplugin.json| replace:: ``sampletoolsplugin.json``
+.. _sampletoolsplugin.json: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleTools/src/sampletoolsplugin.json
 
 As mentioned above, our plugin implements some interfaces, which means that their header file is included (lines 28-30 and 32).
 It also means that our plugin class inherits from those interfaces (lines 45-47), as well as make calls to the ``Q_INTERFACES()`` macro to let `Qt <https://www.qt.io/>`__ know which interfaces it implements (lines 53-56).
