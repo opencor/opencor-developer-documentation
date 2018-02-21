@@ -156,7 +156,7 @@ It also means that our plugin class inherits from those interfaces (lines 49-51)
 Finally, we include the inline files (lines 65-68) that declare various methods that must be implemented by our plugin (see the :ref:`next section <develop_plugins_sampleView_interfacesImplementation>`).
 (The rest of the class definition is specific to our plugin and is discussed :ref:`below <develop_plugins_sampleView_pluginSpecific>`.)
 
-The C function that is used by OpenCOR to retrieve some basic information about our plugin can be found in |sampleviewplugin.cpp|_:
+The C function that is used by OpenCOR to retrieve some :ref:`basic information <develop_plugins_index_basicInformation>` about our plugin can be found in |sampleviewplugin.cpp|_:
 
 .. code-block:: c++
    :lineno-start: 40
