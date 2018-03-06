@@ -54,7 +54,7 @@ Then, a new branch called ``issueXXX`` should be created for issue ``#XXX``.
 It will contain the work associated with issue ``XXX``.
 The work completed, a pull request should be made.
 This pull request will trigger OpenCOR to be built and tested on `Travis CI <https://travis-ci.org/opencor/opencor>`__.
-Assuming it all goes fine, it will then be up to the `project manager <http://localhost/team.html>`__ to merge the work.
+Assuming it all goes fine, it will then be up to the `project manager <http://www.opencor.ws/team.html>`__ to merge the work.
 
 Upon merging a pull request, OpenCOR will also be built and tested through `Jenkins <http://autotest.bioeng.auckland.ac.nz/jenkins/view/OpenCOR/>`__ at the `Auckland Bioengineering Institute <https://www.auckland.ac.nz/en/abi.html>`__, and this on `Windows <http://autotest.bioeng.auckland.ac.nz/jenkins/job/OpenCOR_Windows/>`__, `Linux <http://autotest.bioeng.auckland.ac.nz/jenkins/job/OpenCOR_Linux/>`__ and `macOS <http://autotest.bioeng.auckland.ac.nz/jenkins/job/OpenCOR_macOS/>`__.
 

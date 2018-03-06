@@ -6,7 +6,7 @@
 
 Every new release of OpenCOR (be it a snapshot or an official release) should pass the following functional tests.
 
-**Note:** please `let us know <http://localhost/contactUs.html>`__ if you think a particular functional test is missing from the list above.
+**Note:** please `let us know <http://www.opencor.ws/contactUs.html>`__ if you think a particular functional test is missing from the list above.
 
 Save / reload a file
 --------------------
