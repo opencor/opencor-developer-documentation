@@ -104,7 +104,7 @@ Software
 - `OpenSSL <https://www.openssl.org/>`__ 1.0.2n: a toolkit implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS) protocols, as well as a full-strength general purpose cryptography library.
 
   - Location: |OpenSSLSoftware|_.
-  - Licensing: OpenSSL and SSLeay, which are both `BSD <https://opensource.org/licenses/BSD-3-Clause>`__-style licenses (more information `here <https://www.openssl.org/source/license.html>`__).
+  - Licensing: `OpenSSL and SSLeay <https://www.openssl.org/source/license.html>`__, which are both `BSD <https://opensource.org/licenses/BSD-3-Clause>`__-style licenses.
 
 .. |OpenSSLSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/OpenSSL``
 .. _OpenSSLSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OpenSSL

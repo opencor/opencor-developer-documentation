@@ -75,7 +75,7 @@ Then, a similar mimicking work must be done in |mainwindow.cpp|_ and |mainwindow
 Plugins
 -------
 
-A file called ``[PluginName]_xx.ts`` must be created for each plugin that requires internationalisation and it must be located in ``[PluginName]/i18n`` (e.g. |Core_fr.ts|_; see `here <http://doc.qt.io/qt-5/linguist-ts-file-format.html>`__ for more information about the TS file format):
+A file called ``[PluginName]_xx.ts`` must be created for each plugin that requires internationalisation and it must be located in ``[PluginName]/i18n`` (e.g. |Core_fr.ts|_):
 
 .. code-block:: xml
 

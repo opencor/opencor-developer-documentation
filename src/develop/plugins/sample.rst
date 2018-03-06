@@ -31,7 +31,7 @@ File structure
 Category
 --------
 
-The first thing we need to do is to decide on the category of our plugin (click :ref:`here <develop_plugins_index_categories>` for some information on categories).
+The first thing we need to do is to decide on the :ref:`category <develop_plugins_index_categories>` of our plugin.
 Our plugin is aimed at helping people who want to learn how to write plugins for OpenCOR.
 So, it should be in the `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/>`__ category.
 This means that its code can be found under |Sample|_.
@@ -47,7 +47,7 @@ All our plugin does is to make its ``add()`` function available to other plugins
 CMake project
 -------------
 
-To build our plugin, we need a ``CMakeLists.txt`` file (click :ref:`here <develop_plugins_index_cmakeProject>` for some information on CMake and plugins in OpenCOR), which contents is:
+To build our plugin, we need a ``CMakeLists.txt`` file (some information on CMake and plugins in OpenCOR can be found :ref:`here <develop_plugins_index_cmakeProject>`), which contents is:
 
 .. code-block:: cmake
    :lineno-start: 1

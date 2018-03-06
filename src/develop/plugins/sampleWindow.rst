@@ -36,7 +36,7 @@ Interfaces
 ----------
 
 Unlike for the :ref:`Sample <develop_plugins_sample>` plugin, we want our plugin to interact with OpenCOR.
-This means that it needs to implement some interfaces (click :ref:`here <develop_plugins_index_interfaces>` for some information on interfaces).
+This means that it needs to implement some :ref:`interfaces <develop_plugins_index_interfaces>`.
 
 More specifically, we want our plugin to be a dockable window, so we need to implement both the `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ and `Window <https://github.com/opencor/opencor/blob/master/src/plugins/windowinterface.inl>`__ interfaces.
 While we are at it, we might as well internationalise our plugin, in which case it means that we also need to implement the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface.
