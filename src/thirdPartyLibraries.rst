@@ -46,7 +46,7 @@ APIs
   - Location: |SEDMLAPI|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-.. |SEDMLAPI| replace:: ``[OpenCOR]/src/plugins/api/CellMLAPI``
+.. |SEDMLAPI| replace:: ``[OpenCOR]/src/plugins/api/SEDMLAPI``
 .. _SEDMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/SEDMLAPI
 
 Software
@@ -56,7 +56,7 @@ Software
 
   - Location: |diff-match-patchSoftware|_.
   - Licensing: `Apache v2.0 <https://opensource.org/licenses/Apache-2.0>`__.
-      **Note:** we use an STL version of that library.
+      **Note:** we use an `STL version <https://github.com/leutloff/diff-match-patch-cpp-stl>`__ of that library.
 
 .. |diff-match-patchSoftware| replace:: ``[OpenCOR]/src/3rdparty/diff_match_patch``
 .. _diff-match-patchSoftware: https://github.com/opencor/opencor/tree/master/src/3rdparty/diff_match_patch

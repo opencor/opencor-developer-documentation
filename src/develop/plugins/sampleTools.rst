@@ -6,11 +6,6 @@
 
 The purpose of this plugin is to extend our :ref:`Sample <develop_plugins_sample>` plugin by making it possible for the user to add two numbers, be it from the command line or through OpenCOR's ``Tools`` menu.
 
-Prerequisites
--------------
-
-- :ref:`Sample <develop_plugins_sample>` plugin
-
 File structure
 --------------
 
@@ -214,6 +209,8 @@ We start with the `CLI <https://github.com/opencor/opencor/blob/master/src/plugi
        }
    }
 
+   //==============================================================================
+
 As can be seen, our plugin handles both the ``help`` and ``add`` commands (lines 66-72 and 72-76, respectively).
 
 Next, we have the `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__ interface:
@@ -252,6 +249,8 @@ Next, we have the `GUI <https://github.com/opencor/opencor/blob/master/src/plugi
                                  << Gui::MenuAction(Gui::MenuAction::Tools, Core::newSeparator(Core::mainWindow()));
    }
 
+   //==============================================================================
+
 Our plugin does not need to do anything whenever OpenCOR needs to update the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__, so we do nothing in ``updateGui()`` (lines 89-95).
 Similarly, we do not need to add menus to OpenCOR, so all ``guiMenus()`` does is return ``Gui::Menus()`` (lines 99-104).
 However, we do want to add a menu action (and a menu separator) to OpenCOR's ``Tools`` menu, which we do via ``guiMenuActions()`` (lines 108-114).
@@ -272,6 +271,8 @@ After the `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiin
 
        retranslateAction(mAddTwoNumbersAction, tr("Add Two Numbers..."), tr("Add two numbers together"));
    }
+
+   //==============================================================================
 
 All that we need to do here is to (re)translate ``mAddTwoNumbersAction`` with the actual (French) translations in SampleTools_fr.ts (together with some other translations needed in the :ref:`next section <develop_plugins_sampleTools_pluginSpecific>`).
 
@@ -363,6 +364,8 @@ Finally, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src
 
        // We don't handle this interface...
    }
+
+   //==============================================================================
 
 The only method of interest to our plugin is ``initializePlugin()`` (lines 153-163), which is where we initialise ``mAddTwoNumbersAction``, among a couple of other things.
 All the other methods (``definesPluginInterfaces()``, ``pluginInterfacesOk()``, ``finalizePlugin()``, ``pluginsInitialized()``, ``loadSettings()``, ``saveSettings()`` and ``handleUrl()``) are left empty.
@@ -465,6 +468,8 @@ Their implementation can be found in |sampletoolsplugin.cpp|_:
            }
        }
    }
+
+   //==============================================================================
 
 ``runHelpCommand()`` (lines 212-221) is the method that is executed whenever our plugin is asked to handle the ``help`` command.
 It provides the user with some information about the commands it supports.

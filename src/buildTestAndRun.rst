@@ -69,7 +69,7 @@ Using Qt Creator
 - Open |cmakeFile|_ (by selecting the ``File`` | ``Open File or Project...`` menu or by pressing ``Ctrl``\ +\ ``O``;
 - Configure the project as you see fit and click on the ``Configure Project`` button;
 - Configure CMake, if needed, by going to the ``Projects`` page and setting, for example, ``ENABLE_TESTS`` to ``ON``, and click on the ``Apply Configuration Changes`` button; and
-- Build and run OpenCOR (by selecting the ``Build`` | ``Run`` menu or by pressing ``Ctrl`` + ``R``).
+- Build and run OpenCOR (by selecting the ``Build`` | ``Run`` menu or by pressing ``Ctrl``\ +\ ``R``).
 
 .. |cmakeFile| replace:: ``[OpenCOR]/CMakeLists.txt``
 .. _cmakeFile: https://github.com/opencor/opencor/blob/master/CMakeLists.txt

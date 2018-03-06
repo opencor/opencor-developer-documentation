@@ -6,11 +6,6 @@
 
 The purpose of this plugin is to extend our :ref:`Sample <develop_plugins_sample>` plugin by making it possible for the user to add two numbers through a dockable window.
 
-Prerequisites
--------------
-
-- :ref:`Sample <develop_plugins_sample>` plugin
-
 File structure
 --------------
 

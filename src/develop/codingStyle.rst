@@ -413,7 +413,9 @@ Formatting
 - **Line Breaks:**
 
   - Keep lines shorter than 80 characters whenever possible.
+
     **Note:** `Qt Creator <https://www.qt.io/ide/>`__ can be configured to display a right margin by selecting the ``Tools`` | ``Options...`` menu, then the ``Text Editor`` section, and finally the ``Display`` tab under the ``Text Wrapping`` group box.
+
   - Insert line breaks if necessary.
   - Commas go at the end of a broken line.
   - Operators start at the beginning of a new line.
