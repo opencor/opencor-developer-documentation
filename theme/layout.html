@@ -1,6 +1,22 @@
-{%- extends "basic/layout.html" %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {{ title }}
+        </title>
 
-{# Don't display relbars #}
+        <meta http-equiv="content-type" content="text/html; charset={{ encoding }}"/>
 
-{% block relbar1 %}{% endblock %}
-{% block relbar2 %}{% endblock %}
+        <link href="{{ pathto('_static/theme.css', 1) }}" rel="stylesheet" type="text/css" />
+
+        <script src="{{ pathto('_static/theme.js', 1) }}" type="text/javascript"></script>
+    </head>
+    <body ondragstart="return false;" ondrop="return false;">
+        {% block body %}
+        {% endblock %}
+
+        <script type="text/javascript">
+            copyright("{{ pathto('_static', 1) }}");
+        </script>
+    </body>
+</html>
