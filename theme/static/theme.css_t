@@ -1,5 +1,61 @@
 @import url("basic.css");
 
+body {
+    padding: 13px 0px 9px 0px;
+    /* Note: the padding is determined from the height of div.header and */
+    /*       div.copyright minus the same number of pixels each...       */
+    font-family: arial, sans-serif;
+    font-size: 10pt;
+}
+
+a {
+    color: rgb(49, 133, 155);
+    outline: 0px;
+    text-decoration: none;
+}
+
+a:hover {
+    margin: -1px;
+    border: 1px solid rgba(49, 133, 155, 0.13);
+    background: rgba(49, 133, 155, 0.05);
+    color: rgb(49, 133, 155);
+}
+
+code {
+    color: rgb(49, 133, 155);
+}
+
 div.sphinxsidebar {
     display: none;
+}
+
+h1 {
+    padding: 3px;
+    margin: 0px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 23px;
+    background: rgb(49, 133, 155);
+    color: rgb(255, 255, 255);
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul {
+    margin: 7px 0px;
+}
+
+ul > li {
+    list-style-type: square;
+    margin-left: -1em;
+}
+
+ul > li > ul {
+    margin: 0px;
 }
