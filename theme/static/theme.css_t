@@ -1,0 +1,5 @@
+@import url("basic.css");
+
+div.sphinxsidebar {
+    display: none;
+}
