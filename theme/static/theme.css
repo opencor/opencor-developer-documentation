@@ -119,6 +119,7 @@ img {
 pre {
     margin: 3px 13px 3px 13px;
     border: 1px solid rgba(49, 133, 155, 0.13);
+    border-radius: 2px;
     padding: 3px;
     background: rgba(49, 133, 155, 0.05);
     overflow: auto;
