@@ -24,7 +24,9 @@ if [ $exitCode -ne 0 ]; then
     exit $exitCode
 fi
 
-shift
+if [ $# -gt 0 ]; then
+    shift
+fi
 
 if [ $ninjaFound = true ]; then
     ninja $@
