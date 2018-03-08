@@ -10,7 +10,7 @@ project(DeveloperDocumentationForOpenCOR
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
-find_package(Sphinx REQUIRED)
+find_package(Sphinx 1.4 REQUIRED)
 
 # Build the developer documentation for OpenCOR
 
