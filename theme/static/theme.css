@@ -116,10 +116,6 @@ img {
     vertical-align: middle;
 }
 
-p.first {
-    margin: 0px;
-}
-
 pre {
     margin: 3px 13px 3px 13px;
     border: 1px solid rgba(49, 133, 155, 0.13);
@@ -137,6 +133,10 @@ div.good pre {
 div.bad pre {
     border: 1px solid rgba(149, 55, 52, 0.13);
     background: rgba(149, 55, 52, 0.05);
+}
+
+li > p {
+    margin: 0px;
 }
 
 ul {
