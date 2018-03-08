@@ -112,6 +112,15 @@ h2 {
     font-weight: bold;
 }
 
+h3 {
+    margin: 1.5em 0em 0.5em 0em;
+    /* Note: mimicking what has been done in h2... */
+    color: rgb(49, 133, 155);
+    font-size: 11pt;
+    font-style: italic;
+    font-weight: bold;
+}
+
 img {
     vertical-align: middle;
 }
