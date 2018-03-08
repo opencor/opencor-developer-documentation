@@ -31,11 +31,13 @@ The following guidelines exist to make the code faster, clearer, and/or to take 
   This rule applies to decrement too.
 
   .. code-block:: c++
+     :class: good
 
      ++i;
      --j;
 
   .. code-block:: c++
+     :class: bad
 
      i++;
      j--;
@@ -44,12 +46,14 @@ The following guidelines exist to make the code faster, clearer, and/or to take 
   This is aimed especially at loops:
 
   .. code-block:: c++
+     :class: good
 
      for (Container::iterator iter = large.begin(), end = large.end(); iter != end; ++iter) {
          ...
      }
 
   .. code-block:: c++
+     :class: bad
 
      for (Container::iterator iter = large.begin(); iter != large.end(); ++iter) {
          ...
@@ -59,11 +63,13 @@ The following guidelines exist to make the code faster, clearer, and/or to take 
   It is a nice way to keep line noise down and to give the loop variable a proper name:
 
   .. code-block:: c++
+     :class: good
 
      foreach (QWidget *widget, container)
          doSomething(widget);
 
   .. code-block:: c++
+     :class: bad
 
      for (Container::iterator iter = container.begin(), end = container.end(); iter != end; ++iter)
          doSomething(*iter);
@@ -72,11 +78,13 @@ The following guidelines exist to make the code faster, clearer, and/or to take 
   This might prevent unnecessary detaching of shared data.
 
   .. code-block:: c++
+     :class: good
 
      foreach (const QString &name, someListOfNames)
          doSomething(name);
 
   .. code-block:: c++
+     :class: bad
 
      foreach (QString name, someListOfNames)
          doSomething(name);
@@ -91,6 +99,7 @@ Formatting
   - Single character variable names are only okay for counters and temporaries where the purpose of the variable is obvious.
 
     .. code-block:: c++
+       :class: good
 
        int width;
        int height;
@@ -98,6 +107,7 @@ Formatting
        char *nameOfThat;
 
     .. code-block:: c++
+       :class: bad
 
        int a, b;
        char *c, *d;
@@ -106,6 +116,7 @@ Formatting
     Each consecutive word in a name starts with an upper-case letter.
 
     .. code-block:: c++
+       :class: good
 
        class MainWindow : public QMainWindow
        {
@@ -117,6 +128,7 @@ Formatting
        }
 
     .. code-block:: c++
+       :class: bad
 
        class mainWindow : public QMainWindow
        {
@@ -132,6 +144,7 @@ Formatting
   - Parameters passed to a function start with a lower-case ``p``, but not local variables.
 
     .. code-block:: c++
+       :class: good
 
        int main(int pArgC, char *pArgV[])
        {
@@ -140,6 +153,7 @@ Formatting
        }
 
     .. code-block:: c++
+       :class: bad
 
        int main(int argc, char *argv[])
        {
@@ -158,22 +172,26 @@ Formatting
   - Use only one declaration per line:
 
     .. code-block:: c++
+       :class: good
 
        int width;
        int height;
 
     .. code-block:: c++
+       :class: bad
 
        int width, height;
 
     This is especially important when initialisation is done at the same time:
 
     .. code-block:: c++
+       :class: good
 
        QString firstName = "Joe";
        QString lastName = "Foo";
 
     .. code-block:: c++
+       :class: bad
 
        QString firstName = "Joe", lastName = "Foo";
 
@@ -184,11 +202,13 @@ Formatting
 - Pointers and references:
 
   .. code-block:: c++
+     :class: good
 
      char *ptr = "flop";
      char &c = *ptr;
 
   .. code-block:: c++
+     :class: bad
 
      char* ptr = "flop";
      char & c = * ptr;
@@ -196,20 +216,24 @@ Formatting
   Also, we will have:
 
   .. code-block:: c++
+     :class: good
 
      const char *ptr;
 
   .. code-block:: c++
+     :class: bad
 
      char const * ptr;
 
   Using a plain ``0`` for ``NULL`` pointer constants is always correct and least effort to type. So:
 
   .. code-block:: c++
+     :class: good
 
      void *ptr = 0;
 
   .. code-block:: c++
+     :class: bad
 
      void *ptr = NULL;
      void *ptr = '\0';
@@ -223,31 +247,37 @@ Formatting
     The ``==`` is part of the function name, and therefore, spaces make the declaration look like an expression:
 
     .. code-block:: c++
+       :class: good
 
        operator==(type)
 
     .. code-block:: c++
+       :class: bad
 
        operator == (type)
 
   - Function names and parentheses: do not use spaces between function names and parentheses:
 
     .. code-block:: c++
+       :class: good
 
        void mangle()
 
     .. code-block:: c++
+       :class: bad
 
        void mangle ()
 
   - Always use a single space after a keyword, and before a curly brace:
 
     .. code-block:: c++
+       :class: good
 
        if (foo) {
        }
 
     .. code-block:: c++
+       :class: bad
 
        if(foo){
        }
@@ -255,11 +285,13 @@ Formatting
   - For pointers or references, always use a single space before ``*`` or ``&``, but never after.
 
     .. code-block:: c++
+       :class: good
 
        int *var1;
        int &var2;
 
     .. code-block:: c++
+       :class: bad
 
        int* var1;
        int& var2;
@@ -269,11 +301,13 @@ Formatting
   - As a base rule, place the left curly brace on the same line as the start of the statement:
 
     .. code-block:: c++
+       :class: good
 
        if (codec) {
        }
 
     .. code-block:: c++
+       :class: bad
 
        if (codec)
        {
@@ -282,23 +316,27 @@ Formatting
     **Exception:** function implementations and class declarations always have the left curly brace in the beginning of a line:
 
     .. code-block:: c++
+       :class: good
 
        static void foo()
        {
        }
 
     .. code-block:: c++
+       :class: bad
 
        static void foo() {
        }
 
     .. code-block:: c++
+       :class: good
 
        class Moo
        {
        };
 
     .. code-block:: c++
+       :class: bad
 
        class Moo {
        };
@@ -307,22 +345,26 @@ Formatting
     Otherwise, omit them:
 
     .. code-block:: c++
+       :class: good
 
        if (address.isEmpty())
            return false;
 
     .. code-block:: c++
+       :class: bad
 
        if (address.isEmpty()) {
            return false;
        }
 
     .. code-block:: c++
+       :class: good
 
        for (int i = 0; i < 10; ++i)
            qDebug("%d", i);
 
     .. code-block:: c++
+       :class: bad
 
        for (int i = 0; i < 10; ++i) {
            qDebug("%d", i);
@@ -331,6 +373,7 @@ Formatting
     **Exception #1:** use braces also if the parent statement covers several lines or if it wraps:
 
     .. code-block:: c++
+       :class: good
 
        if (   address.isEmpty()
            || !isValid()
@@ -339,6 +382,7 @@ Formatting
        }
 
     .. code-block:: c++
+       :class: bad
 
        if (   address.isEmpty()
            || !isValid()
@@ -348,6 +392,7 @@ Formatting
     **Exception #2:** use braces also in ``if-then-else`` blocks where either the ``if`` code or the ``else`` code covers several lines:
 
     .. code-block:: c++
+       :class: good
 
        if (address.isEmpty()) {
            --it;
@@ -357,6 +402,7 @@ Formatting
        }
 
     .. code-block:: c++
+       :class: bad
 
        if (address.isEmpty())
            --it;
@@ -366,6 +412,7 @@ Formatting
        }
 
     .. code-block:: c++
+       :class: good
 
        if (cond1) {
            if (cond2)
@@ -375,6 +422,7 @@ Formatting
        }
 
     .. code-block:: c++
+       :class: bad
 
        if (cond1)
            if (cond2)
@@ -385,28 +433,34 @@ Formatting
   - Use curly braces when the body of a conditional statement is empty:
 
     .. code-block:: c++
+       :class: good
 
        while (cond) {}
 
     .. code-block:: c++
+       :class: bad
 
        while (cond);
 
 - Parentheses: use parentheses to group expressions:
 
   .. code-block:: c++
+     :class: good
 
      if ((cond1 && cond2) || cond3)
 
   .. code-block:: c++
+     :class: bad
 
      if (cond1 && cond2 || cond3)
 
   .. code-block:: c++
+     :class: good
 
      (var1+var2) & var3
 
   .. code-block:: c++
+     :class: bad
 
      var1+var2 & var3
 
@@ -421,6 +475,7 @@ Formatting
   - Operators start at the beginning of a new line.
 
     .. code-block:: c++
+       :class: good
 
        if (   longExpression
            || otherLongExpression
@@ -428,6 +483,7 @@ Formatting
        }
 
     .. code-block:: c++
+       :class: bad
 
        if (longExpression ||
            otherLongExpression ||
@@ -447,12 +503,14 @@ Patterns and practices
   - Arrange headers in alphabetic order within a block:
 
     .. code-block:: c++
+       :class: good
 
        #include <QCoreApplication>
        #include <QMessageBox>
        #include <QSettings>
 
     .. code-block:: c++
+       :class: bad
 
        #include <QSettings>
        #include <QCoreApplication>
@@ -476,20 +534,24 @@ Patterns and practices
   - Enclose headers from other plugins in ``<>`` rather than ``""`` to make it easier to spot external dependencies in the sources.
 
     .. code-block:: c++
+       :class: good
 
        #include <QxtCommandOptions>
 
     .. code-block:: c++
+       :class: bad
 
        #include "QxtCommandOptions"
 
   - Prefer direct includes whenever possible:
 
     .. code-block:: c++
+       :class: good
 
        #include <QFileInfo>
 
     .. code-block:: c++
+       :class: bad
 
        #include <QCore/QFileInfo>
 
@@ -527,6 +589,7 @@ Patterns and practices
     Even if the execution time of the initialiser is defined for shared libraries, you will get into trouble when moving that code in a plugin or if the library is compiled statically:
 
     .. code-block:: c++
+       :class: bad
 
        // The default constructor needs to be run to initialize x
 
@@ -543,6 +606,7 @@ Patterns and practices
     Things you can do:
 
     .. code-block:: c++
+       :class: good
 
        // No constructor must be run, x is set at compile time
 
@@ -576,10 +640,12 @@ Patterns and practices
     **Note #2:** using `Qt <https://www.qt.io/>`__ 5 and `C++11 <https://en.wikipedia.org/wiki/C++11>`__, it is now possible to (indirectly) have a ``static const QString`` (see here for more information on ``QString``), thus making it possible for a variable to be both read-only and sharable.
 
     .. code-block:: c++
+       :class: good
 
        static const auto s = QStringLiteral("Hello, World!");
 
     .. code-block:: c++
+       :class: bad
 
        static const QString s = "Hello, World!";
 
@@ -600,10 +666,12 @@ Patterns and practices
     This will silently crash on broken compilers.
 
     .. code-block:: c++
+       :class: good
 
        for (Container::const_iterator iter = c.constBegin(), end = c.constEnd(); iter != end; ++iter)
 
     .. code-block:: c++
+       :class: bad
 
        for (Container::const_iterator iter = c.begin(), Container::iterator end = c.end(); iter != end; ++iter)
 
@@ -632,16 +700,19 @@ OpenCOR specific
 - Divisions are costly, so replace them with multiplications wherever possible:
 
   .. code-block:: c++
+     :class: good
 
      a = 0.5*b;
 
   .. code-block:: c++
+     :class: bad
 
      a = b/2.0;
 
 - Use a reference rather than a pointer to pass a variable to a function, if you want that variable to be changed:
 
   .. code-block:: c++
+     :class: good
 
      void function(int &pVar)
      {
@@ -649,6 +720,7 @@ OpenCOR specific
      }
 
   .. code-block:: c++
+     :class: bad
 
      void function(int *pVar)
      {
@@ -658,6 +730,7 @@ OpenCOR specific
 - Use a constant reference to pass a variable to a function, if you do not intend to modify that variable:
 
   .. code-block:: c++
+     :class: good
 
      int function(const int &pVar)
      {
@@ -665,6 +738,7 @@ OpenCOR specific
      }
 
   .. code-block:: c++
+     :class: bad
 
      void function(int pVar)
      {
