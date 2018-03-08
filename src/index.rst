@@ -7,26 +7,49 @@
 OpenCOR is developed, built, tested, run and packaged on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__, `Linux <https://en.wikipedia.org/wiki/Linux>`__ and `macOS <https://en.wikipedia.org/wiki/MacOS>`__ (see our `supported platforms <http://opencor.ws/supportedPlatforms.html>`__ for more details).
 Information on those different aspects can be found in the following pages:
 
+- :ref:`prerequisites`
+
 .. toctree::
-   :maxdepth: 1
+   :hidden:
 
    prerequisites
 
+- :ref:`fileStructure`
+
 .. toctree::
-   :maxdepth: 1
+   :hidden:
 
    fileStructure
 
+- :ref:`develop_index`
+
+  - :ref:`develop_codingStyle`
+  - :ref:`develop_plugins_index`
+
+    - :ref:`develop_plugins_sample`
+    - :ref:`develop_plugins_sampleTools`
+    - :ref:`develop_plugins_sampleView`
+    - :ref:`develop_plugins_sampleWindow`
+
+  - :ref:`develop_internationalisation`
+  - :ref:`develop_tests`
+
+- :ref:`buildTestAndRun`
+- :ref:`functionalTests`
+- :ref:`package`
+
 .. toctree::
-   :maxdepth: 1
+   :hidden:
 
    develop/index
    buildTestAndRun
    functionalTests
    package
 
+- :ref:`thirdPartyLibraries`
+
 .. toctree::
-   :maxdepth: 1
+   :hidden:
 
    thirdPartyLibraries
 

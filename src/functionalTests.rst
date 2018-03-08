@@ -1,4 +1,4 @@
-.. _functionalTests_index:
+.. _functionalTests:
 
 ==================
  Functional tests
