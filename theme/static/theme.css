@@ -92,6 +92,17 @@ h1 {
     font-weight: bold;
 }
 
+h2 {
+    margin: 1.5em 0em 0.5em 0em;
+    /* Note: the margin is so that it is rendered like a <p>, which is  */
+    /*        necessary if we want to use a section at the beginning of */
+    /*        a page (because of our fixed header at the top)...        */
+    border-bottom: 1px solid rgba(49, 133, 155, 0.39);
+    color: rgb(49, 133, 155);
+    font-size: 13pt;
+    font-weight: bold;
+}
+
 img {
     vertical-align: middle;
 }

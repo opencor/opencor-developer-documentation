@@ -63,8 +63,19 @@ Additional information
 
 More specific information can be found in the following pages:
 
+- :ref:`develop_codingStyle`
+- :ref:`develop_plugins_index`
+
+  - :ref:`develop_plugins_sample`
+  - :ref:`develop_plugins_sampleTools`
+  - :ref:`develop_plugins_sampleView`
+  - :ref:`develop_plugins_sampleWindow`
+
+- :ref:`develop_internationalisation`
+- :ref:`develop_tests`
+
 .. toctree::
-   :maxdepth: 1
+   :hidden:
 
    codingStyle
    plugins/index
