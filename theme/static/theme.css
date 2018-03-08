@@ -83,6 +83,10 @@ div.copyright div img.vpr {
     border: 0px;
 }
 
+div.highlight {
+    background: none;
+}
+
 h1 {
     padding: 3px;
     margin: 0px;
