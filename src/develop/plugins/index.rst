@@ -15,7 +15,7 @@ They illustrate the basic concepts needed to develop plugins for OpenCOR:
    sampleView
    sampleWindow
 
-**Note:** these plugins only get built if the CMake ``ENABLE_SAMPLE_PLUGINS`` option is set to ``ON``.
+**Note:** these plugins only get built if the `CMake <https://www.cmake.org/>`__ ``ENABLE_SAMPLE_PLUGINS`` option is set to ``ON``.
 
 .. _develop_plugins_index_categories:
 
