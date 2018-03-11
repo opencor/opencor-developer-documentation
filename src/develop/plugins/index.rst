@@ -7,8 +7,13 @@
 To help you get started, you might want to have a look at the following sample plugins.
 They illustrate the basic concepts needed to develop plugins for OpenCOR:
 
+- :ref:`develop_plugins_sample`
+- :ref:`develop_plugins_sampleTools`
+- :ref:`develop_plugins_sampleView`
+- :ref:`develop_plugins_sampleWindow`
+
 .. toctree::
-   :maxdepth: 1
+   :hidden:
 
    sample
    sampleTools
