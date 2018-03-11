@@ -148,6 +148,32 @@ li > p {
     margin: 0px;
 }
 
+table.highlighttable {
+    border-spacing: 0px;
+}
+
+table.highlighttable > tbody > tr > td.linenos {
+    padding: 0px;
+}
+
+table.highlighttable > tbody > tr > td.linenos > div.linenodiv > pre {
+    margin-right: 0px;
+    border-right: 0px;
+    border-radius: 2px 0px 0px 2px;
+    padding-right: 7px;
+}
+
+table.highlighttable > tbody > tr > td.code {
+    padding: 0px;
+}
+
+table.highlighttable > tbody > tr > td.code > div.highlight > pre {
+    margin-left: 0px;
+    border-left: 0px;
+    border-radius: 0px 2px 2px 0px;
+    padding-left: 7px;
+}
+
 ul {
     margin: 7px 0px;
 }
