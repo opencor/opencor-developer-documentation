@@ -154,6 +154,7 @@ table.highlighttable {
 
 table.highlighttable > tbody > tr > td.linenos {
     padding: 0px;
+    vertical-align: top;
 }
 
 table.highlighttable > tbody > tr > td.linenos > div.linenodiv > pre {
