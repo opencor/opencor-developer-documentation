@@ -159,9 +159,10 @@ table.highlighttable > tbody > tr > td.linenos {
 
 table.highlighttable > tbody > tr > td.linenos > div.linenodiv > pre {
     margin-right: 0px;
-    border-right: 0px;
     border-radius: 2px 0px 0px 2px;
-    padding-right: 7px;
+    padding: 3px 7px;
+    background: rgba(49, 133, 155, 0.15);
+    color: rgb(49, 133, 155);
 }
 
 table.highlighttable > tbody > tr > td.code {
@@ -174,7 +175,6 @@ table.highlighttable > tbody > tr > td.code > div.highlight > pre {
     margin-left: 0px;
     border-left: 0px;
     border-radius: 0px 2px 2px 0px;
-    padding-left: 7px;
 }
 
 ul {
