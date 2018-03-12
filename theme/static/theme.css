@@ -125,15 +125,6 @@ img {
     vertical-align: middle;
 }
 
-pre {
-    margin: 3px 13px 3px 13px;
-    border: 1px solid rgba(49, 133, 155, 0.13);
-    border-radius: 2px;
-    padding: 3px;
-    background: rgba(49, 133, 155, 0.05);
-    overflow: auto;
-}
-
 div.good pre {
     border: 1px solid rgba(118, 146, 60, 0.13);
     background: rgba(118, 146, 60, 0.05);
@@ -146,6 +137,15 @@ div.bad pre {
 
 li > p {
     margin: 0px;
+}
+
+pre {
+    margin: 3px 13px 3px 13px;
+    border: 1px solid rgba(49, 133, 155, 0.13);
+    border-radius: 2px;
+    padding: 3px;
+    background: rgba(49, 133, 155, 0.05);
+    overflow: auto;
 }
 
 table.highlighttable {
