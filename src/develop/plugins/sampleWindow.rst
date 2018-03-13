@@ -147,7 +147,7 @@ Our :ref:`plugin information <develop_plugins_index_pluginInformation>` can be f
 As mentioned above, our plugin implements some interfaces, which means that their header file is included (lines 28, 30 and 31).
 It also means that our plugin class inherits from those interfaces (lines 48 and 49), as well as make calls to the ``Q_INTERFACES()`` macro to let `Qt <https://www.qt.io/>`__ know which interfaces it implements (lines 55-57).
 Finally, we include the inline files (lines 60-62) that declare various methods that must be implemented by our plugin (see the :ref:`next section <develop_plugins_sampleWindow_interfacesImplementation>`).
-(The rest of the class definition is specific to our plugin and is discussed below.)
+(The rest of the class definition is specific to our plugin and is discussed :ref:`below <develop_plugins_sampleWindow_pluginSpecific>`.)
 
 The C function that is used by OpenCOR to retrieve some :ref:`basic information <develop_plugins_index_basicInformation>` about our plugin can be found in |samplewindowplugin.cpp|_:
 
