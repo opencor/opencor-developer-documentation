@@ -35,7 +35,7 @@ Interfaces
 Unlike for the :ref:`Sample <develop_plugins_sample>` plugin, we want our plugin to interact with OpenCOR.
 This means that it needs to implement some :ref:`interfaces <develop_plugins_index_interfaces>`.
 
-More specifically, we want our plugin to work from the command line, so we need to implement the CLI interface.
+More specifically, we want our plugin to work from the command line, so we need to implement the `CLI <https://github.com/opencor/opencor/blob/master/src/plugins/cliinterface.inl>`__ interface.
 We also want our plugin to work through OpenCOR's ``Tools`` menu, which involves creating a menu item and making it available to OpenCOR so that it can add it for us to its ``Tools`` menu.
 To do these, we need to implement both the `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__ and `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interfaces.
 While we are at it, we might as well internationalise our plugin, in which case it means that we also need to implement the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface.
@@ -145,7 +145,7 @@ Our :ref:`plugin information <develop_plugins_index_pluginInformation>` can be f
 As mentioned above, our plugin implements some interfaces, which means that their header file is included (lines 28-30 and 32).
 It also means that our plugin class inherits from those interfaces (lines 45-47), as well as make calls to the ``Q_INTERFACES()`` macro to let `Qt <https://www.qt.io/>`__ know which interfaces it implements (lines 53-56).
 Finally, we include the inline files (lines 59-62) that declare various methods that must be implemented by our plugin (see the :ref:`next section <develop_plugins_sampleTools_interfacesImplementation>`).
-(The rest of the class definition is specific to our plugin and is discussed below.)
+(The rest of the class definition is specific to our plugin and is discussed :ref:`below <develop_plugins_sampleTools_pluginSpecific>`.)
 
 The C function that is used by OpenCOR to retrieve some :ref:`basic information <develop_plugins_index_basicInformation>` about our plugin can be found in |sampletoolsplugin.cpp|_:
 
@@ -274,7 +274,7 @@ After the `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiin
 
    //==============================================================================
 
-All that we need to do here is to (re)translate ``mAddTwoNumbersAction`` with the actual (French) translations in SampleTools_fr.ts (together with some other translations needed in the :ref:`next section <develop_plugins_sampleTools_pluginSpecific>`).
+All that we need to do here is to (re)translate ``mAddTwoNumbersAction`` with the actual (French) translations in |SampleTools_fr.ts|_ (together with some other translations needed in the :ref:`next section <develop_plugins_sampleTools_pluginSpecific>`).
 
 .. |SampleTools_fr.ts| replace:: ``SampleTools_fr.ts``
 .. _SampleTools_fr.ts: https://github.com/opencor/opencor/tree/master/src/plugins/sample/SampleTools/i18n/SampleTools_fr.ts
