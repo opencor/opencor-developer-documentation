@@ -1,3 +1,25 @@
+// Resize our code elements once our page is loaded and whenever our window
+// gets resized
+
+$(document).ready(function() {
+    resizeCodeElements();
+});
+
+$(window).resize(function() {
+    resizeCodeElements();
+});
+
+// Resize our code elements
+
+function resizeCodeElements() {
+    $("table.highlighttable > tbody > tr > td.code > div.highlight > pre").each(function() {
+        $(this).width( $("body").width()
+                      -$(this).position().left
+                      +parseInt($(this).css("border-right"))
+                      -parseInt($(this).css("margin-right")));
+    });
+}
+
 // Copyright information
 
 function copyright(relativePath) {

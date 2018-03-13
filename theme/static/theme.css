@@ -167,8 +167,6 @@ table.highlighttable > tbody > tr > td.linenos > div.linenodiv > pre {
 
 table.highlighttable > tbody > tr > td.code {
     padding: 0px;
-    display: block;
-    width: 500px;
 }
 
 table.highlighttable > tbody > tr > td.code > div.highlight > pre {
