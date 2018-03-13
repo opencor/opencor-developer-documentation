@@ -167,12 +167,14 @@ table.highlighttable > tbody > tr > td.linenos > div.linenodiv > pre {
 
 table.highlighttable > tbody > tr > td.code {
     padding: 0px;
+    width: 100%;
 }
 
 table.highlighttable > tbody > tr > td.code > div.highlight > pre {
     margin-left: 0px;
     border-left: 0px;
     border-radius: 0px 2px 2px 0px;
+    width: auto;
 }
 
 ul {
