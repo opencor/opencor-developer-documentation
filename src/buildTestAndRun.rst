@@ -16,14 +16,18 @@ Various batch / VBScript files (``.bat`` \| ``.vbs``) and shell scripts are avai
 
 - |cleanScript|_\[|cleanallScript|_][|cleanBatch|_]: cleans (all) the OpenCOR environment;
 - |makeScript|_\[|makeBatch|_]: compiles and links everything that is required to get a release version of OpenCOR;
-    **Note:** if you use ``make`` and don't have `Ninja <https://ninja-build.org/>`__ installed on your system, then OpenCOR will, by default, be compiled sequentially.
-    You can, however, specify a maximum number of jobs (``n``) to be run simultaneously by calling ``make`` with ``-j [n]``.
-    If no ``n`` value is provided, then as many jobs as possible will be run simultaneously.
+
+  **Note:** if you use ``make`` and don't have `Ninja <https://ninja-build.org/>`__ installed on your system, then OpenCOR will, by default, be compiled sequentially.
+  You can, however, specify a maximum number of jobs (``n``) to be run simultaneously by calling ``make`` with ``-j [n]``.
+  If no ``n`` value is provided, then as many jobs as possible will be run simultaneously.
+
 - |maketestsScript|_\[|maketestsBatch|_]: builds a release version of OpenCOR and its tests;
 - |runScript|_\[|runBatch|_ | |runVBScript|_]: runs OpenCOR; and
-    **Note:** on Windows, if you were to run OpenCOR from a console window by entering ``run``, then ``run.bat`` would be executed (rather than ``run.vbs``), offering you the opportunity to use OpenCOR as a `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ application.
-    However, if you were to run OpenCOR by double clicking ``run.bat`` in, say, Windows Explorer, then a console window would quickly appear and disappear.
-    To avoid this, use ``run.vbs`` instead.
+
+  **Note:** on Windows, if you were to run OpenCOR from a console window by entering ``run``, then ``run.bat`` would be executed (rather than ``run.vbs``), offering you the opportunity to use OpenCOR as a `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ application.
+  However, if you were to run OpenCOR by double clicking ``run.bat`` in, say, Windows Explorer, then a console window would quickly appear and disappear.
+  To avoid this, use ``run.vbs`` instead.
+
 - |runtestsScript|_\[|runtestsBatch|_]: runs OpenCOR's tests.
 
 .. |cleanScript| replace:: ``[OpenCOR]/clean``
