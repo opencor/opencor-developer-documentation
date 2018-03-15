@@ -14,40 +14,40 @@ APIs
   - Location: |BioSignalMLAPI|_.
   - Licensing: none.
 
-.. |BioSignalMLAPI| replace:: ``[OpenCOR]/src/plugins/api/BioSignalMLAPI``
-.. _BioSignalMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/BioSignalMLAPI
+  .. |BioSignalMLAPI| replace:: ``[OpenCOR]/src/plugins/api/BioSignalMLAPI``
+  .. _BioSignalMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/BioSignalMLAPI
 
 - `CellML API <https://github.com/cellmlapi/cellml-api/>`__ (from `opencor/cellml-api <https://github.com/opencor/cellml-api>`__ on GitHub): an interface to manipulate and process `CellML <https://www.cellml.org/>`__ documents.
 
   - Location: |CellMLAPI|_.
   - Licensing: `MPL v1.1 <https://opensource.org/licenses/MPL-1.1>`__, `GPL v2.0 <https://opensource.org/licenses/GPL-2.0>`__ (or later) and `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
 
-.. |CellMLAPI| replace:: ``[OpenCOR]/src/plugins/api/CellMLAPI``
-.. _CellMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/CellMLAPI
+  .. |CellMLAPI| replace:: ``[OpenCOR]/src/plugins/api/CellMLAPI``
+  .. _CellMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/CellMLAPI
 
 - `libNuML <https://github.com/NuML/NuML/>`__ 1.1.1: a library for reading and writing `NuML <https://github.com/NuML/NuML/>`__ models.
 
   - Location: |NuMLAPI|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
 
-.. |NuMLAPI| replace:: ``[OpenCOR]/src/plugins/api/NuMLAPI``
-.. _NuMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/NuMLAPI
+  .. |NuMLAPI| replace:: ``[OpenCOR]/src/plugins/api/NuMLAPI``
+  .. _NuMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/NuMLAPI
 
 - `libSBML <http://sbml.org/Software/libSBML/>`__ 5.16.0: a programming library to help you read, write, manipulate, translate and validate `SBML <http://www.sbml.org/>`__ files and data streams.
 
   - Location: |SBMLAPI|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
 
-.. |SBMLAPI| replace:: ``[OpenCOR]/src/plugins/api/SBMLAPI``
-.. _SBMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/SBMLAPI
+  .. |SBMLAPI| replace:: ``[OpenCOR]/src/plugins/api/SBMLAPI``
+  .. _SBMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/SBMLAPI
 
 - `libSEDML <https://github.com/fbergmann/libSEDML/>`__ 0.4.3: a library for reading and writing `SED-ML <http://www.sed-ml.org/>`__ models.
 
   - Location: |SEDMLAPI|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-.. |SEDMLAPI| replace:: ``[OpenCOR]/src/plugins/api/SEDMLAPI``
-.. _SEDMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/SEDMLAPI
+  .. |SEDMLAPI| replace:: ``[OpenCOR]/src/plugins/api/SEDMLAPI``
+  .. _SEDMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/SEDMLAPI
 
 Software
 --------
@@ -56,153 +56,149 @@ Software
 
   - Location: |diff-match-patchSoftware|_.
   - Licensing: `Apache v2.0 <https://opensource.org/licenses/Apache-2.0>`__.
-      **Note:** we use an `STL version <https://github.com/leutloff/diff-match-patch-cpp-stl>`__ of that library.
 
-.. |diff-match-patchSoftware| replace:: ``[OpenCOR]/src/3rdparty/diff_match_patch``
-.. _diff-match-patchSoftware: https://github.com/opencor/opencor/tree/master/src/3rdparty/diff_match_patch
+    **Note:** we use an `STL version <https://github.com/leutloff/diff-match-patch-cpp-stl>`__ of that library.
+
+  .. |diff-match-patchSoftware| replace:: ``[OpenCOR]/src/3rdparty/diff_match_patch``
+  .. _diff-match-patchSoftware: https://github.com/opencor/opencor/tree/master/src/3rdparty/diff_match_patch
 
 - `jQuery <https://jquery.com/>`__ 3.3.1: a fast and concise `JavaScript <https://en.wikipedia.org/wiki/JavaScript>`__ library that simplifies `HTML <https://www.w3.org/html/>`__ document traversing, event handling, animating, and `Ajax <https://en.wikipedia.org/wiki/Ajax_(programming)>`__ interactions for rapid web development.
 
   - Location: |jQuerySoftware|_.
   - Licensing: `MIT <https://opensource.org/licenses/MIT>`__.
 
-.. |jQuerySoftware| replace:: ``[OpenCOR]/doc/3rdparty/jQuery``
-.. _jQuerySoftware: https://github.com/opencor/opencor/tree/master/doc/3rdparty/jQuery
+  .. |jQuerySoftware| replace:: ``[OpenCOR]/doc/3rdparty/jQuery``
+  .. _jQuerySoftware: https://github.com/opencor/opencor/tree/master/doc/3rdparty/jQuery
 
 - `libgit2 <https://libgit2.github.com/>`__ 0.26.0: a portable, pure C implementation of the `Git <https://git-scm.com/>`__ core methods provided as a re-entrant linkable library with a solid API.
 
   - Location: |libgit2Software|_.
   - Licensing: `GPL v2.0 <https://opensource.org/licenses/GPL-2.0>`__ with linking exception.
 
-.. |libgit2Software| replace:: ``[OpenCOR]/src/plugins/thirdParty/libgit2``
-.. _libgit2Software: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libgit2
+  .. |libgit2Software| replace:: ``[OpenCOR]/src/plugins/thirdParty/libgit2``
+  .. _libgit2Software: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libgit2
 
 - `LibXDiff <http://www.xmailserver.org/xdiff-lib.html>`__ 0.23: a library that implements basic and yet complete functionalities to create file differences/patches to both binary and text files.
 
   - Location: |LibXDiffSoftware|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__.
 
-.. |LibXDiffSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/LibXDiff``
-.. _LibXDiffSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LibXDiff
+  .. |LibXDiffSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/LibXDiff``
+  .. _LibXDiffSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LibXDiff
 
 - `LLVM <http://www.llvm.org/>`__\ +\ `Clang <http://clang.llvm.org/>`__ 5.0.1 a collection of modular and reusable compiler and toolchain technologies.
 
   - Location: |LLVM+ClangSoftware|_.
   - Licensing: `UoI/NCSA <https://opensource.org/licenses/UoI-NCSA>`__.
 
-.. |LLVM+ClangSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/LLVMClang``
-.. _LLVM+ClangSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang
+  .. |LLVM+ClangSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/LLVMClang``
+  .. _LLVM+ClangSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang
 
 - `OAuth 2.0 for Qt <https://github.com/pipacs/o2>`__ 1.0.1: a library that encapsulates the `OAuth <https://oauth.net/>`__ 1.0 and 2.0 client authentication flows, and the sending of authenticated `HTTP <https://www.w3.org/Protocols/>`__ requests.
 
   - Location: |OAuthSoftware|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-.. |OAuthSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/OAuth``
-.. _OAuthSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OAuth
+  .. |OAuthSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/OAuth``
+  .. _OAuthSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OAuth
 
 - `OpenSSL <https://www.openssl.org/>`__ 1.0.2n: a toolkit implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS) protocols, as well as a full-strength general purpose cryptography library.
 
   - Location: |OpenSSLSoftware|_.
   - Licensing: `OpenSSL and SSLeay <https://www.openssl.org/source/license.html>`__, which are both `BSD <https://opensource.org/licenses/BSD-3-Clause>`__-style licenses.
 
-.. |OpenSSLSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/OpenSSL``
-.. _OpenSSLSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OpenSSL
+  .. |OpenSSLSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/OpenSSL``
+  .. _OpenSSLSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OpenSSL
 
 - `QScintilla <https://riverbankcomputing.com/software/qscintilla/intro>`__ 2.10.3: a `Qt <https://www.qt.io/>`__ port of the `Scintilla <http://www.scintilla.org/>`__ editing component.
 
   - Location: |QScintillaSoftware|_.
   - Licensing: `GPL v3.0 <https://opensource.org/licenses/GPL-3.0>`__.
 
-.. |QScintillaSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/QScintilla``
-.. _QScintillaSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/QScintilla
+  .. |QScintillaSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/QScintilla``
+  .. _QScintillaSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/QScintilla
 
 - `QtSingleApplication <https://code.qt.io/cgit/qt-solutions/qt-solutions.git/tree/qtsingleapplication>`__: a class that ensures that only one instance of the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__ version of OpenCOR can be run at any given time.
 
   - Location: |QtSingleApplicationSoftware|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
 
-.. |QtSingleApplicationSoftware| replace:: ``[OpenCOR]/src/3rdparty/QtSingleApplication``
-.. _QtSingleApplicationSoftware: https://github.com/opencor/opencor/tree/master/src/3rdparty/QtSingleApplication
+  .. |QtSingleApplicationSoftware| replace:: ``[OpenCOR]/src/3rdparty/QtSingleApplication``
+  .. _QtSingleApplicationSoftware: https://github.com/opencor/opencor/tree/master/src/3rdparty/QtSingleApplication
 
 - `QtWebKit <http://code.qt.io/cgit/qt/qtwebkit.git/tree/>`__: a `Qt <https://www.qt.io/>`__ port of `WebKit <https://webkit.org/>`__, a web browser engine.
 
   - Location: |QtWebKitSoftware|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__.
-      **Note:** we use the `Reloaded <https://github.com/annulen/webkit/wiki>`__ version of that library.
 
-.. |QtWebKitSoftware| replace:: ``[OpenCOR]/src/3rdparty/QtWebKit``
-.. _QtWebKitSoftware: https://github.com/opencor/opencor/tree/master/src/3rdparty/QtWebKit
+    **Note:** we use the `Reloaded <https://github.com/annulen/webkit/wiki>`__ version of that library.
+
+  .. |QtWebKitSoftware| replace:: ``[OpenCOR]/src/3rdparty/QtWebKit``
+  .. _QtWebKitSoftware: https://github.com/opencor/opencor/tree/master/src/3rdparty/QtWebKit
 
 - `Qwt <http://qwt.sourceforge.net/>`__ 6.1.3: a set of widgets and utility classes primarily aimed at programs with a technical background.
 
   - Location: |QwtSoftware|_.
   - Licensing: `Qwt License v1.0 <http://qwt.sourceforge.net/qwtlicense.html>`__ (a slightly less restricive version of `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__) and `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ for the `MathML <https://www.w3.org/Math/>`__ text engine, which is based on the QtMmlWidget code.
-      **Note:** we have contributed some code to the `MathML <https://www.w3.org/Math/>`__ renderer, but it has yet to be fully incorporated in the `Qwt <http://qwt.sourceforge.net/>`__ project.
-      So, in the meantime, we use our version of the `MathML <https://www.w3.org/Math/>`__ renderer.
 
-.. |QwtSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/Qwt``
-.. _QwtSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Qwt
+    **Note:** we have contributed some code to the `MathML <https://www.w3.org/Math/>`__ renderer, but it has yet to be fully incorporated in the `Qwt <http://qwt.sourceforge.net/>`__ project.
+    So, in the meantime, we use our version of the `MathML <https://www.w3.org/Math/>`__ renderer.
+
+  .. |QwtSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/Qwt``
+  .. _QwtSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Qwt
 
 - `SUNDIALS <http://computation.llnl.gov/projects/sundials>`__ 3.1.0: a SUite of Non-linear and DIfferential/ALgebraic equation Solvers.
 
   - Location: |SUNDIALSSoftware|_.
   - Licensing: `BSD 3-Clause <https://opensource.org/licenses/BSD-3-Clause>`__.
 
-.. |SUNDIALSSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/SUNDIALS``
-.. _SUNDIALSSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/SUNDIALS
+  .. |SUNDIALSSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/SUNDIALS``
+  .. _SUNDIALSSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/SUNDIALS
 
-- `web-xslt <https://github.com/davidcarlisle/web-xslt>`__: `XSLT <https://www.w3.org/TR/xslt>`__ and `JavaScript <https://en.wikipedia.org/wiki/JavaScript>`__ code intended mostly for manipulating `MathML <https://www.w3.org/Math/>`__ and `OpenMath <https://www.openmath.org/>`__.
+- `web-xslt <https://github.com/davidcarlisle/web-xslt>`__: `XSLT <https://www.w3.org/TR/xslt>`__ and `JavaScript <https://en.wikipedia.org/wiki/JavaScript>`__ code intended mostly for manipulating `MathML <https://www.w3.org/Math/>`__ and `OpenMath <https://openmath.github.io/>`__.
 
   - Location: |web-xsltSoftware|_.
   - Licensing: `W3C <https://opensource.org/licenses/W3C>`__, `Apache v2.0 <https://opensource.org/licenses/Apache-2.0>`__, `MIT <https://opensource.org/licenses/MIT>`__, `MPL v1.1 <https://opensource.org/licenses/MPL-1.1>`__ or `MPL v2.0 <https://opensource.org/licenses/MPL-2.0>`__.
-      **Note:** we currently use only (a slightly improved version of) |ctopff.xsl|_ to convert `Content MathML <https://www.w3.org/TR/MathML3/chapter4.html>`__ to `Presentation MathML <https://www.w3.org/TR/MathML2/chapter3.html>`__.
 
-.. |web-xsltSoftware| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/res/web-xslt``
-.. _web-xsltSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/res/web-xslt
+    **Note:** we currently use only (a slightly improved version of) |ctopff.xsl|_ to convert `Content MathML <https://www.w3.org/TR/MathML3/chapter4.html>`__ to `Presentation MathML <https://www.w3.org/TR/MathML2/chapter3.html>`__.
 
-.. |ctopff.xsl| replace:: ``ctopff.xsl``
-.. _ctopff.xsl: https://github.com/davidcarlisle/web-xslt/blob/master/ctop/ctopff.xsl
+  .. |web-xsltSoftware| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/res/web-xslt``
+  .. _web-xsltSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/res/web-xslt
+
+  .. |ctopff.xsl| replace:: ``ctopff.xsl``
+  .. _ctopff.xsl: https://github.com/davidcarlisle/web-xslt/blob/master/ctop/ctopff.xsl
 
 - `Zinc <https://github.com/OpenCMISS/zinc>`__ 3.1.2: a library for creating software to interact with and visualise complex finite element models and image-based fields.
 
   - Location: |ZincSoftware|_.
   - Licensing: `MPL v2.0 <https://opensource.org/licenses/MPL-2.0>`__.
 
-.. |ZincSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/Zinc``
-.. _ZincSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Zinc
+  .. |ZincSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/Zinc``
+  .. _ZincSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Zinc
 
 - `zlib <http://www.zlib.net/>`__ 1.2.11: a massively spiffy yet delicately unobtrusive compression library.
 
   - Location: |zlibSoftware|_.
   - Licensing: `Zlib <https://opensource.org/licenses/Zlib>`__.
 
-.. |zlibSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/zlib``
-.. _zlibSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/zlib
+  .. |zlibSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/zlib``
+  .. _zlibSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/zlib
 
 Images
 ------
 
-- `Oxygen <https://packages.ubuntu.com/bionic/oxygen-icon-theme>`__ 5.43.0: icons used in various parts of OpenCOR.
+- `Oxygen <https://packages.ubuntu.com/bionic/oxygen-icon-theme>`__ 5.44.0: icons used in various parts of OpenCOR.
 
   - Location: |OxygenImages|_.
   - Licensing: `LGPL v3.0 <https://opensource.org/licenses/LGPL-3.0>`__.
 
-.. |OxygenImages| replace:: ``[OpenCOR]/res/oxygen``
-.. _OxygenImages: https://github.com/opencor/opencor/tree/master/res/oxygen
+  .. |OxygenImages| replace:: ``[OpenCOR]/res/oxygen``
+  .. _OxygenImages: https://github.com/opencor/opencor/tree/master/res/oxygen
 
 - `Printable world flags <https://www.printableworldflags.com/flag-icon/>`__: flag icons used in our Language menu.
 
   - Location: |FlagsImages|_.
   - Licensing: none.
 
-.. |FlagsImages| replace:: ``[OpenCOR]/res/flags``
-.. _FlagsImages: https://github.com/opencor/opencor/tree/master/res/flags
-
-- `Qt Creator <https://code.qt.io/cgit/qt-creator/qt-creator.git/tree/>`__: icons used in our `Editor <https://github.com/opencor/opencor/tree/master/src/plugins/widget/EditorWidget>`__ widget.
-
-  - Location: |QtCreatorImages|_.
-  - Licensing: `GPL v3.0 <https://opensource.org/licenses/GPL-3.0>`__.
-
-.. |QtCreatorImages| replace:: ``[OpenCOR]/src/plugins/widget/EditorWidget/res/qtCreator``
-.. _QtCreatorImages: https://github.com/opencor/opencor/tree/master/src/plugins/widget/EditorWidget/res/qtCreator
+  .. |FlagsImages| replace:: ``[OpenCOR]/res/flags``
+  .. _FlagsImages: https://github.com/opencor/opencor/tree/master/res/flags
