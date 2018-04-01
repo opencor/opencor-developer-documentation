@@ -347,7 +347,7 @@ Some extra work is needed to get our plugin to do what it is supposed to be doin
 
    namespace Ui {
        class SampleWindowWindow;
-   }
+   }   // namespace Ui
 
    //==============================================================================
 
@@ -362,13 +362,13 @@ Some extra work is needed to get our plugin to do what it is supposed to be doin
 
    public:
        explicit SampleWindowWindow(QWidget *pParent);
-       ~SampleWindowWindow();
+       ~SampleWindowWindow() override;
 
    private:
        Ui::SampleWindowWindow *mGui;
 
    private slots:
-       void updateSum();
+       void updateSum(int pValue = 0);
    };
 
    //==============================================================================
@@ -415,10 +415,10 @@ The implementation of ``SampleWindowWindow`` can be found in |samplewindowwindow
        // A couple of connections to update our sum whenever one of the value of
        // one of our numbers is updated
 
-       connect(mGui->nb1DoubleSpinBox, SIGNAL(valueChanged(double)),
-               this, SLOT(updateSum()));
-       connect(mGui->nb2DoubleSpinBox, SIGNAL(valueChanged(double)),
-               this, SLOT(updateSum()));
+       connect(mGui->nb1DoubleSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged),
+               this, &SampleWindowWindow::updateSum);
+       connect(mGui->nb2DoubleSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged),
+               this, &SampleWindowWindow::updateSum);
 
        // Initialise our sum
 
@@ -436,8 +436,10 @@ The implementation of ``SampleWindowWindow`` can be found in |samplewindowwindow
 
    //==============================================================================
 
-   void SampleWindowWindow::updateSum()
+   void SampleWindowWindow::updateSum(int pValue)
    {
+       Q_UNUSED(pValue);
+
        // Update our sum
 
        mGui->sumLabel->setText(QString::number(Sample::add(mGui->nb1DoubleSpinBox->value(), mGui->nb2DoubleSpinBox->value())));

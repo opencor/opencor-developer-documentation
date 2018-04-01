@@ -514,7 +514,7 @@ Some extra work is needed to get our plugin to do what it is supposed to be doin
 
    namespace Ui {
        class SampleViewWidget;
-   }
+   }   // namespace Ui
 
    //==============================================================================
 
@@ -529,11 +529,11 @@ Some extra work is needed to get our plugin to do what it is supposed to be doin
 
    public:
        explicit SampleViewWidget(QWidget *pParent);
-       ~SampleViewWidget();
+       ~SampleViewWidget() override;
 
-       virtual void retranslateUi();
+       void retranslateUi() override;
 
-       virtual QWidget * widget(const QString &pFileName);
+       QWidget * widget(const QString &pFileName) override;
 
        void update(const QString &pFileName);
 

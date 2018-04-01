@@ -318,8 +318,8 @@ Finally, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src
 
        // A connection to handle our Add Two Numbers action
 
-       connect(mAddTwoNumbersAction, SIGNAL(triggered()),
-               this, SLOT(addTwoNumbers()));
+       connect(mAddTwoNumbersAction, &QAction::triggered,
+               this, &SampleToolsPlugin::addTwoNumbers);
    }
 
    //==============================================================================

@@ -205,7 +205,7 @@ It is declared in |sampleutilities.h|_:
 
    //==============================================================================
 
-   double SAMPLE_EXPORT add(const double &pNb1, const double &pNb2);
+   double SAMPLE_EXPORT add(double pNb1, double pNb2);
 
    //==============================================================================
 
@@ -235,7 +235,7 @@ The implementation our plugin's ``add()`` function can be found in |sampleutilit
 
    //==============================================================================
 
-   double add(const double &pNb1, const double &pNb2)
+   double add(double pNb1, double pNb2)
    {
        // Return the sum of the two given numbers
 
