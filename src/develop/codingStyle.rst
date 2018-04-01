@@ -732,15 +732,33 @@ OpenCOR specific
   .. code-block:: c++
      :class: good
 
-     int function(const int &pVar)
+     void function(const QString &pVar)
      {
-         return 3*pVar;
+         ...
      }
 
   .. code-block:: c++
      :class: bad
 
+     void function(QString pVar)
+     {
+         ...
+     }
+
+  unless it is a built-in type:
+
+  .. code-block:: c++
+     :class: good
+
      void function(int pVar)
      {
-         return 3*pVar;
+         ...
+     }
+
+  .. code-block:: c++
+     :class: bad
+
+     void function(const int &pVar)
+     {
+         ...
      }
