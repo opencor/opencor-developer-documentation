@@ -8,6 +8,18 @@ Every new release of OpenCOR (be it a snapshot or an official release) should pa
 
 **Note:** please `let us know <http://www.opencor.ws/contactUs.html>`__ if you think a particular functional test is missing from the list above.
 
+Command line
+------------
+
+.. code-block:: bash
+
+   ./OpenCOR -c CellMLTextView::import models/noble_model_1962.cellml
+   ./OpenCOR -c CellMLTools::export https://models.physiomeproject.org/w/andre/HH/rawfile/957c2190e1eed47d7634613250bc274dc836b826/experiments/periodic-stimulus.xml cellml_1_0
+   ./OpenCOR -c CellMLTools::export models/van_der_pol_model_1928.cellml formats/C.xml
+   ./OpenCOR -c CellMLTools::export models/van_der_pol_model_1928.cellml formats/F77.xml
+   ./OpenCOR -c CellMLTools::export models/van_der_pol_model_1928.cellml formats/MATLAB.xml
+   ./OpenCOR -c CellMLTools::export models/van_der_pol_model_1928.cellml formats/Python.xml
+
 Save / reload a file
 --------------------
 
