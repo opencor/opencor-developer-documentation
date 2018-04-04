@@ -368,7 +368,7 @@ Some extra work is needed to get our plugin to do what it is supposed to be doin
        Ui::SampleWindowWindow *mGui;
 
    private slots:
-       void updateSum(int pValue = 0);
+       void updateSum();
    };
 
    //==============================================================================
@@ -436,10 +436,8 @@ The implementation of ``SampleWindowWindow`` can be found in |samplewindowwindow
 
    //==============================================================================
 
-   void SampleWindowWindow::updateSum(int pValue)
+   void SampleWindowWindow::updateSum()
    {
-       Q_UNUSED(pValue);
-
        // Update our sum
 
        mGui->sumLabel->setText(QString::number(Sample::add(mGui->nb1DoubleSpinBox->value(), mGui->nb2DoubleSpinBox->value())));
