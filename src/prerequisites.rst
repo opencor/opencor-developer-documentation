@@ -14,9 +14,9 @@ The following tools are required in order to develop, build , test, run and pack
 - C++ toolchain: a set of C++ tools.
   The toolchain is different depending on the platform you are using:
 
-  - **Windows:** `Visual Studio Community 2015 with Update 3 <https://www.visualstudio.com/downloads/download-visual-studio-vs>`__;
+  - **Windows:** `Visual Studio Community 2015 with Update 3 <https://www.visualstudio.com/downloads/download-visual-studio-vs>`__ (including the `Debugging Tools for Windows <https://developer.microsoft.com/windows/downloads/windows-10-sdk>`__);
   - **Linux:** GCC/G++ 5.x (``g++-5`` package), as well as OpenGL and GStreamer (``mesa-common-dev`` and ``libgstreamer-plugins-base0.10-0`` packages, respectively) on Ubuntu; and
-  - **macOS:** `Xcode <https://developer.apple.com/xcode/>`__ 9.3 (including its `command line tools <https://developer.apple.com/downloads/?q=Command%20Line%20Tools>`__).
+  - **macOS:** `Xcode <https://developer.apple.com/xcode/>`__ 9.3 (including the `Command Line Tools <https://developer.apple.com/downloads/?q=Command%20Line%20Tools>`__).
 
 - `Qt <https://www.qt.io/>`__ 5.9.4 LTS: a cross-platform application and UI framework (`Qt Creator <https://www.qt.io/ide/>`__ is its supporting IDE):
 
