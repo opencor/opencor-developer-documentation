@@ -187,7 +187,7 @@ Software
 Images
 ------
 
-- `Oxygen <https://packages.ubuntu.com/bionic/oxygen-icon-theme>`__ 5.44.0: icons used in various parts of OpenCOR.
+- `Oxygen <https://packages.ubuntu.com/cosmic/oxygen-icon-theme>`__ 5.44.0: icons used in various parts of OpenCOR.
 
   - Location: |OxygenImages|_.
   - Licensing: `LGPL v3.0 <https://opensource.org/licenses/LGPL-3.0>`__.
