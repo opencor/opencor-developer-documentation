@@ -45,18 +45,15 @@ All changes to the source code must be referenced in the list of `issues <https:
 Continuous integration
 ----------------------
 
-Whenever something is pushed to the `master branch <https://github.com/opencor/opencor/tree/master>`__, OpenCOR gets automatically built and tested on `Travis CI <https://travis-ci.org/opencor/opencor>`__'s `Ubuntu <https://docs.travis-ci.com/user/ci-environment/>`__ and `macOS <https://docs.travis-ci.com/user/osx-ci-environment/>`__ machines.
-That is, unless ``[ci skip]`` has been added to a commit message, although a commit that closes an issue should always result in OpenCOR being built and tested on `Travis CI <https://travis-ci.org/opencor/opencor>`__.
+Whenever something is pushed to the `Git repository <https://github.com/opencor/opencor>`__, OpenCOR gets automatically built and tested on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__, `Linux <https://en.wikipedia.org/wiki/Linux>`__ and `macOS <https://en.wikipedia.org/wiki/MacOS>`__, through `Jenkins <http://autotest.bioeng.auckland.ac.nz/jenkins/view/OpenCOR/>`__ at the `Auckland Bioengineering Institute <https://www.auckland.ac.nz/en/abi.html>`__.
 
-However, it is not recommended to work directly on the `master branch <https://github.com/opencor/opencor/tree/master>`__.
-Instead, anyone wanting to contribute to OpenCOR should first fork its `Git repository <https://github.com/opencor/opencor>`__.
+Although possible, direct work on the `master branch <https://github.com/opencor/opencor/tree/master>`__ is not allowed.
+Instead, anyone wanting to contribute to OpenCOR should first fork the `Git repository <https://github.com/opencor/opencor>`__.
 Then, a new branch called ``issueXXX`` should be created for issue ``#XXX``.
-It will contain the work associated with issue ``XXX``.
-The work completed, a pull request should be made.
-This pull request will trigger OpenCOR to be built and tested on `Travis CI <https://travis-ci.org/opencor/opencor>`__.
+That branch should contain all the work associated with issue ``XXX``.
+Upon work completion, a pull request should be made.
+This pull request will trigger OpenCOR to be built and tested on `Jenkins <http://autotest.bioeng.auckland.ac.nz/jenkins/view/OpenCOR/>`__.
 Assuming it all goes fine, it will then be up to the `project manager <http://www.opencor.ws/team.html>`__ to merge the work.
-
-Upon merging a pull request, OpenCOR will also be built and tested through `Jenkins <http://autotest.bioeng.auckland.ac.nz/jenkins/view/OpenCOR/>`__ at the `Auckland Bioengineering Institute <https://www.auckland.ac.nz/en/abi.html>`__, and this on `Windows <http://autotest.bioeng.auckland.ac.nz/jenkins/job/OpenCOR_Windows/>`__, `Linux <http://autotest.bioeng.auckland.ac.nz/jenkins/job/OpenCOR_Linux/>`__ and `macOS <http://autotest.bioeng.auckland.ac.nz/jenkins/job/OpenCOR_macOS/>`__.
 
 Additional information
 ----------------------

@@ -58,10 +58,7 @@ Here are also some direct links to OpenCOR's:
 - `Git repository <https://github.com/opencor/opencor>`__
 - `Latest commits <https://github.com/opencor/opencor/commits>`__
 - `Current bugs, feature requests, etc. <https://github.com/opencor/opencor/issues>`__
-- `Continuous integration <https://travis-ci.org/opencor/opencor>`__: |TravisCI|_
-
-.. |TravisCI| image:: https://travis-ci.org/opencor/opencor.svg?branch=master
-.. _TravisCI: https://travis-ci.org/opencor/opencor
+- `Continuous integration <http://autotest.bioeng.auckland.ac.nz/jenkins/view/OpenCOR/>`__
 
 You might also be interested in our `published article <https://dx.doi.org/10.3389/fphys.2015.00026>`__.
 
