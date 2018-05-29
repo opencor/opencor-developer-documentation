@@ -33,7 +33,7 @@ APIs
   .. |NuMLAPI| replace:: ``[OpenCOR]/src/plugins/api/NuMLAPI``
   .. _NuMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/NuMLAPI
 
-- `libSBML <http://sbml.org/Software/libSBML/>`__ 5.16.0: a programming library to help you read, write, manipulate, translate and validate `SBML <http://www.sbml.org/>`__ files and data streams.
+- `libSBML <http://sbml.org/Software/libSBML/>`__ 5.17.0: a programming library to help you read, write, manipulate, translate and validate `SBML <http://www.sbml.org/>`__ files and data streams.
 
   - Location: |SBMLAPI|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
