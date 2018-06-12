@@ -18,7 +18,7 @@ The following tools are required in order to develop, build , test, run and pack
   - **Linux:** GCC/G++ 5.x or later and OpenGL (``g++-5``/``g++`` and ``mesa-common-dev`` packages, respectively) on Ubuntu 16.04/18.04 LTS, as well as GStreamer (``libgstreamer-plugins-base0.10-0`` package) on Ubuntu 16.04 LTS; and
   - **macOS:** `Xcode <https://developer.apple.com/xcode/>`__ 9.4 (including the `Command Line Tools <https://developer.apple.com/downloads/?q=Command%20Line%20Tools>`__).
 
-- `Qt <https://www.qt.io/>`__ 5.9.6 LTS: a cross-platform application and UI framework (`Qt Creator <https://www.qt.io/ide/>`__ is its supporting IDE):
+- `Qt <https://www.qt.io/>`__ 5.9.5 LTS: a cross-platform application and UI framework (`Qt Creator <https://www.qt.io/ide/>`__ is its supporting IDE):
 
   - |Windows|_;
   - |Linux|_; and
@@ -38,6 +38,6 @@ The following tools are required in order to develop, build , test, run and pack
 
 Finally, you will need to update your ``PATH`` environment variable by adding the following path(s):
 
-- **Windows:** ``C:\Program Files\Git\bin``, ``C:\Program Files\CMake\bin``, ``C:\Qt\5.9.6\msvc2015_64\bin`` and ``C:\Qt\Tools\QtCreator\bin``;
-- **Linux:** ``/opt/Qt/5.9.6/gcc_64/bin`` in ``/etc/environment`` on Ubuntu; and
-- **macOS:** ``/Applications/Qt/5.9.6/clang_64/bin`` in ``/etc/profile``.
+- **Windows:** ``C:\Program Files\Git\bin``, ``C:\Program Files\CMake\bin``, ``C:\Qt\5.9.5\msvc2015_64\bin`` and ``C:\Qt\Tools\QtCreator\bin``;
+- **Linux:** ``/opt/Qt/5.9.5/gcc_64/bin`` in ``/etc/environment`` on Ubuntu; and
+- **macOS:** ``/Applications/Qt/5.9.5/clang_64/bin`` in ``/etc/profile``.
