@@ -27,17 +27,19 @@ There are only two exceptions to this rule: |src/main.cpp|_ and |src/windows/mai
 Issues
 ------
 
-All changes to the source code must be referenced in the list of `issues <https://github.com/opencor/opencor/issues>`__ using `labels <https://github.com/opencor/opencor/labels>`__. There are three types of labels:
+All changes to the source code must be referenced in the list of `issues <https://github.com/opencor/opencor/issues>`__ using `labels <https://github.com/opencor/opencor/labels>`__. There are four types of labels:
 
-- **Version:** they are used to request a |feature| for or an |improvement| to a future version of OpenCOR, or to report a |bug| with the current official version of OpenCOR.
-- **Development:** they are used to specify a |task| that needs to be carried out (in preparation for the next version of OpenCOR) or to report a |regression| issue with the current development version of OpenCOR.
-- **Platform:** they are used to specify the platform(s) (|windows|, |linux| and/or |macos|) affected by a |bug|, |task| or |regression| issue.
+- **Version:** it is used to request a |feature| for or an |improvement| to a future version of OpenCOR, or to report a |bug| with the current official version of OpenCOR.
+- **Development:** it is used to specify a |task| that needs to be carried out (in preparation for the next version of OpenCOR) or to report a |regression| issue with the current development version of OpenCOR.
+- **Binding:** it is used to specify the binding (|python|) associated with a |bug|, |task| or |regression| issue.
+- **Platform:** it is used to specify the platform(s) (|windows|, |linux| and/or |macos|) associated with a |bug|, |task| or |regression| issue.
 
 .. |bug| image:: pics/bug.svg
 .. |feature| image:: pics/feature.svg
 .. |improvement| image:: pics/improvement.svg
 .. |linux| image:: pics/linux.svg
 .. |macos| image:: pics/macos.svg
+.. |python| image:: pics/python.svg
 .. |regression| image:: pics/regression.svg
 .. |task| image:: pics/task.svg
 .. |windows| image:: pics/windows.svg
