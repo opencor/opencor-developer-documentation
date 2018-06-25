@@ -110,7 +110,7 @@ Software
   .. |OpenSSLSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/OpenSSL``
   .. _OpenSSLSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OpenSSL
 
-- `QScintilla <https://riverbankcomputing.com/software/qscintilla/intro>`__ 2.10.4: a `Qt <https://www.qt.io/>`__ port of the `Scintilla <http://www.scintilla.org/>`__ editing component.
+- `QScintilla <https://riverbankcomputing.com/software/qscintilla/intro>`__ 2.10.6: a `Qt <https://www.qt.io/>`__ port of the `Scintilla <http://www.scintilla.org/>`__ editing component.
 
   - Location: |QScintillaSoftware|_.
   - Licensing: `GPL v3.0 <https://opensource.org/licenses/GPL-3.0>`__.
