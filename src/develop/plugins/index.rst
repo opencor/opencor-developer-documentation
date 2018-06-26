@@ -31,7 +31,6 @@ All plugins come under a given category.
 Currently supported categories are:
 
 - **Analysis**: plugins to analyse files.
-- |APICategory|_: plugins to access various APIs.
 - |DataStoreCategory|_: plugins to store and manipulate data.
 - |EditingCategory|_: plugins to edit files.
 - |MiscellaneousCategory|_: plugins that do not fit in any other category.
@@ -39,14 +38,11 @@ Currently supported categories are:
 - |SampleCategory|_: plugins that illustrate various plugin-related aspects.
 - |SimulationCategory|_: plugins to simulate files.
 - |SolverCategory|_: plugins to access various solvers.
-- |SupportCategory|_: plugins to support various third-party libraries and APIs.
+- |SupportCategory|_: plugins to support various third-party libraries.
 - |TestCategory|_: test plugins.
 - |ThirdPartyCategory|_: plugins to access various third-party libraries.
 - |ToolsCategory|_: plugins to access various tools.
 - |WidgetCategory|_: plugins to access various ad hoc widgets.
-
-.. |APICategory| replace:: **API**
-.. _APICategory: https://github.com/opencor/opencor/tree/master/src/plugins/api/
 
 .. |DataStoreCategory| replace:: **Data Store**
 .. _DataStoreCategory: https://github.com/opencor/opencor/tree/master/src/plugins/dataStore/

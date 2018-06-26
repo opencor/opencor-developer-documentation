@@ -33,12 +33,6 @@ Files are organised as follows:
    │   └─ QtWebKit              // QtWebKit
    ├─ misc                      // Files that do not fit anywhere else
    ├─ plugins                   // Plugins supported by OpenCOR
-   │   ├─ api                   // Plugins to access various APIs
-   │   │   ├─ BioSignalMLAPI    // The BioSignalML API as a plugin
-   │   │   ├─ CellMLAPI         // The CellML API as a plugin
-   │   │   ├─ NuMLAPI           // libNuML as a plugin
-   │   │   ├─ SBMLAPI           // libSBML as a plugin
-   │   │   └─ SEDMLAPI          // libSEDML as a plugin
    │   ├─ dataStore             // Plugins to store and manipulate data
    │   ├─ editing               // Plugins to edit files
    │   ├─ miscellaneous         // Plugins for various things
@@ -46,10 +40,15 @@ Files are organised as follows:
    │   ├─ sample                // Sample plugins
    │   ├─ simulation            // Plugins to simulate files
    │   ├─ solver                // Plugins to access various solvers
-   │   ├─ support               // Plugins to support various third-party libraries and APIs
+   │   ├─ support               // Plugins to support various third-party libraries
    │   ├─ test                  // Test plugins
    │   ├─ thirdParty            // Plugins to access various third-party libraries
+   │   │   ├─ BioSignalML       // BioSignalML as a plugin
+   │   │   ├─ CellMLAPI         // The CellML API as a plugin
    │   │   ├─ libgit2           // libgit2 as a plugin
+   │   │   ├─ libNuML           // libNuML as a plugin
+   │   │   ├─ libSBML           // libSBML as a plugin
+   │   │   ├─ libSEDML          // libSEDML as a plugin
    │   │   ├─ LibXDiff          // LibXDiff as a plugin
    │   │   ├─ LLVMClang         // LLVM+Clang as a plugin
    │   │   ├─ OAuth             // OAuth 2.0 for Qt as a plugin
