@@ -4,53 +4,23 @@
  Third-party libraries
 =======================
 
-OpenCOR uses various APIs, as well as software- and image-based third-party libraries, all of which are listed below, together with the type of license(s) under which they are released, if any.
+OpenCOR uses various third-party libraries, all of which are listed below, together with the type of license(s) under which they are released, if any.
 
-APIs
-----
+- BioSignalML: a library for reading and writing BioSignalML documents.
 
-- libBioSignalML: a library for reading and writing BioSignalML documents.
-
-  - Location: |BioSignalMLAPI|_.
+  - Location: |BioSignalML|_.
   - Licensing: none.
 
-  .. |BioSignalMLAPI| replace:: ``[OpenCOR]/src/plugins/api/BioSignalMLAPI``
-  .. _BioSignalMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/BioSignalMLAPI
+  .. |BioSignalML| replace:: ``[OpenCOR]/src/plugins/thirdParty/BioSignalML``
+  .. _BioSignalML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/BioSignalML
 
-- `CellML API <https://github.com/cellmlapi/cellml-api/>`__ (from `opencor/cellml-api <https://github.com/opencor/cellml-api>`__ on GitHub): an interface to manipulate and process `CellML <https://www.cellml.org/>`__ documents.
+- `CellML API <https://github.com/cellmlapi/cellml-api/>`__: an interface to manipulate and process `CellML <https://www.cellml.org/>`__ documents.
 
   - Location: |CellMLAPI|_.
   - Licensing: `MPL v1.1 <https://opensource.org/licenses/MPL-1.1>`__, `GPL v2.0 <https://opensource.org/licenses/GPL-2.0>`__ (or later) and `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
 
-  .. |CellMLAPI| replace:: ``[OpenCOR]/src/plugins/api/CellMLAPI``
-  .. _CellMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/CellMLAPI
-
-- `libNuML <https://github.com/NuML/NuML/>`__ 1.1.1: a library for reading and writing `NuML <https://github.com/NuML/NuML/>`__ models.
-
-  - Location: |NuMLAPI|_.
-  - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
-
-  .. |NuMLAPI| replace:: ``[OpenCOR]/src/plugins/api/NuMLAPI``
-  .. _NuMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/NuMLAPI
-
-- `libSBML <http://sbml.org/Software/libSBML/>`__ 5.17.0: a programming library to help you read, write, manipulate, translate and validate `SBML <http://www.sbml.org/>`__ files and data streams.
-
-  - Location: |SBMLAPI|_.
-  - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
-
-  .. |SBMLAPI| replace:: ``[OpenCOR]/src/plugins/api/SBMLAPI``
-  .. _SBMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/SBMLAPI
-
-- `libSEDML <https://github.com/fbergmann/libSEDML/>`__ 0.4.3: a library for reading and writing `SED-ML <http://www.sed-ml.org/>`__ models.
-
-  - Location: |SEDMLAPI|_.
-  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
-
-  .. |SEDMLAPI| replace:: ``[OpenCOR]/src/plugins/api/SEDMLAPI``
-  .. _SEDMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/api/SEDMLAPI
-
-Software
---------
+  .. |CellMLAPI| replace:: ``[OpenCOR]/src/plugins/thirdParty/CellMLAPI``
+  .. _CellMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/CellMLAPI
 
 - `diff-match-patch <https://code.google.com/p/google-diff-match-patch/>`__: a set of libraries that offer robust algorithms to perform the operations required for synchronising plain text.
 
@@ -77,6 +47,30 @@ Software
 
   .. |libgit2Software| replace:: ``[OpenCOR]/src/plugins/thirdParty/libgit2``
   .. _libgit2Software: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libgit2
+
+- `libNuML <https://github.com/NuML/NuML/>`__ 1.1.1: a library for reading and writing `NuML <https://github.com/NuML/NuML/>`__ models.
+
+  - Location: |libNuML|_.
+  - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
+
+  .. |libNuML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libNuML``
+  .. _libNuML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libNuML
+
+- `libSBML <http://sbml.org/Software/libSBML/>`__ 5.17.0: a programming library to help you read, write, manipulate, translate and validate `SBML <http://www.sbml.org/>`__ files and data streams.
+
+  - Location: |libSBML|_.
+  - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
+
+  .. |libSBML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libSBML``
+  .. _libSBML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libSBML
+
+- `libSEDML <https://github.com/fbergmann/libSEDML/>`__ 0.4.3: a library for reading and writing `SED-ML <http://www.sed-ml.org/>`__ models.
+
+  - Location: |libSEDML|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+  .. |libSEDML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libSEDML``
+  .. _libSEDML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libSEDML
 
 - `LibXDiff <http://www.xmailserver.org/xdiff-lib.html>`__ 0.23: a library that implements basic and yet complete functionalities to create file differences/patches to both binary and text files.
 
@@ -109,6 +103,22 @@ Software
 
   .. |OpenSSLSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/OpenSSL``
   .. _OpenSSLSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OpenSSL
+
+- `Oxygen <https://packages.ubuntu.com/cosmic/oxygen-icon-theme>`__ 5.46.0: icons used in various parts of OpenCOR.
+
+  - Location: |OxygenImages|_.
+  - Licensing: `LGPL v3.0 <https://opensource.org/licenses/LGPL-3.0>`__.
+
+  .. |OxygenImages| replace:: ``[OpenCOR]/res/oxygen``
+  .. _OxygenImages: https://github.com/opencor/opencor/tree/master/res/oxygen
+
+- `Printable world flags <https://www.printableworldflags.com/flag-icon/>`__: flag icons used in our Language menu.
+
+  - Location: |FlagsImages|_.
+  - Licensing: none.
+
+  .. |FlagsImages| replace:: ``[OpenCOR]/res/flags``
+  .. _FlagsImages: https://github.com/opencor/opencor/tree/master/res/flags
 
 - `QScintilla <https://riverbankcomputing.com/software/qscintilla/intro>`__ 2.10.6: a `Qt <https://www.qt.io/>`__ port of the `Scintilla <http://www.scintilla.org/>`__ editing component.
 
@@ -183,22 +193,3 @@ Software
 
   .. |zlibSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/zlib``
   .. _zlibSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/zlib
-
-Images
-------
-
-- `Oxygen <https://packages.ubuntu.com/cosmic/oxygen-icon-theme>`__ 5.46.0: icons used in various parts of OpenCOR.
-
-  - Location: |OxygenImages|_.
-  - Licensing: `LGPL v3.0 <https://opensource.org/licenses/LGPL-3.0>`__.
-
-  .. |OxygenImages| replace:: ``[OpenCOR]/res/oxygen``
-  .. _OxygenImages: https://github.com/opencor/opencor/tree/master/res/oxygen
-
-- `Printable world flags <https://www.printableworldflags.com/flag-icon/>`__: flag icons used in our Language menu.
-
-  - Location: |FlagsImages|_.
-  - Licensing: none.
-
-  .. |FlagsImages| replace:: ``[OpenCOR]/res/flags``
-  .. _FlagsImages: https://github.com/opencor/opencor/tree/master/res/flags
