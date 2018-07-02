@@ -8,7 +8,7 @@ project(DeveloperDocumentation
 
 # Make sure that Sphinx is available and that it is at least version 1.4
 
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
 find_package(Sphinx REQUIRED)
 
@@ -35,7 +35,7 @@ include(FetchContent)
 
 FetchContent_Declare(sphinx-theme
     GIT_REPOSITORY https://github.com/opencor/sphinx-theme
-    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/theme
+    SOURCE_DIR ${CMAKE_SOURCE_DIR}/theme
 )
 
 FetchContent_Populate(sphinx-theme)
@@ -44,13 +44,13 @@ FetchContent_Populate(sphinx-theme)
 
 string(TIMESTAMP SPHINX_YEAR "%Y")
 
-configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/conf.py.in"
-               "${CMAKE_CURRENT_BINARY_DIR}/conf.py"
+configure_file("${CMAKE_SOURCE_DIR}/src/conf.py.in"
+               "${CMAKE_BINARY_DIR}/conf.py"
                @ONLY)
 
 add_custom_target(Sphinx ALL
                   ${SPHINX_EXECUTABLE} -q -b html
-                                       -c "${CMAKE_CURRENT_BINARY_DIR}"
-                                       "${CMAKE_CURRENT_SOURCE_DIR}/src"
-                                       "${CMAKE_CURRENT_BINARY_DIR}/html"
+                                       -c "${CMAKE_BINARY_DIR}"
+                                       "${CMAKE_SOURCE_DIR}/src"
+                                       "${CMAKE_BINARY_DIR}/html"
                   COMMENT "Building the developer documentation for OpenCOR")
