@@ -29,6 +29,17 @@ if(SPHINX_VERSION VERSION_LESS 1.4)
     message(FATAL_ERROR "Sphinx 1.4 or later is required...")
 endif()
 
+# Retrieve the theme repository
+
+include(FetchContent)
+
+FetchContent_Declare(sphinx-theme
+    GIT_REPOSITORY https://github.com/opencor/sphinx-theme
+    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/theme
+)
+
+FetchContent_Populate(sphinx-theme)
+
 # Build the developer documentation for OpenCOR
 
 string(TIMESTAMP SPHINX_YEAR "%Y")
