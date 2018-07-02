@@ -51,7 +51,6 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/conf.py.in"
 add_custom_target(Sphinx ALL
                   ${SPHINX_EXECUTABLE} -q -b html
                                        -c "${CMAKE_CURRENT_BINARY_DIR}"
-                                       -d "${CMAKE_CURRENT_BINARY_DIR}/doctrees"
                                        "${CMAKE_CURRENT_SOURCE_DIR}/src"
                                        "${CMAKE_CURRENT_BINARY_DIR}/html"
                   COMMENT "Building the developer documentation for OpenCOR")
