@@ -7,7 +7,7 @@
 The following tools are required in order to develop, build , test, run and package OpenCOR:
 
 - `Git <https://git-scm.com/>`__: a distributed version control system;
-- `CMake <https://www.cmake.org/>`__ 3.3 or later: a cross-platform build system;
+- `CMake <https://www.cmake.org/>`__ 3.11 or later: a cross-platform build system;
 - `Ninja <https://ninja-build.org/>`__ 1.8.2 or later (optional): a small build system with a focus on speed;
 - `clcache <https://github.com/frerich/clcache>`__ (optional and Windows only): a compiler cache;
 - `ccache <https://ccache.samba.org/>`__ (optional and Linux/macOS only): a compiler cache;
