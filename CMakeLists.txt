@@ -35,7 +35,7 @@ include(FetchContent)
 
 FetchContent_Declare(sphinx-theme
     GIT_REPOSITORY https://github.com/opencor/sphinx-theme
-    SOURCE_DIR ${CMAKE_SOURCE_DIR}/theme
+    SOURCE_DIR ${CMAKE_BINARY_DIR}/theme
 )
 
 FetchContent_Populate(sphinx-theme)
