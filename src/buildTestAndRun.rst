@@ -5,7 +5,7 @@
 =====================
 
 OpenCOR (and its corresponding :ref:`tests <develop_tests>`) can be built, tested and run either from the command line or using `Qt Creator <https://www.qt.io/ide/>`__.
-By default, `Ninja <https://ninja-build.org/>`__ is used to build OpenCOR, but if it is not available on your system, then `JOM <https://wiki.qt.io/Jom>`__ (on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__) or `Make <https://www.gnu.org/software/make/>`__ (on `Linux <https://en.wikipedia.org/wiki/Linux>`__ / `macOS <https://en.wikipedia.org/wiki/MacOS>`__) will be used instead.
+By default, `Ninja <https://ninja-build.org/>`__ is used to build OpenCOR, but if it is not available, then `JOM <https://wiki.qt.io/Jom>`__ (on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__) or `Make <https://www.gnu.org/software/make/>`__ (on `Linux <https://en.wikipedia.org/wiki/Linux>`__ / `macOS <https://en.wikipedia.org/wiki/MacOS>`__) will be used.
 
 .. _buildTestAndRunFromTheCommandLine:
 
@@ -17,8 +17,8 @@ Various batch / VBScript files (``.bat`` \| ``.vbs``) and shell scripts are avai
 - |cleanScript|_\[|cleanallScript|_][|cleanBatch|_]: cleans (all) the OpenCOR environment;
 - |makeScript|_\[|makeBatch|_]: compiles and links everything that is required to get a release version of OpenCOR;
 
-  **Note:** if you use ``make`` and don't have `Ninja <https://ninja-build.org/>`__ installed on your system, then OpenCOR will, by default, be compiled sequentially.
-  You can, however, specify a maximum number of jobs (``n``) to be run simultaneously by calling ``make`` with ``-j [n]``.
+  **Note:** if you use ``make``, then OpenCOR will, by default, be compiled sequentially.
+  You can, however, specify a maximum number of jobs (``n``) to be run simultaneously by calling ``make -j [n]``.
   If no ``n`` value is provided, then as many jobs as possible will be run simultaneously.
 
 - |maketestsScript|_\[|maketestsBatch|_]: builds a release version of OpenCOR and its tests;
@@ -26,7 +26,7 @@ Various batch / VBScript files (``.bat`` \| ``.vbs``) and shell scripts are avai
 
   **Note:** on Windows, if you were to run OpenCOR from a console window by entering ``run``, then ``run.bat`` would be executed (rather than ``run.vbs``), offering you the opportunity to use OpenCOR as a `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ application.
   However, if you were to run OpenCOR by double clicking ``run.bat`` in, say, Windows Explorer, then a console window would quickly appear and disappear.
-  To avoid this, use ``run.vbs`` instead.
+  To avoid this, use ``run.vbs``.
 
 - |runtestsScript|_\[|runtestsBatch|_]: runs OpenCOR's tests.
 
