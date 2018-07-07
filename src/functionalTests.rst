@@ -4,9 +4,7 @@
  Functional tests
 ==================
 
-Every new release of OpenCOR (be it a snapshot or an official release) should pass the following functional tests.
-
-**Note:** please `let us know <http://www.opencor.ws/contactUs.html>`__ if you think a particular functional test is missing from the list above.
+The following functional tests should pass before a new official version of OpenCOR can be released, and this on all supported platforms.
 
 Command line
 ------------
@@ -110,6 +108,13 @@ SED-ML files
 
 - |noble_1962_local.sedml|_
 - |noble_1962_remote.sedml|_
+
+.. |noble_1962_local.sedml| replace:: ``[OpenCOR]/models/tests/sedml/noble_1962_local.sedml``
+.. _noble_1962_local.sedml: https://github.com/opencor/opencor/blob/master/models/tests/sedml/noble_1962_local.sedml
+
+.. |noble_1962_remote.sedml| replace:: ``[OpenCOR]/models/tests/sedml/noble_1962_remote.sedml``
+.. _noble_1962_remote.sedml: https://github.com/opencor/opencor/blob/master/models/tests/sedml/noble_1962_remote.sedml
+
 - |noble_1962_gL_time.sedml|_
 - |noble_1962_iK_time.sedml|_
 - |noble_1962_iK_V.sedml|_
@@ -119,12 +124,6 @@ SED-ML files
 - |noble_1962_time_V.sedml|_
 - |noble_1962_V_iK.sedml|_
 - |noble_1962_V_time.sedml|_
-
-.. |noble_1962_local.sedml| replace:: ``[OpenCOR]/models/tests/sedml/noble_1962_local.sedml``
-.. _noble_1962_local.sedml: https://github.com/opencor/opencor/blob/master/models/tests/sedml/noble_1962_local.sedml
-
-.. |noble_1962_remote.sedml| replace:: ``[OpenCOR]/models/tests/sedml/noble_1962_remote.sedml``
-.. _noble_1962_remote.sedml: https://github.com/opencor/opencor/blob/master/models/tests/sedml/noble_1962_remote.sedml
 
 .. |noble_1962_gL_time.sedml| replace:: ``[OpenCOR]/models/tests/sedml/noble_1962_gL_time.sedml``
 .. _noble_1962_gL_time.sedml: https://github.com/opencor/opencor/blob/master/models/tests/sedml/noble_1962_gL_time.sedml
