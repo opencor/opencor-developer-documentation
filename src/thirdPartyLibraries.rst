@@ -40,7 +40,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |jQuerySoftware| replace:: ``[OpenCOR]/doc/3rdparty/jQuery``
   .. _jQuerySoftware: https://github.com/opencor/opencor/tree/master/doc/3rdparty/jQuery
 
-- `libgit2 <https://libgit2.github.com/>`__ 0.27.2: a portable, pure C implementation of the `Git <https://git-scm.com/>`__ core methods provided as a re-entrant linkable library with a solid API.
+- `libgit2 <https://libgit2.github.com/>`__ 0.27.3: a portable, pure C implementation of the `Git <https://git-scm.com/>`__ core methods provided as a re-entrant linkable library with a solid API.
 
   - Location: |libgit2Software|_.
   - Licensing: `GPL v2.0 <https://opensource.org/licenses/GPL-2.0>`__ with linking exception.
