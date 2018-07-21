@@ -4,8 +4,8 @@
  Coding style
 ==============
 
-This page contains various rules, which anyone working on OpenCOR should (try to) respect.
-These rules were taken (paraphrased, if not simply copied/pasted) from the `Qt Coding Style <https://wiki.qt.io/Qt_Coding_Style>`__ document.
+This page contains various rules, which anyone working on OpenCOR should respect.
+These rules were taken (paraphrased, if not simply copied/pasted) from the `Coding Conventions <https://wiki.qt.io/Coding_Conventions>`__ document.
 
 General
 -------
@@ -318,19 +318,6 @@ Formatting
     .. code-block:: c++
        :class: good
 
-       static void foo()
-       {
-       }
-
-    .. code-block:: c++
-       :class: bad
-
-       static void foo() {
-       }
-
-    .. code-block:: c++
-       :class: good
-
        class Moo
        {
        };
@@ -340,6 +327,19 @@ Formatting
 
        class Moo {
        };
+
+    .. code-block:: c++
+       :class: good
+
+       void Moo::foo()
+       {
+       }
+
+    .. code-block:: c++
+       :class: bad
+
+       void Moo::foo() {
+       }
 
   - Use curly braces when the body of a conditional statement contains more than one line, and also if a single line statement is somewhat complex.
     Otherwise, omit them:
@@ -370,12 +370,12 @@ Formatting
            qDebug("%d", i);
        }
 
-    **Exception #1:** use braces also if the parent statement covers several lines or if it wraps:
+    **Exception #1:** use braces if the parent statement covers several lines or if it wraps:
 
     .. code-block:: c++
        :class: good
 
-       if (   address.isEmpty()
+       if (    address.isEmpty()
            || !isValid()
            || !codec) {
            return false;
@@ -384,12 +384,12 @@ Formatting
     .. code-block:: c++
        :class: bad
 
-       if (   address.isEmpty()
+       if (    address.isEmpty()
            || !isValid()
            || !codec)
            return false;
 
-    **Exception #2:** use braces also in ``if-then-else`` blocks where either the ``if`` code or the ``else`` code covers several lines:
+    **Exception #2:** use braces in ``if-then-else`` statements when either the ``if`` or ``else`` block covers several lines:
 
     .. code-block:: c++
        :class: good
@@ -398,6 +398,7 @@ Formatting
            --it;
        } else {
            qDebug("%s", qPrintable(address));
+
            ++it;
        }
 
@@ -408,6 +409,7 @@ Formatting
            --it;
        else {
            qDebug("%s", qPrintable(address));
+
            ++it;
        }
 
@@ -468,7 +470,9 @@ Formatting
 
   - Keep lines shorter than 80 characters whenever possible.
 
-    **Note:** `Qt Creator <https://www.qt.io/ide/>`__ can be configured to display a right margin by selecting the ``Tools`` | ``Options...`` menu, then the ``Text Editor`` section, and finally the ``Display`` tab under the ``Text Wrapping`` group box.
+    **Note:** `Qt Creator <https://www.qt.io/ide/>`__ can be configured to display a right margin.
+    For this, select the ``Tools`` | ``Options...`` menu, then the ``Text Editor`` section, and finally the ``Display`` tab.
+    Configuration options can be found under the ``Text Wrapping`` group box.
 
   - Insert line breaks if necessary.
   - Commas go at the end of a broken line.
@@ -497,7 +501,7 @@ Patterns and practices
 - Do not use RTTI (Run-Time Type Information, i.e. the ``typeinfo struct``, the ``dynamic_cast`` or the ``typeid`` operators, including throwing exceptions), unless you know what you are doing.
 - Use templates wisely, not just because you can.
 - Every ``QObject`` subclass must have a ``Q_OBJECT`` macro, even if it does not have signals or slots, if it is intended to be used with ``qobject_cast<>``.
-- If you create a new set of ``.cpp``/``.h`` files, then top of those files should include a comment common to both files.
+- If you create a new set of ``.cpp``/``.h`` files, then our copyright statement and a comment common to both files should be included at the beginning of those files (e.g. |mainwindow.cpp|_ and |mainwindow.h|_).
 - **Including headers:**
 
   - Arrange headers in alphabetic order within a block:
@@ -516,32 +520,22 @@ Patterns and practices
        #include <QCoreApplication>
        #include <QMessageBox>
 
-  - Arrange includes in an order that goes from specific (to OpenCOR) to generic to ensure that the headers are self-contained.
+  - Arrange includes in blocks of headers that are specific to OpenCOR, `Qt <https://www.qt.io/>`__, third-party libraries and C++.
     For example:
 
     .. code-block:: c++
 
-       #include "common.h"
-       #include "utils.h"
+       #include "coreguiutils.h"
+       #include "filemanager.h"
 
-       #include <QCoreApplication>
-       #include <QFileInfo>
+       #include <QApplication>
+       #include <QMainWindow>
 
-       #include <QxtCommandOptions>
+       #include "qwt_mml_document.h"
+       #include "qwt_wheel.h"
 
-       #include <iostream>
-
-  - Enclose headers from other plugins in ``<>`` rather than ``""`` to make it easier to spot external dependencies in the sources.
-
-    .. code-block:: c++
-       :class: good
-
-       #include <QxtCommandOptions>
-
-    .. code-block:: c++
-       :class: bad
-
-       #include "QxtCommandOptions"
+       #include <string>
+       #include <vector>
 
   - Prefer direct includes whenever possible:
 
@@ -558,7 +552,7 @@ Patterns and practices
 - **Casting:**
 
   - Avoid C casts, prefer C++ casts (``static_cast``, ``const_cast``, ``reinterpret_cast``). Both ``reinterpret_cast`` and C-style casts are dangerous, but at least ``reinterpret_cast`` will not remove the const modifier.
-  - Do not use ``dynamic_cast``, use ``qobject_cast`` for ``QObject``, or refactor your design, for example by introducing a ``type()`` method (see ``QListWidgetItem``), unless you know what you are doing.
+  - Do not use ``dynamic_cast``, use ``qobject_cast`` for ``QObject``, or refactor your design, for example by introducing a ``type()`` method (see |QListWidgetItem|_), unless you know what you are doing.
 
 - **Compiler and platform-specific issues:**
 
@@ -637,7 +631,7 @@ Patterns and practices
     The constructor will be run the first time the function is entered.
     The code is not re-entrant, though.
 
-    **Note #2:** using `Qt <https://www.qt.io/>`__ 5 and `C++11 <https://en.wikipedia.org/wiki/C++11>`__, it is now possible to (indirectly) have a ``static const QString`` (see here for more information on ``QString``), thus making it possible for a variable to be both read-only and sharable.
+    **Note #2:** using `Qt <https://www.qt.io/>`__ 5 and `C++11 <https://en.wikipedia.org/wiki/C++11>`__, it is now possible to (indirectly) have a ``static const QString`` (see `here <https://www.macieira.org/blog/2011/07/qstring-improved/>`__ for more information on ``QString``), thus making it possible for a variable to be both read-only and sharable.
 
     .. code-block:: c++
        :class: good
@@ -690,6 +684,15 @@ Patterns and practices
   - Prefer ``enum`` to define constants over ``static const int`` or ``#define``.
     Enumeration values will be replaced by the compiler at compile time, resulting in faster code.
     Also, ``#define`` is not namespace safe.
+
+   .. |mainwindow.cpp| replace:: ``[OpenCOR]/src/mainwindow.cpp``
+   .. _mainwindow.cpp: https://github.com/opencor/opencor/tree/master/src/mainwindow.cpp
+
+   .. |mainwindow.h| replace:: ``[OpenCOR]/src/mainwindow.h``
+   .. _mainwindow.h: https://github.com/opencor/opencor/tree/master/src/mainwindow.h
+
+   .. |QListWidgetItem| replace:: ``QListWidgetItem``
+   .. _QListWidgetItem: http://doc.qt.io/qt-5/qlistwidgetitem.html
 
 OpenCOR specific
 ----------------
