@@ -225,16 +225,17 @@ Formatting
 
      char const * ptr;
 
-  Using a plain ``0`` for ``NULL`` pointer constants is always correct and least effort to type. So:
+  Use ``nullptr`` for ``NULL`` pointer constants:
 
   .. code-block:: c++
      :class: good
 
-     void *ptr = 0;
+     void *ptr = nullptr;
 
   .. code-block:: c++
      :class: bad
 
+     void *ptr = 0;
      void *ptr = NULL;
      void *ptr = '\0';
      void *ptr = 42-7*6;
@@ -729,6 +730,20 @@ OpenCOR specific
      {
          *pVar = 3;
      }
+
+- Use ``qIsNull()`` to test floating point numbers:
+
+  .. code-block:: c++
+     :class: good
+
+      qIsNull(a-b)
+     !qIsNull(a-b)
+
+  .. code-block:: c++
+     :class: bad
+
+     a == b
+     a != b
 
 - Use a constant reference to pass a variable to a function, if you do not intend to modify that variable:
 
