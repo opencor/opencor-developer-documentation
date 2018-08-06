@@ -27,10 +27,8 @@ They illustrate the basic concepts needed to develop plugins for OpenCOR:
 Categories
 ----------
 
-All plugins come under a given category.
-Currently supported categories are:
+All plugins come under one of the following categories:
 
-- **Analysis**: plugins to analyse files.
 - |DataStoreCategory|_: plugins to store and manipulate data.
 - |EditingCategory|_: plugins to edit files.
 - |MiscellaneousCategory|_: plugins that do not fit in any other category.
@@ -109,16 +107,16 @@ They are:
 
 - |CLIInterface|_: to support command line execution.
 - |CoreInterface|_: to control some of OpenCOR's core aspects.
-- |DataStoreInterface|_: to let OpenCOR know about the name of our data store, as well as to provide OpenCOR with a new instance of that data store.
+- |DataStoreInterface|_: to let OpenCOR know about the name of a data store, as well as retrieve some data from it and provide an instance of its exporter.
 - |FileHandlingInterface|_: to save a file, as well as to be told whenever a file has been opened, modified, closed, etc.
-- |FileTypeInterface|_: to let OpenCOR know about our supported file types and their description.
+- |FileTypeInterface|_: to let OpenCOR know about supported file types and their description.
 - |GUIInterface|_: to let OpenCOR know about the menus and menu actions that we want to see added to the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__, as well as to be told whenever the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__ needs updating.
 - |InternationalisationInterface|_: to be told whenever we should retranslate ourselves.
 - |PluginInterface|_: to initialise/finalise a plugin, load/save its settings, etc.
 - |PreferencesInterface|_: to specify a plugin's default behaviour, settings, etc.
-- |SolverInterface|_: to let OpenCOR know about the type, name and properties of our solver, as well as to provide OpenCOR with a new instance of that solver.
-- |ViewInterface|_: to let OpenCOR know about the name of our view, its mode, the MIME types it supports, whether we have a view for the current file, etc.
-- |WindowInterface|_: to let OpenCOR know about the widget, action and default location of our window.
+- |SolverInterface|_: to let OpenCOR know about the type, name and properties of a solver, as well as to provide OpenCOR with an instance of that solver.
+- |ViewInterface|_: to let OpenCOR know about the name of a view, its mode, the MIME types it supports, whether we have a view for the current file, etc.
+- |WindowInterface|_: to let OpenCOR know about the widget, action and default location of a window.
 
 .. |CLIInterface| replace:: **CLI**
 .. _CLIInterface: https://github.com/opencor/opencor/blob/master/src/plugins/cliinterface.inl
@@ -175,13 +173,14 @@ That information comes in the form of a series of parameters, some of which are 
 - ``HEADERS_MOC``: header files, which define at least one ``QObject``-based class.
 - ``UIS``: user interface files.
 - ``DEFINITIONS``: definitions needed to build the plugin.
+- ``PLUGINS``: plugins needed by the plugin.
 - ``QT_MODULES``: Qt modules needed by the plugin.
-- ``EXTERNAL_BINARIES_DIR``: location where external binaries needed by the plugin can be found.
+- ``EXTERNAL_BINARIES_DIR``: location of external binaries needed by the plugin.
 - ``EXTERNAL_BINARIES``: external binaries needed by the plugin.
-- ``EXTERNAL_DEST_DIR``: location where external dependencies are to be copied.
-- ``EXTERNAL_SOURCE_DIR``: location where external dependencies can be found.
+- ``EXTERNAL_DESTINATION_DIR``: location where external dependencies are to be copied.
+- ``EXTERNAL_SOURCE_DIR``: location of external dependencies.
 - ``SYSTEM_BINARIES``: system binaries needed by the plugin.
-- ``DEPENDS_ON``: plugins on which the plugin depends.
+- ``DEPENDS_ON``: CMake targets on which the plugin depends.
 - ``TESTS``: :ref:`tests <develop_tests>` for the plugin.
 
 .. |common.cmake| replace:: ``[OpenCOR]/cmake/common.cmake``
@@ -198,7 +197,7 @@ Plugin information
 ------------------
 
 For a plugin to be recognisable by OpenCOR, it must provide some :ref:`basic information <develop_plugins_index_basicInformation>` about itself, as well as define a :ref:`plugin class <develop_plugins_index_pluginClass>`.
-For this, we need a ``.cpp``, ``.h`` and ``.json`` file, such as |coreplugin.cpp|_, |coreplugin.h|_ and |coreplugin.json|_ for the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin.
+For this, we need a ``.cpp``, a ``.h`` and a ``.json`` file, such as |coreplugin.cpp|_, |coreplugin.h|_ and |coreplugin.json|_ for the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin.
 
 .. |coreplugin.cpp| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/src/coreplugin.cpp``
 .. _coreplugin.cpp: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Core/src/coreplugin.cpp
@@ -257,7 +256,7 @@ Plugins must provide the following basic information about themselves:
 .. |CLI| replace:: **CLI**
 .. _CLI: https://en.wikipedia.org/wiki/Command-line_interface
 
-This information is made available to OpenCOR through a function, which in the case of the Core plugin has the following declaration:
+This information is made available to OpenCOR through a function, which in the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin has the following declaration:
 
 .. code-block:: c++
 
@@ -267,7 +266,7 @@ This information is made available to OpenCOR through a function, which in the c
 In other words, the name of the function is expected to be ``<PluginName>PluginInfo()``.
 If it is not, OpenCOR will not be able to recognise the plugin.
 
-In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, the body of its function is:
+In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, the body of that function is:
 
 .. code-block:: c++
 
@@ -357,7 +356,7 @@ and imported by the plugin that wants to use it:
    void __declspec(dllimport) myFunction();
    class __declspec(dllimport) myClass;
 
-Each plugin that exports functions and/or classes therefore defines a macro that refers either to ``__declspec(dllexport)`` or to ``__declspec(dllimport)``, depending on how the plugin's code is to be compiled.
+Each plugin that exports functions and/or classes must therefore define a macro that refers either to ``__declspec(dllexport)`` or to ``__declspec(dllimport)``, depending on how the plugin's code is to be compiled.
 Thus, in the case of the `Compiler <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/>`__ plugin, we have:
 
 .. code-block:: c++
