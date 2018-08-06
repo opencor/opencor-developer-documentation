@@ -4,7 +4,7 @@
  Sample
 ========
 
-The purpose of this plugin is to give other plugins access to a simple ``add()`` function, which could then be used as follows:
+The purpose of this plugin is to give other plugins access to a simple ``add()`` function, which can be used as follows:
 
 .. code-block:: c++
 
@@ -81,7 +81,7 @@ As for any plugin, our `Sample <https://github.com/opencor/opencor/tree/master/s
 This convention is used throughout OpenCOR's code to ensure that there are no name clashes between plugins' files.)
 All header files that define at least one class that uses the ``Q_OBJECT`` macro must also be referenced.
 ``sampleplugin.h`` is one such file (see below) and is therefore referenced (line 12).
-Finally, OpenCOR uses the `Qt <https://www.qt.io/>`__ framework, so even though our `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugin is very minimal, we must reference the ``Core`` module (line 14).
+Finally, OpenCOR uses the `Qt <https://www.qt.io/>`__ framework, so even though our `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugin is very minimal, we must still reference the ``Core`` module (line 14).
 
 .. |plugininfo.cpp| replace:: ``[OpenCOR]/src/plugins/plugininfo.cpp``
 .. _plugininfo.cpp: https://github.com/opencor/opencor/blob/master/src/plugins/plugininfo.cpp
@@ -182,7 +182,7 @@ Then, lines 33-43 contain the body of our C function.
 The first thing it does is to create an instance of ``Descriptions`` on the stack (line 35).
 This instance is used to provide a multilingual description of our plugin (here, both in English and in French; lines 37 and 38).
 Then, it creates and returns an instance of ``PluginInfo`` on the heap (lines 40-42), which contains the :ref:`basic information <develop_plugins_index_basicInformation>` needed by OpenCOR to identify our plugin.
-This includes our plugin's category (``PluginInfo::Sample``; line 40), whether it is selectable (``false``; line 40), whether it offers direct `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ support (``false``; line 40), our plugin's direct dependencies (none, so ``QStringList()``; line 41) and its multilingual description (``descriptions``; line 42).
+This includes our plugin's category (``PluginInfo::Sample``; line 40), whether it is selectable (``false``; line 40), whether it offers direct `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ support (``false``; line 40), our plugin's direct dependencies (none, hence ``QStringList()``; line 41) and its multilingual description (``descriptions``; line 42).
 
 **Note:** the returned ``PluginInfo`` object gets deleted by OpenCOR.
 So, no need to worry about it.
