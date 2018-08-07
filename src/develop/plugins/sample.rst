@@ -47,7 +47,7 @@ All our plugin does is to make its ``add()`` function available to other plugins
 CMake project
 -------------
 
-To build our plugin, we need a ``CMakeLists.txt`` file (some information on CMake and plugins in OpenCOR can be found :ref:`here <develop_plugins_index_cmakeProject>`), which contents is:
+To build our plugin, we need a |CMakeLists.txt|_ file (some information on CMake and plugins in OpenCOR can be found :ref:`here <develop_plugins_index_cmakeProject>`), which contents is:
 
 .. code-block:: cmake
    :lineno-start: 1
@@ -67,6 +67,9 @@ To build our plugin, we need a ``CMakeLists.txt`` file (some information on CMak
        QT_MODULES
            Core
    )
+
+.. |CMakeLists.txt| replace:: ``CMakeLists.txt``
+.. _CMakeLists.txt: https://github.com/opencor/opencor/blob/master/src/plugins/sample/Sample/CMakeLists.txt
 
 The first line specifies the name of the CMake project for our `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugin, i.e. ``SamplePlugin``.
 Then, we have a call to the ``add_plugin()`` macro (line 5), which is defined in |common.cmake|_.
