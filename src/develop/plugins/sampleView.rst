@@ -173,7 +173,7 @@ The C function that is used by OpenCOR to retrieve some :ref:`basic information 
                              descriptions);
    }
 
-As can be seen, our plugin is selectable by the user, but it does not offer direct `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ support (line 47).
+As can be seen, our plugin is selectable by the user, but it does not offer `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ support (line 47).
 It also has a direct dependency on the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin (line 48).
 
 .. _develop_plugins_sampleView_interfacesImplementation:
@@ -181,9 +181,8 @@ It also has a direct dependency on the `Core <https://github.com/opencor/opencor
 Interfaces implementation
 -------------------------
 
-The implementation of the interfaces' various methods can also be found in |sampleviewplugin.cpp|_.
+The implementation of the interfaces' various methods can be found in |sampleviewplugin.cpp|_.
 The methods are grouped by interface and are ordered alphabetically.
-The interfaces are also ordered alphabetically, making it easier to read and maintain the code.
 
 We start with the `File handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`__ interface:
 
@@ -551,7 +550,7 @@ Some extra work is needed to get our plugin to do what it is supposed to be doin
 .. |sampleviewwidget.h| replace:: ``sampleviewwidget.h``
 .. _sampleviewwidget.h: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleView/src/sampleviewwidget.h
 
-``SampleViewWidget`` inherits from ``Core::ViewWidget``, which is defined in the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin and is an extended version of `Qt <https://www.qt.io/>`__'s ``QWidget`` (line 43).
+``SampleViewWidget`` inherits from ``Core::ViewWidget``, which is defined in the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin and is an extended version of `Qt <https://www.qt.io/>`__'s ``QWidget`` class (line 43).
 It requires implementing the ``widget()`` method, which purpose is to return the exact widget that is to be shown in the view (line 53).
 In the present case, it is ``SampleViewWidget`` itself.
 Otherwise, ``SampleViewWidget`` also comes with a GUI file, which describes the layout of our plugin window (|sampleviewwidget.ui|_).
@@ -662,4 +661,4 @@ The implementation of ``SampleViewWidget`` can be found in |sampleviewwidget.cpp
 .. |sampleviewwidget.cpp| replace:: ``sampleviewwidget.cpp``
 .. _sampleviewwidget.cpp: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleView/src/sampleviewwidget.cpp
 
-``retranslateUi()`` (lines 68-78) retranslates our view, as well as return its exact widget (lines 82-89) and update its contents using ``update()`` (lines 93-111).
+``retranslateUi()`` (lines 68-78) retranslates our view while ``widget()`` returns it (lines 82-89) and ``update()`` updates its contents (lines 93-111).
