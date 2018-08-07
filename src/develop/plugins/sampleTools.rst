@@ -77,7 +77,7 @@ Then, our plugin needs the `Core <https://github.com/opencor/opencor/tree/master
 Plugin information
 ------------------
 
-Our :ref:`plugin information <develop_plugins_index_pluginInformation>` can be found in |sampletoolsplugin.cpp|_, |sampletoolsplugin.h|_ and |sampletoolsplugin.json|_. Starting with sampletoolsplugin.h, its contents is:
+Our :ref:`plugin information <develop_plugins_index_pluginInformation>` can be found in |sampletoolsplugin.cpp|_, |sampletoolsplugin.h|_ and |sampletoolsplugin.json|_. Starting with |sampletoolsplugin.h|_, its contents is:
 
 .. code-block:: c++
    :lineno-start: 28
@@ -172,9 +172,8 @@ It also has a direct dependency on the `Core <https://github.com/opencor/opencor
 Interfaces implementation
 -------------------------
 
-The implementation of the interfaces' various methods can also be found in |sampletoolsplugin.cpp|_.
+The implementation of the interfaces' various methods can be found in |sampletoolsplugin.cpp|_.
 The methods are grouped by interface and are ordered alphabetically.
-The interfaces are also ordered alphabetically, making it easier to read and maintain the code.
 
 We start with the `CLI <https://github.com/opencor/opencor/blob/master/src/plugins/cliinterface.inl>`__ interface:
 
@@ -254,7 +253,7 @@ Next, we have the `GUI <https://github.com/opencor/opencor/blob/master/src/plugi
 Our plugin does not need to do anything whenever OpenCOR needs to update the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__, so we do nothing in ``updateGui()`` (lines 89-95).
 Similarly, we do not need to add menus to OpenCOR, so all ``guiMenus()`` does is return ``Gui::Menus()`` (lines 99-104).
 However, we do want to add a menu action (and a menu separator) to OpenCOR's ``Tools`` menu, which we do via ``guiMenuActions()`` (lines 108-114).
-Note that ``mAddTwoNumbersAction`` is initialised in our implementation of the `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interface (see below).
+Note that ``mAddTwoNumbersAction`` is initialised in our implementation of the `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interface (see :ref:`below <develop_plugins_sampleTools_pluginInterface>`).
 
 After the `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__ interface, we have the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface:
 
@@ -278,6 +277,8 @@ All that we need to do here is to (re)translate ``mAddTwoNumbersAction`` with th
 
 .. |SampleTools_fr.ts| replace:: ``SampleTools_fr.ts``
 .. _SampleTools_fr.ts: https://github.com/opencor/opencor/tree/master/src/plugins/sample/SampleTools/i18n/SampleTools_fr.ts
+
+.. _develop_plugins_sampleTools_pluginInterface:
 
 Finally, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interface:
 
@@ -367,7 +368,7 @@ Finally, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src
 
    //==============================================================================
 
-The only method of interest to our plugin is ``initializePlugin()`` (lines 153-163), which is where we initialise ``mAddTwoNumbersAction``, among a couple of other things.
+The only method of interest to our plugin is ``initializePlugin()`` (lines 153-163), which is where we initialise ``mAddTwoNumbersAction``, among other things.
 All the other methods (``definesPluginInterfaces()``, ``pluginInterfacesOk()``, ``finalizePlugin()``, ``pluginsInitialized()``, ``loadSettings()``, ``saveSettings()`` and ``handleUrl()``) are left empty.
 
 .. _develop_plugins_sampleTools_pluginSpecific:
@@ -477,4 +478,4 @@ In a similar way, ``runAddCommand()`` (lines 225-260) is executed whenever our p
 It checks that two numbers have been passed to the command and, if so, returns their sum to the user.
 
 ``addTwoNumbers()`` (lines 264-280) is a `Qt <https://www.qt.io/>`__ slot that is executed whenever the user selects our menu item (see ``mAddTwoNumbersAction``).
-Using a GUI approach, it asks the user to provide two numbers and returns their sum, unless the user decides to cancel the action.
+Using a `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__ approach, it asks the user to provide two numbers and returns their sum, unless the user decides to cancel the action.
