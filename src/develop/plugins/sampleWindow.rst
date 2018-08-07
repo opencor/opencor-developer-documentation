@@ -166,7 +166,7 @@ The C function that is used by OpenCOR to retrieve some :ref:`basic information 
                              descriptions);
    }
 
-As can be seen, our plugin is selectable by the user, but it does not offer direct `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ support (line 46).
+As can be seen, our plugin is selectable by the user, but it does not offer `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ support (line 46).
 It also has a direct dependency on both the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ and `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugins (line 47).
 
 .. _develop_plugins_sampleWindow_interfacesImplementation:
@@ -174,9 +174,8 @@ It also has a direct dependency on both the `Core <https://github.com/opencor/op
 Interfaces implementation
 -------------------------
 
-The implementation of the interfaces' various methods can also be found in |samplewindowplugin.cpp|_.
+The implementation of the interfaces' various methods can be found in |samplewindowplugin.cpp|_.
 The methods are grouped by interface and are ordered alphabetically.
-The interfaces are also ordered alphabetically, making it easier to read and maintain the code.
 
 We start with the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface:
 
@@ -379,7 +378,7 @@ Some extra work is needed to get our plugin to do what it is supposed to be doin
 .. |samplewindowwindow.h| replace:: ``samplewindowwindow.h``
 .. _samplewindowwindow.h: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleWindow/src/samplewindowwindow.h
 
-``SampleWindowWindow`` inherits from ``Core::WindowWidget``, which is defined in the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin and is an extended version of `Qt <https://www.qt.io/>`__'s ``QDockWidget`` (line 43).
+``SampleWindowWindow`` inherits from ``Core::WindowWidget``, which is defined in the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin and is an extended version of `Qt <https://www.qt.io/>`__'s ``QDockWidget`` class (line 43).
 It also comes with a GUI file, which describes the layout of our plugin window (|samplewindowwindow.ui|_).
 
 .. |samplewindowwindow.ui| replace:: ``samplewindowwindow.ui``
