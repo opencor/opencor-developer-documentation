@@ -34,6 +34,11 @@ Information on those different aspects can be found in the following pages:
   - :ref:`develop_internationalisation`
   - :ref:`develop_tests`
 
+.. toctree::
+   :hidden:
+
+   develop/index
+
 - :ref:`buildTestAndRun`
 - :ref:`functionalTests`
 - :ref:`package`
@@ -41,7 +46,6 @@ Information on those different aspects can be found in the following pages:
 .. toctree::
    :hidden:
 
-   develop/index
    buildTestAndRun
    functionalTests
    package
