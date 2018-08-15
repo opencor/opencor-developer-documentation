@@ -24,6 +24,8 @@ The following tools are required in order to develop, build , test, run and pack
   - |Linux|_; and
   - |macOS|_.
 
+  **Note:** although `Qt <https://www.qt.io/>`__ 5.9.6 LTS is available, it should not be used (it contains a `regression issue <https://bugreports.qt.io/browse/QTBUG-68939>`__ that breaks things on macOS).
+
   .. |Windows| replace:: **Windows**
   .. _Windows: https://download.qt.io/official_releases/online_installers/qt-unified-windows-x86-online.exe
 
