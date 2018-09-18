@@ -152,7 +152,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Licensing: `Qwt License v1.0 <http://qwt.sourceforge.net/qwtlicense.html>`__ (a slightly less restricive version of `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__) and `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ for the `MathML <https://www.w3.org/Math/>`__ text engine, which is based on the QtMmlWidget code.
 
     **Note:** we have contributed some code to the `MathML <https://www.w3.org/Math/>`__ renderer, but it has yet to be fully incorporated in the `Qwt <http://qwt.sourceforge.net/>`__ project.
-    So, in the meantime, we use our version of the `MathML <https://www.w3.org/Math/>`__ renderer.
+    So, in the meantime, we use `our version <https://github.com/uwerat/qwt-mml-dev>`__ of the `MathML <https://www.w3.org/Math/>`__ renderer.
 
   .. |QwtSoftware| replace:: ``[OpenCOR]/src/plugins/thirdParty/Qwt``
   .. _QwtSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Qwt
