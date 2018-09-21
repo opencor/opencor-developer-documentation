@@ -35,7 +35,7 @@ include(FetchContent)
 
 FetchContent_Declare(sphinx-theme
     GIT_REPOSITORY https://github.com/opencor/sphinx-theme
-    SOURCE_DIR ${CMAKE_BINARY_DIR}/theme
+    SOURCE_DIR "${CMAKE_BINARY_DIR}/theme"
 )
 
 FetchContent_Populate(sphinx-theme)
@@ -44,9 +44,16 @@ FetchContent_Populate(sphinx-theme)
 
 string(TIMESTAMP SPHINX_YEAR "%Y")
 
-configure_file("${CMAKE_SOURCE_DIR}/src/conf.py.in"
-               "${CMAKE_BINARY_DIR}/conf.py"
-               @ONLY)
+execute_process(COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/src/conf.py
+                                                 ${CMAKE_BINARY_DIR}/conf.py)
+
+file(APPEND "${CMAKE_BINARY_DIR}/conf.py"
+    \n
+    copyright = u'2011-${SPHINX_YEAR}, University of Auckland'\n
+    html_theme = 'theme'\n
+    html_show_sphinx = False\n
+    html_show_copyright = False\n
+)
 
 add_custom_target(Sphinx ALL
                   ${SPHINX_EXECUTABLE} -q -b html
