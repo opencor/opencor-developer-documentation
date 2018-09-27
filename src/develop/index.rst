@@ -72,11 +72,3 @@ More specific information can be found in the following pages:
 
 - :ref:`develop_internationalisation`
 - :ref:`develop_tests`
-
-.. toctree::
-   :hidden:
-
-   codingStyle
-   plugins/index
-   internationalisation
-   tests

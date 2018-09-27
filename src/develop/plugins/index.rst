@@ -12,14 +12,6 @@ They illustrate the basic concepts needed to develop plugins for OpenCOR:
 - :ref:`develop_plugins_sampleView`
 - :ref:`develop_plugins_sampleWindow`
 
-.. toctree::
-   :hidden:
-
-   sample
-   sampleTools
-   sampleView
-   sampleWindow
-
 **Note:** these plugins only get built if the `CMake <https://www.cmake.org/>`__ ``ENABLE_SAMPLE_PLUGINS`` option is set to ``ON``.
 
 .. _develop_plugins_index_categories:

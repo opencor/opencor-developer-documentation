@@ -9,17 +9,7 @@ Information on those different aspects can be found in the following pages:
 
 - :ref:`prerequisites`
 
-.. toctree::
-   :hidden:
-
-   prerequisites
-
 - :ref:`fileStructure`
-
-.. toctree::
-   :hidden:
-
-   fileStructure
 
 - :ref:`develop_index`
 
@@ -34,27 +24,29 @@ Information on those different aspects can be found in the following pages:
   - :ref:`develop_internationalisation`
   - :ref:`develop_tests`
 
-.. toctree::
-   :hidden:
-
-   develop/index
-
 - :ref:`buildTestAndRun`
 - :ref:`functionalTests`
 - :ref:`package`
-
-.. toctree::
-   :hidden:
-
-   buildTestAndRun
-   functionalTests
-   package
 
 - :ref:`thirdPartyLibraries`
 
 .. toctree::
    :hidden:
 
+   prerequisites
+   fileStructure
+   develop/index
+   develop/codingStyle
+   develop/plugins/index
+   develop/plugins/sample
+   develop/plugins/sampleTools
+   develop/plugins/sampleView
+   develop/plugins/sampleWindow
+   develop/internationalisation
+   develop/tests
+   buildTestAndRun
+   functionalTests
+   package
    thirdPartyLibraries
 
 Here are also some direct links to OpenCOR's:
