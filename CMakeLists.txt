@@ -12,15 +12,9 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
 find_package(Sphinx REQUIRED)
 
-if(APPLE)
-    execute_process(COMMAND "${SPHINX_EXECUTABLE}" --version
-                    OUTPUT_VARIABLE SPHINX_VERSION
-                    OUTPUT_STRIP_TRAILING_WHITESPACE)
-else()
-    execute_process(COMMAND "${SPHINX_EXECUTABLE}" --version
-                    ERROR_VARIABLE SPHINX_VERSION
-                    ERROR_STRIP_TRAILING_WHITESPACE)
-endif()
+execute_process(COMMAND "${SPHINX_EXECUTABLE}" --version
+                ERROR_VARIABLE SPHINX_VERSION
+                ERROR_STRIP_TRAILING_WHITESPACE)
 
 string(REGEX REPLACE "^.* " ""
        SPHINX_VERSION "${SPHINX_VERSION}")
