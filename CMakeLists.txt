@@ -10,7 +10,7 @@ project(DeveloperDocumentation
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
-find_package(Sphinx REQUIRED)
+find_package(Sphinx REQUIRED QUIET)
 
 execute_process(COMMAND "${SPHINX_EXECUTABLE}" --version
                 ERROR_VARIABLE SPHINX_VERSION
@@ -19,8 +19,10 @@ execute_process(COMMAND "${SPHINX_EXECUTABLE}" --version
 string(REGEX REPLACE "^.* " ""
        SPHINX_VERSION "${SPHINX_VERSION}")
 
-if(SPHINX_VERSION VERSION_LESS 1.4)
-    message(FATAL_ERROR "Sphinx 1.4 or later is required...")
+set(MINIMUM_SPHINX_VERSION 1.4)
+
+if(SPHINX_VERSION VERSION_LESS ${MINIMUM_SPHINX_VERSION})
+    message(FATAL_ERROR "Sphinx ${MINIMUM_SPHINX_VERSION} or later is required...")
 endif()
 
 # Retrieve the theme repository
