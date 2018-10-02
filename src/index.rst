@@ -9,7 +9,11 @@ Information on those different aspects can be found in the following pages:
 
 - :ref:`prerequisites`
 
+..
+
 - :ref:`fileStructure`
+
+..
 
 - :ref:`develop_index`
 
@@ -27,6 +31,8 @@ Information on those different aspects can be found in the following pages:
 - :ref:`buildTestAndRun`
 - :ref:`functionalTests`
 - :ref:`package`
+
+..
 
 - :ref:`thirdPartyLibraries`
 
