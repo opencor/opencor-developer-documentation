@@ -45,10 +45,10 @@ execute_process(COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/src/conf.py
 
 file(APPEND "${CMAKE_BINARY_DIR}/conf.py"
     \n
-    copyright = u'2011-${SPHINX_YEAR}, University of Auckland'\n
-    html_theme = 'theme'\n
-    html_show_sphinx = False\n
-    html_show_copyright = False\n
+    copyright\ =\ u'2011-${SPHINX_YEAR},\ University\ of\ Auckland'\n
+    html_theme\ =\ 'theme'\n
+    html_show_sphinx\ =\ False\n
+    html_show_copyright\ =\ False\n
 )
 
 add_custom_target(Sphinx ALL
