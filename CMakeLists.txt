@@ -9,7 +9,6 @@ project(DeveloperDocumentation
 # Make sure that Sphinx is available and that it is at least version 1.4
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
-message("[BEFORE] SPHINX_EXECUTABLE: >${SPHINX_EXECUTABLE}<")
 
 if(NOT PYTHON_EXECUTABLE)
     find_package(PythonInterp REQUIRED QUIET)
@@ -18,7 +17,6 @@ endif()
 if(NOT SPHINX_EXECUTABLE)
     find_package(Sphinx REQUIRED QUIET)
 endif()
-message("[AFTER]  SPHINX_EXECUTABLE: >${SPHINX_EXECUTABLE}<")
 
 execute_process(COMMAND ${SPHINX_EXECUTABLE} --version
                 ERROR_VARIABLE SPHINX_VERSION
