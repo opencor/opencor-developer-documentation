@@ -11,8 +11,13 @@ project(DeveloperDocumentation
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 message("[BEFORE] SPHINX_EXECUTABLE: >${SPHINX_EXECUTABLE}<")
 
-find_package(PythonInterp REQUIRED QUIET)
-find_package(Sphinx REQUIRED QUIET)
+if(NOT PYTHON_EXECUTABLE)
+    find_package(PythonInterp REQUIRED QUIET)
+endif()
+
+if(NOT SPHINX_EXECUTABLE)
+    find_package(Sphinx REQUIRED QUIET)
+endif()
 message("[AFTER]  SPHINX_EXECUTABLE: >${SPHINX_EXECUTABLE}<")
 
 execute_process(COMMAND ${SPHINX_EXECUTABLE} --version
