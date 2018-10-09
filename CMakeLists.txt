@@ -10,6 +10,7 @@ project(DeveloperDocumentation
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
+find_package(PythonInterp REQUIRED QUIET)
 find_package(Sphinx REQUIRED QUIET)
 
 execute_process(COMMAND "${SPHINX_EXECUTABLE}" --version
@@ -52,8 +53,12 @@ file(APPEND "${CMAKE_BINARY_DIR}/conf.py"
 )
 
 add_custom_target(Sphinx ALL
-                  ${SPHINX_EXECUTABLE} -q -b html
-                                       -c "${CMAKE_BINARY_DIR}"
-                                       "${CMAKE_SOURCE_DIR}/src"
-                                       "${CMAKE_BINARY_DIR}/html"
+                  COMMAND ${SPHINX_EXECUTABLE} -q -b html
+                                               -c "${CMAKE_BINARY_DIR}"
+                                               "${CMAKE_SOURCE_DIR}/src"
+                                               "${CMAKE_BINARY_DIR}/html"
+                  COMMAND ${PYTHON_EXECUTABLE} "${CMAKE_BINARY_DIR}/theme/cmake/stringreplace.py"
+                                               "${CMAKE_BINARY_DIR}/html/_static/theme.css"
+                                               "103, 103, 103"
+                                               "49, 133, 155"
                   COMMENT "Building the developer documentation for OpenCOR")
