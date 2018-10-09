@@ -13,7 +13,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 find_package(PythonInterp REQUIRED QUIET)
 find_package(Sphinx REQUIRED QUIET)
 
-execute_process(COMMAND "${SPHINX_EXECUTABLE}" --version
+execute_process(COMMAND ${SPHINX_EXECUTABLE} --version
                 ERROR_VARIABLE SPHINX_VERSION
                 ERROR_STRIP_TRAILING_WHITESPACE)
 
