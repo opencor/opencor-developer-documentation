@@ -18,8 +18,8 @@ Command line
    ./OpenCOR -c CellMLTools::export models/van_der_pol_model_1928.cellml formats/MATLAB.xml
    ./OpenCOR -c CellMLTools::export models/van_der_pol_model_1928.cellml formats/Python.xml
 
-Save / reload a file
---------------------
+Save/reload a file
+------------------
 
 Check that a given view looks right for a given file when:
 
@@ -33,8 +33,8 @@ Check that a given view looks right for a given file when:
   - The file is edited and saved **outside** of OpenCOR.
   - The file is edited and saved **in** OpenCOR (if applicable).
 
-Edit / save a SED-ML file / COMBINE archive
--------------------------------------------
+Edit/save a SED-ML file / COMBINE archive
+-----------------------------------------
 
 Using the `Simulation Experiment <http://opencor.ws/user/plugins/simulation/SimulationExperimentView.html>`__ view, check that we can:
 

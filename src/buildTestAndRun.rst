@@ -5,14 +5,14 @@
 =====================
 
 OpenCOR (and its corresponding :ref:`tests <develop_tests>`) can be built, tested and run either from the command line or using `Qt Creator <https://www.qt.io/ide/>`__.
-By default, `Ninja <https://ninja-build.org/>`__ is used to build OpenCOR, but if it is not available, then `JOM <https://wiki.qt.io/Jom>`__ (on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__) or `Make <https://www.gnu.org/software/make/>`__ (on `Linux <https://en.wikipedia.org/wiki/Linux>`__ / `macOS <https://en.wikipedia.org/wiki/MacOS>`__) will be used.
+By default, `Ninja <https://ninja-build.org/>`__ is used to build OpenCOR, but if it is not available, then `JOM <https://wiki.qt.io/Jom>`__ (on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__) or `Make <https://www.gnu.org/software/make/>`__ (on `Linux <https://en.wikipedia.org/wiki/Linux>`__/`macOS <https://en.wikipedia.org/wiki/MacOS>`__) will be used.
 
 .. _buildTestAndRunFromTheCommandLine:
 
 From the command line
 ---------------------
 
-Various batch / VBScript files (``.bat`` \| ``.vbs``) and shell scripts are available on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__ and `Linux <https://en.wikipedia.org/wiki/Linux>`__ / `macOS <https://en.wikipedia.org/wiki/MacOS>`__, respectively:
+Various batch/VBScript files (``.bat`` \| ``.vbs``) and shell scripts are available on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__ and `Linux <https://en.wikipedia.org/wiki/Linux>`__/`macOS <https://en.wikipedia.org/wiki/MacOS>`__, respectively:
 
 - |cleanScript|_\[|cleanallScript|_][|cleanBatch|_]: cleans (all) the OpenCOR environment;
 - |makeScript|_\[|makeBatch|_]: compiles and links everything that is required to get a release version of OpenCOR;
