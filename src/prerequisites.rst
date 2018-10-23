@@ -38,6 +38,6 @@ The following tools are required in order to develop, build , test, run and pack
 
 Finally, you will need to update your ``PATH`` environment variable by adding Qt to it:
 
-- **Windows:** ``C:\Qt\5.9.5\msvc2015_64\bin``;
-- **Linux:** ``/opt/Qt/5.9.5/gcc_64/bin``; and
-- **macOS:** ``/Applications/Qt/5.9.5/clang_64/bin``.
+- **Windows:** ``C:\Qt\5.9.7\msvc2015_64\bin``;
+- **Linux:** ``/opt/Qt/5.9.7/gcc_64/bin``; and
+- **macOS:** ``/Applications/Qt/5.9.7/clang_64/bin``.
