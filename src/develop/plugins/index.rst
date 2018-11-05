@@ -203,7 +203,7 @@ For this, we need a ``.cpp``, a ``.h`` and a ``.json`` file, such as |coreplugin
 .. _develop_plugins_index_jsonFile:
 
 ``.json`` file
-""""""""""""""
+~~~~~~~~~~~~~~
 
 The ``.json`` file is a simple `JSON <http://www.json.org/>`__ file, which sole purpose is to reference the name of the plugin class.
 In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, the contents of that file is:
@@ -215,7 +215,7 @@ In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plu
    }
 
 Namespace
-"""""""""
+~~~~~~~~~
 
 The code for the :ref:`basic information <develop_plugins_index_basicInformation>` and :ref:`plugin class <develop_plugins_index_pluginClass>` must be in the plugin's own namespace within the ``OpenCOR`` namespace.
 More generally, any plugin-related code should be within those two namespaces, this to ensure the integrity of the plugin's code.
@@ -234,7 +234,7 @@ Thus, in the case of the `Core <https://github.com/opencor/opencor/tree/master/s
 .. _develop_plugins_index_basicInformation:
 
 Basic information
-"""""""""""""""""
+~~~~~~~~~~~~~~~~~
 
 Plugins must provide the following basic information about themselves:
 
@@ -280,7 +280,7 @@ So, instead, we use a ``QMap``-based approach.
 .. _develop_plugins_index_pluginClass:
 
 Plugin class
-""""""""""""
+~~~~~~~~~~~~
 
 We rely on `Qt <https://www.qt.io/>`__'s support for plugins, which means that plugins must define a specific class.
 The class must inherit from ``QObject``, as well as from any interface the plugin implements.
@@ -331,7 +331,7 @@ Hence, its much simpler class definition:
 .. _develop_plugins_index_globalHeaderInformation:
 
 Global header file
-""""""""""""""""""
+~~~~~~~~~~~~~~~~~~
 
 There may be cases where a plugin declares a function or defines a class that we want to be able to use from another plugin.
 On `Linux <https://en.wikipedia.org/wiki/Linux>`__ and `macOS <https://en.wikipedia.org/wiki/MacOS>`__, nothing special needs to be done, but on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__, the function or class needs to be exported by the original plugin:
