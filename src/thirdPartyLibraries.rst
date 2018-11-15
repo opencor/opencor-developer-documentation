@@ -6,14 +6,6 @@
 
 OpenCOR uses various third-party libraries, all of which are listed below, together with the type of license(s) under which they are released, if any.
 
-- BioSignalML: a library for reading and writing BioSignalML documents.
-
-  - Location: |BioSignalML|_.
-  - Licensing: none.
-
-  .. |BioSignalML| replace:: ``[OpenCOR]/src/plugins/thirdParty/BioSignalML``
-  .. _BioSignalML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/BioSignalML
-
 - `CellML API <https://github.com/cellmlapi/cellml-api/>`__: an interface to manipulate and process `CellML <https://www.cellml.org/>`__ documents.
 
   - Location: |CellMLAPI|_.
@@ -39,6 +31,14 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
 
   .. |jQuerySoftware| replace:: ``[OpenCOR]/doc/3rdparty/jQuery``
   .. _jQuerySoftware: https://github.com/opencor/opencor/tree/master/doc/3rdparty/jQuery
+
+- libBioSignalML: a library for reading and writing BioSignalML documents.
+
+  - Location: |libBioSignalML|_.
+  - Licensing: none.
+
+  .. |libBioSignalML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libBioSignalML``
+  .. _libBioSignalML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libBioSignalML
 
 - `libgit2 <https://libgit2.github.com/>`__ 0.27.7: a portable, pure C implementation of the `Git <https://git-scm.com/>`__ core methods provided as a re-entrant linkable library with a solid API.
 
@@ -170,7 +170,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |web-xsltSoftware|_.
   - Licensing: `W3C <https://opensource.org/licenses/W3C>`__, `Apache v2.0 <https://opensource.org/licenses/Apache-2.0>`__, `MIT <https://opensource.org/licenses/MIT>`__, `MPL v1.1 <https://opensource.org/licenses/MPL-1.1>`__ or `MPL v2.0 <https://opensource.org/licenses/MPL-2.0>`__.
 
-    **Note:** we currently use only (a slightly improved version of) |ctopff.xsl|_ to convert `Content MathML <https://www.w3.org/TR/MathML3/chapter4.html>`__ to `Presentation MathML <https://www.w3.org/TR/MathML2/chapter3.html>`__.
+    **Note:** we only use (a slightly improved version of) |ctopff.xsl|_ to convert `Content MathML <https://www.w3.org/TR/MathML3/chapter4.html>`__ to `Presentation MathML <https://www.w3.org/TR/MathML2/chapter3.html>`__.
 
   .. |web-xsltSoftware| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/res/web-xslt``
   .. _web-xsltSoftware: https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/res/web-xslt
