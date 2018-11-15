@@ -29,10 +29,10 @@ All plugins come under one of the following categories:
 - |SimulationCategory|_: plugins to simulate files.
 - |SolverCategory|_: plugins to access various solvers.
 - |SupportCategory|_: plugins to support various third-party libraries.
-- |TestCategory|_: test plugins.
+- |TestCategory|_: plugins to test things.
 - |ThirdPartyCategory|_: plugins to access various third-party libraries.
 - |ToolsCategory|_: plugins to access various tools.
-- |WidgetCategory|_: plugins to access various ad hoc widgets.
+- |WidgetCategory|_: plugins to access various *ad hoc* widgets.
 
 .. |DataStoreCategory| replace:: **Data Store**
 .. _DataStoreCategory: https://github.com/opencor/opencor/tree/master/src/plugins/dataStore/
@@ -85,7 +85,7 @@ For example, |miscellaneousDirectory|_ contains the code of our different `Misce
 .. _coreDirectory: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Core/
 
 **Note:** the |SampleCategory|_ and |TestCategory|_ categories are special categories in that they are only available when building OpenCOR with the ``ENABLE_SAMPLE_PLUGINS`` and/or ``ENABLE_TEST_PLUGINS`` options set to ``ON``.
-They should therefore only be used for plugins that are aimed at helping people who want to learn how to write plugins for OpenCOR, and/or for test plugins.
+They should therefore only be used for plugins that are aimed at helping people who want to learn how to write plugins for OpenCOR, and/or at testing things.
 
 .. _develop_plugins_index_interfaces:
 
@@ -94,16 +94,16 @@ Interfaces
 
 Plugins can implement different interfaces.
 Those interfaces allow a plugin, through the implementation of various methods, to interact with OpenCOR.
-Currently supported interfaces can be found under |plugins|_.
+Current interfaces can be found under |plugins|_.
 They are:
 
 - |CLIInterface|_: to support command line execution.
 - |CoreInterface|_: to control some of OpenCOR's core aspects.
 - |DataStoreInterface|_: to let OpenCOR know about the name of a data store, as well as retrieve some data from it and provide an instance of its exporter.
-- |FileHandlingInterface|_: to save a file, as well as to be told whenever a file has been opened, modified, closed, etc.
+- |FileHandlingInterface|_: to save a file, as well as to be told when a file has been opened, modified, closed, etc.
 - |FileTypeInterface|_: to let OpenCOR know about supported file types and their description.
-- |GUIInterface|_: to let OpenCOR know about the menus and menu actions that we want to see added to the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__, as well as to be told whenever the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__ needs updating.
-- |InternationalisationInterface|_: to be told whenever we should retranslate ourselves.
+- |GUIInterface|_: to let OpenCOR know about the menus and menu actions that we want to see added to the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__, as well as to be told when the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__ needs updating.
+- |InternationalisationInterface|_: to be told when we should retranslate ourselves.
 - |PluginInterface|_: to initialise/finalise a plugin, load/save its settings, etc.
 - |PreferencesInterface|_: to specify a plugin's default behaviour, settings, etc.
 - |SolverInterface|_: to let OpenCOR know about the type, name and properties of a solver, as well as to provide OpenCOR with an instance of that solver.
@@ -148,8 +148,8 @@ They are:
 
 Some plugins do not implement any interface (e.g. the `LLVM+Clang <https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang/>`__ plugin) while others may implement one or several interfaces (e.g. the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin implements the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__, `File Handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`__, `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__, `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ and `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interfaces).
 
-**Note:** the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__ interface is a special interface in that it is only, and can only be, implemented by the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin.
-Any plugin, besides the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, that tries to implement the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__ interface will be reported by OpenCOR as being invalid.
+**Note:** the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__ interface is only, and can only be, implemented by the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin.
+Any other plugin that tries to implement the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__ interface will be reported by OpenCOR as being invalid.
 
 .. _develop_plugins_index_cmakeProject:
 
@@ -158,7 +158,7 @@ CMake project
 
 OpenCOR is built and packaged using `CMake <https://www.cmake.org/>`__.
 When it comes to plugins, this requires creating a ``CMakeLists.txt`` file in the plugin's root folder and calling the ``add_plugin()`` macro, which is defined in |common.cmake|_.
-The ``add_plugin()`` macro uses information passed to it to build and package the plugin.
+That macro uses information passed to it to build and package the plugin.
 That information comes in the form of a series of parameters, some of which are keywords:
 
 - ``SOURCES``: implementation files.
@@ -166,13 +166,13 @@ That information comes in the form of a series of parameters, some of which are 
 - ``UIS``: user interface files.
 - ``DEFINITIONS``: definitions needed to build the plugin.
 - ``PLUGINS``: plugins needed by the plugin.
-- ``QT_MODULES``: Qt modules needed by the plugin.
+- ``QT_MODULES``: `Qt <https://www.qt.io/>`__ modules needed by the plugin.
 - ``EXTERNAL_BINARIES_DIR``: location of external binaries needed by the plugin.
 - ``EXTERNAL_BINARIES``: external binaries needed by the plugin.
 - ``EXTERNAL_DESTINATION_DIR``: location where external dependencies are to be copied.
 - ``EXTERNAL_SOURCE_DIR``: location of external dependencies.
 - ``SYSTEM_BINARIES``: system binaries needed by the plugin.
-- ``DEPENDS_ON``: CMake targets on which the plugin depends.
+- ``DEPENDS_ON``: `CMake <https://www.cmake.org/>`__ targets on which the plugin depends.
 - ``TESTS``: :ref:`tests <develop_tests>` for the plugin.
 
 .. |common.cmake| replace:: ``[OpenCOR]/cmake/common.cmake``
@@ -219,7 +219,7 @@ Namespace
 
 The code for the :ref:`basic information <develop_plugins_index_basicInformation>` and :ref:`plugin class <develop_plugins_index_pluginClass>` must be in the plugin's own namespace within the ``OpenCOR`` namespace.
 More generally, any plugin-related code should be within those two namespaces, this to ensure the integrity of the plugin's code.
-Thus, in the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, we must have:
+Thus, in the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, we have:
 
 .. code-block:: c++
 
@@ -256,7 +256,7 @@ This information is made available to OpenCOR through a function, which in the c
 
 **Note:** to ensure the uniqueness of a plugin, OpenCOR uses the name of a plugin to determine the name of its function.
 In other words, the name of the function is expected to be ``<PluginName>PluginInfo()``.
-If it is not, OpenCOR will not be able to recognise the plugin.
+If it is not, OpenCOR will not recognise the plugin.
 
 In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, the body of that function is:
 
@@ -334,7 +334,7 @@ Global header file
 ~~~~~~~~~~~~~~~~~~
 
 There may be cases where a plugin declares a function or defines a class that we want to be able to use from another plugin.
-On `Linux <https://en.wikipedia.org/wiki/Linux>`__ and `macOS <https://en.wikipedia.org/wiki/MacOS>`__, nothing special needs to be done, but on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__, the function or class needs to be exported by the original plugin:
+On `Linux <https://en.wikipedia.org/wiki/Linux>`__ and `macOS <https://en.wikipedia.org/wiki/MacOS>`__, nothing needs to be done about it, but on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__, the function or class needs to be exported by the original plugin:
 
 .. code-block:: c++
 
