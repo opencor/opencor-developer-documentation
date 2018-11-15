@@ -21,7 +21,7 @@ Various batch/VBScript files (``.bat`` \| ``.vbs``) and shell scripts are availa
   You can, however, specify a maximum number of jobs (``n``) to be run simultaneously by calling ``make -j [n]``.
   If no ``n`` value is provided, then as many jobs as possible will be run simultaneously.
 
-- |maketestsScript|_\[|maketestsBatch|_]: builds a release version of OpenCOR and its tests;
+- |maketestsScript|_\[|maketestsBatch|_]: builds a debug version of OpenCOR and its tests;
 - |runScript|_\[|runBatch|_ | |runVBScript|_]: runs OpenCOR; and
 
   **Note:** on Windows, if you were to run OpenCOR from a console window by entering ``run``, then ``run.bat`` would be executed (rather than ``run.vbs``), offering you the opportunity to use OpenCOR as a `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ application.
@@ -72,7 +72,7 @@ Using Qt Creator
 - Start `Qt Creator <https://www.qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__;
 - Open |cmakeFile|_ (by selecting the ``File`` | ``Open File or Project...`` menu or by pressing ``Ctrl``\ +\ ``O``;
 - Configure the project as you see fit and click on the ``Configure Project`` button;
-- Configure CMake, if needed, by going to the ``Projects`` page and setting, for example, ``ENABLE_TESTS`` to ``ON``, and click on the ``Apply Configuration Changes`` button; and
+- Configure `CMake <https://www.cmake.org/>`__, if needed, by going to the ``Projects`` page and setting, for example, ``ENABLE_TESTS`` to ``ON``, and click on the ``Apply Configuration Changes`` button; and
 - Build and run OpenCOR (by selecting the ``Build`` | ``Run`` menu or by pressing ``Ctrl``\ +\ ``R``).
 
 .. |cmakeFile| replace:: ``[OpenCOR]/CMakeLists.txt``
