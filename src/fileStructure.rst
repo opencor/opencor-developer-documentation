@@ -11,7 +11,7 @@ Files are organised as follows:
   build                         // Where OpenCOR is built
   cmake                         // Files used to build OpenCOR
   distrib                       // Files used to package OpenCOR
-  doc                           // User and developer documentations
+  doc                           // Documentation
    ├─ 3rdparty                  // Third-party libraries used for the documentation
    │   └─ jQuery                // jQuery
    ├─ cor                       // COR
@@ -21,6 +21,10 @@ Files are organised as follows:
   formats                       // Some sample formats for CellML export
   i18n                          // Internationalisation files
   models                        // Some sample CellML files
+   └─ tests                     // Some test files
+       ├─ cellml                // Some CellML test files
+       ├─ combine               // Some COMBINE test archives
+       └─ sedml                 // Some SED-ML test files
   res                           // Resource files
    ├─ flags                     // Images from the Printable world flags library
    ├─ oxygen                    // Images from the Oxygen library
@@ -32,7 +36,7 @@ Files are organised as follows:
    │   ├─ QtSingleApplication   // QtSingleApplication
    │   └─ QtWebKit              // QtWebKit
    ├─ misc                      // Files that do not fit anywhere else
-   ├─ plugins                   // Plugins supported by OpenCOR
+   ├─ plugins                   // Plugins
    │   ├─ dataStore             // Plugins to store and manipulate data
    │   ├─ editing               // Plugins to edit files
    │   ├─ miscellaneous         // Plugins for various things
@@ -43,8 +47,8 @@ Files are organised as follows:
    │   ├─ support               // Plugins to support various third-party libraries
    │   ├─ test                  // Test plugins
    │   ├─ thirdParty            // Plugins to access various third-party libraries
-   │   │   ├─ BioSignalML       // BioSignalML as a plugin
    │   │   ├─ CellMLAPI         // The CellML API as a plugin
+   │   │   ├─ libBioSignalML    // libBioSignalML as a plugin
    │   │   ├─ libgit2           // libgit2 as a plugin
    │   │   ├─ libNuML           // libNuML as a plugin
    │   │   ├─ libSBML           // libSBML as a plugin
@@ -53,6 +57,8 @@ Files are organised as follows:
    │   │   ├─ LLVMClang         // LLVM+Clang as a plugin
    │   │   ├─ OAuth             // OAuth 2.0 for Qt as a plugin
    │   │   ├─ OpenSSL           // OpenSSL as a plugin
+   │   │   ├─ Python            // Python as a plugin
+   │   │   ├─ PythonPackages    // Some Python packages as a plugin
    │   │   ├─ QScintilla        // QScintilla as a plugin
    │   │   ├─ Qwt               // Qwt as a plugin
    │   │   ├─ SUNDIALS          // Part of SUNDIALS as a plugin
