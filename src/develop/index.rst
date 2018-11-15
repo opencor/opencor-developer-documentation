@@ -36,14 +36,31 @@ All changes to the source code must be referenced in the list of `issues <https:
 - Specify the platform(s) (|windows|, |linux| and/or |macos|) associated with a |bug|, |task| or |regression| issue.
 
 .. |bug| image:: pics/bug.svg
+   :class: label
+
 .. |feature| image:: pics/feature.svg
+   :class: label
+
 .. |improvement| image:: pics/improvement.svg
+   :class: label
+
 .. |linux| image:: pics/linux.svg
+   :class: label
+
 .. |macos| image:: pics/macos.svg
+   :class: label
+
 .. |python| image:: pics/python.svg
+   :class: label
+
 .. |regression| image:: pics/regression.svg
+   :class: label
+
 .. |task| image:: pics/task.svg
+   :class: label
+
 .. |windows| image:: pics/windows.svg
+   :class: label
 
 Continuous integration
 ----------------------
