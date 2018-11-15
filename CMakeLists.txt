@@ -24,3 +24,8 @@ FetchContent_Populate(sphinx-theme)
 include(${SPHINX_THEME_DIR}/cmake/common.cmake)
 
 build_documentation(developer 49 133 155)
+
+add_custom_command(TARGET Sphinx POST_BUILD
+                   COMMAND ${PYTHON_EXECUTABLE} "${CMAKE_BINARY_DIR}/theme/cmake/appendfile.py"
+                                                "${CMAKE_BINARY_DIR}/html/_static/theme.css"
+                                                "${CMAKE_SOURCE_DIR}/styles/opencor.css")

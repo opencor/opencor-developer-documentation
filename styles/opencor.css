@@ -1,0 +1,9 @@
+div.bad pre {
+    border: 1px solid rgba(149, 55, 52, 0.13);
+    background: rgba(149, 55, 52, 0.05);
+}
+
+div.good pre {
+    border: 1px solid rgba(118, 146, 60, 0.13);
+    background: rgba(118, 146, 60, 0.05);
+}
