@@ -4,7 +4,7 @@
  Build, test and run
 =====================
 
-OpenCOR (and its corresponding :ref:`tests <develop_tests>`) can be built, tested and run either from the command line or using `Qt Creator <https://www.qt.io/ide/>`__.
+OpenCOR (and its corresponding :ref:`tests <develop_tests>`) can be built, tested and run either from the command line or using `Qt Creator <https://www.qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__.
 By default, `Ninja <https://ninja-build.org/>`__ is used to build OpenCOR, but if it is not available, then `JOM <https://wiki.qt.io/Jom>`__ (on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__) or `Make <https://www.gnu.org/software/make/>`__ (on `Linux <https://en.wikipedia.org/wiki/Linux>`__/`macOS <https://en.wikipedia.org/wiki/MacOS>`__) will be used.
 
 .. _buildTestAndRunFromTheCommandLine:
@@ -69,7 +69,7 @@ Various batch/VBScript files (``.bat`` \| ``.vbs``) and shell scripts are availa
 Using Qt Creator
 ----------------
 
-- Start `Qt Creator <https://www.qt.io/ide/>`__;
+- Start `Qt Creator <https://www.qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__;
 - Open |cmakeFile|_ (by selecting the ``File`` | ``Open File or Project...`` menu or by pressing ``Ctrl``\ +\ ``O``;
 - Configure the project as you see fit and click on the ``Configure Project`` button;
 - Configure CMake, if needed, by going to the ``Projects`` page and setting, for example, ``ENABLE_TESTS`` to ``ON``, and click on the ``Apply Configuration Changes`` button; and

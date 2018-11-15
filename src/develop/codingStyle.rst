@@ -471,7 +471,7 @@ Formatting
 
   - Keep lines shorter than 80 characters whenever possible.
 
-    **Note:** `Qt Creator <https://www.qt.io/ide/>`__ can be configured to display a right margin.
+    **Note:** `Qt Creator <https://www.qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__ can be configured to display a right margin.
     For this, select the ``Tools`` | ``Options...`` menu, then the ``Text Editor`` section, and finally the ``Display`` tab.
     Configuration options can be found under the ``Text Wrapping`` group box.
 
