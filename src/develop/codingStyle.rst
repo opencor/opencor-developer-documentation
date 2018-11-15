@@ -5,12 +5,12 @@
 ==============
 
 This page contains various rules, which anyone working on OpenCOR should respect.
-These rules were taken (paraphrased, if not simply copied/pasted) from the `Coding Conventions <https://wiki.qt.io/Coding_Conventions>`__ document.
+These rules were taken (paraphrased, if not simply copied/pasted) from the `Qt Coding Conventions <https://wiki.qt.io/Coding_Conventions>`__ document.
 
 General
 -------
 
-- The most important rule of all: the `KISS principle <https://en.wikipedia.org/wiki/KISS_principle>`__, i.e. *Keep it simple, stupid!*
+- The most important rule of all: the `KISS principle <https://en.wikipedia.org/wiki/KISS_principle>`__, i.e. *Keep it simple, stupid*.
   Always use a simple implementation in favour of a more complicated one.
   This eases maintenance a lot!
 - Write good C++ code: readable, well commented when necessary, and object-oriented.
@@ -225,7 +225,7 @@ Formatting
 
      char const * ptr;
 
-  Use ``nullptr`` for ``NULL`` pointer constants:
+  Use ``nullptr`` for null pointer constants:
 
   .. code-block:: c++
      :class: good
@@ -617,7 +617,7 @@ Patterns and practices
 
        // Pointers to objects are OK, no code needs to be run to initialise ptr
 
-       static QString *ptr = 0;
+       static QString *ptr = nullptr;
 
        // Use Q_GLOBAL_STATIC to create static global objects instead
 
