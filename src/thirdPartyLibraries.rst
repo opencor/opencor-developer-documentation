@@ -32,6 +32,14 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |jQuery| replace:: ``[OpenCOR]/doc/3rdparty/jQuery``
   .. _jQuery: https://github.com/opencor/opencor/tree/master/doc/3rdparty/jQuery
 
+- `KaTeX <https://katex.org/>`__ 0.10.0: the fastest math typesetting library for the Web.
+
+  - Location: |KaTeX|_.
+  - Licensing: `MIT <https://opensource.org/licenses/MIT>`__.
+
+  .. |KaTeX| replace:: ``[SphinxTheme]/static/katex``
+  .. _KaTeX: https://github.com/opencor/sphinx-theme/tree/master/static/katex
+
 - libBioSignalML: a library for reading and writing BioSignalML documents.
 
   - Location: |libBioSignalML|_.
