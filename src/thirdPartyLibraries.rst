@@ -96,6 +96,13 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |LLVM+Clang| replace:: ``[OpenCOR]/src/plugins/thirdParty/LLVMClang``
   .. _LLVM+Clang: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang
 
+- `Mesa <https://www.mesa3d.org/>`__ 18.2.5: a system for rendering interactive 3D graphics.
+
+  - Location: `MIT <https://opensource.org/licenses/MIT>`__.
+
+  .. |Mesa| replace:: ``[OpenCOR]/distrib/linux/mesa``
+  .. _Mesa: https://github.com/opencor/opencor/tree/master/distrib/linux/mesa
+
 - `OAuth 2.0 for Qt <https://github.com/pipacs/o2>`__ 1.0.1: a library that encapsulates the `OAuth <https://oauth.net/>`__ 1.0 and 2.0 client authentication flows, and the sending of authenticated `HTTP <https://www.w3.org/Protocols/>`__ requests.
 
   - Location: |OAuth|_.
