@@ -24,6 +24,14 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |diff-match-patch| replace:: ``[OpenCOR]/src/3rdparty/diff_match_patch``
   .. _diff-match-patch: https://github.com/opencor/opencor/tree/master/src/3rdparty/diff_match_patch
 
+- `ICU <http://site.icu-project.org/>`__ 56.1: a library that provides `Unicode <https://en.wikipedia.org/wiki/Unicode>`__ and Globalization support for software applications.
+
+  - Location: |ICU|_.
+  - Licensing: `Unicode <http://www.unicode.org/copyright.html#License>`__.
+
+  .. |ICU| replace:: ``[OpenCOR]/distrib/linux/icu``
+  .. _ICU: https://github.com/opencor/opencor/tree/master/distrib/linux/icu
+
 - `jQuery <https://jquery.com/>`__ 3.3.1: a fast and concise `JavaScript <https://en.wikipedia.org/wiki/JavaScript>`__ library that simplifies `HTML <https://www.w3.org/html/>`__ document traversing, event handling, animating, and `Ajax <https://en.wikipedia.org/wiki/Ajax_(programming)>`__ interactions for rapid web development.
 
   - Location: |jQuery|_.
