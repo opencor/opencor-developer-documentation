@@ -39,7 +39,7 @@ Unlike for the :ref:`Sample <develop_plugins_sample>` plugin, we want our plugin
 This means that it needs to implement some :ref:`interfaces <develop_plugins_index_interfaces>`.
 
 More specifically, we want our plugin to be a dockable window, so we need to implement both the `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ and `Window <https://github.com/opencor/opencor/blob/master/src/plugins/windowinterface.inl>`__ interfaces.
-While we are at it, we might as well internationalise our plugin, in which case it means that we also need to implement the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface.
+While we are at it, we might also internationalise our plugin, which means also implementing the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface.
 
 CMake project
 -------------
@@ -75,7 +75,7 @@ As for the :ref:`Sample <develop_plugins_sample>` plugin, our plugin has a |CMak
 .. |CMakeLists.txt| replace:: ``CMakeLists.txt``
 .. _CMakeLists.txt: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleWindow/CMakeLists.txt
 
-One of the interfaces our plugin implements comes with a ``.cpp`` file, so we reference it (lines 7, 9 and 10).
+The interfaces our plugin implements come with a ``.cpp`` file, so we reference them (lines 7, 9 and 10).
 Then, our plugin needs both the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ and `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugins (the latter, to be able to use its ``add()`` function), so they are referenced (lines 20 and 21) using the ``PLUGINS`` keyword (line 19).
 Our plugin comes with a dockable window, which is implemented using various files (lines 13, 16 and 18).
 One of those files is a ``.ui`` file, which is referenced using the ``UIS`` keyword (line 17).
@@ -145,8 +145,8 @@ Our :ref:`plugin information <develop_plugins_index_pluginInformation>` can be f
 .. _samplewindowplugin.json: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleWindow/src/samplewindowplugin.json
 
 As mentioned above, our plugin implements some interfaces, which means that their header file is included (lines 28, 30 and 31).
-It also means that our plugin class inherits from those interfaces (lines 48 and 49), as well as make calls to the ``Q_INTERFACES()`` macro to let `Qt <https://www.qt.io/>`__ know which interfaces it implements (lines 55-57).
-Finally, we include the inline files (lines 60-62) that declare various methods that must be implemented by our plugin (see the :ref:`next section <develop_plugins_sampleWindow_interfacesImplementation>`).
+It also means that our plugin class inherits from those interfaces (lines 48 and 49), as well as makes calls to the ``Q_INTERFACES()`` macro to let `Qt <https://www.qt.io/>`__ know which interfaces it implements (lines 55-57).
+Finally, we include the inline files (lines 60-62) that declare various methods that must be implemented by our plugin (see :ref:`below <develop_plugins_sampleWindow_interfacesImplementation>`).
 (The rest of the class definition is specific to our plugin and is discussed :ref:`below <develop_plugins_sampleWindow_pluginSpecific>`.)
 
 The C function that is used by OpenCOR to retrieve some :ref:`basic information <develop_plugins_index_basicInformation>` about our plugin can be found in |samplewindowplugin.cpp|_:
@@ -197,7 +197,7 @@ We start with the `Internationalisation <https://github.com/opencor/opencor/blob
 
    //==============================================================================
 
-All that we need to do here is to (re)translate ``mSampleWindowAction`` with the actual (French) translations in |SampleWindow_fr.ts|_ (together with some other translations needed in the :ref:`next section <develop_plugins_sampleWindow_pluginSpecific>`).
+All that we need to do is (re)translate ``mSampleWindowAction`` with the actual (French) translations in |SampleWindow_fr.ts|_ (together with some other translations needed :ref:`below <develop_plugins_sampleWindow_pluginSpecific>`).
 
 .. |SampleWindow_fr.ts| replace:: ``SampleWindow_fr.ts``
 .. _SampleWindow_fr.ts: https://github.com/opencor/opencor/tree/master/src/plugins/sample/SampleWindow/i18n/SampleWindow_fr.ts
@@ -335,7 +335,7 @@ All three methods are implemented since they tell OpenCOR the default dock area 
 Plugin specific
 ---------------
 
-Some extra work is needed to get our plugin to do what it is supposed to be doing, and this is done via the ``SampleWindowWindow`` class in |samplewindowwindow.h|_:
+Some extra work is needed to get our plugin to do what we want, and this is done via the ``SampleWindowWindow`` class in |samplewindowwindow.h|_:
 
 .. code-block:: c++
    :lineno-start: 28
