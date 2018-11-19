@@ -42,12 +42,12 @@ This means that its code can be found under |Sample|_.
 Interfaces
 ----------
 
-All our plugin does is to make its ``add()`` function available to other plugins, so there is no need for our plugin to interact with OpenCOR and, therefore, no need to implement any interface.
+All our plugin does is make its ``add()`` function available to other plugins, so there is no need for our plugin to interact with OpenCOR and, therefore, no need to implement any interface.
 
 CMake project
 -------------
 
-To build our plugin, we need a |CMakeLists.txt|_ file (some information on CMake and plugins in OpenCOR can be found :ref:`here <develop_plugins_index_cmakeProject>`), which contents is:
+To build our plugin, we need a |CMakeLists.txt|_ file (some information on `CMake <https://www.cmake.org/>`__ and plugins in OpenCOR can be found :ref:`here <develop_plugins_index_cmakeProject>`), which contents is:
 
 .. code-block:: cmake
    :lineno-start: 1
@@ -71,14 +71,14 @@ To build our plugin, we need a |CMakeLists.txt|_ file (some information on CMake
 .. |CMakeLists.txt| replace:: ``CMakeLists.txt``
 .. _CMakeLists.txt: https://github.com/opencor/opencor/blob/master/src/plugins/sample/Sample/CMakeLists.txt
 
-The first line specifies the name of the CMake project for our `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugin, i.e. ``SamplePlugin``.
+The first line specifies the name of the `CMake <https://www.cmake.org/>`__ project for our `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugin, i.e. ``SamplePlugin``.
 Then, we have a call to the ``add_plugin()`` macro (line 5), which is defined in |common.cmake|_.
 Different types of parameters are passed to it (``SOURCES``, ``HEADERS_MOC`` and ``QT_MODULES`` at lines 6, 11 and 13, respectively), followed by the parameters themselves.
 
 .. |common.cmake| replace:: ``[OpenCOR]/cmake/common.cmake``
 .. _common.cmake: https://github.com/opencor/opencor/blob/master/cmake/common.cmake
 
-As for any plugin, our `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugin must reference |plugininfo.cpp|_ (line 7), so that it can provide some :ref:`basic information <develop_plugins_index_basicInformation>` about itself (more on this below).
+As for any plugin, our `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugin must reference |plugininfo.cpp|_ (line 7), so that it can provide some :ref:`basic information <develop_plugins_index_basicInformation>` about itself (see below).
 ``.cpp`` files that contain the plugin's implementation code must also be referenced (lines 9 and 10).
 (Note that they start with ``sample``, i.e. the name of the plugin in lower case.
 This convention is used throughout OpenCOR's code to ensure that there are no name clashes between plugins' files.)
@@ -130,8 +130,8 @@ That function is declared in |sampleplugin.h|_, which is also where our :ref:`pl
 .. |sampleplugin.h| replace:: ``sampleplugin.h``
 .. _sampleplugin.h: https://github.com/opencor/opencor/blob/master/src/plugins/sample/Sample/src/sampleplugin.h
 
-We need to know about the data structure of our :ref:`basic information <develop_plugins_index_basicInformation>`, so we include |plugininfo.h|_ (line 28).
-Then, we declare our C function (line 37).
+We need to know about the data structure of our :ref:`basic information <develop_plugins_index_basicInformation>`, so we must include |plugininfo.h|_ (line 28).
+Then, we must declare our C function (line 37).
 Finally, we have the definition of our :ref:`plugin class <develop_plugins_index_pluginClass>` (lines 41-46).
 The call to the ``Q_PLUGIN_METADATA()`` macro (line 45) requires to pass both an IID (``OpenCOR.SamplePlugin``) and the name of a `JSON <http://www.json.org/>`__ file (|sampleplugin.json|_).
 As mentioned :ref:`here <develop_plugins_index_jsonFile>`, the JSON file simply references the name of our plugin class (``SamplePlugin``):
@@ -182,7 +182,7 @@ Next, we have our |sampleplugin.cpp|_ file, which contents is:
 
 We start by including our header file (line 24).
 Then, lines 33-43 contain the body of our C function.
-The first thing it does is to create an instance of ``Descriptions`` on the stack (line 35).
+The first thing it does is create an instance of ``Descriptions`` on the stack (line 35).
 This instance is used to provide a multilingual description of our plugin (here, both in English and in French; lines 37 and 38).
 Then, it creates and returns an instance of ``PluginInfo`` on the heap (lines 40-42), which contains the :ref:`basic information <develop_plugins_index_basicInformation>` needed by OpenCOR to identify our plugin.
 This includes our plugin's category (``PluginInfo::Sample``; line 40), whether it is selectable (``false``; line 40), whether it offers direct `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ support (``false``; line 40), our plugin's direct dependencies (none, hence ``QStringList()``; line 41) and its multilingual description (``descriptions``; line 42).
@@ -224,7 +224,7 @@ This header file defines the ``SAMPLE_EXPORT`` macro (click :ref:`here <develop_
 .. |sampleglobal.h| replace:: ``sampleglobal.h``
 .. _sampleglobal.h: https://github.com/opencor/opencor/blob/master/src/plugins/sample/Sample/src/sampleglobal.h
 
-The implementation our plugin's ``add()`` function can be found in |sampleutilities.cpp|_:
+The implementation of our plugin's ``add()`` function can be found in |sampleutilities.cpp|_:
 
 .. code-block:: c++
    :lineno-start: 24
