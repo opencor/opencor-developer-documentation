@@ -38,8 +38,9 @@ Interfaces
 We want our plugin to interact with OpenCOR.
 This means that it needs to implement some :ref:`interfaces <develop_plugins_index_interfaces>`.
 
-More specifically, we want our plugin to be a view, so we need to implement both the `File handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`__, `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ and `View <https://github.com/opencor/opencor/blob/master/src/plugins/viewinterface.inl>`__ interfaces.
-While we are at it, we might as well internationalise our plugin, in which case it means that we also need to implement the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface.
+More specifically, we want our plugin to be a view, so we need to implement both the `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ and `View <https://github.com/opencor/opencor/blob/master/src/plugins/viewinterface.inl>`__ interfaces.
+Considering the purpose of our plugin, we also need to implement the `File handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`__ interface.
+While we are at it, we might also internationalise our plugin, which means also implementing the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface.
 
 CMake project
 -------------
@@ -75,7 +76,7 @@ As for the :ref:`Sample <develop_plugins_sample>` plugin, our plugin has a |CMak
 .. |CMakeLists.txt| replace:: ``CMakeLists.txt``
 .. _CMakeLists.txt: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleView/CMakeLists.txt
 
-Some of the interfaces our plugin implements come with a ``.cpp`` file, so we reference them (lines 7, 8, 10 and 11).
+The interfaces our plugin implements come with a ``.cpp`` file, so we reference them (lines 7, 8, 10 and 11).
 Then, our plugin needs the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, so it is referenced (line 21) using the ``PLUGINS`` keyword (line 20).
 Our plugin provides OpenCOR with a test view, which is implemented using various files (lines 14, 17 and 19).
 One of those files is a ``.ui`` file, which is referenced using the ``UIS`` keyword (line 18).
@@ -152,8 +153,8 @@ Starting with |sampleviewplugin.h|_, its contents is:
 .. _sampleviewplugin.json: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleView/src/sampleviewplugin.json
 
 As mentioned above, our plugin implements some interfaces, which means that their header file is included (lines 28, 29, 31 and 32).
-It also means that our plugin class inherits from those interfaces (lines 49-51), as well as make calls to the ``Q_INTERFACES()`` macro to let `Qt <https://www.qt.io/>`__ know which interfaces it implements (lines 57-60).
-Finally, we include the inline files (lines 65-68) that declare various methods that must be implemented by our plugin (see the :ref:`next section <develop_plugins_sampleView_interfacesImplementation>`).
+It also means that our plugin class inherits from those interfaces (lines 49-51), as well as makes calls to the ``Q_INTERFACES()`` macro to let `Qt <https://www.qt.io/>`__ know which interfaces it implements (lines 57-60).
+Finally, we include the inline files (lines 65-68) that declare various methods that must be implemented by our plugin (see :ref:`below <develop_plugins_sampleView_interfacesImplementation>`).
 (The rest of the class definition is specific to our plugin and is discussed :ref:`below <develop_plugins_sampleView_pluginSpecific>`.)
 
 The C function that is used by OpenCOR to retrieve some :ref:`basic information <develop_plugins_index_basicInformation>` about our plugin can be found in |sampleviewplugin.cpp|_:
@@ -502,7 +503,7 @@ Finally, our plugin needs to handle the case where a view widget is to be remove
 Plugin specific
 ---------------
 
-Some extra work is needed to get our plugin to do what it is supposed to be doing, and this is done via the ``SampleViewWidget`` class in |sampleviewwidget.h|_:
+Some extra work is needed to get our plugin to do what we want, and this is done via the ``SampleViewWidget`` class in |sampleviewwidget.h|_:
 
 .. code-block:: c++
    :lineno-start: 28
@@ -551,7 +552,7 @@ Some extra work is needed to get our plugin to do what it is supposed to be doin
 .. _sampleviewwidget.h: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleView/src/sampleviewwidget.h
 
 ``SampleViewWidget`` inherits from ``Core::ViewWidget``, which is defined in the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin and is an extended version of `Qt <https://www.qt.io/>`__'s ``QWidget`` class (line 43).
-It requires implementing the ``widget()`` method, which purpose is to return the exact widget that is to be shown in the view (line 53).
+It requires implementing the ``widget()`` method, which purpose is to return the widget that is to be shown in the view (line 53).
 In the present case, it is ``SampleViewWidget`` itself.
 Otherwise, ``SampleViewWidget`` also comes with a GUI file, which describes the layout of our plugin window (|sampleviewwidget.ui|_).
 The ``update()`` method is used by our plugin to update the contents of our view using information about the given file (line 55).
