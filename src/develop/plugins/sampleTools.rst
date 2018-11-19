@@ -36,9 +36,9 @@ Unlike for the :ref:`Sample <develop_plugins_sample>` plugin, we want our plugin
 This means that it needs to implement some :ref:`interfaces <develop_plugins_index_interfaces>`.
 
 More specifically, we want our plugin to work from the command line, so we need to implement the `CLI <https://github.com/opencor/opencor/blob/master/src/plugins/cliinterface.inl>`__ interface.
-We also want our plugin to work through OpenCOR's ``Tools`` menu, which involves creating a menu item and making it available to OpenCOR so that it can add it for us to its ``Tools`` menu.
+We also want our plugin to work through OpenCOR's ``Tools`` menu, which involves creating a menu item and making it available to OpenCOR, so that it can add it for us to its ``Tools`` menu.
 To do these, we need to implement both the `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__ and `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interfaces.
-While we are at it, we might as well internationalise our plugin, in which case it means that we also need to implement the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface.
+While we are at it, we might also internationalise our plugin, which means also implementing the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface.
 
 CMake project
 -------------
@@ -71,7 +71,7 @@ As for the :ref:`Sample <develop_plugins_sample>` plugin, our plugin has a |CMak
 .. |CMakeLists.txt| replace:: ``CMakeLists.txt``
 .. _CMakeLists.txt: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleTools/CMakeLists.txt
 
-Some of the interfaces our plugin implements come with a ``.cpp`` file, so we reference them (lines 7-9 and 11).
+The interfaces our plugin implements come with a ``.cpp`` file, so we reference them (lines 7-9 and 11).
 Then, our plugin needs the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ and `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugins (the latter, to be able to use its ``add()`` function), so they are referenced (lines 17 and 18) using the ``PLUGINS`` keyword (line 16).
 
 Plugin information
@@ -143,8 +143,8 @@ Our :ref:`plugin information <develop_plugins_index_pluginInformation>` can be f
 .. _sampletoolsplugin.json: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleTools/src/sampletoolsplugin.json
 
 As mentioned above, our plugin implements some interfaces, which means that their header file is included (lines 28-30 and 32).
-It also means that our plugin class inherits from those interfaces (lines 45-47), as well as make calls to the ``Q_INTERFACES()`` macro to let `Qt <https://www.qt.io/>`__ know which interfaces it implements (lines 53-56).
-Finally, we include the inline files (lines 59-62) that declare various methods that must be implemented by our plugin (see the :ref:`next section <develop_plugins_sampleTools_interfacesImplementation>`).
+It also means that our plugin class inherits from those interfaces (lines 45-47), as well as makes calls to the ``Q_INTERFACES()`` macro to let `Qt <https://www.qt.io/>`__ know which interfaces it implements (lines 53-56).
+Finally, we include the inline files (lines 59-62) that declare various methods that must be implemented by our plugin (see :ref:`below <develop_plugins_sampleTools_interfacesImplementation>`).
 (The rest of the class definition is specific to our plugin and is discussed :ref:`below <develop_plugins_sampleTools_pluginSpecific>`.)
 
 The C function that is used by OpenCOR to retrieve some :ref:`basic information <develop_plugins_index_basicInformation>` about our plugin can be found in |sampletoolsplugin.cpp|_:
@@ -273,7 +273,7 @@ After the `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiin
 
    //==============================================================================
 
-All that we need to do here is to (re)translate ``mAddTwoNumbersAction`` with the actual (French) translations in |SampleTools_fr.ts|_ (together with some other translations needed in the :ref:`next section <develop_plugins_sampleTools_pluginSpecific>`).
+All that we need to do is (re)translate ``mAddTwoNumbersAction`` with the actual (French) translations in |SampleTools_fr.ts|_ (together with some other translations needed :ref:`below <develop_plugins_sampleTools_pluginSpecific>`).
 
 .. |SampleTools_fr.ts| replace:: ``SampleTools_fr.ts``
 .. _SampleTools_fr.ts: https://github.com/opencor/opencor/tree/master/src/plugins/sample/SampleTools/i18n/SampleTools_fr.ts
@@ -475,7 +475,7 @@ Their implementation can be found in |sampletoolsplugin.cpp|_:
 ``runHelpCommand()`` (lines 212-221) is the method that is executed whenever our plugin is asked to handle the ``help`` command.
 It provides the user with some information about the commands it supports.
 In a similar way, ``runAddCommand()`` (lines 225-260) is executed whenever our plugin is asked to handle the ``add`` command.
-It checks that two numbers have been passed to the command and, if so, returns their sum to the user.
+It checks that two numbers have been passed and, if so, returns their sum to the user.
 
 ``addTwoNumbers()`` (lines 264-280) is a `Qt <https://www.qt.io/>`__ slot that is executed whenever the user selects our menu item (see ``mAddTwoNumbersAction``).
 Using a `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__ approach, it asks the user to provide two numbers and returns their sum, unless the user decides to cancel the action.
