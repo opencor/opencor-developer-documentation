@@ -27,7 +27,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
 - `ICU <http://site.icu-project.org/>`__ 56.1: a library that provides `Unicode <https://en.wikipedia.org/wiki/Unicode>`__ and Globalization support for software applications.
 
   - Location: |ICU|_.
-  - Licensing: `Unicode <http://www.unicode.org/copyright.html#License>`__.
+  - Licensing: `Unicode <https://unicode.org/copyright.html#License>`__.
 
   .. |ICU| replace:: ``[OpenCOR]/distrib/linux/icu``
   .. _ICU: https://github.com/opencor/opencor/tree/master/distrib/linux/icu
@@ -80,7 +80,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |libSBML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libSBML``
   .. _libSBML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libSBML
 
-- `libSEDML <https://github.com/fbergmann/libSEDML/>`__ 0.4.3: a library for reading and writing `SED-ML <http://www.sed-ml.org/>`__ models.
+- `libSEDML <https://github.com/fbergmann/libSEDML/>`__ 0.4.3: a library for reading and writing `SED-ML <https://sed-ml.github.io/>`__ files.
 
   - Location: |libSEDML|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
@@ -96,7 +96,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |LibXDiff| replace:: ``[OpenCOR]/src/plugins/thirdParty/LibXDiff``
   .. _LibXDiff: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LibXDiff
 
-- `LLVM <http://www.llvm.org/>`__\ +\ `Clang <http://clang.llvm.org/>`__ 7.0.0: a collection of modular and reusable compiler and toolchain technologies.
+- `LLVM <https://llvm.org/>`__\ +\ `Clang <https://clang.llvm.org/>`__ 7.0.0: a collection of modular and reusable compiler and toolchain technologies.
 
   - Location: |LLVM+Clang|_.
   - Licensing: `UoI/NCSA <https://opensource.org/licenses/UoI-NCSA>`__.
@@ -143,7 +143,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |FlagsImages| replace:: ``[OpenCOR]/res/flags``
   .. _FlagsImages: https://github.com/opencor/opencor/tree/master/res/flags
 
-- `QScintilla <https://riverbankcomputing.com/software/qscintilla/intro>`__ 2.10.8: a `Qt <https://www.qt.io/>`__ port of the `Scintilla <http://www.scintilla.org/>`__ editing component.
+- `QScintilla <https://riverbankcomputing.com/software/qscintilla/intro>`__ 2.10.8: a `Qt <https://www.qt.io/>`__ port of the `Scintilla <https://www.scintilla.org/>`__ editing component.
 
   - Location: |QScintilla|_.
   - Licensing: `GPL v3.0 <https://opensource.org/licenses/GPL-3.0>`__.
@@ -159,7 +159,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |QtSingleApplication| replace:: ``[OpenCOR]/src/3rdparty/QtSingleApplication``
   .. _QtSingleApplication: https://github.com/opencor/opencor/tree/master/src/3rdparty/QtSingleApplication
 
-- `QtWebKit <http://code.qt.io/cgit/qt/qtwebkit.git/tree/>`__: a `Qt <https://www.qt.io/>`__ port of `WebKit <https://webkit.org/>`__, a web browser engine.
+- `QtWebKit <https://code.qt.io/cgit/qt/qtwebkit.git/tree/>`__: a `Qt <https://www.qt.io/>`__ port of `WebKit <https://webkit.org/>`__, a web browser engine.
 
   - Location: |QtWebKit|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__.
@@ -180,7 +180,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |Qwt| replace:: ``[OpenCOR]/src/plugins/thirdParty/Qwt``
   .. _Qwt: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Qwt
 
-- `SUNDIALS <http://computation.llnl.gov/projects/sundials>`__ 3.2.1: a SUite of Non-linear and DIfferential/ALgebraic equation Solvers.
+- `SUNDIALS <https://computation.llnl.gov/projects/sundials>`__ 3.2.1: a SUite of Non-linear and DIfferential/ALgebraic equation Solvers.
 
   - Location: |SUNDIALS|_.
   - Licensing: `BSD 3-Clause <https://opensource.org/licenses/BSD-3-Clause>`__.
@@ -209,7 +209,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |Zinc| replace:: ``[OpenCOR]/src/plugins/thirdParty/Zinc``
   .. _Zinc: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Zinc
 
-- `zlib <http://www.zlib.net/>`__ 1.2.11: a massively spiffy yet delicately unobtrusive compression library.
+- `zlib <https://zlib.net/>`__ 1.2.11: a massively spiffy yet delicately unobtrusive compression library.
 
   - Location: |zlib|_.
   - Licensing: `Zlib <https://opensource.org/licenses/Zlib>`__.

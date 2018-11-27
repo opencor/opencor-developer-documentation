@@ -205,7 +205,7 @@ For this, we need a ``.cpp``, a ``.h`` and a ``.json`` file, such as |coreplugin
 ``.json`` file
 ~~~~~~~~~~~~~~
 
-The ``.json`` file is a simple `JSON <http://www.json.org/>`__ file, which sole purpose is to reference the name of the plugin class.
+The ``.json`` file is a simple `JSON <https://www.json.org/>`__ file, which sole purpose is to reference the name of the plugin class.
 In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, the contents of that file is:
 
 .. code-block:: json
@@ -314,7 +314,7 @@ For example, the `Core <https://github.com/opencor/opencor/tree/master/src/plugi
    };
    ...
 
-On the other hand, our `LLVM+Clang <https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang/>`__ plugin does not need to implement any interface since its sole purpose is to provide other plugins with access to `LLVM <http://www.llvm.org/>`__ and `Clang <http://clang.llvm.org/>`__.
+On the other hand, our `LLVM+Clang <https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang/>`__ plugin does not need to implement any interface since its sole purpose is to provide other plugins with access to `LLVM <https://llvm.org/>`__ and `Clang <https://clang.llvm.org/>`__.
 Hence, its much simpler class definition:
 
 .. code-block:: c++

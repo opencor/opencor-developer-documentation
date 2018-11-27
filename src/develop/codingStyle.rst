@@ -693,14 +693,14 @@ Patterns and practices
    .. _mainwindow.h: https://github.com/opencor/opencor/tree/master/src/mainwindow.h
 
    .. |QListWidgetItem| replace:: ``QListWidgetItem``
-   .. _QListWidgetItem: http://doc.qt.io/qt-5/qlistwidgetitem.html
+   .. _QListWidgetItem: https://doc.qt.io/qt-5/qlistwidgetitem.html
 
 OpenCOR specific
 ----------------
 
 - Do not use ``inline`` functions.
   It is probably better to rely on the compiler to optimise the code, if necessary, not to mention that, if badly used, ``inline`` functions can result in slower code.
-  A good resource on the topic can be found `here <http://yosefk.com/c++fqa/inline.html>`__.
+  A good resource on the topic can be found `here <https://yosefk.com/c++fqa/inline.html>`__.
 - Divisions are costly, so replace them with multiplications wherever possible:
 
   .. code-block:: c++

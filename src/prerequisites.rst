@@ -33,7 +33,7 @@ The following tools are required in order to develop, build , test, run and pack
   .. |macOS| replace:: **macOS**
   .. _macOS: https://download.qt.io/official_releases/online_installers/qt-unified-mac-x64-online.dmg
 
-- `NSIS <http://nsis.sourceforge.net/>`__ 3.03 (optional and Windows only): a program for creating Windows installers.
+- `NSIS <https://nsis.sourceforge.io/>`__ 3.03 (optional and Windows only): a program for creating Windows installers.
 - `PackageMaker <https://developer.apple.com/downloads/?q=Auxiliary%20tools%20for%20Xcode%20-%20Late%20July%202012>`__ (optional and macOS only): a program for creating macOS installers.
 
 Finally, you will need to update your ``PATH`` environment variable by adding Qt to it:

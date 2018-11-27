@@ -133,7 +133,7 @@ That function is declared in |sampleplugin.h|_, which is also where our :ref:`pl
 We need to know about the data structure of our :ref:`basic information <develop_plugins_index_basicInformation>`, so we must include |plugininfo.h|_ (line 28).
 Then, we must declare our C function (line 37).
 Finally, we have the definition of our :ref:`plugin class <develop_plugins_index_pluginClass>` (lines 41-46).
-The call to the ``Q_PLUGIN_METADATA()`` macro (line 45) requires to pass both an IID (``OpenCOR.SamplePlugin``) and the name of a `JSON <http://www.json.org/>`__ file (|sampleplugin.json|_).
+The call to the ``Q_PLUGIN_METADATA()`` macro (line 45) requires to pass both an IID (``OpenCOR.SamplePlugin``) and the name of a `JSON <https://www.json.org/>`__ file (|sampleplugin.json|_).
 As mentioned :ref:`here <develop_plugins_index_jsonFile>`, the JSON file simply references the name of our plugin class (``SamplePlugin``):
 
 .. code-block:: json
