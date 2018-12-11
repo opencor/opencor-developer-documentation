@@ -18,7 +18,7 @@ The following tools are required in order to develop, build , test, run and pack
   - **Linux:** GCC/G++ 5.x or later and OpenGL (``g++-5``/``g++`` and ``mesa-common-dev`` packages, respectively) on Ubuntu 16.04/18.04 LTS, as well as GStreamer (``libgstreamer-plugins-base0.10-0`` package) on Ubuntu 16.04 LTS; and
   - **macOS:** `Xcode <https://developer.apple.com/xcode/>`__ 10.1 (including its `Command Line Tools <https://developer.apple.com/downloads/?q=Command%20Line%20Tools>`__).
 
-- `Qt <https://www.qt.io/>`__ 5.9.7 LTS: a cross-platform application and UI framework (`Qt Creator <https://www.qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__ is its supporting IDE):
+- `Qt <https://www.qt.io/>`__ 5.12.0 LTS: a cross-platform application and UI framework (`Qt Creator <https://www.qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__ is its supporting IDE):
 
   - |Windows|_;
   - |Linux|_; and
