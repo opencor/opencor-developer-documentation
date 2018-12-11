@@ -35,9 +35,3 @@ The following tools are required in order to develop, build , test, run and pack
 
 - `NSIS <https://nsis.sourceforge.io/>`__ 3.03 (optional and Windows only): a program for creating Windows installers.
 - `PackageMaker <https://developer.apple.com/downloads/?q=Auxiliary%20tools%20for%20Xcode%20-%20Late%20July%202012>`__ (optional and macOS only): a program for creating macOS installers.
-
-Finally, you will need to update your ``PATH`` environment variable by adding Qt to it:
-
-- **Windows:** ``C:\Qt\5.9.7\msvc2015_64\bin``;
-- **Linux:** ``/opt/Qt/5.9.7/gcc_64/bin``; and
-- **macOS:** ``/Applications/Qt/5.9.7/clang_64/bin``.
