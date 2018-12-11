@@ -104,7 +104,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |LLVM+Clang| replace:: ``[OpenCOR]/src/plugins/thirdParty/LLVMClang``
   .. _LLVM+Clang: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang
 
-- `Mesa <https://www.mesa3d.org/>`__ 18.3.0: a system for rendering interactive 3D graphics.
+- `Mesa <https://www.mesa3d.org/>`__ 18.2.6: a system for rendering interactive 3D graphics.
 
   - Location: `MIT <https://opensource.org/licenses/MIT>`__.
 
