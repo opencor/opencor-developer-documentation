@@ -96,7 +96,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |LibXDiff| replace:: ``[OpenCOR]/src/plugins/thirdParty/LibXDiff``
   .. _LibXDiff: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LibXDiff
 
-- `LLVM <https://llvm.org/>`__\ +\ `Clang <https://clang.llvm.org/>`__ 7.0.0: a collection of modular and reusable compiler and toolchain technologies.
+- `LLVM <https://llvm.org/>`__\ +\ `Clang <https://clang.llvm.org/>`__ 7.0.1: a collection of modular and reusable compiler and toolchain technologies.
 
   - Location: |LLVM+Clang|_.
   - Licensing: `UoI/NCSA <https://opensource.org/licenses/UoI-NCSA>`__.
