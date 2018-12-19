@@ -59,11 +59,16 @@ The following guidelines exist to make the code faster, clearer, and/or to take 
          ...
      }
 
-- You can use the Qt ``foreach`` loop in non-time-critical code with a Qt container.
-  It is a nice way to keep line noise down and to give the loop variable a proper name:
+- You should use the range-based for ``loop`` rather than the Qt ``foreach`` loop or even a classical ``for`` loop:
 
   .. code-block:: c++
      :class: good
+
+     for (auto widget : container)
+         doSomething(widget);
+
+  .. code-block:: c++
+     :class: bad
 
      foreach (QWidget *widget, container)
          doSomething(widget);
@@ -80,13 +85,13 @@ The following guidelines exist to make the code faster, clearer, and/or to take 
   .. code-block:: c++
      :class: good
 
-     foreach (const QString &name, someListOfNames)
+     for (const auto &name : someListOfNames)
          doSomething(name);
 
   .. code-block:: c++
      :class: bad
 
-     foreach (QString name, someListOfNames)
+     for (auto name : someListOfNames)
          doSomething(name);
 
 Formatting
