@@ -197,7 +197,7 @@ Finally, we need to deal with our plugin's ``add()`` function.
 It is declared in |sampleutilities.h|_:
 
 .. code-block:: c++
-   :lineno-start: 28
+   :lineno-start: 32
 
    #include "sampleglobal.h"
 
@@ -218,8 +218,8 @@ It is declared in |sampleutilities.h|_:
 .. |sampleutilities.h| replace:: ``sampleutilities.h``
 .. _sampleutilities.h: https://github.com/opencor/opencor/blob/master/src/plugins/sample/Sample/src/sampleutilities.h
 
-We start by including |sampleglobal.h|_ (line 28).
-This header file defines the ``SAMPLE_EXPORT`` macro (click :ref:`here <develop_plugins_index_globalHeaderInformation>` for some information on plugins' global header file in OpenCOR), which we use to declare our plugin's ``add()`` function (line 37).
+We start by including |sampleglobal.h|_ (line 32).
+This header file defines the ``SAMPLE_EXPORT`` macro (click :ref:`here <develop_plugins_index_globalHeaderInformation>` for some information on plugins' global header file in OpenCOR), which we use to declare our plugin's ``add()`` function (line 41).
 
 .. |sampleglobal.h| replace:: ``sampleglobal.h``
 .. _sampleglobal.h: https://github.com/opencor/opencor/blob/master/src/plugins/sample/Sample/src/sampleglobal.h
