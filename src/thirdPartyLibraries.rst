@@ -169,7 +169,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |QtWebKit| replace:: ``[OpenCOR]/src/3rdparty/QtWebKit``
   .. _QtWebKit: https://github.com/opencor/opencor/tree/master/src/3rdparty/QtWebKit
 
-- `Qwt <http://qwt.sourceforge.net/>`__ 6.1.3: a set of widgets and utility classes primarily aimed at programs with a technical background.
+- `Qwt <http://qwt.sourceforge.net/>`__ 6.1.4: a set of widgets and utility classes primarily aimed at programs with a technical background.
 
   - Location: |Qwt|_.
   - Licensing: `Qwt License v1.0 <http://qwt.sourceforge.net/qwtlicense.html>`__ (a slightly less restricive version of `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__) and `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ for the `MathML <https://www.w3.org/Math/>`__ text engine, which is based on the QtMmlWidget code.
