@@ -106,7 +106,8 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
 
 - `Mesa <https://www.mesa3d.org/>`__ 18.2.8: a system for rendering interactive 3D graphics.
 
-  - Location: `MIT <https://opensource.org/licenses/MIT>`__.
+  - Location: |Mesa|_.
+  - Licensing: `MIT <https://opensource.org/licenses/MIT>`__.
 
   .. |Mesa| replace:: ``[OpenCOR]/distrib/linux/mesa``
   .. _Mesa: https://github.com/opencor/opencor/tree/master/distrib/linux/mesa
