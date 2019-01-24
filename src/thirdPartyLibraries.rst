@@ -181,7 +181,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |Qwt| replace:: ``[OpenCOR]/src/plugins/thirdParty/Qwt``
   .. _Qwt: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Qwt
 
-- `SUNDIALS <https://computation.llnl.gov/projects/sundials>`__ 4.0.1: a SUite of Non-linear and DIfferential/ALgebraic equation Solvers.
+- `SUNDIALS <https://computation.llnl.gov/projects/sundials>`__ 4.0.2: a SUite of Non-linear and DIfferential/ALgebraic equation Solvers.
 
   - Location: |SUNDIALS|_.
   - Licensing: `BSD 3-Clause <https://opensource.org/licenses/BSD-3-Clause>`__.
