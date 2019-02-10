@@ -144,7 +144,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |FlagsImages| replace:: ``[OpenCOR]/res/flags``
   .. _FlagsImages: https://github.com/opencor/opencor/tree/master/res/flags
 
-- `QScintilla <https://riverbankcomputing.com/software/qscintilla/intro>`__ 2.10.8: a `Qt <https://www.qt.io/>`__ port of the `Scintilla <https://www.scintilla.org/>`__ editing component.
+- `QScintilla <https://riverbankcomputing.com/software/qscintilla/intro>`__ 2.11: a `Qt <https://www.qt.io/>`__ port of the `Scintilla <https://www.scintilla.org/>`__ editing component.
 
   - Location: |QScintilla|_.
   - Licensing: `GPL v3.0 <https://opensource.org/licenses/GPL-3.0>`__.
