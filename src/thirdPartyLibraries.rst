@@ -56,7 +56,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |libBioSignalML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libBioSignalML``
   .. _libBioSignalML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libBioSignalML
 
-- `libgit2 <https://libgit2.github.com/>`__ 0.27.8: a portable, pure C implementation of the `Git <https://git-scm.com/>`__ core methods provided as a re-entrant linkable library with a solid API.
+- `libgit2 <https://libgit2.github.com/>`__ 0.28.1: a portable, pure C implementation of the `Git <https://git-scm.com/>`__ core methods provided as a re-entrant linkable library with a solid API.
 
   - Location: |libgit2|_.
   - Licensing: `GPL v2.0 <https://opensource.org/licenses/GPL-2.0>`__ with linking exception.
