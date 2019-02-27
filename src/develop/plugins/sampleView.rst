@@ -194,6 +194,17 @@ We start with the `File handling <https://github.com/opencor/opencor/blob/master
    // File handling interface
    //==============================================================================
 
+   bool SampleViewPlugin::importFile(const QString &pFileName)
+   {
+       Q_UNUSED(pFileName);
+
+       // We don't handle this interface...
+
+       return false;
+   }
+
+   //==============================================================================
+
    bool SampleViewPlugin::saveFile(const QString &pOldFileName,
                                    const QString &pNewFileName,
                                    bool &pNeedFeedback)
@@ -284,16 +295,16 @@ We start with the `File handling <https://github.com/opencor/opencor/blob/master
    //==============================================================================
 
 Our plugin provides a view and, as such, should at least handle some of the `File handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`__ interface's methods.
-Here, we want our plugin to provide some information about the current file, so we do not need to implement ``saveFile()`` (lines 63-74), ``fileOpened()`` (lines 78-83), ``fileModified()`` (lines 98-103) and ``fileSaved()`` (lines 107-112).
+Here, we want our plugin to provide some information about the current file, so we do not need to implement ``importFile()`` (lines 63-70) ``saveFile()`` (lines 74-85), ``fileOpened()`` (lines 89-94), ``fileModified()`` (lines 109-114) and ``fileSaved()`` (lines 118-123).
 On the other hand, should the current file have its permissions changed or be renamed, then we want to update the information presented in our view.
-We do this by implementing the ``filePermissionsChanged()`` (lines 87-94) and ``fileReloaded()`` (lines 116-122) methods.
-The same holds true if the current file gets renamed, in which case we also want to update ``mFileName`` (see ``fileRenamed()``; lines 126-138).
-Finally, we want to reset ``mFileName`` if the current file gets closed (see ``fileClosed()``; lines 142-148).
+We do this by implementing the ``filePermissionsChanged()`` (lines 98-105) and ``fileReloaded()`` (lines 127-133) methods.
+The same holds true if the current file gets renamed, in which case we also want to update ``mFileName`` (see ``fileRenamed()``; lines 137-149).
+Finally, we want to reset ``mFileName`` if the current file gets closed (see ``fileClosed()``; lines 153-159).
 
 Next, we have the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface:
 
 .. code-block:: c++
-   :lineno-start: 150
+   :lineno-start: 161
 
    //==============================================================================
    // I18n interface
@@ -314,7 +325,7 @@ If some information is being shown for a file, then we ask our view to retransla
 After the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interface:
 
 .. code-block:: c++
-   :lineno-start: 162
+   :lineno-start: 173
 
    //==============================================================================
    // Plugin interface
@@ -399,13 +410,13 @@ After the `Internationalisation <https://github.com/opencor/opencor/blob/master/
 
    //==============================================================================
 
-The only method of interest to our plugin is ``initializePlugin()`` (lines 188-198), which is where we initialise ``mViewWidget``, our view.
+The only method of interest to our plugin is ``initializePlugin()`` (lines 199-209), which is where we initialise ``mViewWidget``, our view.
 All the other methods (``definesPluginInterfaces()``, ``pluginInterfacesOk()``, ``finalizePlugin()``, ``pluginsInitialized()``, ``loadSettings()``, ``saveSettings()`` and ``handleUrl()``) are left empty.
 
 Finally, we have the `View <https://github.com/opencor/opencor/blob/master/src/plugins/viewinterface.inl>`__ interface:
 
 .. code-block:: c++
-   :lineno-start: 243
+   :lineno-start: 254
 
    //==============================================================================
    // View interface
@@ -493,10 +504,10 @@ Finally, we have the `View <https://github.com/opencor/opencor/blob/master/src/p
 
    //==============================================================================
 
-Our plugin provides a view, so OpenCOR needs to know about its name (see ``viewName()``; lines 309-314), its type (see ``viewMode()``; lines 247-252), the MIME types it supports (see ``viewMimeTypes()``; lines 256-261), the MIME type supported by a given file (see ``viewMimeType()``; lines 265-272), the default file extension it supports (see ``viewDefaultFileExtension()``; lines 276-281) and whether it needs a special tab icon (see ``fileTabIcon()``; lines 318-325).
-OpenCOR also needs to know the widget that is used for the view and this for a given file (see ``viewWidget()``; lines 285-294).
+Our plugin provides a view, so OpenCOR needs to know about its name (see ``viewName()``; lines 320-325), its type (see ``viewMode()``; lines 258-263), the MIME types it supports (see ``viewMimeTypes()``; lines 267-272), the MIME type supported by a given file (see ``viewMimeType()``; lines 276-283), the default file extension it supports (see ``viewDefaultFileExtension()``; lines 287-292) and whether it needs a special tab icon (see ``fileTabIcon()``; lines 329-336).
+OpenCOR also needs to know the widget that is used for the view and this for a given file (see ``viewWidget()``; lines 296-305).
 Note that our plugin uses only one view widget (and updates its contents based on the file that is currently active), but it might perfectly use one per file.
-Finally, our plugin needs to handle the case where a view widget is to be removed (see ``removeViewWidget()``; lines 298-305), which happens whenever a file gets closed.
+Finally, our plugin needs to handle the case where a view widget is to be removed (see ``removeViewWidget()``; lines 309-316), which happens whenever a file gets closed.
 
 .. _develop_plugins_sampleView_pluginSpecific:
 
