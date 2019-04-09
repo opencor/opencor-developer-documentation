@@ -170,7 +170,7 @@ Next, we have our |sampleplugin.cpp|_ file, which contents is:
        descriptions.insert("en", QString::fromUtf8("a plugin that provides an addition function."));
        descriptions.insert("fr", QString::fromUtf8("une extension qui fournit une fonction d'addition."));
 
-       return new PluginInfo(PluginInfo::Sample, false, false,
+       return new PluginInfo(PluginInfo::Category::Sample, false, false,
                              QStringList(),
                              descriptions);
    }
@@ -185,7 +185,7 @@ Then, lines 33-43 contain the body of our C function.
 The first thing it does is create an instance of ``Descriptions`` on the stack (line 35).
 This instance is used to provide a multilingual description of our plugin (here, both in English and in French; lines 37 and 38).
 Then, it creates and returns an instance of ``PluginInfo`` on the heap (lines 40-42), which contains the :ref:`basic information <develop_plugins_index_basicInformation>` needed by OpenCOR to identify our plugin.
-This includes our plugin's category (``PluginInfo::Sample``; line 40), whether it is selectable (``false``; line 40), whether it offers direct `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ support (``false``; line 40), our plugin's direct dependencies (none, hence ``QStringList()``; line 41) and its multilingual description (``descriptions``; line 42).
+This includes our plugin's category (``PluginInfo::Category::Sample``; line 40), whether it is selectable (``false``; line 40), whether it offers direct `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ support (``false``; line 40), our plugin's direct dependencies (none, hence ``QStringList()``; line 41) and its multilingual description (``descriptions``; line 42).
 
 **Note:** the returned ``PluginInfo`` object gets deleted by OpenCOR.
 So, no need to worry about it.
@@ -197,7 +197,11 @@ Finally, we need to deal with our plugin's ``add()`` function.
 It is declared in |sampleutilities.h|_:
 
 .. code-block:: c++
-   :lineno-start: 32
+   :lineno-start: 28
+
+   #include <qglobal.h>
+
+   //==============================================================================
 
    #include "sampleglobal.h"
 

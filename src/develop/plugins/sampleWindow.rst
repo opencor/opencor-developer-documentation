@@ -161,7 +161,7 @@ The C function that is used by OpenCOR to retrieve some :ref:`basic information 
        descriptions.insert("en", QString::fromUtf8("a plugin that provides an addition window."));
        descriptions.insert("fr", QString::fromUtf8("une extension qui fournit une fenêtre d'addition."));
 
-       return new PluginInfo(PluginInfo::Sample, true, false,
+       return new PluginInfo(PluginInfo::Category::Sample, true, false,
                              QStringList() << "Core" << "Sample",
                              descriptions);
    }
@@ -262,7 +262,7 @@ Next, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src/pl
 
    //==============================================================================
 
-   void SampleWindowPlugin::loadSettings(QSettings *pSettings)
+   void SampleWindowPlugin::loadSettings(QSettings &pSettings)
    {
        Q_UNUSED(pSettings);
 
@@ -271,7 +271,7 @@ Next, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src/pl
 
    //==============================================================================
 
-   void SampleWindowPlugin::saveSettings(QSettings *pSettings) const
+   void SampleWindowPlugin::saveSettings(QSettings &pSettings) const
    {
        Q_UNUSED(pSettings);
 

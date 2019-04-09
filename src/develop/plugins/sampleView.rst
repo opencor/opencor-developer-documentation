@@ -169,7 +169,7 @@ The C function that is used by OpenCOR to retrieve some :ref:`basic information 
        descriptions.insert("en", QString::fromUtf8("a plugin that provides a test view."));
        descriptions.insert("fr", QString::fromUtf8("une extension qui fournit une vue de test."));
 
-       return new PluginInfo(PluginInfo::Sample, true, false,
+       return new PluginInfo(PluginInfo::Category::Sample, true, false,
                              QStringList() << "Core",
                              descriptions);
    }
@@ -383,7 +383,7 @@ After the `Internationalisation <https://github.com/opencor/opencor/blob/master/
 
    //==============================================================================
 
-   void SampleViewPlugin::loadSettings(QSettings *pSettings)
+   void SampleViewPlugin::loadSettings(QSettings &pSettings)
    {
        Q_UNUSED(pSettings);
 
@@ -392,7 +392,7 @@ After the `Internationalisation <https://github.com/opencor/opencor/blob/master/
 
    //==============================================================================
 
-   void SampleViewPlugin::saveSettings(QSettings *pSettings) const
+   void SampleViewPlugin::saveSettings(QSettings &pSettings) const
    {
        Q_UNUSED(pSettings);
 
@@ -426,7 +426,7 @@ Finally, we have the `View <https://github.com/opencor/opencor/blob/master/src/p
    {
        // Return our mode
 
-       return SampleMode;
+       return ViewInterface::Mode::Sample;
    }
 
    //==============================================================================
