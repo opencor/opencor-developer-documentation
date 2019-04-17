@@ -18,7 +18,7 @@ The following tools are required in order to develop, build , test, run and pack
   - **Linux:** G++ and OpenGL (``g++`` and ``libgl1-mesa-dev`` packages, respectively) on Ubuntu 18.04 LTS; and
   - **macOS:** `Xcode <https://developer.apple.com/xcode/>`__ 10.2 (including its `Command Line Tools <https://developer.apple.com/downloads/?q=Command%20Line%20Tools>`__).
 
-- `Qt <https://www.qt.io/>`__ 5.12.0 LTS: a cross-platform application and UI framework (`Qt Creator <https://www.qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__ is its supporting IDE):
+- `Qt <https://www.qt.io/>`__ 5.12.3 LTS: a cross-platform application and UI framework (`Qt Creator <https://www.qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__ is its supporting IDE):
 
   - |Windows|_;
   - |Linux|_; and
