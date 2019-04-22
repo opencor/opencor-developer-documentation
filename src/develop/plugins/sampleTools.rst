@@ -61,8 +61,6 @@ As for the :ref:`Sample <develop_plugins_sample>` plugin, our plugin has a |CMak
            ../../plugininterface.cpp
 
            src/sampletoolsplugin.cpp
-       HEADERS_MOC
-           src/sampletoolsplugin.h
        PLUGINS
            Core
            Sample
@@ -72,7 +70,7 @@ As for the :ref:`Sample <develop_plugins_sample>` plugin, our plugin has a |CMak
 .. _CMakeLists.txt: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleTools/CMakeLists.txt
 
 The interfaces our plugin implements come with a ``.cpp`` file, so we reference them (lines 7-9 and 11).
-Then, our plugin needs the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ and `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugins (the latter, to be able to use its ``add()`` function), so they are referenced (lines 17 and 18) using the ``PLUGINS`` keyword (line 16).
+Then, our plugin needs the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ and `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugins (the latter, to be able to use its ``add()`` function), so they are referenced (lines 15 and 16) using the ``PLUGINS`` keyword (line 14).
 
 Plugin information
 ------------------
@@ -130,8 +128,8 @@ Our :ref:`plugin information <develop_plugins_index_pluginInformation>` can be f
 
    //==============================================================================
 
-   }   // namespace SampleTools
-   }   // namespace OpenCOR
+   } // namespace SampleTools
+   } // namespace OpenCOR
 
 .. |sampletoolsplugin.cpp| replace:: ``sampletoolsplugin.cpp``
 .. _sampletoolsplugin.cpp: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleTools/src/sampletoolsplugin.cpp
@@ -189,33 +187,38 @@ We start with the `CLI <https://github.com/opencor/opencor/blob/master/src/plugi
    {
        // Run the given CLI command
 
-       if (!pCommand.compare("help")) {
+       static const QString Help = "help";
+       static const QString Add  = "add";
+
+       if (pCommand == Help) {
            // Display the commands that we support
 
            runHelpCommand();
 
            return 0;
-       } else if (!pCommand.compare("add")) {
+       }
+
+       if (pCommand == Add) {
            // Add some numbers
 
            return runAddCommand(pArguments);
-       } else {
-           // Not a CLI command that we support, so show our help and leave
-
-           runHelpCommand();
-
-           return -1;
        }
+
+       // Not a CLI command that we support, so show our help and leave
+
+       runHelpCommand();
+
+       return -1;
    }
 
    //==============================================================================
 
-As can be seen, our plugin handles both the ``help`` and ``add`` commands (lines 66-72 and 72-76, respectively).
+As can be seen, our plugin handles both the ``help`` and ``add`` commands (lines 69-75 and 77-81, respectively).
 
 Next, we have the `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__ interface:
 
 .. code-block:: c++
-   :lineno-start: 85
+   :lineno-start: 90
 
    //==============================================================================
    // GUI interface
@@ -223,8 +226,8 @@ Next, we have the `GUI <https://github.com/opencor/opencor/blob/master/src/plugi
 
    void SampleToolsPlugin::updateGui(Plugin *pViewPlugin, const QString &pFileName)
    {
-       Q_UNUSED(pViewPlugin);
-       Q_UNUSED(pFileName);
+       Q_UNUSED(pViewPlugin)
+       Q_UNUSED(pFileName)
 
        // We don't handle this interface...
    }
@@ -235,7 +238,7 @@ Next, we have the `GUI <https://github.com/opencor/opencor/blob/master/src/plugi
    {
        // We don't handle this interface...
 
-       return Gui::Menus();
+       return {};
    }
 
    //==============================================================================
@@ -250,15 +253,15 @@ Next, we have the `GUI <https://github.com/opencor/opencor/blob/master/src/plugi
 
    //==============================================================================
 
-Our plugin does not need to do anything whenever OpenCOR needs to update the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__, so we do nothing in ``updateGui()`` (lines 89-95).
-Similarly, we do not need to add menus to OpenCOR, so all ``guiMenus()`` does is return ``Gui::Menus()`` (lines 99-104).
-However, we do want to add a menu action (and a menu separator) to OpenCOR's ``Tools`` menu, which we do via ``guiMenuActions()`` (lines 108-114).
+Our plugin does not need to do anything whenever OpenCOR needs to update the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__, so we do nothing in ``updateGui()`` (lines 94-100).
+Similarly, we do not need to add menus to OpenCOR, so all ``guiMenus()`` does is return ``Gui::Menus()`` (lines 104-109).
+However, we do want to add a menu action (and a menu separator) to OpenCOR's ``Tools`` menu, which we do via ``guiMenuActions()`` (lines 113-119).
 Note that ``mAddTwoNumbersAction`` is initialised in our implementation of the `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interface (see :ref:`below <develop_plugins_sampleTools_pluginInterface>`).
 
 After the `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__ interface, we have the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface:
 
 .. code-block:: c++
-   :lineno-start: 116
+   :lineno-start: 121
 
    //==============================================================================
    // I18n interface
@@ -283,7 +286,7 @@ All that we need to do is (re)translate ``mAddTwoNumbersAction`` with the actual
 Finally, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interface:
 
 .. code-block:: c++
-   :lineno-start: 127
+   :lineno-start: 132
 
    //==============================================================================
    // Plugin interface
@@ -301,8 +304,8 @@ Finally, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src
    bool SampleToolsPlugin::pluginInterfacesOk(const QString &pFileName,
                                               QObject *pInstance)
    {
-       Q_UNUSED(pFileName);
-       Q_UNUSED(pInstance);
+       Q_UNUSED(pFileName)
+       Q_UNUSED(pInstance)
 
        // We don't handle this interface...
 
@@ -334,7 +337,7 @@ Finally, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src
 
    void SampleToolsPlugin::pluginsInitialized(const Plugins &pLoadedPlugins)
    {
-       Q_UNUSED(pLoadedPlugins);
+       Q_UNUSED(pLoadedPlugins)
 
        // We don't handle this interface...
    }
@@ -343,7 +346,7 @@ Finally, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src
 
    void SampleToolsPlugin::loadSettings(QSettings &pSettings)
    {
-       Q_UNUSED(pSettings);
+       Q_UNUSED(pSettings)
 
        // We don't handle this interface...
    }
@@ -352,7 +355,7 @@ Finally, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src
 
    void SampleToolsPlugin::saveSettings(QSettings &pSettings) const
    {
-       Q_UNUSED(pSettings);
+       Q_UNUSED(pSettings)
 
        // We don't handle this interface...
    }
@@ -361,14 +364,14 @@ Finally, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src
 
    void SampleToolsPlugin::handleUrl(const QUrl &pUrl)
    {
-       Q_UNUSED(pUrl);
+       Q_UNUSED(pUrl)
 
        // We don't handle this interface...
    }
 
    //==============================================================================
 
-The only method of interest to our plugin is ``initializePlugin()`` (lines 153-163), which is where we initialise ``mAddTwoNumbersAction``, among other things.
+The only method of interest to our plugin is ``initializePlugin()`` (lines 158-168), which is where we initialise ``mAddTwoNumbersAction``, among other things.
 All the other methods (``definesPluginInterfaces()``, ``pluginInterfacesOk()``, ``finalizePlugin()``, ``pluginsInitialized()``, ``loadSettings()``, ``saveSettings()`` and ``handleUrl()``) are left empty.
 
 .. _develop_plugins_sampleTools_pluginSpecific:
@@ -394,7 +397,7 @@ They are declared in the ``SampleToolsPlugin`` class in |sampletoolsplugin.h|_:
 Their implementation can be found in |sampletoolsplugin.cpp|_:
 
 .. code-block:: c++
-   :lineno-start: 208
+   :lineno-start: 213
 
    //==============================================================================
    // Plugin specific
@@ -472,10 +475,10 @@ Their implementation can be found in |sampletoolsplugin.cpp|_:
 
    //==============================================================================
 
-``runHelpCommand()`` (lines 212-221) is the method that is executed whenever our plugin is asked to handle the ``help`` command.
+``runHelpCommand()`` (lines 217-226) is the method that is executed whenever our plugin is asked to handle the ``help`` command.
 It provides the user with some information about the commands it supports.
-In a similar way, ``runAddCommand()`` (lines 225-260) is executed whenever our plugin is asked to handle the ``add`` command.
+In a similar way, ``runAddCommand()`` (lines 230-265) is executed whenever our plugin is asked to handle the ``add`` command.
 It checks that two numbers have been passed and, if so, returns their sum to the user.
 
-``addTwoNumbers()`` (lines 264-280) is a `Qt <https://www.qt.io/>`__ slot that is executed whenever the user selects our menu item (see ``mAddTwoNumbersAction``).
+``addTwoNumbers()`` (lines 269-285) is a `Qt <https://www.qt.io/>`__ slot that is executed whenever the user selects our menu item (see ``mAddTwoNumbersAction``).
 Using a `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__ approach, it asks the user to provide two numbers and returns their sum, unless the user decides to cancel the action.
