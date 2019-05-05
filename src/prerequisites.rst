@@ -12,7 +12,7 @@ The following tools are required in order to develop, build , test, run and pack
 - `clcache <https://github.com/frerich/clcache>`__ (optional and Windows only): a compiler cache;
 - `ccache <https://ccache.samba.org/>`__ (optional and Linux/macOS only): a compiler cache;
 - `Clang-Tidy <https://clang.llvm.org/extra/clang-tidy/>`__ (optional): a `Clang <https://clang.llvm.org/>`__-based C++ linter tool;
-- `Clang-Format <https://clang.llvm.org/docs/ClangFormat.html>`__ (optional): a tool to format C/C++ code;
+- `ClangFormat <https://clang.llvm.org/docs/ClangFormat.html>`__ (optional): a tool to format C/C++ code;
 - C++ toolchain: a set of C++ tools.
   The toolchain is different depending on the platform you are using:
 
