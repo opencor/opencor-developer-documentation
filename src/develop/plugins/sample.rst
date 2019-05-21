@@ -62,6 +62,8 @@ To build our plugin, we need a |CMakeLists.txt|_ file (some information on `CMak
 
            src/sampleplugin.cpp
            src/sampleutilities.cpp
+       HEADERS_MOC
+           src/sampleplugin.h
        QT_MODULES
            Core
    )
@@ -71,7 +73,7 @@ To build our plugin, we need a |CMakeLists.txt|_ file (some information on `CMak
 
 The first line specifies the name of the `CMake <https://www.cmake.org/>`__ project for our `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugin, i.e. ``SamplePlugin``.
 Then, we have a call to the ``add_plugin()`` macro (line 5), which is defined in |common.cmake|_.
-Different types of parameters are passed to it (``SOURCES`` and ``QT_MODULES`` at lines 6 and 11, respectively), followed by the parameters themselves.
+Different types of parameters are passed to it (``SOURCES``, ``HEADERS_MOC`` and ``QT_MODULES`` at lines 6, 11 and 13, respectively), followed by the parameters themselves.
 
 .. |common.cmake| replace:: ``[OpenCOR]/cmake/common.cmake``
 .. _common.cmake: https://github.com/opencor/opencor/blob/master/cmake/common.cmake
@@ -80,7 +82,9 @@ As for any plugin, our `Sample <https://github.com/opencor/opencor/tree/master/s
 ``.cpp`` files that contain the plugin's implementation code must also be referenced (lines 9 and 10).
 (Note that they start with ``sample``, i.e. the name of the plugin in lower case.
 This convention is used throughout OpenCOR's code to ensure that there are no name clashes between plugins' files.)
-Finally, OpenCOR uses the `Qt <https://www.qt.io/>`__ framework, so even though our `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugin is very minimal, we must still reference the ``Core`` module (line 12).
+All header files that define at least one class that uses the ``Q_OBJECT`` macro must also be referenced.
+``sampleplugin.h`` is one such file (see below) and is therefore referenced (line 12).
+Finally, OpenCOR uses the `Qt <https://www.qt.io/>`__ framework, so even though our `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugin is very minimal, we must still reference the ``Core`` module (line 14).
 
 .. |plugininfo.cpp| replace:: ``[OpenCOR]/src/plugins/plugininfo.cpp``
 .. _plugininfo.cpp: https://github.com/opencor/opencor/blob/master/src/plugins/plugininfo.cpp

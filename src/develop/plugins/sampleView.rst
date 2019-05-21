@@ -64,6 +64,9 @@ As for the :ref:`Sample <develop_plugins_sample>` plugin, our plugin has a |CMak
 
            src/sampleviewplugin.cpp
            src/sampleviewwidget.cpp
+       HEADERS_MOC
+           src/sampleviewplugin.h
+           src/sampleviewwidget.h
        UIS
            src/sampleviewwidget.ui
        PLUGINS
@@ -74,9 +77,9 @@ As for the :ref:`Sample <develop_plugins_sample>` plugin, our plugin has a |CMak
 .. _CMakeLists.txt: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleView/CMakeLists.txt
 
 The interfaces our plugin implements come with a ``.cpp`` file, so we reference them (lines 7, 8, 10 and 11).
-Then, our plugin needs the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, so it is referenced (line 18) using the ``PLUGINS`` keyword (line 17).
-Our plugin provides OpenCOR with a test view, which is implemented using various files (lines 14 and 16).
-One of those files is a ``.ui`` file, which is referenced using the ``UIS`` keyword (line 15).
+Then, our plugin needs the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, so it is referenced (line 21) using the ``PLUGINS`` keyword (line 20).
+Our plugin provides OpenCOR with a test view, which is implemented using various files (lines 14, 17 and 19).
+One of those files is a ``.ui`` file, which is referenced using the ``UIS`` keyword (line 18).
 
 Plugin information
 ------------------
@@ -637,7 +640,7 @@ The implementation of ``SampleViewWidget`` can be found in |sampleviewwidget.cpp
 
    QWidget * SampleViewWidget::widget(const QString &pFileName)
    {
-       Q_UNUSED(pFileName);
+       Q_UNUSED(pFileName)
 
        // Return the requested (self) widget
 

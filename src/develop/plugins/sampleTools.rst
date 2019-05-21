@@ -61,6 +61,8 @@ As for the :ref:`Sample <develop_plugins_sample>` plugin, our plugin has a |CMak
            ../../plugininterface.cpp
 
            src/sampletoolsplugin.cpp
+       HEADERS_MOC
+           src/sampletoolsplugin.h
        PLUGINS
            Core
            Sample
@@ -70,7 +72,7 @@ As for the :ref:`Sample <develop_plugins_sample>` plugin, our plugin has a |CMak
 .. _CMakeLists.txt: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleTools/CMakeLists.txt
 
 The interfaces our plugin implements come with a ``.cpp`` file, so we reference them (lines 7-9 and 11).
-Then, our plugin needs the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ and `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugins (the latter, to be able to use its ``add()`` function), so they are referenced (lines 15 and 16) using the ``PLUGINS`` keyword (line 14).
+Then, our plugin needs the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ and `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugins (the latter, to be able to use its ``add()`` function), so they are referenced (lines 17 and 18) using the ``PLUGINS`` keyword (line 16).
 
 Plugin information
 ------------------
