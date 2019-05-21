@@ -62,9 +62,6 @@ As for the :ref:`Sample <develop_plugins_sample>` plugin, our plugin has a |CMak
 
            src/samplewindowplugin.cpp
            src/samplewindowwindow.cpp
-       HEADERS_MOC
-           src/samplewindowplugin.h
-           src/samplewindowwindow.h
        UIS
            src/samplewindowwindow.ui
        PLUGINS
@@ -76,9 +73,9 @@ As for the :ref:`Sample <develop_plugins_sample>` plugin, our plugin has a |CMak
 .. _CMakeLists.txt: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleWindow/CMakeLists.txt
 
 The interfaces our plugin implements come with a ``.cpp`` file, so we reference them (lines 7, 9 and 10).
-Then, our plugin needs both the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ and `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugins (the latter, to be able to use its ``add()`` function), so they are referenced (lines 20 and 21) using the ``PLUGINS`` keyword (line 19).
-Our plugin comes with a dockable window, which is implemented using various files (lines 13, 16 and 18).
-One of those files is a ``.ui`` file, which is referenced using the ``UIS`` keyword (line 17).
+Then, our plugin needs both the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ and `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugins (the latter, to be able to use its ``add()`` function), so they are referenced (lines 17 and 18) using the ``PLUGINS`` keyword (line 16).
+Our plugin comes with a dockable window, which is implemented using various files (lines 13 and 15).
+One of those files is a ``.ui`` file, which is referenced using the ``UIS`` keyword (line 14).
 
 Plugin information
 ------------------
