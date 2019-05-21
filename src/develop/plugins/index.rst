@@ -162,6 +162,7 @@ That macro uses information passed to it to build and package the plugin.
 That information comes in the form of a series of parameters, some of which are keywords:
 
 - ``SOURCES``: implementation files.
+- ``HEADERS_MOC``: header files, which define at least one ``QObject``-based class.
 - ``UIS``: user interface files.
 - ``DEFINITIONS``: definitions needed to build the plugin.
 - ``PLUGINS``: plugins needed by the plugin.
@@ -360,7 +361,7 @@ Thus, in the case of the `Compiler <https://github.com/opencor/opencor/tree/mast
    #endif
    ...
 
-``Compiler_PLUGIN`` (or, more generally, ``<PluginName>_PLUGIN``) is automatically defined, if at all, at build time, and is used to determine the value of ``COMPILER_EXPORT`` (or, more generally, the value of ``<PLUGINNAME>_EXPORT``), which can then be used as follows without having to worry whether the function or class should be imported or exported:
+``_WIN32`` and ``Compiler_PLUGIN`` (or, more generally, ``<PluginName>_PLUGIN``) are automatically defined, if at all, at build time, and are used to determine the value of ``COMPILER_EXPORT`` (or, more generally, the value of ``<PLUGINNAME>_EXPORT``), which can then be used as follows without having to worry whether the function or class should be imported or exported:
 
 .. code-block:: c++
 
