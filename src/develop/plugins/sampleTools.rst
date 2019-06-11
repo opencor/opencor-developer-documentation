@@ -120,7 +120,7 @@ Our :ref:`plugin information <develop_plugins_index_pluginInformation>` can be f
        QAction *mAddTwoNumbersAction;
 
        void runHelpCommand();
-       int runAddCommand(const QStringList &pArguments);
+       bool runAddCommand(const QStringList &pArguments);
 
    private slots:
        void addTwoNumbers();
@@ -182,9 +182,11 @@ We start with the `CLI <https://github.com/opencor/opencor/blob/master/src/plugi
    // CLI interface
    //==============================================================================
 
-   int SampleToolsPlugin::executeCommand(const QString &pCommand,
-                                         const QStringList &pArguments)
+   bool SampleToolsPlugin::executeCommand(const QString &pCommand,
+                                          const QStringList &pArguments, int &pRes)
    {
+       Q_UNUSED(pRes)
+
        // Run the given CLI command
 
        static const QString Help = "help";
@@ -195,7 +197,7 @@ We start with the `CLI <https://github.com/opencor/opencor/blob/master/src/plugi
 
            runHelpCommand();
 
-           return 0;
+           return true;
        }
 
        if (pCommand == Add) {
@@ -208,17 +210,17 @@ We start with the `CLI <https://github.com/opencor/opencor/blob/master/src/plugi
 
        runHelpCommand();
 
-       return -1;
+       return false;
    }
 
    //==============================================================================
 
-As can be seen, our plugin handles both the ``help`` and ``add`` commands (lines 69-75 and 77-81, respectively).
+As can be seen, our plugin handles both the ``help`` and ``add`` commands (lines 71-77 and 79-83, respectively).
 
 Next, we have the `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__ interface:
 
 .. code-block:: c++
-   :lineno-start: 90
+   :lineno-start: 92
 
    //==============================================================================
    // GUI interface
@@ -253,15 +255,15 @@ Next, we have the `GUI <https://github.com/opencor/opencor/blob/master/src/plugi
 
    //==============================================================================
 
-Our plugin does not need to do anything whenever OpenCOR needs to update the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__, so we do nothing in ``updateGui()`` (lines 94-100).
-Similarly, we do not need to add menus to OpenCOR, so all ``guiMenus()`` does is return ``Gui::Menus()`` (lines 104-109).
-However, we do want to add a menu action (and a menu separator) to OpenCOR's ``Tools`` menu, which we do via ``guiMenuActions()`` (lines 113-119).
+Our plugin does not need to do anything whenever OpenCOR needs to update the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__, so we do nothing in ``updateGui()`` (lines 96-102).
+Similarly, we do not need to add menus to OpenCOR, so all ``guiMenus()`` does is return ``Gui::Menus()`` (lines 106-111).
+However, we do want to add a menu action (and a menu separator) to OpenCOR's ``Tools`` menu, which we do via ``guiMenuActions()`` (lines 115-121).
 Note that ``mAddTwoNumbersAction`` is initialised in our implementation of the `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interface (see :ref:`below <develop_plugins_sampleTools_pluginInterface>`).
 
 After the `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__ interface, we have the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface:
 
 .. code-block:: c++
-   :lineno-start: 121
+   :lineno-start: 123
 
    //==============================================================================
    // I18n interface
@@ -286,7 +288,7 @@ All that we need to do is (re)translate ``mAddTwoNumbersAction`` with the actual
 Finally, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interface:
 
 .. code-block:: c++
-   :lineno-start: 132
+   :lineno-start: 134
 
    //==============================================================================
    // Plugin interface
@@ -371,7 +373,7 @@ Finally, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src
 
    //==============================================================================
 
-The only method of interest to our plugin is ``initializePlugin()`` (lines 158-168), which is where we initialise ``mAddTwoNumbersAction``, among other things.
+The only method of interest to our plugin is ``initializePlugin()`` (lines 160-170), which is where we initialise ``mAddTwoNumbersAction``, among other things.
 All the other methods (``definesPluginInterfaces()``, ``pluginInterfacesOk()``, ``finalizePlugin()``, ``pluginsInitialized()``, ``loadSettings()``, ``saveSettings()`` and ``handleUrl()``) are left empty.
 
 .. _develop_plugins_sampleTools_pluginSpecific:
@@ -397,7 +399,7 @@ They are declared in the ``SampleToolsPlugin`` class in |sampletoolsplugin.h|_:
 Their implementation can be found in |sampletoolsplugin.cpp|_:
 
 .. code-block:: c++
-   :lineno-start: 213
+   :lineno-start: 215
 
    //==============================================================================
    // Plugin specific
@@ -475,10 +477,10 @@ Their implementation can be found in |sampletoolsplugin.cpp|_:
 
    //==============================================================================
 
-``runHelpCommand()`` (lines 217-226) is the method that is executed whenever our plugin is asked to handle the ``help`` command.
+``runHelpCommand()`` (lines 219-228) is the method that is executed whenever our plugin is asked to handle the ``help`` command.
 It provides the user with some information about the commands it supports.
-In a similar way, ``runAddCommand()`` (lines 230-265) is executed whenever our plugin is asked to handle the ``add`` command.
+In a similar way, ``runAddCommand()`` (lines 232-267) is executed whenever our plugin is asked to handle the ``add`` command.
 It checks that two numbers have been passed and, if so, returns their sum to the user.
 
-``addTwoNumbers()`` (lines 269-285) is a `Qt <https://www.qt.io/>`__ slot that is executed whenever the user selects our menu item (see ``mAddTwoNumbersAction``).
+``addTwoNumbers()`` (lines 271-287) is a `Qt <https://www.qt.io/>`__ slot that is executed whenever the user selects our menu item (see ``mAddTwoNumbersAction``).
 Using a `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__ approach, it asks the user to provide two numbers and returns their sum, unless the user decides to cancel the action.
