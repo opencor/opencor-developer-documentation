@@ -40,7 +40,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |jQuery| replace:: ``[OpenCOR]/doc/3rdparty/jQuery``
   .. _jQuery: https://github.com/opencor/opencor/tree/master/doc/3rdparty/jQuery
 
-- `KaTeX <https://katex.org/>`__ 0.10.1: the fastest math typesetting library for the Web.
+- `KaTeX <https://katex.org/>`__ 0.10.2: the fastest math typesetting library for the Web.
 
   - Location: |KaTeX|_.
   - Licensing: `MIT <https://opensource.org/licenses/MIT>`__.
