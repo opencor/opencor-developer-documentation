@@ -32,7 +32,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |ICU| replace:: ``[OpenCOR]/distrib/linux/icu``
   .. _ICU: https://github.com/opencor/opencor/tree/master/distrib/linux/icu
 
-- `jQuery <https://jquery.com/>`__ 3.4.0: a fast and concise `JavaScript <https://en.wikipedia.org/wiki/JavaScript>`__ library that simplifies `HTML <https://www.w3.org/html/>`__ document traversing, event handling, animating, and `Ajax <https://en.wikipedia.org/wiki/Ajax_(programming)>`__ interactions for rapid web development.
+- `jQuery <https://jquery.com/>`__ 3.4.1: a fast and concise `JavaScript <https://en.wikipedia.org/wiki/JavaScript>`__ library that simplifies `HTML <https://www.w3.org/html/>`__ document traversing, event handling, animating, and `Ajax <https://en.wikipedia.org/wiki/Ajax_(programming)>`__ interactions for rapid web development.
 
   - Location: |jQuery|_.
   - Licensing: `MIT <https://opensource.org/licenses/MIT>`__.
