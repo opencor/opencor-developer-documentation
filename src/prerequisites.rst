@@ -18,7 +18,7 @@ The following tools are required in order to develop, build , test, run and pack
 
   - **Windows:** `Visual Studio Community 2017 <https://www.visualstudio.com/downloads/download-visual-studio-vs>`__ ( ``Desktop development with C++``);
   - **Linux:** G++ and OpenGL (``g++`` and ``libgl1-mesa-dev`` packages, respectively) on Ubuntu 18.04 LTS; and
-  - **macOS:** `Xcode <https://developer.apple.com/xcode/>`__ 10 (including its `Command Line Tools <https://developer.apple.com/downloads/?q=Command%20Line%20Tools>`__).
+  - **macOS:** `Xcode <https://developer.apple.com/xcode/>`__ 11 (including its `Command Line Tools <https://developer.apple.com/downloads/?q=Command%20Line%20Tools>`__).
 
 - `Qt <https://www.qt.io/>`__ 5.12 LTS: a cross-platform application and UI framework (`Qt Creator <https://www.qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__ is its supporting IDE):
 
