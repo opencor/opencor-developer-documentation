@@ -122,9 +122,9 @@ Our :ref:`plugin information <develop_plugins_index_pluginInformation>` can be f
    #include "windowinterface.inl"
 
    private:
-       QAction *mSampleWindowAction;
+       QAction *mSampleWindowAction = nullptr;
 
-       SampleWindowWindow *mSampleWindowWindow;
+       SampleWindowWindow *mSampleWindowWindow = nullptr;
    };
 
    //==============================================================================
