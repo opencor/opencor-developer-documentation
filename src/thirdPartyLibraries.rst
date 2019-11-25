@@ -147,7 +147,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
 - `Python <https://python.org/>`__ 3.7.5: a programming language that lets you work quickly and integrate systems more effectively.
 
   - Location: |Python|_.
-  - Licensing: `Python License v2.0 <https://opensource.org/licenses/Python-2.0>`__.
+  - Licensing: `PSF v2.0 <https://opensource.org/licenses/Python-2.0>`__.
 
   .. |Python| replace:: ``[OpenCOR]/src/plugins/thirdParty/Python``
   .. _Python: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Python
