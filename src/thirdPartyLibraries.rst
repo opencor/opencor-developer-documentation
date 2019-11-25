@@ -6,7 +6,7 @@
 
 OpenCOR uses various third-party libraries, all of which are listed below, together with the type of license(s) under which they are released, if any.
 
-- `CellML API <https://github.com/cellmlapi/cellml-api/>`__: an interface to manipulate and process `CellML <https://www.cellml.org/>`__ documents.
+- `CellML API <https://github.com/cellmlapi/cellml-api/>`__: an interface to manipulate and process `CellML <https://cellml.org/>`__ documents.
 
   - Location: |CellMLAPI|_.
   - Licensing: `MPL v1.1 <https://opensource.org/licenses/MPL-1.1>`__, `GPL v2.0 <https://opensource.org/licenses/GPL-2.0>`__ (or later) and `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
@@ -32,7 +32,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |ICU| replace:: ``[OpenCOR]/distrib/linux/icu``
   .. _ICU: https://github.com/opencor/opencor/tree/master/distrib/linux/icu
 
-- `jQuery <https://jquery.com/>`__ 3.4.1: a fast and concise `JavaScript <https://en.wikipedia.org/wiki/JavaScript>`__ library that simplifies `HTML <https://www.w3.org/html/>`__ document traversing, event handling, animating, and `Ajax <https://en.wikipedia.org/wiki/Ajax_(programming)>`__ interactions for rapid web development.
+- `jQuery <https://jquery.com/>`__ 3.4.1: a fast and concise `JavaScript <https://en.wikipedia.org/wiki/JavaScript>`__ library that simplifies `HTML <https://html.spec.whatwg.org/multipage>`__ document traversing, event handling, animating, and `Ajax <https://en.wikipedia.org/wiki/Ajax_(programming)>`__ interactions for rapid web development.
 
   - Location: |jQuery|_.
   - Licensing: `MIT <https://opensource.org/licenses/MIT>`__.
@@ -72,7 +72,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |libNuML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libNuML``
   .. _libNuML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libNuML
 
-- `libSBML <http://sbml.org/Software/libSBML/>`__ 5.18.0: a programming library to help you read, write, manipulate, translate and validate `SBML <http://www.sbml.org/>`__ files and data streams.
+- `libSBML <http://sbml.org/Software/libSBML/>`__ 5.18.0: a programming library to help you read, write, manipulate, translate and validate `SBML <http://sbml.org/>`__ files and data streams.
 
   - Location: |libSBML|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
@@ -88,7 +88,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |libSEDML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libSEDML``
   .. _libSEDML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libSEDML
 
-- `LibXDiff <http://www.xmailserver.org/xdiff-lib.html>`__ 0.23: a library that implements basic and yet complete functionalities to create file differences/patches to both binary and text files.
+- `LibXDiff <http://xmailserver.org/xdiff-lib.html>`__ 0.23: a library that implements basic and yet complete functionalities to create file differences/patches to both binary and text files.
 
   - Location: |LibXDiff|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__.
@@ -104,7 +104,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |LLVM+Clang| replace:: ``[OpenCOR]/src/plugins/thirdParty/LLVMClang``
   .. _LLVM+Clang: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang
 
-- `Mesa <https://www.mesa3d.org/>`__ 19.2.6: a system for rendering interactive 3D graphics.
+- `Mesa <https://mesa3d.org/>`__ 19.2.6: a system for rendering interactive 3D graphics.
 
   - Location: |Mesa|_.
   - Licensing: `MIT <https://opensource.org/licenses/MIT>`__.
@@ -112,7 +112,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |Mesa| replace:: ``[OpenCOR]/distrib/linux/mesa``
   .. _Mesa: https://github.com/opencor/opencor/tree/master/distrib/linux/mesa
 
-- `OAuth 2.0 for Qt <https://github.com/pipacs/o2>`__ 1.0.1: a library that encapsulates the `OAuth <https://oauth.net/>`__ 1.0 and 2.0 client authentication flows, and the sending of authenticated `HTTP <https://www.w3.org/Protocols/>`__ requests.
+- `OAuth 2.0 for Qt <https://github.com/pipacs/o2>`__ 1.0.1: a library that encapsulates the `OAuth <https://oauth.net/>`__ 1.0 and 2.0 client authentication flows, and the sending of authenticated `HTTP <https://w3.org/Protocols>`__ requests.
 
   - Location: |OAuth|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
@@ -120,10 +120,10 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |OAuth| replace:: ``[OpenCOR]/src/plugins/thirdParty/OAuth``
   .. _OAuth: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OAuth
 
-- `OpenSSL <https://www.openssl.org/>`__ 1.1.1d: a toolkit implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS) protocols, as well as a full-strength general purpose cryptography library.
+- `OpenSSL <https://openssl.org/>`__ 1.1.1d: a toolkit implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS) protocols, as well as a full-strength general purpose cryptography library.
 
   - Location: |OpenSSL|_.
-  - Licensing: `OpenSSL and SSLeay <https://www.openssl.org/source/license.html>`__, which are both `BSD <https://opensource.org/licenses/BSD-3-Clause>`__-style licenses.
+  - Licensing: `OpenSSL and SSLeay <https://openssl.org/source/license.html>`__, which are both `BSD <https://opensource.org/licenses/BSD-3-Clause>`__-style licenses.
 
   .. |OpenSSL| replace:: ``[OpenCOR]/src/plugins/thirdParty/OpenSSL``
   .. _OpenSSL: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OpenSSL
@@ -136,15 +136,15 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |OxygenImages| replace:: ``[OpenCOR]/res/oxygen``
   .. _OxygenImages: https://github.com/opencor/opencor/tree/master/res/oxygen
 
-- `Printable world flags <https://www.printableworldflags.com/flag-icon/>`__: flag icons used in our Language menu.
+- `Printable world flags <https://printableworldflags.com/flag-icon>`__: flag icons used in our Language menu.
 
-  - Location: |FlagsImages|_.
+  - Location: |PrintableWorldFlagsImages|_.
   - Licensing: none.
 
-  .. |FlagsImages| replace:: ``[OpenCOR]/res/flags``
-  .. _FlagsImages: https://github.com/opencor/opencor/tree/master/res/flags
+  .. |PrintableWorldFlagsImages| replace:: ``[OpenCOR]/res/flags``
+  .. _PrintableWorldFlagsImages: https://github.com/opencor/opencor/tree/master/res/flags
 
-- `QScintilla <https://riverbankcomputing.com/software/qscintilla/intro>`__ 2.11.3: a `Qt <https://www.qt.io/>`__ port of the `Scintilla <https://www.scintilla.org/>`__ editing component.
+- `QScintilla <https://riverbankcomputing.com/software/qscintilla/intro>`__ 2.11.3: a `Qt <https://qt.io/>`__ port of the `Scintilla <https://scintilla.org/>`__ editing component.
 
   - Location: |QScintilla|_.
   - Licensing: `GPL v3.0 <https://opensource.org/licenses/GPL-3.0>`__.
@@ -160,7 +160,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |QtSingleApplication| replace:: ``[OpenCOR]/src/3rdparty/QtSingleApplication``
   .. _QtSingleApplication: https://github.com/opencor/opencor/tree/master/src/3rdparty/QtSingleApplication
 
-- `QtWebKit <https://code.qt.io/cgit/qt/qtwebkit.git/tree/>`__: a `Qt <https://www.qt.io/>`__ port of `WebKit <https://webkit.org/>`__, a web browser engine.
+- `QtWebKit <https://code.qt.io/cgit/qt/qtwebkit.git/tree/>`__: a `Qt <https://qt.io/>`__ port of `WebKit <https://webkit.org/>`__, a web browser engine.
 
   - Location: |QtWebKit|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__.
@@ -173,10 +173,10 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
 - `Qwt <http://qwt.sourceforge.net/>`__ 6.1.4: a set of widgets and utility classes primarily aimed at programs with a technical background.
 
   - Location: |Qwt|_.
-  - Licensing: `Qwt License v1.0 <http://qwt.sourceforge.net/qwtlicense.html>`__ (a slightly less restricive version of `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__) and `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ for the `MathML <https://www.w3.org/Math/>`__ text engine, which is based on the QtMmlWidget code.
+  - Licensing: `Qwt License v1.0 <http://qwt.sourceforge.net/qwtlicense.html>`__ (a slightly less restricive version of `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__) and `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ for the `MathML <https://w3.org/Math>`__ text engine, which is based on the QtMmlWidget code.
 
-    **Note:** we have contributed some code to the `MathML <https://www.w3.org/Math/>`__ renderer, but it has yet to be fully incorporated in the `Qwt <http://qwt.sourceforge.net/>`__ project.
-    So, in the meantime, we use `our version <https://github.com/uwerat/qwt-mml-dev>`__ of the `MathML <https://www.w3.org/Math/>`__ renderer.
+    **Note:** we have contributed some code to the `MathML <https://w3.org/Math>`__ renderer, but it has yet to be fully incorporated in the `Qwt <http://qwt.sourceforge.net/>`__ project.
+    So, in the meantime, we use `our version <https://github.com/uwerat/qwt-mml-dev>`__ of the `MathML <https://w3.org/Math>`__ renderer.
 
   .. |Qwt| replace:: ``[OpenCOR]/src/plugins/thirdParty/Qwt``
   .. _Qwt: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Qwt
@@ -189,12 +189,12 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |SUNDIALS| replace:: ``[OpenCOR]/src/plugins/thirdParty/SUNDIALS``
   .. _SUNDIALS: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/SUNDIALS
 
-- `web-xslt <https://github.com/davidcarlisle/web-xslt>`__: `XSLT <https://www.w3.org/TR/xslt>`__ and `JavaScript <https://en.wikipedia.org/wiki/JavaScript>`__ code intended mostly for manipulating `MathML <https://www.w3.org/Math/>`__ and `OpenMath <https://openmath.github.io/>`__.
+- `web-xslt <https://github.com/davidcarlisle/web-xslt>`__: `XSLT <https://w3.org/TR/xslt>`__ and `JavaScript <https://en.wikipedia.org/wiki/JavaScript>`__ code intended mostly for manipulating `MathML <https://w3.org/Math>`__ and `OpenMath <https://openmath.github.io/>`__.
 
   - Location: |web-xslt|_.
   - Licensing: `W3C <https://opensource.org/licenses/W3C>`__, `Apache v2.0 <https://opensource.org/licenses/Apache-2.0>`__, `MIT <https://opensource.org/licenses/MIT>`__, `MPL v1.1 <https://opensource.org/licenses/MPL-1.1>`__ or `MPL v2.0 <https://opensource.org/licenses/MPL-2.0>`__.
 
-    **Note:** we only use (a slightly improved version of) |ctopff.xsl|_ to convert `Content MathML <https://www.w3.org/TR/MathML3/chapter4.html>`__ to `Presentation MathML <https://www.w3.org/TR/MathML2/chapter3.html>`__.
+    **Note:** we only use (a slightly improved version of) |ctopff.xsl|_ to convert `Content MathML <https://w3.org/TR/MathML3/chapter4.html>`__ to `Presentation MathML <https://w3.org/TR/MathML2/chapter3.html>`__.
 
   .. |web-xslt| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/res/web-xslt``
   .. _web-xslt: https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/res/web-xslt
