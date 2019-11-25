@@ -144,6 +144,22 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |PrintableWorldFlagsImages| replace:: ``[OpenCOR]/res/flags``
   .. _PrintableWorldFlagsImages: https://github.com/opencor/opencor/tree/master/res/flags
 
+- `Python <https://python.org/>`__ 3.7.5: a programming language that lets you work quickly and integrate systems more effectively.
+
+  - Location: |Python|_.
+  - Licensing: `Python License v2.0 <https://opensource.org/licenses/Python-2.0>`__.
+
+  .. |Python| replace:: ``[OpenCOR]/src/plugins/thirdParty/Python``
+  .. _Python: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Python
+
+- `PythonQt <https://mevislab.github.io/pythonqt>`__ 3.2.2: a dynamic `Python <https://python.org/>`__ binding for the `Qt <https://qt.io/>`__ framework.
+
+  - Location: |PythonQt|_.
+  - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__.
+
+  .. |PythonQt| replace:: ``[OpenCOR]/src/plugins/thirdParty/PythonQt``
+  .. _PythonQt: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/PythonQt
+
 - `QScintilla <https://riverbankcomputing.com/software/qscintilla/intro>`__ 2.11.3: a `Qt <https://qt.io/>`__ port of the `Scintilla <https://scintilla.org/>`__ editing component.
 
   - Location: |QScintilla|_.
