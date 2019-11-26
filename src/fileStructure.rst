@@ -11,6 +11,9 @@ Files are organised as follows:
   build                         // Where OpenCOR is built
   cmake                         // Files used to build OpenCOR
   distrib                       // Files used to package OpenCOR
+   ├─ linux                     // Linux-specific
+   ├─ macos                     // macOS-specific
+   └─ windows                   // Windows-specific
   doc                           // Documentation
    ├─ 3rdparty                  // Third-party libraries used for the documentation
    │   └─ jQuery                // jQuery
@@ -22,9 +25,11 @@ Files are organised as follows:
   i18n                          // Internationalisation files
   models                        // Some sample CellML files
    └─ tests                     // Some test files
-       ├─ cellml                // Some CellML test files
-       ├─ combine               // Some COMBINE test archives
-       └─ sedml                 // Some SED-ML test files
+       ├─ cellml                // Some test CellML files
+       ├─ combine               // Some test COMBINE archives
+       ├─ jupyter               // Some test Jupyter notebooks
+       ├─ python                // Some test Python scripts
+       └─ sedml                 // Some test SED-ML files
   res                           // Resource files
    ├─ flags                     // Images from the Printable world flags library
    ├─ oxygen                    // Images from the Oxygen library
@@ -33,6 +38,9 @@ Files are organised as follows:
   src                           // Source code files
    ├─ 3rdparty                  // Third-party libraries statically linked to OpenCOR
    │   ├─ diff_match_patch      // diff-match-patch
+   │   ├─ linux                 // Linux-specific
+   │   │   ├─ icu               // ICU
+   │   │   └─ mesa              // Mesa
    │   ├─ QtSingleApplication   // QtSingleApplication
    │   └─ QtWebKit              // QtWebKit
    ├─ misc                      // Files that do not fit anywhere else
@@ -59,6 +67,7 @@ Files are organised as follows:
    │   │   ├─ OpenSSL           // OpenSSL as a plugin
    │   │   ├─ Python            // Python as a plugin
    │   │   ├─ PythonPackages    // Some Python packages as a plugin
+   │   │   ├─ PythonQt          // PythonQt as a plugin
    │   │   ├─ QScintilla        // QScintilla as a plugin
    │   │   ├─ Qwt               // Qwt as a plugin
    │   │   ├─ SUNDIALS          // Part of SUNDIALS as a plugin
