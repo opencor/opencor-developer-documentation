@@ -64,20 +64,23 @@ The following guidelines exist to make the code faster, clearer, and/or to take 
   .. code-block:: c++
      :class: good
 
-     for (auto widget : container)
+     for (auto widget : container) {
          doSomething(widget);
+     }
 
   .. code-block:: c++
      :class: bad
 
-     foreach (QWidget *widget, container)
+     foreach (QWidget *widget, container) {
          doSomething(widget);
+     }
 
   .. code-block:: c++
      :class: bad
 
-     for (Container::iterator iter = container.begin(), end = container.end(); iter != end; ++iter)
+     for (Container::iterator iter = container.begin(), end = container.end(); iter != end; ++iter) {
          doSomething(*iter);
+     }
 
   Make the loop variable ``const``, if possible.
   This might prevent unnecessary detaching of shared data.
@@ -85,14 +88,16 @@ The following guidelines exist to make the code faster, clearer, and/or to take 
   .. code-block:: c++
      :class: good
 
-     for (const auto &name : someListOfNames)
+     for (const auto &name : someListOfNames) {
          doSomething(name);
+     }
 
   .. code-block:: c++
      :class: bad
 
-     for (auto name : someListOfNames)
+     for (auto name : someListOfNames) {
          doSomething(name);
+     }
 
 Formatting
 ----------
@@ -347,96 +352,33 @@ Formatting
        void Moo::foo() {
        }
 
-  - Use curly braces when the body of a conditional statement contains more than one line, and also if a single line statement is somewhat complex.
-    Otherwise, omit them:
+  - Use curly braces at all times:
 
     .. code-block:: c++
        :class: good
-
-       if (address.isEmpty())
-           return false;
-
-    .. code-block:: c++
-       :class: bad
 
        if (address.isEmpty()) {
            return false;
        }
 
     .. code-block:: c++
-       :class: good
+       :class: bad
 
-       for (int i = 0; i < 10; ++i)
-           qDebug("%d", i);
+       if (address.isEmpty())
+           return false;
 
     .. code-block:: c++
-       :class: bad
+       :class: good
 
        for (int i = 0; i < 10; ++i) {
            qDebug("%d", i);
        }
 
-    **Exception #1:** use braces if the parent statement covers several lines or if it wraps:
-
-    .. code-block:: c++
-       :class: good
-
-       if (    address.isEmpty()
-           || !isValid()
-           || !codec) {
-           return false;
-       }
-
     .. code-block:: c++
        :class: bad
 
-       if (    address.isEmpty()
-           || !isValid()
-           || !codec)
-           return false;
-
-    **Exception #2:** use braces in ``if-then-else`` statements when either the ``if`` or ``else`` block covers several lines:
-
-    .. code-block:: c++
-       :class: good
-
-       if (address.isEmpty()) {
-           --it;
-       } else {
-           qDebug("%s", qPrintable(address));
-
-           ++it;
-       }
-
-    .. code-block:: c++
-       :class: bad
-
-       if (address.isEmpty())
-           --it;
-       else {
-           qDebug("%s", qPrintable(address));
-
-           ++it;
-       }
-
-    .. code-block:: c++
-       :class: good
-
-       if (cond1) {
-           if (cond2)
-               ...
-           else
-               ...
-       }
-
-    .. code-block:: c++
-       :class: bad
-
-       if (cond1)
-           if (cond2)
-               ...
-           else
-               ...
+       for (int i = 0; i < 10; ++i)
+           qDebug("%d", i);
 
   - Use curly braces when the body of a conditional statement is empty:
 
