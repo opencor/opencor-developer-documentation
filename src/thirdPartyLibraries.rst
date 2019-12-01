@@ -150,7 +150,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |Mesa| replace:: ``[OpenCOR]/distrib/linux/mesa``
   .. _Mesa: https://github.com/opencor/opencor/tree/master/distrib/linux/mesa
 
-- `nbconvert <https://pypi.org/project/nbconvert>`__ 5.6.0: a tool that converts notebooks to various other formats via `Jinja <http://jinja.pocoo.org/>`__ templates.
+- `nbconvert <https://pypi.org/project/nbconvert>`__ 5.6.0: a tool that converts notebooks to various other formats via `Jinja <https://palletsprojects.com/p/jinja/>`__ templates.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
@@ -249,12 +249,12 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |QtWebKit| replace:: ``[OpenCOR]/src/3rdparty/QtWebKit``
   .. _QtWebKit: https://github.com/opencor/opencor/tree/master/src/3rdparty/QtWebKit
 
-- `Qwt <http://qwt.sourceforge.net/>`__ 6.1.4: a set of widgets and utility classes primarily aimed at programs with a technical background.
+- `Qwt <https://qwt.sourceforge.io/>`__ 6.1.4: a set of widgets and utility classes primarily aimed at programs with a technical background.
 
   - Location: |Qwt|_.
-  - Licensing: `Qwt License v1.0 <http://qwt.sourceforge.net/qwtlicense.html>`__ (a slightly less restricive version of `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__) and `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ for the `MathML <https://w3.org/Math>`__ text engine, which is based on the QtMmlWidget code.
+  - Licensing: `Qwt License v1.0 <https://qwt.sourceforge.net/qwtlicense.html>`__ (a slightly less restricive version of `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__) and `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ for the `MathML <https://w3.org/Math>`__ text engine, which is based on the QtMmlWidget code.
 
-    **Note:** we have contributed some code to the `MathML <https://w3.org/Math>`__ renderer, but it has yet to be fully incorporated in the `Qwt <http://qwt.sourceforge.net/>`__ project.
+    **Note:** we have contributed some code to the `MathML <https://w3.org/Math>`__ renderer, but it has yet to be fully incorporated in the `Qwt <https://qwt.sourceforge.net/>`__ project.
     So, in the meantime, we use `our version <https://github.com/uwerat/qwt-mml-dev>`__ of the `MathML <https://w3.org/Math>`__ renderer.
 
   .. |Qwt| replace:: ``[OpenCOR]/src/plugins/thirdParty/Qwt``

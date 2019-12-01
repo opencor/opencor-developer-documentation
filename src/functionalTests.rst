@@ -36,7 +36,7 @@ Check that a given view looks right for a given file when:
 Edit/save a SED-ML file / COMBINE archive
 -----------------------------------------
 
-Using the `Simulation Experiment <http://opencor.ws/user/plugins/simulation/simulationExperimentView.html>`__ view, check that we can:
+Using the `Simulation Experiment <https://opencor.ws/user/plugins/simulation/simulationExperimentView.html>`__ view, check that we can:
 
 - SED-ML file:
 

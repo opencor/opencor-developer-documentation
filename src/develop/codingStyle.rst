@@ -14,7 +14,7 @@ General
   Always use a simple implementation in favour of a more complicated one.
   This eases maintenance a lot!
 - Write good C++ code: readable, well commented when necessary, and object-oriented.
-- Adapt the code to the structures already existing in OpenCOR or, in the case that you have better ideas, discuss them with the `project manager <http://www.opencor.ws/team.html>`__ before implementing them.
+- Adapt the code to the structures already existing in OpenCOR or, in the case that you have better ideas, discuss them with the `project manager <https://opencor.ws/team.html>`__ before implementing them.
 - Take advantage of `Qt <https://www.qt.io/>`__. Do not re-invent the wheel.
 
 Code constructs

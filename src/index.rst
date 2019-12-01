@@ -4,7 +4,7 @@
  OpenCOR
 =========
 
-`OpenCOR <http://www.opencor.ws/>`__ is developed, built, tested, run and packaged on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__, `Linux <https://en.wikipedia.org/wiki/Linux>`__ and `macOS <https://en.wikipedia.org/wiki/MacOS>`__ (see our `supported platforms <http://opencor.ws/supportedPlatforms.html>`__ for more details).
+`OpenCOR <https://opencor.ws/>`__ is developed, built, tested, run and packaged on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__, `Linux <https://en.wikipedia.org/wiki/Linux>`__ and `macOS <https://en.wikipedia.org/wiki/MacOS>`__ (see our `supported platforms <https://opencor.ws/supportedPlatforms.html>`__ for more details).
 Information on those different aspects can be found in the following pages:
 
 - :ref:`prerequisites`
@@ -60,8 +60,8 @@ Here are also some direct links to OpenCOR's:
 - `Git repository <https://github.com/opencor/opencor>`__
 - `Latest commits <https://github.com/opencor/opencor/commits>`__
 - `Current bugs, feature requests, etc. <https://github.com/opencor/opencor/issues>`__
-- `Continuous integration <http://autotest.bioeng.auckland.ac.nz/jenkins/view/OpenCOR/>`__
+- `Continuous integration <https://autotest.bioeng.auckland.ac.nz/jenkins/view/OpenCOR>`__
 
 You might also be interested in our `published article <https://dx.doi.org/10.3389/fphys.2015.00026>`__.
 
-Finally, here is how you can `contact us <http://www.opencor.ws/contactUs.html>`__.
+Finally, here is how you can `contact us <https://opencor.ws/contactUs.html>`__.
