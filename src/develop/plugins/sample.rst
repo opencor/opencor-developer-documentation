@@ -47,7 +47,7 @@ All our plugin does is make its ``add()`` function available to other plugins, s
 CMake project
 -------------
 
-To build our plugin, we need a |CMakeLists.txt|_ file (some information on `CMake <https://www.cmake.org/>`__ and plugins in OpenCOR can be found :ref:`here <develop_plugins_index_cmakeProject>`), which contents is:
+To build our plugin, we need a |CMakeLists.txt|_ file (some information on `CMake <https://cmake.org/>`__ and plugins in OpenCOR can be found :ref:`here <develop_plugins_index_cmakeProject>`), which contents is:
 
 .. code-block:: cmake
    :lineno-start: 1
@@ -69,7 +69,7 @@ To build our plugin, we need a |CMakeLists.txt|_ file (some information on `CMak
 .. |CMakeLists.txt| replace:: ``CMakeLists.txt``
 .. _CMakeLists.txt: https://github.com/opencor/opencor/blob/master/src/plugins/sample/Sample/CMakeLists.txt
 
-The first line specifies the name of the `CMake <https://www.cmake.org/>`__ project for our `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugin, i.e. ``SamplePlugin``.
+The first line specifies the name of the `CMake <https://cmake.org/>`__ project for our `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugin, i.e. ``SamplePlugin``.
 Then, we have a call to the ``add_plugin()`` macro (line 5), which is defined in |common.cmake|_.
 Different types of parameters are passed to it (``SOURCES`` and ``QT_MODULES`` at lines 6 and 11, respectively), followed by the parameters themselves.
 
@@ -80,7 +80,7 @@ As for any plugin, our `Sample <https://github.com/opencor/opencor/tree/master/s
 ``.cpp`` files that contain the plugin's implementation code must also be referenced (lines 9 and 10).
 (Note that they start with ``sample``, i.e. the name of the plugin in lower case.
 This convention is used throughout OpenCOR's code to ensure that there are no name clashes between plugins' files.)
-Finally, OpenCOR uses the `Qt <https://www.qt.io/>`__ framework, so even though our `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugin is very minimal, we must still reference the ``Core`` module (line 12).
+Finally, OpenCOR uses the `Qt <https://qt.io/>`__ framework, so even though our `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/Sample/>`__ plugin is very minimal, we must still reference the ``Core`` module (line 12).
 
 .. |plugininfo.cpp| replace:: ``[OpenCOR]/src/plugins/plugininfo.cpp``
 .. _plugininfo.cpp: https://github.com/opencor/opencor/blob/master/src/plugins/plugininfo.cpp
@@ -129,7 +129,7 @@ That function is declared in |sampleplugin.h|_, which is also where our :ref:`pl
 We need to know about the data structure of our :ref:`basic information <develop_plugins_index_basicInformation>`, so we must include |plugininfo.h|_ (line 28).
 Then, we must declare our C function (line 37).
 Finally, we have the definition of our :ref:`plugin class <develop_plugins_index_pluginClass>` (lines 41-46).
-The call to the ``Q_PLUGIN_METADATA()`` macro (line 45) requires to pass both an IID (``OpenCOR.SamplePlugin``) and the name of a `JSON <https://www.json.org/>`__ file (|sampleplugin.json|_).
+The call to the ``Q_PLUGIN_METADATA()`` macro (line 45) requires to pass both an IID (``OpenCOR.SamplePlugin``) and the name of a `JSON <https://json.org/>`__ file (|sampleplugin.json|_).
 As mentioned :ref:`here <develop_plugins_index_jsonFile>`, the JSON file simply references the name of our plugin class (``SamplePlugin``):
 
 .. code-block:: json

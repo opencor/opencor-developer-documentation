@@ -150,7 +150,7 @@ Starting with |sampleviewplugin.h|_, its contents is:
 .. _sampleviewplugin.json: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleView/src/sampleviewplugin.json
 
 As mentioned above, our plugin implements some interfaces, which means that their header file is included (lines 28, 29, 31 and 32).
-It also means that our plugin class inherits from those interfaces (lines 49-51), as well as makes calls to the ``Q_INTERFACES()`` macro to let `Qt <https://www.qt.io/>`__ know which interfaces it implements (lines 57-60).
+It also means that our plugin class inherits from those interfaces (lines 49-51), as well as makes calls to the ``Q_INTERFACES()`` macro to let `Qt <https://qt.io/>`__ know which interfaces it implements (lines 57-60).
 Finally, we include the inline files (lines 65-68) that declare various methods that must be implemented by our plugin (see :ref:`below <develop_plugins_sampleView_interfacesImplementation>`).
 (The rest of the class definition is specific to our plugin and is discussed :ref:`below <develop_plugins_sampleView_pluginSpecific>`.)
 
@@ -563,7 +563,7 @@ Some extra work is needed to get our plugin to do what we want, and this is done
 .. |sampleviewwidget.h| replace:: ``sampleviewwidget.h``
 .. _sampleviewwidget.h: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleView/src/sampleviewwidget.h
 
-``SampleViewWidget`` inherits from ``Core::ViewWidget``, which is defined in the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin and is an extended version of `Qt <https://www.qt.io/>`__'s ``QWidget`` class (line 43).
+``SampleViewWidget`` inherits from ``Core::ViewWidget``, which is defined in the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin and is an extended version of `Qt <https://qt.io/>`__'s ``QWidget`` class (line 43).
 It requires implementing the ``widget()`` method, which purpose is to return the widget that is to be shown in the view (line 53).
 In the present case, it is ``SampleViewWidget`` itself.
 Otherwise, ``SampleViewWidget`` also comes with a GUI file, which describes the layout of our plugin window (|sampleviewwidget.ui|_).

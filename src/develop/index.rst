@@ -65,7 +65,7 @@ All changes to the source code must be referenced in the list of `issues <https:
 Continuous integration
 ----------------------
 
-Whenever something is pushed to the `Git repository <https://github.com/opencor/opencor>`__, OpenCOR gets automatically built and tested on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__, `Linux <https://en.wikipedia.org/wiki/Linux>`__ and `macOS <https://en.wikipedia.org/wiki/MacOS>`__, through `Jenkins <https://autotest.bioeng.auckland.ac.nz/jenkins/view/OpenCOR>`__ at the `Auckland Bioengineering Institute <https://www.auckland.ac.nz/en/abi.html>`__.
+Whenever something is pushed to the `Git repository <https://github.com/opencor/opencor>`__, OpenCOR gets automatically built and tested on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__, `Linux <https://en.wikipedia.org/wiki/Linux>`__ and `macOS <https://en.wikipedia.org/wiki/MacOS>`__, through `Jenkins <https://autotest.bioeng.auckland.ac.nz/jenkins/view/OpenCOR>`__ at the `Auckland Bioengineering Institute <https://auckland.ac.nz/en/abi.html>`__.
 
 Although it can technically be done, no work should be carried out on the `master branch <https://github.com/opencor/opencor/tree/master>`__.
 Instead, anyone wanting to contribute to OpenCOR should first fork the `Git repository <https://github.com/opencor/opencor>`__.

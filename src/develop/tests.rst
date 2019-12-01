@@ -20,7 +20,7 @@ Tests must:
   .. |tests.h| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Compiler/tests/tests.h``
   .. _tests.h: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Compiler/tests/tests.h
 
-- Be listed under the ``TESTS`` header in the call to our `CMake <https://www.cmake.org/>`__ |add_plugin|_ macro of the plugin's ``CMakeLists.txt`` file (e.g. |CMakeLists.txt|_ for the `Compiler <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/>`__ plugin):
+- Be listed under the ``TESTS`` header in the call to our `CMake <https://cmake.org/>`__ |add_plugin|_ macro of the plugin's ``CMakeLists.txt`` file (e.g. |CMakeLists.txt|_ for the `Compiler <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/>`__ plugin):
 
   .. code-block:: cmake
 

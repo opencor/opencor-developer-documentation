@@ -141,7 +141,7 @@ Our :ref:`plugin information <develop_plugins_index_pluginInformation>` can be f
 .. _sampletoolsplugin.json: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleTools/src/sampletoolsplugin.json
 
 As mentioned above, our plugin implements some interfaces, which means that their header file is included (lines 28-30 and 32).
-It also means that our plugin class inherits from those interfaces (lines 45-47), as well as makes calls to the ``Q_INTERFACES()`` macro to let `Qt <https://www.qt.io/>`__ know which interfaces it implements (lines 53-56).
+It also means that our plugin class inherits from those interfaces (lines 45-47), as well as makes calls to the ``Q_INTERFACES()`` macro to let `Qt <https://qt.io/>`__ know which interfaces it implements (lines 53-56).
 Finally, we include the inline files (lines 59-62) that declare various methods that must be implemented by our plugin (see :ref:`below <develop_plugins_sampleTools_interfacesImplementation>`).
 (The rest of the class definition is specific to our plugin and is discussed :ref:`below <develop_plugins_sampleTools_pluginSpecific>`.)
 
@@ -482,5 +482,5 @@ It provides the user with some information about the commands it supports.
 In a similar way, ``runAddCommand()`` (lines 232-267) is executed whenever our plugin is asked to handle the ``add`` command.
 It checks that two numbers have been passed and, if so, returns their sum to the user.
 
-``addTwoNumbers()`` (lines 271-287) is a `Qt <https://www.qt.io/>`__ slot that is executed whenever the user selects our menu item (see ``mAddTwoNumbersAction``).
+``addTwoNumbers()`` (lines 271-287) is a `Qt <https://qt.io/>`__ slot that is executed whenever the user selects our menu item (see ``mAddTwoNumbersAction``).
 Using a `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__ approach, it asks the user to provide two numbers and returns their sum, unless the user decides to cancel the action.

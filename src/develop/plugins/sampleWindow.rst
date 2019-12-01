@@ -142,7 +142,7 @@ Our :ref:`plugin information <develop_plugins_index_pluginInformation>` can be f
 .. _samplewindowplugin.json: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleWindow/src/samplewindowplugin.json
 
 As mentioned above, our plugin implements some interfaces, which means that their header file is included (lines 28, 30 and 31).
-It also means that our plugin class inherits from those interfaces (lines 48 and 49), as well as makes calls to the ``Q_INTERFACES()`` macro to let `Qt <https://www.qt.io/>`__ know which interfaces it implements (lines 55-57).
+It also means that our plugin class inherits from those interfaces (lines 48 and 49), as well as makes calls to the ``Q_INTERFACES()`` macro to let `Qt <https://qt.io/>`__ know which interfaces it implements (lines 55-57).
 Finally, we include the inline files (lines 60-62) that declare various methods that must be implemented by our plugin (see :ref:`below <develop_plugins_sampleWindow_interfacesImplementation>`).
 (The rest of the class definition is specific to our plugin and is discussed :ref:`below <develop_plugins_sampleWindow_pluginSpecific>`.)
 
@@ -375,7 +375,7 @@ Some extra work is needed to get our plugin to do what we want, and this is done
 .. |samplewindowwindow.h| replace:: ``samplewindowwindow.h``
 .. _samplewindowwindow.h: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleWindow/src/samplewindowwindow.h
 
-``SampleWindowWindow`` inherits from ``Core::WindowWidget``, which is defined in the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin and is an extended version of `Qt <https://www.qt.io/>`__'s ``QDockWidget`` class (line 43).
+``SampleWindowWindow`` inherits from ``Core::WindowWidget``, which is defined in the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin and is an extended version of `Qt <https://qt.io/>`__'s ``QDockWidget`` class (line 43).
 It also comes with a GUI file, which describes the layout of our plugin window (|samplewindowwindow.ui|_).
 
 .. |samplewindowwindow.ui| replace:: ``samplewindowwindow.ui``

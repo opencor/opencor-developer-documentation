@@ -12,7 +12,7 @@ They illustrate the basic concepts needed to develop plugins for OpenCOR:
 - :ref:`develop_plugins_sampleView`
 - :ref:`develop_plugins_sampleWindow`
 
-**Note:** these plugins only get built if the `CMake <https://www.cmake.org/>`__ ``ENABLE_SAMPLE_PLUGINS`` option is set to ``ON``.
+**Note:** these plugins only get built if the `CMake <https://cmake.org/>`__ ``ENABLE_SAMPLE_PLUGINS`` option is set to ``ON``.
 
 .. _develop_plugins_index_categories:
 
@@ -156,7 +156,7 @@ Any other plugin that tries to implement the `Core <https://github.com/opencor/o
 CMake project
 -------------
 
-OpenCOR is built and packaged using `CMake <https://www.cmake.org/>`__.
+OpenCOR is built and packaged using `CMake <https://cmake.org/>`__.
 When it comes to plugins, this requires creating a ``CMakeLists.txt`` file in the plugin's root folder and calling the ``add_plugin()`` macro, which is defined in |common.cmake|_.
 That macro uses information passed to it to build and package the plugin.
 That information comes in the form of a series of parameters, some of which are keywords:
@@ -165,13 +165,13 @@ That information comes in the form of a series of parameters, some of which are 
 - ``UIS``: user interface files.
 - ``DEFINITIONS``: definitions needed to build the plugin.
 - ``PLUGINS``: plugins needed by the plugin.
-- ``QT_MODULES``: `Qt <https://www.qt.io/>`__ modules needed by the plugin.
+- ``QT_MODULES``: `Qt <https://qt.io/>`__ modules needed by the plugin.
 - ``EXTERNAL_BINARIES_DIR``: location of external binaries needed by the plugin.
 - ``EXTERNAL_BINARIES``: external binaries needed by the plugin.
 - ``EXTERNAL_DESTINATION_DIR``: location where external dependencies are to be copied.
 - ``EXTERNAL_SOURCE_DIR``: location of external dependencies.
 - ``SYSTEM_BINARIES``: system binaries needed by the plugin.
-- ``DEPENDS_ON``: `CMake <https://www.cmake.org/>`__ targets on which the plugin depends.
+- ``DEPENDS_ON``: `CMake <https://cmake.org/>`__ targets on which the plugin depends.
 - ``TESTS``: :ref:`tests <develop_tests>` for the plugin.
 
 .. |common.cmake| replace:: ``[OpenCOR]/cmake/common.cmake``
@@ -204,7 +204,7 @@ For this, we need a ``.cpp``, a ``.h`` and a ``.json`` file, such as |coreplugin
 ``.json`` file
 ~~~~~~~~~~~~~~
 
-The ``.json`` file is a simple `JSON <https://www.json.org/>`__ file, which sole purpose is to reference the name of the plugin class.
+The ``.json`` file is a simple `JSON <https://json.org/>`__ file, which sole purpose is to reference the name of the plugin class.
 In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, the contents of that file is:
 
 .. code-block:: json
@@ -273,7 +273,7 @@ In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plu
                              descriptions);
    }
 
-**Note:** support for the internationalisation of a plugin's description would normally be done using `Qt <https://www.qt.io/>`__'s ``tr()`` function, but the C nature of the function means that it cannot be done.
+**Note:** support for the internationalisation of a plugin's description would normally be done using `Qt <https://qt.io/>`__'s ``tr()`` function, but the C nature of the function means that it cannot be done.
 So, instead, we use a ``QMap``-based approach.
 
 .. _develop_plugins_index_pluginClass:
@@ -281,7 +281,7 @@ So, instead, we use a ``QMap``-based approach.
 Plugin class
 ~~~~~~~~~~~~
 
-We rely on `Qt <https://www.qt.io/>`__'s support for plugins, which means that plugins must define a specific class.
+We rely on `Qt <https://qt.io/>`__'s support for plugins, which means that plugins must define a specific class.
 The class must inherit from ``QObject``, as well as from any interface the plugin implements.
 For example, the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin implements the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__, `File Handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`__, `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__, `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ and `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interfaces, so its class definition is:
 

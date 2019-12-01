@@ -15,7 +15,7 @@ General
   This eases maintenance a lot!
 - Write good C++ code: readable, well commented when necessary, and object-oriented.
 - Adapt the code to the structures already existing in OpenCOR or, in the case that you have better ideas, discuss them with the `project manager <https://opencor.ws/team.html>`__ before implementing them.
-- Take advantage of `Qt <https://www.qt.io/>`__. Do not re-invent the wheel.
+- Take advantage of `Qt <https://qt.io/>`__. Do not re-invent the wheel.
 
 Code constructs
 ---------------
@@ -418,7 +418,7 @@ Formatting
 
   - Keep lines shorter than 80 characters whenever possible.
 
-    **Note:** `Qt Creator <https://www.qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__ can be configured to display a right margin.
+    **Note:** `Qt Creator <https://qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__ can be configured to display a right margin.
     For this, select the ``Tools`` | ``Options...`` menu, then the ``Text Editor`` section, and finally the ``Display`` tab.
     Configuration options can be found under the ``Text Wrapping`` group box.
 
@@ -468,7 +468,7 @@ Patterns and practices
        #include <QCoreApplication>
        #include <QMessageBox>
 
-  - Arrange includes in blocks of headers that are specific to OpenCOR, `Qt <https://www.qt.io/>`__, third-party libraries and C++.
+  - Arrange includes in blocks of headers that are specific to OpenCOR, `Qt <https://qt.io/>`__, third-party libraries and C++.
     For example:
 
     .. code-block:: c++
@@ -579,7 +579,7 @@ Patterns and practices
     The constructor will be run the first time the function is entered.
     The code is not re-entrant, though.
 
-    **Note #2:** using `Qt <https://www.qt.io/>`__ 5 and `C++11 <https://en.wikipedia.org/wiki/C++11>`__, it is now possible to (indirectly) have a ``static const QString`` (see `here <https://www.macieira.org/blog/2011/07/qstring-improved/>`__ for more information on ``QString``), thus making it possible for a variable to be both read-only and sharable.
+    **Note #2:** using `Qt <https://qt.io/>`__ 5 and `C++11 <https://en.wikipedia.org/wiki/C++11>`__, it is now possible to (indirectly) have a ``static const QString`` (see `here <https://www.macieira.org/blog/2011/07/qstring-improved/>`__ for more information on ``QString``), thus making it possible for a variable to be both read-only and sharable.
 
     .. code-block:: c++
        :class: good

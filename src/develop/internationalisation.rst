@@ -14,7 +14,7 @@ OpenCOR
 There are two sets of language files to consider:
 
 #. **Qt-specific translation files:** these files are originally located under ``[Qt]/[QtVersion]/[CompilerVersion]/translations/qtXXX_xx.qm`` with ``XXX`` the type of translations (e.g. ``base``) and ``xx`` the language code (e.g. ``fr`` for French).
-   For every language supported by OpenCOR (except for English, which is natively supported by `Qt <https://www.qt.io/>`__), we need to add the corresponding `Qt <https://www.qt.io/>`__-specific translation files to |translations|_.
+   For every language supported by OpenCOR (except for English, which is natively supported by `Qt <https://qt.io/>`__), we need to add the corresponding `Qt <https://qt.io/>`__-specific translation files to |translations|_.
    Then, an entry for those files must be added to |translations.qrc|_:
 
    .. code-block:: xml
@@ -40,7 +40,7 @@ There are two sets of language files to consider:
    .. |OpenCOR_fr.ts| replace:: ``[OpenCOR]/i18n/OpenCOR_fr.ts``
    .. _OpenCOR_fr.ts: https://github.com/opencor/opencor/tree/master/i18n/OpenCOR_fr.ts
 
-   and replace ``xx_XX`` accordingly. Otherwise, as for the `Qt <https://www.qt.io/>`__-specific file above, an entry for the OpenCOR-specific translation file must be added to |i18n.qrc.in|_ (``PROJECT_BUILD_DIR`` is automatically replaced during the build process):
+   and replace ``xx_XX`` accordingly. Otherwise, as for the `Qt <https://qt.io/>`__-specific file above, an entry for the OpenCOR-specific translation file must be added to |i18n.qrc.in|_ (``PROJECT_BUILD_DIR`` is automatically replaced during the build process):
 
    .. code-block:: xml
 
@@ -147,11 +147,11 @@ The internationalisation interface has only one method that needs to be implemen
 .. |coreplugin.cpp| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/src/coreplugin.cpp``
 .. _coreplugin.cpp: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Core/src/coreplugin.cpp
 
-`Qt <https://www.qt.io/>`__ objects (e.g. menus, actions) need to be retranslated either by the plugin class itself or by an object owned directly or indirectly by the plugin class (e.g. |coreplugin.cpp|_ for the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin).
+`Qt <https://qt.io/>`__ objects (e.g. menus, actions) need to be retranslated either by the plugin class itself or by an object owned directly or indirectly by the plugin class (e.g. |coreplugin.cpp|_ for the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin).
 To help with this process, |I18nInterface|_ comes with two methods that ensure that menus and actions get properly retranslated: ``retranslateMenu(QMenu *pMenu, const QString &pTitle)`` and ``retranslateAction(QAction *pAction, const QString &pText, const QString &pStatusTip)``.
 
-It may happen that a plugin does not own any `Qt <https://www.qt.io/>`__ objects, but still needs to support internationalisation.
-This is the case with our `Editor <https://github.com/opencor/opencor/tree/master/src/plugins/widget/EditorWidget>`__ widget, which implements a `Qt <https://www.qt.io/>`__ widget that can be both instantiated and retranslated by others.
+It may happen that a plugin does not own any `Qt <https://qt.io/>`__ objects, but still needs to support internationalisation.
+This is the case with our `Editor <https://github.com/opencor/opencor/tree/master/src/plugins/widget/EditorWidget>`__ widget, which implements a `Qt <https://qt.io/>`__ widget that can be both instantiated and retranslated by others.
 This means that its ``retranslateUi()`` method is empty (see |editorwidgetplugin.cpp|_).
 
 .. |editorwidgetplugin.cpp| replace:: ``[OpenCOR]/src/plugins/widget/EditorWidget/src/editorwidgetplugin.cpp``

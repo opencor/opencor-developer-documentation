@@ -7,7 +7,7 @@
 The following tools are required in order to develop, build , test, run and package OpenCOR:
 
 - `Git <https://git-scm.com/>`__: a distributed version control system;
-- `CMake <https://www.cmake.org/>`__ 3.14 or later: a cross-platform build system;
+- `CMake <https://cmake.org/>`__ 3.14 or later: a cross-platform build system;
 - `Ninja <https://ninja-build.org/>`__ 1.8.2 or later (optional): a small build system with a focus on speed;
 - `clcache <https://github.com/frerich/clcache>`__ (optional and Windows only): a compiler cache;
 - `ccache <https://ccache.samba.org/>`__ (optional and Linux/macOS only): a compiler cache;
@@ -16,11 +16,11 @@ The following tools are required in order to develop, build , test, run and pack
 - C++ toolchain: a set of C++ tools.
   The toolchain is different depending on the platform you are using:
 
-  - **Windows:** `Visual Studio Community 2017 <https://www.visualstudio.com/downloads/download-visual-studio-vs>`__ ( ``Desktop development with C++``);
+  - **Windows:** `Visual Studio Community 2017 <https://visualstudio.com/downloads/download-visual-studio-vs>`__ ( ``Desktop development with C++``);
   - **Linux:** G++ and OpenGL (``g++`` and ``libgl1-mesa-dev`` packages, respectively) on Ubuntu 18.04 LTS; and
   - **macOS:** `Xcode <https://developer.apple.com/xcode/>`__ 11 (including its `Command Line Tools <https://developer.apple.com/downloads/?q=Command%20Line%20Tools>`__).
 
-- `Qt <https://www.qt.io/>`__ 5.12 LTS: a cross-platform application and UI framework (`Qt Creator <https://www.qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__ is its supporting IDE):
+- `Qt <https://qt.io/>`__ 5.12 LTS: a cross-platform application and UI framework (`Qt Creator <https://qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__ is its supporting IDE):
 
   - |Windows|_;
   - |Linux|_; and
