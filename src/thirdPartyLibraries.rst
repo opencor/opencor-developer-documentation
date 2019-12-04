@@ -260,7 +260,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |Qwt| replace:: ``[OpenCOR]/src/plugins/thirdParty/Qwt``
   .. _Qwt: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Qwt
 
-- `SciPy <https://scipy.org/>`__ 1.3.1: a `Python <https://python.org/>`__-based ecosystem of open-source software for mathematics, science, and engineering.
+- `SciPy <https://scipy.org/>`__ 1.3.1: a `Python <https://python.org/>`__-based ecosystem of open-source software for mathematics, science and engineering.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 3-Clause <https://opensource.org/licenses/BSD-3-Clause>`__.
