@@ -195,7 +195,7 @@ It is declared in |sampleutilities.h|_:
 .. code-block:: c++
    :lineno-start: 28
 
-   #include <qglobal.h>
+   #include <QtGlobal>
 
    //==============================================================================
 
