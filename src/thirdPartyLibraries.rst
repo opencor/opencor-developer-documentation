@@ -142,7 +142,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |PythonPackages|_.
   - Licensing: `Matplotlib License <https://matplotlib.org/users/license.html>`__.
 
-- `Mesa <https://mesa3d.org/>`__ 19.2.6: a system for rendering interactive 3D graphics.
+- `Mesa <https://mesa3d.org/>`__ 19.3.2: a system for rendering interactive 3D graphics.
 
   - Location: |Mesa|_.
   - Licensing: `MIT <https://opensource.org/licenses/MIT>`__.
