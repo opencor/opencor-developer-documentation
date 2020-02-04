@@ -167,7 +167,7 @@ Next, we have our |sampleplugin.cpp|_ file, which contents is:
        descriptions.insert("fr", QString::fromUtf8("une extension qui fournit une fonction d'addition."));
 
        return new PluginInfo(PluginInfo::Category::Sample, false, false,
-                             QStringList(),
+                             {},
                              descriptions);
    }
 

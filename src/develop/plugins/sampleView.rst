@@ -167,7 +167,7 @@ The C function that is used by OpenCOR to retrieve some :ref:`basic information 
        descriptions.insert("fr", QString::fromUtf8("une extension qui fournit une vue de test."));
 
        return new PluginInfo(PluginInfo::Category::Sample, true, false,
-                             QStringList() << "Core",
+                             { "Core" },
                              descriptions);
    }
 
