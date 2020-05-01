@@ -181,7 +181,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |OpenSSL| replace:: ``[OpenCOR]/src/plugins/thirdParty/OpenSSL``
   .. _OpenSSL: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OpenSSL
 
-- `Oxygen <https://packages.ubuntu.com/focal/oxygen-icon-theme>`__ 5.67.0: icons used in various parts of OpenCOR.
+- `Oxygen <https://packages.ubuntu.com/focal/oxygen-icon-theme>`__ 5.68.0: icons used in various parts of OpenCOR.
 
   - Location: |OxygenImages|_.
   - Licensing: `LGPL v3.0 <https://opensource.org/licenses/LGPL-3.0>`__.
