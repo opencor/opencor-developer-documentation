@@ -218,7 +218,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `QScintilla <https://riverbankcomputing.com/software/qscintilla/intro>`__ 2.11.4: a `Qt <https://qt.io/>`__ port of the `Scintilla <https://scintilla.org/>`__ editing component.
+- `QScintilla <https://riverbankcomputing.com/software/qscintilla/intro>`__ 2.11.5: a `Qt <https://qt.io/>`__ port of the `Scintilla <https://scintilla.org/>`__ editing component.
 
   - Location: |QScintilla|_.
   - Licensing: `GPL v3.0 <https://opensource.org/licenses/GPL-3.0>`__.
