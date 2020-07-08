@@ -10,7 +10,7 @@ The following tools are required in order to develop, build , test, run and pack
 - `CMake <https://cmake.org/>`__ 3.14 or later: a cross-platform build system;
 - `Ninja <https://ninja-build.org/>`__ 1.8.2 or later (optional): a small build system with a focus on speed;
 - `clcache <https://github.com/frerich/clcache>`__ (optional and Windows only): a compiler cache;
-- `ccache <https://ccache.samba.org/>`__ (optional and Linux/macOS only): a compiler cache;
+- `ccache <https://ccache.dev/>`__ (optional and Linux/macOS only): a compiler cache;
 - `Clang-Tidy <https://clang.llvm.org/extra/clang-tidy/>`__ (optional): a `Clang <https://clang.llvm.org/>`__-based C++ linter tool;
 - `ClangFormat <https://clang.llvm.org/docs/ClangFormat.html>`__ (optional): a tool to format C/C++ code;
 - C++ toolchain: a set of C++ tools.
