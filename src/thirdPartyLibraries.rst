@@ -68,7 +68,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `KaTeX <https://katex.org/>`__ 0.11.1: the fastest math typesetting library for the Web.
+- `KaTeX <https://katex.org/>`__ 0.12.0: the fastest math typesetting library for the Web.
 
   - Location: |KaTeX|_.
   - Licensing: `MIT <https://opensource.org/licenses/MIT>`__.
