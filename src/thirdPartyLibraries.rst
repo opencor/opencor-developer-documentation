@@ -239,7 +239,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |QtSingleApplication| replace:: ``[OpenCOR]/src/3rdparty/QtSingleApplication``
   .. _QtSingleApplication: https://github.com/opencor/opencor/tree/master/src/3rdparty/QtSingleApplication
 
-- `QtWebKit <https://github.com/qt/qtwebkit>`__ 5.212.0 Alpha 4: a `Qt <https://qt.io/>`__ port of `WebKit <https://webkit.org/>`__, a web browser engine.
+- `QtWebKit <https://github.com/qt/qtwebkit>`__ 5.212.0 Alpha 3: a `Qt <https://qt.io/>`__ port of `WebKit <https://webkit.org/>`__, a web browser engine.
 
   - Location: |QtWebKit|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__.
