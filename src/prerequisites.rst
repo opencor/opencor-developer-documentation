@@ -36,4 +36,3 @@ The following tools are required in order to develop, build , test, run and pack
   .. _macOS: https://download.qt.io/official_releases/online_installers/qt-unified-mac-x64-online.dmg
 
 - `NSIS <https://nsis.sourceforge.io/>`__ 3.0 or later (optional and Windows only): a program for creating Windows installers.
-- `PackageMaker <https://developer.apple.com/downloads/?q=Auxiliary%20tools%20for%20Xcode%20-%20Late%20July%202012>`__ (optional and macOS only): a program for creating macOS installers.
