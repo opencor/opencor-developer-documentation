@@ -100,7 +100,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |libNuML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libNuML``
   .. _libNuML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libNuML
 
-- `libSBML <http://sbml.org/Software/libSBML/>`__ 5.18.0: a programming library to help you read, write, manipulate, translate and validate `SBML <http://sbml.org/>`__ files and data streams.
+- `libSBML <http://sbml.org/Software/libSBML/>`__ 5.19.0: a programming library to help you read, write, manipulate, translate and validate `SBML <http://sbml.org/>`__ files and data streams.
 
   - Location: |libSBML|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
