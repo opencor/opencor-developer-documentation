@@ -50,7 +50,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `jQuery <https://jquery.com/>`__ 3.5.1: a fast and concise `JavaScript <https://en.wikipedia.org/wiki/JavaScript>`__ library that simplifies `HTML <https://html.spec.whatwg.org/multipage>`__ document traversing, event handling, animating, and `Ajax <https://en.wikipedia.org/wiki/Ajax_(programming)>`__ interactions for rapid web development.
+- `jQuery <https://jquery.com/>`__ 3.6.0: a fast and concise `JavaScript <https://en.wikipedia.org/wiki/JavaScript>`__ library that simplifies `HTML <https://html.spec.whatwg.org/multipage>`__ document traversing, event handling, animating, and `Ajax <https://en.wikipedia.org/wiki/Ajax_(programming)>`__ interactions for rapid web development.
 
   - Location: |jQuery|_.
   - Licensing: `MIT <https://opensource.org/licenses/MIT>`__.
