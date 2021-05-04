@@ -92,7 +92,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |libgit2| replace:: ``[OpenCOR]/src/plugins/thirdParty/libgit2``
   .. _libgit2: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libgit2
 
-- `libNuML <https://github.com/NuML/NuML/>`__ 1.1.1: a library for reading and writing `NuML <https://github.com/NuML/NuML/>`__ models.
+- `libNuML <https://github.com/NuML/NuML/>`__ 1.1.4: a library for reading and writing `NuML <https://github.com/NuML/NuML/>`__ models.
 
   - Location: |libNuML|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
