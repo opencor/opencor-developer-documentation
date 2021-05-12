@@ -1,5 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="85.947265625" height="19">
-    <rect x="0" y="1" width="85.947265625" height="18" rx="3" fill="#e0b508" />
-    <rect x="0" y="0" width="85.947265625" height="18" rx="3" fill="#fbca04" />
-    <text fill="#000" x="4" dy="0.39em" y="9" textLength="77.947265625" style="font-family:-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-size:12px;font-weight:600;text-rendering:geometricPrecision;">Improvement</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="92" height="22">
+<rect width="92" height="22" rx="11" ry="11" fill="#fbca04" stroke="#273135" stroke-width="1" stroke-opacity="0.12" stroke-linejoin="round"/>
+<text x="46" y="15" fill="#333026" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Improvement</text></svg>

@@ -9,5 +9,8 @@ div.good pre {
 }
 
 img.label {
+    margin-top: 1px;
     vertical-align: -5px;
+    height: 19px;
+    width: auto;
 }
