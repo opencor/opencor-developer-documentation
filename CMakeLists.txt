@@ -10,7 +10,7 @@ project(DeveloperDocumentation
 
 include(FetchContent)
 
-set(SPHINX_THEME_DIR ${CMAKE_BINARY_DIR}/theme)
+set(SPHINX_THEME_DIR ${CMAKE_CURRENT_BINARY_DIR}/theme)
 
 FetchContent_Declare(sphinx-theme
     GIT_REPOSITORY https://github.com/opencor/sphinx-theme
@@ -26,6 +26,6 @@ include(${SPHINX_THEME_DIR}/cmake/common.cmake)
 build_documentation(developer 49 133 155)
 
 add_custom_command(TARGET Sphinx POST_BUILD
-                   COMMAND ${PYTHON_EXECUTABLE} "${CMAKE_BINARY_DIR}/theme/cmake/appendfile.py"
-                                                "${CMAKE_BINARY_DIR}/html/_static/theme.css"
-                                                "${CMAKE_SOURCE_DIR}/styles/opencor.css")
+                   COMMAND ${PYTHON_EXECUTABLE} "${CMAKE_CURRENT_BINARY_DIR}/theme/cmake/appendfile.py"
+                                                "${CMAKE_CURRENT_BINARY_DIR}/html/_static/theme.css"
+                                                "${CMAKE_CURRENT_SOURCE_DIR}/styles/opencor.css")
