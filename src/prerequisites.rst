@@ -8,11 +8,6 @@ The following tools are required in order to develop, build , test, run and pack
 
 - `Git <https://git-scm.com/>`__: a distributed version control system;
 - `CMake <https://cmake.org/>`__ 3.14 or later: a cross-platform build system;
-- `Ninja <https://ninja-build.org/>`__ 1.8.2 or later (optional): a small build system with a focus on speed;
-- `clcache <https://github.com/frerich/clcache>`__ (optional and Windows only): a compiler cache;
-- `ccache <https://ccache.dev/>`__ (optional and Linux/macOS only): a compiler cache;
-- `Clang-Tidy <https://clang.llvm.org/extra/clang-tidy/>`__ (optional): a `Clang <https://clang.llvm.org/>`__-based C++ linter tool;
-- `ClangFormat <https://clang.llvm.org/docs/ClangFormat.html>`__ (optional): a tool to format C/C++ code;
 - C++ toolchain: a set of C++ tools.
   The toolchain is different depending on the platform you are using:
 
@@ -35,4 +30,12 @@ The following tools are required in order to develop, build , test, run and pack
   .. |macOS| replace:: **macOS**
   .. _macOS: https://download.qt.io/official_releases/online_installers/qt-unified-mac-x64-online.dmg
 
-- `NSIS <https://nsis.sourceforge.io/>`__ 3.0 or later (optional and Windows only): a program for creating Windows installers.
+Additionally, you may also want to rely on the following optional tools:
+
+- `Ninja <https://ninja-build.org/>`__ 1.8.2 or later: a small build system with a focus on speed;
+- `buildcache <https://github.com/mbitsnbites/buildcache>`__: a compiler cache;
+- `clcache <https://github.com/frerich/clcache>`__ (Windows only): a compiler cache;
+- `ccache <https://ccache.dev/>`__ (Linux/macOS only): a compiler cache;
+- `Clang-Tidy <https://clang.llvm.org/extra/clang-tidy/>`__: a `Clang <https://clang.llvm.org/>`__-based C++ linter tool;
+- `ClangFormat <https://clang.llvm.org/docs/ClangFormat.html>`__: a tool to format C/C++ code; and
+- `NSIS <https://nsis.sourceforge.io/>`__ 3.0 or later (Windows only): a program to create Windows installers.
