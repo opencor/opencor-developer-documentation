@@ -4,7 +4,7 @@
  Prerequisites
 ===============
 
-The following tools are required in order to develop, build , test, run and package OpenCOR:
+The following tools are required to develop, build , test, run and package OpenCOR:
 
 - `Git <https://git-scm.com/>`__: a distributed version control system;
 - `CMake <https://cmake.org/>`__ 3.14 or later: a cross-platform build system;
