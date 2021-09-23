@@ -21,14 +21,12 @@ Files are organised as follows:
    ├─ downloads                 // Where the different releases of OpenCOR are stored
    └─ res                       // Resource files used by the documentation
   ext                           // Where external packages are cloned
-  formats                       // Some sample formats for CellML export
   i18n                          // Internationalisation files
   models                        // Some sample CellML files
    └─ tests                     // Some test files
        ├─ cellml                // Some test CellML files
        ├─ combine               // Some test COMBINE archives
        ├─ jupyter               // Some test Jupyter notebooks
-       ├─ python                // Some test Python scripts
        └─ sedml                 // Some test SED-ML files
   res                           // Resource files
    ├─ flags                     // Images from the Printable world flags library
