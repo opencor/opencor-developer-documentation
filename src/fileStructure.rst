@@ -15,11 +15,7 @@ Files are organised as follows:
    ├─ macos                     // macOS-specific
    └─ windows                   // Windows-specific
   doc                           // Documentation
-   ├─ 3rdparty                  // Third-party libraries used for the documentation
-   │   └─ jQuery                // jQuery
-   ├─ cor                       // COR
-   ├─ downloads                 // Where the different releases of OpenCOR are stored
-   └─ res                       // Resource files used by the documentation
+   └─ cor                       // COR
   ext                           // Where external packages are cloned
   i18n                          // Internationalisation files
   models                        // Some sample CellML files
