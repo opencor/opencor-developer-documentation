@@ -1,40 +1,49 @@
 @ECHO OFF
 
-pushd %~dp0
+SETLOCAL ENABLEDELAYEDEXPANSION
 
-REM Command file for Sphinx documentation
-
-if "%SPHINXBUILD%" == "" (
-    set SPHINXBUILD=sphinx-build
+FOR %%X IN (ninja.exe) DO (
+    SET NinjaFound=%%~$PATH:X
 )
 
-set SOURCEDIR=src
-set BUILDDIR=build
-
-if "%1" == "" goto help
-
-%SPHINXBUILD% >NUL 2>NUL
-
-if errorlevel 9009 (
-    echo.
-    echo.The 'sphinx-build' command was not found. Make sure you have Sphinx
-    echo.installed, then set the SPHINXBUILD environment variable to point
-    echo.to the full path of the 'sphinx-build' executable. Alternatively you
-    echo.may add the Sphinx directory to PATH.
-    echo.
-    echo.If you don't have Sphinx installed, grab it from
-    echo.https://sphinx-doc.org/
-    exit /b 1
+IF DEFINED NinjaFound (
+    SET Generator=Ninja
+) ELSE (
+    SET Generator=JOM
 )
 
-%SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS%
+TITLE Making the developer documentation for OpenCOR (using !Generator!)...
 
-goto end
+CALL "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64\vcvars64.bat"
 
-:help
+CD build
 
-%SPHINXBUILD% -M help %SOURCEDIR% %BUILDDIR% %SPHINXOPTS%
+IF DEFINED NinjaFound (
+    SET CMakeGenerator=Ninja
+) ELSE (
+    SET CMakeGenerator=NMake Makefiles JOM
+)
 
-:end
+cmake -G "!CMakeGenerator!" ..
 
-popd
+SET ExitCode=!ERRORLEVEL!
+
+IF !ExitCode! EQU 0 (
+    FOR /F "TOKENS=1,* DELIMS= " %%X IN ("%*") DO (
+        SET Args=%%Y
+    )
+
+    IF DEFINED NinjaFound (
+        ninja !Args!
+
+        SET ExitCode=!ERRORLEVEL!
+    ) ELSE (
+        jom !Args!
+
+        SET ExitCode=!ERRORLEVEL!
+    )
+)
+
+CD ..
+
+EXIT /B !ExitCode!
