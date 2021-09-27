@@ -14,14 +14,20 @@ IF DEFINED NinjaFound (
 
 TITLE Making the developer documentation for OpenCOR (using !Generator!)...
 
-CALL "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64\vcvars64.bat"
+IF NOT DEFINED NinjaFound (
+    IF EXIST "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat" (
+        CALL "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
+    ) ELSE (
+        CALL "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
+    )
+)
 
 CD build
 
 IF DEFINED NinjaFound (
     SET CMakeGenerator=Ninja
 ) ELSE (
-    SET CMakeGenerator=NMake Makefiles JOM
+    SET CMakeGenerator=NMake Makefiles
 )
 
 cmake -G "!CMakeGenerator!" ..
@@ -38,7 +44,7 @@ IF !ExitCode! EQU 0 (
 
         SET ExitCode=!ERRORLEVEL!
     ) ELSE (
-        jom !Args!
+        nmake /f Makefile !Args!
 
         SET ExitCode=!ERRORLEVEL!
     )
