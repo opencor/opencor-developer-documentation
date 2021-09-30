@@ -60,7 +60,7 @@ Here are also some direct links to OpenCOR's:
 - `Git repository <https://github.com/opencor/opencor>`__
 - `Latest commits <https://github.com/opencor/opencor/commits>`__
 - `Current bugs, feature requests, etc. <https://github.com/opencor/opencor/issues>`__
-- `Continuous integration <https://autotest.bioeng.auckland.ac.nz/jenkins/view/OpenCOR>`__
+- `Continuous integration <https://github.com/opencor/opencor/actions/workflows/ci.yml>`__
 
 You might also be interested in our `published article <https://dx.doi.org/10.3389/fphys.2015.00026>`__.
 
