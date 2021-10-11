@@ -1,11 +1,19 @@
+html {
+    --bad-border: rgba(149, 55, 52, 0.13);
+    --bad-background-color: rgba(149, 55, 52, 0.05);
+
+    --good-border: rgba(118, 146, 60, 0.13);
+    --good-background-color: rgba(118, 146, 60, 0.05);
+}
+
 div.bad pre {
-    border: 1px solid rgba(149, 55, 52, 0.13);
-    background-color: rgba(149, 55, 52, 0.05);
+    border: 1px solid var(--bad-border);
+    background-color: var(--bad-background-color);
 }
 
 div.good pre {
-    border: 1px solid rgba(118, 146, 60, 0.13);
-    background-color: rgba(118, 146, 60, 0.05);
+    border: 1px solid var(--good-border);
+    background-color: var(--good-background-color);
 }
 
 img.label {
