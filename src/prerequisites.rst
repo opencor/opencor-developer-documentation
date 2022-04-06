@@ -11,7 +11,7 @@ The following tools are required to develop, build , test, run and package OpenC
 - C++ toolchain: a set of C++ tools.
   The toolchain is different depending on the platform you are using:
 
-  - **Windows:** `Visual Studio Community 2017 <https://visualstudio.com/downloads/download-visual-studio-vs>`__ ( ``Desktop development with C++``);
+  - **Windows:** `Visual Studio Community 2019 <https://visualstudio.com/downloads/download-visual-studio-vs>`__ ( ``Desktop development with C++`` with ``MSVC v142 - VS 2019 C++ x64/x86 build tools`` and ``Windows 10 SDK (10.0.19041.0)``);
   - **Linux:** G++ and OpenGL (``g++``, ``libgl1-mesa-dev`` and ``libtinfo5`` packages, respectively) on Ubuntu 20.04 LTS; and
   - **macOS:** `Xcode <https://developer.apple.com/xcode/>`__ 13 (including its `Command Line Tools <https://developer.apple.com/downloads/?q=Command%20Line%20Tools>`__).
 
