@@ -6,7 +6,7 @@
 
 OpenCOR uses various third-party libraries, all of which are listed below, together with the type of license(s) under which they are released, if any.
 
-- `CellML API <https://github.com/cellmlapi/cellml-api/>`__: an interface to manipulate and process `CellML <https://cellml.org/>`__ documents.
+- `CellML API <https://github.com/cellmlapi/cellml-api>`__: an interface to manipulate and process `CellML <https://cellml.org/>`__ documents.
 
   - Location: |CellMLAPI|_.
   - Licensing: `MPL v1.1 <https://opensource.org/licenses/MPL-1.1>`__, `GPL v2.0 <https://opensource.org/licenses/GPL-2.0>`__ (or later) and `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
@@ -76,7 +76,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |libBioSignalML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libBioSignalML``
   .. _libBioSignalML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libBioSignalML
 
-- `libgit2 <https://libgit2.github.com/>`__ 1.3.0: a portable, pure C implementation of the `Git <https://git-scm.com/>`__ core methods provided as a re-entrant linkable library with a solid API.
+- `libgit2 <https://libgit2.org/>`__ 1.3.0: a portable, pure C implementation of the `Git <https://git-scm.com/>`__ core methods provided as a re-entrant linkable library with a solid API.
 
   - Location: |libgit2|_.
   - Licensing: `GPL v2.0 <https://opensource.org/licenses/GPL-2.0>`__ with linking exception.
@@ -84,7 +84,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |libgit2| replace:: ``[OpenCOR]/src/plugins/thirdParty/libgit2``
   .. _libgit2: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libgit2
 
-- `libNuML <https://github.com/NuML/NuML/>`__ 1.1.4: a library for reading and writing `NuML <https://github.com/NuML/NuML/>`__ models.
+- `libNuML <https://github.com/NuML/NuML>`__ 1.1.4: a library for reading and writing `NuML <https://github.com/NuML/NuML>`__ models.
 
   - Location: |libNuML|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
@@ -92,7 +92,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |libNuML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libNuML``
   .. _libNuML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libNuML
 
-- `libSBML <http://sbml.org/Software/libSBML/>`__ 5.19.0: a programming library to help you read, write, manipulate, translate and validate `SBML <http://sbml.org/>`__ files and data streams.
+- `libSBML <https://github.com/sbmlteam/libsbml>`__ 5.19.0: a programming library to help you read, write, manipulate, translate and validate `SBML <https://sbml.org/>`__ files and data streams.
 
   - Location: |libSBML|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
@@ -100,7 +100,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |libSBML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libSBML``
   .. _libSBML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libSBML
 
-- `libSEDML <https://github.com/fbergmann/libSEDML/>`__ 0.4.4: a library for reading and writing `SED-ML <https://sed-ml.github.io/>`__ files.
+- `libSEDML <https://github.com/fbergmann/libSEDML>`__ 0.4.4: a library for reading and writing `SED-ML <https://sed-ml.github.io/>`__ files.
 
   - Location: |libSEDML|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
@@ -124,7 +124,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |LLVM+Clang| replace:: ``[OpenCOR]/src/plugins/thirdParty/LLVMClang``
   .. _LLVM+Clang: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang
 
-- `lxml <https://lxml.de/>`__ 4.4.1: a Pythonic binding for the C libraries `libxml2 <http://xmlsoft.org/>`__ and `libxslt <http://xmlsoft.org/XSLT/>`__.
+- `lxml <https://lxml.de/>`__ 4.4.1: a Pythonic binding for the C libraries `libxml2 <https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home>`__ and `libxslt <https://gitlab.gnome.org/GNOME/libxslt/-/wikis/home>`__.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
