@@ -100,7 +100,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |libSBML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libSBML``
   .. _libSBML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libSBML
 
-- `libSEDML <https://github.com/fbergmann/libSEDML>`__ 0.4.4: a library for reading and writing `SED-ML <https://sed-ml.github.io/>`__ files.
+- `libSEDML <https://github.com/fbergmann/libSEDML>`__ 2.0.30: a library for reading and writing `SED-ML <https://sed-ml.github.io/>`__ files.
 
   - Location: |libSEDML|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
