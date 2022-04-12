@@ -157,7 +157,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `OAuth 2.0 for Qt <https://github.com/pipacs/o2>`__ 1.0.1: a library that encapsulates the `OAuth <https://oauth.net/>`__ 1.0 and 2.0 client authentication flows, and the sending of authenticated `HTTP <https://w3.org/Protocols>`__ requests.
+- `OAuth 2.0 for Qt <https://github.com/pipacs/o2>`__ 1.0.2: a library that encapsulates the `OAuth <https://oauth.net/>`__ 1.0 and 2.0 client authentication flows, and the sending of authenticated `HTTP <https://w3.org/Protocols>`__ requests.
 
   - Location: |OAuth|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
