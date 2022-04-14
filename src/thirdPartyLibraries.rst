@@ -260,7 +260,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `SUNDIALS <https://computing.llnl.gov/projects/sundials>`__ 5.8.0: a SUite of Non-linear and DIfferential/ALgebraic equation Solvers.
+- `SUNDIALS <https://computing.llnl.gov/projects/sundials>`__ 6.1.1: a SUite of Non-linear and DIfferential/ALgebraic equation Solvers.
 
   - Location: |SUNDIALS|_.
   - Licensing: `BSD 3-Clause <https://opensource.org/licenses/BSD-3-Clause>`__.
