@@ -161,10 +161,10 @@ The C function that is used by OpenCOR to retrieve some :ref:`basic information 
 
    PLUGININFO_FUNC SampleViewPluginInfo()
    {
-       Descriptions descriptions;
-
-       descriptions.insert("en", QString::fromUtf8("a plugin that provides a test view."));
-       descriptions.insert("fr", QString::fromUtf8("une extension qui fournit une vue de test."));
+       static const Descriptions descriptions = {
+                                                    { "en", QString::fromUtf8("a plugin that provides a test view.") },
+                                                    { "fr", QString::fromUtf8("une extension qui fournit une vue de test.") }
+                                                };
 
        return new PluginInfo(PluginInfo::Category::Sample, true, false,
                              { "Core" },

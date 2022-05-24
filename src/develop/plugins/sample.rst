@@ -161,10 +161,10 @@ Next, we have our |sampleplugin.cpp|_ file, which contents is:
 
    PLUGININFO_FUNC SamplePluginInfo()
    {
-       Descriptions descriptions;
-
-       descriptions.insert("en", QString::fromUtf8("a plugin that provides an addition function."));
-       descriptions.insert("fr", QString::fromUtf8("une extension qui fournit une fonction d'addition."));
+       static const Descriptions descriptions = {
+                                                    { "en", QString::fromUtf8("a plugin that provides an addition function.") },
+                                                    { "fr", QString::fromUtf8("une extension qui fournit une fonction d'addition.") }
+                                                };
 
        return new PluginInfo(PluginInfo::Category::Sample, false, false,
                              {},
@@ -179,7 +179,7 @@ Next, we have our |sampleplugin.cpp|_ file, which contents is:
 We start by including our header file (line 24).
 Then, lines 33-43 contain the body of our C function.
 The first thing it does is create an instance of ``Descriptions`` on the stack (line 35).
-This instance is used to provide a multilingual description of our plugin (here, both in English and in French; lines 37 and 38).
+This instance is used to provide a multilingual description of our plugin (here, both in English and in French; lines 36 and 37).
 Then, it creates and returns an instance of ``PluginInfo`` on the heap (lines 40-42), which contains the :ref:`basic information <develop_plugins_index_basicInformation>` needed by OpenCOR to identify our plugin.
 This includes our plugin's category (``PluginInfo::Category::Sample``; line 40), whether it is selectable (``false``; line 40), whether it offers direct `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ support (``false``; line 40), our plugin's direct dependencies (none, hence ``QStringList()``; line 41) and its multilingual description (``descriptions``; line 42).
 
