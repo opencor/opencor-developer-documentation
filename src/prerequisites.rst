@@ -36,6 +36,6 @@ Additionally, you may also want to rely on the following optional tools:
 - `buildcache <https://github.com/mbitsnbites/buildcache>`__: a compiler cache;
 - `clcache <https://github.com/frerich/clcache>`__ (Windows only): a compiler cache;
 - `ccache <https://ccache.dev/>`__ (Linux/macOS only): a compiler cache;
-- `Clang-Tidy <https://clang.llvm.org/extra/clang-tidy/>`__: a `Clang <https://clang.llvm.org/>`__-based C++ linter tool;
 - `ClangFormat <https://clang.llvm.org/docs/ClangFormat.html>`__: a tool to format C/C++ code; and
+- `Clang-Tidy <https://clang.llvm.org/extra/clang-tidy/>`__: a `Clang <https://clang.llvm.org/>`__-based C++ linter tool;
 - `NSIS <https://nsis.sourceforge.io/>`__ 3.0 or later (Windows only): a program to create Windows installers.
