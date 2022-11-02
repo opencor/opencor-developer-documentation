@@ -60,14 +60,6 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `KaTeX <https://katex.org/>`__ 0.15.6: the fastest math typesetting library for the Web.
-
-  - Location: |KaTeX|_.
-  - Licensing: `MIT <https://opensource.org/licenses/MIT>`__.
-
-  .. |KaTeX| replace:: ``[SphinxTheme]/static/katex``
-  .. _KaTeX: https://github.com/opencor/sphinx-theme/tree/master/static/katex
-
 - libBioSignalML: a library for reading and writing BioSignalML documents.
 
   - Location: |libBioSignalML|_.
