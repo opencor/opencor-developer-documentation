@@ -40,4 +40,4 @@ Additionally, you may also want to rely on the following optional tools:
 - `Clang-Tidy <https://clang.llvm.org/extra/clang-tidy/>`__: a `Clang <https://clang.llvm.org/>`__-based C++ linter tool;
 - `NSIS <https://nsis.sourceforge.io/>`__ 3.0 or later (Windows only): a program to create Windows installers.
 
-**Note:** the `HelpWindow plugin <https://opencor.ws/user/plugins/miscellaneous/helpWindow.html>`__ only gets built if `Python <https://www.python.org/>`__ 3.x is installed on your system, as well as the `sphinx-copybutton <https://pypi.org/project/sphinx-copybutton/>`__ and `sphinx-inline-tabs <https://pypi.org/project/sphinx-inline-tabs/>`__ packages.
+**Note:** the `HelpWindow plugin <https://opencor.ws/user/plugins/miscellaneous/helpWindow.html>`__ only gets built if `Python <https://www.python.org/>`__ 3.x is installed on your system, as well as the `Sphinx <https://pypi.org/project/Sphinx/>`__, `sphinx-copybutton <https://pypi.org/project/sphinx-copybutton/>`__ and `sphinx-inline-tabs <https://pypi.org/project/sphinx-inline-tabs/>`__ packages.
