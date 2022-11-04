@@ -100,7 +100,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |libSEDML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libSEDML``
   .. _libSEDML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libSEDML
 
-- `LibXDiff <http://xmailserver.org/xdiff-lib.html>`__ 0.23: a library that implements basic and yet complete functionalities to create file differences/patches to both binary and text files.
+- `LibXDiff <http://www.xmailserver.org/xdiff-lib.html>`__ 0.23: a library that implements basic and yet complete functionalities to create file differences/patches to both binary and text files.
 
   - Location: |LibXDiff|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__.
