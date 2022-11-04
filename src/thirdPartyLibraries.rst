@@ -108,7 +108,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |LibXDiff| replace:: ``[OpenCOR]/src/plugins/thirdParty/LibXDiff``
   .. _LibXDiff: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LibXDiff
 
-- `LLVM <https://llvm.org/>`__\ +\ `Clang <https://clang.llvm.org/>`__ 14.0.3: a collection of modular and reusable compiler and toolchain technologies.
+- `LLVM <https://llvm.org/>`__\ +\ `Clang <https://clang.llvm.org/>`__ 14.0.6: a collection of modular and reusable compiler and toolchain technologies.
 
   - Location: |LLVM+Clang|_.
   - Licensing: `Apache v2.0 <https://opensource.org/licenses/Apache-2.0>`__ with LLVM Exceptions.
@@ -157,7 +157,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |OAuth| replace:: ``[OpenCOR]/src/plugins/thirdParty/OAuth``
   .. _OAuth: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OAuth
 
-- `OpenSSL <https://openssl.org/>`__ 1.1.1o: a toolkit implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS) protocols, as well as a full-strength general purpose cryptography library.
+- `OpenSSL <https://openssl.org/>`__ 1.1.1s: a toolkit implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS) protocols, as well as a full-strength general purpose cryptography library.
 
   - Location: |OpenSSL|_.
   - Licensing: `OpenSSL and SSLeay <https://openssl.org/source/license.html>`__, which are both `BSD <https://opensource.org/licenses/BSD-3-Clause>`__-style licenses.
@@ -252,7 +252,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `SUNDIALS <https://computing.llnl.gov/projects/sundials>`__ 6.2.0: a SUite of Non-linear and DIfferential/ALgebraic equation Solvers.
+- `SUNDIALS <https://computing.llnl.gov/projects/sundials>`__ 6.4.1: a SUite of Non-linear and DIfferential/ALgebraic equation Solvers.
 
   - Location: |SUNDIALS|_.
   - Licensing: `BSD 3-Clause <https://opensource.org/licenses/BSD-3-Clause>`__.
