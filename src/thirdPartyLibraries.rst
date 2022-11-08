@@ -286,7 +286,7 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |Zinc| replace:: ``[OpenCOR]/src/plugins/thirdParty/Zinc``
   .. _Zinc: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Zinc
 
-- `zlib <https://zlib.net/>`__ 1.2.12: a massively spiffy yet delicately unobtrusive compression library.
+- `zlib <https://zlib.net/>`__ 1.2.13: a massively spiffy yet delicately unobtrusive compression library.
 
   - Location: |zlib|_.
   - Licensing: `Zlib <https://opensource.org/licenses/Zlib>`__.
