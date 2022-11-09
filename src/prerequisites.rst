@@ -4,25 +4,24 @@
  Prerequisites
 ===============
 
-The following tools are required to develop, build , test, run and package OpenCOR:
+The following tools are required to develop, build , test, run, and package OpenCOR:
 
 - `Git <https://git-scm.com/>`__: a distributed version control system;
 - `CMake <https://cmake.org/>`__ 3.14 or later: a cross-platform build system;
-- C++ toolchain: a set of C++ tools.
-  The toolchain is different depending on the platform you are using:
+- C++ toolchain: a set of C++ tools:
 
   - **Windows:** `Visual Studio Community 2019 <https://visualstudio.com/downloads/download-visual-studio-vs>`__ ( ``Desktop development with C++`` with ``MSVC v142 - VS 2019 C++ x64/x86 build tools`` and ``Windows 10 SDK (10.0.19041.0)``);
   - **Linux:** G++ and OpenGL (``g++``, ``libgl1-mesa-dev`` and ``libtinfo5`` packages, respectively) on Ubuntu 20.04 LTS; and
   - **macOS:** `Xcode <https://developer.apple.com/xcode/>`__ 14 (including its `Command Line Tools <https://developer.apple.com/downloads/?q=Command%20Line%20Tools>`__).
 
-- `Qt <https://qt.io/>`__ 5.12 LTS: a cross-platform application and UI framework (`Qt Creator <https://qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__ is its supporting IDE):
+- `Qt <https://qt.io/>`__ 5.12 LTS: a cross-platform application and UI framework (`Qt Creator <https://qt.io/product/development-tools>`__ is its supporting IDE):
 
   - |Windows|_;
   - |Linux|_; and
   - |macOS|_.
 
   .. |Windows| replace:: **Windows**
-  .. _Windows: https://download.qt.io/official_releases/online_installers/qt-unified-windows-x86-online.exe
+  .. _Windows: https://download.qt.io/official_releases/online_installers/qt-unified-windows-x64-online.exe
 
   .. |Linux| replace:: **Linux**
   .. _Linux: https://download.qt.io/official_releases/online_installers/qt-unified-linux-x64-online.run
