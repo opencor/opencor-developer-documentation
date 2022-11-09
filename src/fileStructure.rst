@@ -15,20 +15,19 @@ Files are organised as follows:
    ├─ macos                     // macOS-specific
    └─ windows                   // Windows-specific
   doc                           // Documentation
-   └─ cor                       // COR
-  ext                           // Where external packages are cloned
+  ext                           // Where external packages are retrieved
   i18n                          // Internationalisation files
-  models                        // Some sample CellML files
-   └─ tests                     // Some test files
-       ├─ cellml                // Some test CellML files
-       ├─ combine               // Some test COMBINE archives
-       ├─ jupyter               // Some test Jupyter notebooks
-       └─ sedml                 // Some test SED-ML files
+  models                        // Sample CellML files
+   └─ tests                     // Test files
+       ├─ cellml                // Test CellML files
+       ├─ combine               // Test COMBINE archives
+       ├─ jupyter               // Test Jupyter notebooks
+       └─ sedml                 // Test SED-ML files
   res                           // Resource files
    ├─ flags                     // Images from the Printable world flags library
    ├─ oxygen                    // Images from the Oxygen library
    └─ translations              // Qt translation files
-  scripts                       // Files used to build/package OpenCOR
+  scripts                       // Scripts used to build/package OpenCOR
   src                           // Source code files
    ├─ 3rdparty                  // Third-party libraries statically linked to OpenCOR
    │   ├─ diff_match_patch      // diff-match-patch
@@ -60,7 +59,7 @@ Files are organised as follows:
    │   │   ├─ OAuth             // OAuth 2.0 for Qt as a plugin
    │   │   ├─ OpenSSL           // OpenSSL as a plugin
    │   │   ├─ Python            // Python as a plugin
-   │   │   ├─ PythonPackages    // Some Python packages as a plugin
+   │   │   ├─ PythonPackages    // Python packages as a plugin
    │   │   ├─ PythonQt          // PythonQt as a plugin
    │   │   ├─ QScintilla        // QScintilla as a plugin
    │   │   ├─ Qwt               // Qwt as a plugin
