@@ -10,11 +10,11 @@ These rules were taken (paraphrased, if not simply copied/pasted) from the `Qt C
 General
 -------
 
-- The most important rule of all: the `KISS principle <https://en.wikipedia.org/wiki/KISS_principle>`__, i.e. *Keep it simple, stupid*.
+- The most important rule of all: the `KISS principle <https://en.wikipedia.org/wiki/KISS_principle>`__, i.e. *Keep it simple, stupid!*
   Always use a simple implementation in favour of a more complicated one.
   This eases maintenance a lot!
 - Write good C++ code: readable, well commented when necessary, and object-oriented.
-- Adapt the code to the structures already existing in OpenCOR or, in the case that you have better ideas, discuss them with the `project manager <https://opencor.ws/team.html>`__ before implementing them.
+- Adapt the code to the structures already existing in OpenCOR or, in the case that you have a better idea, discuss it with the `project manager <https://opencor.ws/team.html>`__ before implementing it.
 - Take advantage of `Qt <https://qt.io/>`__. Do not re-invent the wheel.
 
 Code constructs
@@ -42,8 +42,7 @@ The following guidelines exist to make the code faster, clearer, and/or to take 
      i++;
      j--;
 
-- Try to minimise evaluation of the same code over and over.
-  This is aimed especially at loops:
+- Try to minimise the evaluation of the same code, especially in loops:
 
   .. code-block:: c++
      :class: good
@@ -59,7 +58,7 @@ The following guidelines exist to make the code faster, clearer, and/or to take 
          ...
      }
 
-- You should use the range-based for ``loop`` rather than the Qt ``foreach`` loop or even a classical ``for`` loop:
+- You should use the range-based ``for`` loop rather than the Qt ``foreach`` loop or even the classical ``for`` loop:
 
   .. code-block:: c++
      :class: good
@@ -173,9 +172,9 @@ Formatting
 
 - **Declarations:**
 
-  - Use this order for the access sections of your class: ``public``, ``protected`` and ``private``.
-    The ``public`` section is interesting for every user of the class.
-    The ``private`` section is only of interest for the implementors of the class (you).
+  - Use this order for the access sections of your class: ``public``, ``protected``, and ``private``.
+    The ``public`` section is of interest for every user of the class.
+    The ``private`` section is only of interest for the implementors of the class.
   - Avoid declaring global objects in the declaration file of the class.
     If the same variable is used for all objects, use a ``static`` member.
   - Avoid declaring global or static variables.
@@ -385,7 +384,8 @@ Formatting
     .. code-block:: c++
        :class: good
 
-       while (cond) {}
+       while (cond) {
+       }
 
     .. code-block:: c++
        :class: bad
@@ -418,8 +418,8 @@ Formatting
 
   - Keep lines shorter than 80 characters whenever possible.
 
-    **Note:** `Qt Creator <https://qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__ can be configured to display a right margin.
-    For this, select the ``Tools`` | ``Options...`` menu, then the ``Text Editor`` section, and finally the ``Display`` tab.
+    **Note:** `Qt Creator <https://qt.io/product/development-tools>`__ can be configured to display a right margin.
+    For this, select the ``Edit`` | ``Preferences...`` menu, then the ``Text Editor`` section, and finally the ``Display`` tab.
     Configuration options can be found under the ``Text Wrapping`` group box.
 
   - Insert line breaks if necessary.
@@ -449,7 +449,7 @@ Patterns and practices
 - Do not use RTTI (Run-Time Type Information, i.e. the ``typeinfo struct``, the ``dynamic_cast`` or the ``typeid`` operators, including throwing exceptions), unless you know what you are doing.
 - Use templates wisely, not just because you can.
 - Every ``QObject`` subclass must have a ``Q_OBJECT`` macro, even if it does not have signals or slots, if it is intended to be used with ``qobject_cast<>``.
-- If you create a new set of ``.cpp``/``.h`` files, then our copyright statement and a comment common to both files should be included at the beginning of those files (e.g. |mainwindow.cpp|_ and |mainwindow.h|_).
+- If you create a new set of ``.cpp``/``.h`` files, then our copyright statement and a comment common to both files should be included at the beginning of those files (e.g., |mainwindow.cpp|_ and |mainwindow.h|_).
 - **Including headers:**
 
   - Arrange headers in alphabetic order within a block:
@@ -499,7 +499,7 @@ Patterns and practices
 
 - **Casting:**
 
-  - Avoid C casts, prefer C++ casts (``static_cast``, ``const_cast``, ``reinterpret_cast``). Both ``reinterpret_cast`` and C-style casts are dangerous, but at least ``reinterpret_cast`` will not remove the const modifier.
+  - Avoid C casts, prefer C++ casts (``static_cast``, ``const_cast``, ``reinterpret_cast``). Both ``reinterpret_cast`` and C-style casts are dangerous, but at least ``reinterpret_cast`` will not remove the ``const`` modifier.
   - Do not use ``dynamic_cast``, use ``qobject_cast`` for ``QObject``, or refactor your design, for example by introducing a ``type()`` method (see |QListWidgetItem|_), unless you know what you are doing.
 
 - **Compiler and platform-specific issues:**
@@ -510,6 +510,8 @@ Patterns and practices
     .. code-block:: c++
 
        QString str;
+
+       ...
 
        return condition?str:"nothing";   // Crash at runtime - QString vs const char *
 
@@ -570,6 +572,8 @@ Patterns and practices
 
        Q_STATIC_GLOBAL(QString, s)
 
+       ...
+
        void foo()
        {
            s()->append("moo");
@@ -617,7 +621,7 @@ Patterns and practices
 
        for (Container::const_iterator iter = c.begin(), Container::iterator end = c.end(); iter != end; ++iter)
 
-- Inheriting from template or tool classes: this has the following potential pitfalls:
+- To inherit from template or tool classes has the following potential pitfalls:
 
   - The destructors are not virtual, which can lead to memory leaks.
   - The symbols are not exported (and mostly inline), which can lead to symbol clashes.
@@ -634,10 +638,10 @@ Patterns and practices
     Also, ``#define`` is not namespace safe.
 
    .. |mainwindow.cpp| replace:: ``[OpenCOR]/src/mainwindow.cpp``
-   .. _mainwindow.cpp: https://github.com/opencor/opencor/tree/master/src/mainwindow.cpp
+   .. _mainwindow.cpp: https://github.com/opencor/opencor/blob/master/src/mainwindow.cpp
 
    .. |mainwindow.h| replace:: ``[OpenCOR]/src/mainwindow.h``
-   .. _mainwindow.h: https://github.com/opencor/opencor/tree/master/src/mainwindow.h
+   .. _mainwindow.h: https://github.com/opencor/opencor/blob/master/src/mainwindow.h
 
    .. |QListWidgetItem| replace:: ``QListWidgetItem``
    .. _QListWidgetItem: https://doc.qt.io/qt-5/qlistwidgetitem.html
