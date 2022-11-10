@@ -12,7 +12,7 @@ They illustrate the basic concepts needed to develop plugins for OpenCOR:
 - :ref:`develop_plugins_sampleView`
 - :ref:`develop_plugins_sampleWindow`
 
-**Note:** these plugins only get built if the `CMake <https://cmake.org/>`__ ``ENABLE_SAMPLE_PLUGINS`` option is set to ``ON``.
+**Note:** these plugins only get built if the ``ENABLE_SAMPLE_PLUGINS`` option is set to ``ON`` in `CMake <https://cmake.org/>`__.
 
 .. _develop_plugins_index_categories:
 
@@ -73,19 +73,19 @@ All plugins come under one of the following categories:
 A category is used by OpenCOR to group plugins together to improve user experience.
 From a developer's perspective, a category determines where a plugin's code should be located.
 Thus, the different folders under |plugins|_ are for our different categories.
-For example, |miscellaneousDirectory|_ contains the code of our different `Miscellaneous <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/>`__ plugins and |coreDirectory|_ that of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin in particular.
+For example, |miscellaneousDirectory|_ contains the code of our different `Miscellaneous <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/>`__ plugins and |coreDirectory|_ the code of our `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin in particular.
 
 .. |plugins| replace:: ``[OpenCOR]/src/plugins/``
-.. _plugins: https://github.com/opencor/opencor/blob/master/src/plugins/
+.. _plugins: https://github.com/opencor/opencor/tree/master/src/plugins/
 
 .. |miscellaneousDirectory| replace:: ``[OpenCOR]/src/plugins/miscellaneous/``
-.. _miscellaneousDirectory: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/
+.. _miscellaneousDirectory: https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/
 
 .. |coreDirectory| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/``
-.. _coreDirectory: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Core/
+.. _coreDirectory: https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/
 
-**Note:** the |SampleCategory|_ and |TestCategory|_ categories are special categories in that they are only available when building OpenCOR with the ``ENABLE_SAMPLE_PLUGINS`` and/or ``ENABLE_TEST_PLUGINS`` options set to ``ON``.
-They should therefore only be used for plugins that are aimed at helping people who want to learn how to write plugins for OpenCOR, and/or at testing things.
+**Note:** the |SampleCategory|_ and |TestCategory|_ categories are special categories that are only available when building OpenCOR with the ``ENABLE_SAMPLE_PLUGINS`` and ``ENABLE_TEST_PLUGINS`` options set to ``ON``, respectively.
+They should only be used for plugins that are aimed at helping people who want to learn how to write plugins for OpenCOR and at testing things, respectively.
 
 .. _develop_plugins_index_interfaces:
 
@@ -106,9 +106,10 @@ They are:
 - |InternationalisationInterface|_: to be told when we should retranslate ourselves.
 - |PluginInterface|_: to initialise/finalise a plugin, load/save its settings, etc.
 - |PreferencesInterface|_: to specify a plugin's default behaviour, settings, etc.
-- |SolverInterface|_: to let OpenCOR know about the type, name and properties of a solver, as well as to provide OpenCOR with an instance of that solver.
+- |PythonInterface|_: to register Python classes with OpenCOR.
+- |SolverInterface|_: to let OpenCOR know about the type, name, and properties of a solver, as well as to provide OpenCOR with an instance of that solver.
 - |ViewInterface|_: to let OpenCOR know about the name of a view, its mode, the MIME types it supports, whether we have a view for the current file, etc.
-- |WindowInterface|_: to let OpenCOR know about the widget, action and default location of a window.
+- |WindowInterface|_: to let OpenCOR know about the widget, action, and default location of a window.
 
 .. |CLIInterface| replace:: **CLI**
 .. _CLIInterface: https://github.com/opencor/opencor/blob/master/src/plugins/cliinterface.inl
@@ -137,6 +138,9 @@ They are:
 .. |PreferencesInterface| replace:: **Preferences**
 .. _PreferencesInterface: https://github.com/opencor/opencor/blob/master/src/plugins/preferencesinterface.inl
 
+.. |PythonInterface| replace:: **Python**
+.. _PythonInterface: https://github.com/opencor/opencor/blob/master/src/plugins/pythoninterface.inl
+
 .. |SolverInterface| replace:: **Solver**
 .. _SolverInterface: https://github.com/opencor/opencor/blob/master/src/plugins/solverinterface.inl
 
@@ -146,7 +150,7 @@ They are:
 .. |WindowInterface| replace:: **Window**
 .. _WindowInterface: https://github.com/opencor/opencor/blob/master/src/plugins/windowinterface.inl
 
-Some plugins do not implement any interface (e.g. the `LLVM+Clang <https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang/>`__ plugin) while others may implement one or several interfaces (e.g. the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin implements the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__, `File Handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`__, `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__, `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ and `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interfaces).
+Some plugins do not implement any interface (e.g., the `LLVM+Clang <https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang/>`__ plugin) while others may implement one or several interfaces (e.g., the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin implements the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__, `File Handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`__, `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__, `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__, and `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interfaces).
 
 **Note:** the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__ interface is only, and can only be, implemented by the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin.
 Any other plugin that tries to implement the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__ interface will be reported by OpenCOR as being invalid.
@@ -163,7 +167,6 @@ That information comes in the form of a series of parameters, some of which are 
 
 - ``SOURCES``: implementation files.
 - ``UIS``: user interface files.
-- ``DEFINITIONS``: definitions needed to build the plugin.
 - ``PLUGINS``: plugins needed by the plugin.
 - ``QT_MODULES``: `Qt <https://qt.io/>`__ modules needed by the plugin.
 - ``EXTERNAL_BINARIES_DIR``: location of external binaries needed by the plugin.
@@ -171,7 +174,9 @@ That information comes in the form of a series of parameters, some of which are 
 - ``EXTERNAL_DESTINATION_DIR``: location where external dependencies are to be copied.
 - ``EXTERNAL_SOURCE_DIR``: location of external dependencies.
 - ``SYSTEM_BINARIES``: system binaries needed by the plugin.
+- ``NO_STRIP``: whether we should not strip the plugin.
 - ``DEPENDS_ON``: `CMake <https://cmake.org/>`__ targets on which the plugin depends.
+- ``BYPRODUCTS``: byproducts for the plugin.
 - ``TESTS``: :ref:`tests <develop_tests>` for the plugin.
 
 .. |common.cmake| replace:: ``[OpenCOR]/cmake/common.cmake``
@@ -188,7 +193,7 @@ Plugin information
 ------------------
 
 For a plugin to be recognisable by OpenCOR, it must provide some :ref:`basic information <develop_plugins_index_basicInformation>` about itself, as well as define a :ref:`plugin class <develop_plugins_index_pluginClass>`.
-For this, we need a ``.cpp``, a ``.h`` and a ``.json`` file, such as |coreplugin.cpp|_, |coreplugin.h|_ and |coreplugin.json|_ for the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin.
+For this, we need a ``.cpp``, a ``.h``, and a ``.json`` file, such as |coreplugin.cpp|_, |coreplugin.h|_, and |coreplugin.json|_ for the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin.
 
 .. |coreplugin.cpp| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/src/coreplugin.cpp``
 .. _coreplugin.cpp: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Core/src/coreplugin.cpp
@@ -204,7 +209,7 @@ For this, we need a ``.cpp``, a ``.h`` and a ``.json`` file, such as |coreplugin
 ``.json`` file
 ~~~~~~~~~~~~~~
 
-The ``.json`` file is a simple `JSON <https://json.org/>`__ file, which sole purpose is to reference the name of the plugin class.
+The ``.json`` file is a simple `JSON <https://json.org/json-en.html>`__ file, which sole purpose is to reference the name of the plugin class.
 In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, the contents of that file is:
 
 .. code-block:: json
@@ -235,7 +240,7 @@ Thus, in the case of the `Core <https://github.com/opencor/opencor/tree/master/s
 Basic information
 ~~~~~~~~~~~~~~~~~
 
-Plugins must provide the following basic information about themselves:
+Plugins must provide the following basic information:
 
 - **Category:** category under which the plugin is to be listed.
 - **Selectable:** whether the plugin can be selected by the user (for loading upon starting OpenCOR).
@@ -263,13 +268,13 @@ In the case of the `Core <https://github.com/opencor/opencor/tree/master/src/plu
 
    PLUGININFO_FUNC CorePluginInfo()
    {
-       Descriptions descriptions;
+       static const Descriptions descriptions = {
+                                                    { "en", QString::fromUtf8("the core plugin.") },
+                                                    { "fr", QString::fromUtf8("l'extension de base.") }
+                                                 };
 
-       descriptions.insert("en", QString::fromUtf8("the core plugin."));
-       descriptions.insert("fr", QString::fromUtf8("l'extension de base."));
-
-       return new PluginInfo(PluginInfo::Miscellaneous, false, false,
-                             QStringList(),
+       return new PluginInfo(PluginInfo::Category::Miscellaneous, false, false,
+                             {},
                              descriptions);
    }
 
@@ -283,7 +288,7 @@ Plugin class
 
 We rely on `Qt <https://qt.io/>`__'s support for plugins, which means that plugins must define a specific class.
 The class must inherit from ``QObject``, as well as from any interface the plugin implements.
-For example, the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin implements the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__, `File Handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`__, `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__, `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ and `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interfaces, so its class definition is:
+For example, the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin implements the `Core <https://github.com/opencor/opencor/blob/master/src/plugins/coreinterface.inl>`__, `File Handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`__, `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__, `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__, and `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interfaces, so its class definition is:
 
 .. code-block:: c++
 
@@ -303,7 +308,6 @@ For example, the `Core <https://github.com/opencor/opencor/tree/master/src/plugi
        Q_INTERFACES(OpenCOR::PluginInterface)
 
    public:
-   ...
    #include "coreinterface.inl"
    #include "filehandlinginterface.inl"
    #include "guiinterface.inl"
@@ -348,7 +352,7 @@ and imported by the plugin that wants to use it:
    class __declspec(dllimport) myClass;
 
 Each plugin that exports functions and/or classes must therefore define a macro that refers either to ``__declspec(dllexport)`` or to ``__declspec(dllimport)``, depending on how the plugin's code is to be compiled.
-Thus, in the case of the `Compiler <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/>`__ plugin, we have:
+In the case of the `Compiler <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/>`__ plugin, we have:
 
 .. code-block:: c++
 
@@ -360,7 +364,7 @@ Thus, in the case of the `Compiler <https://github.com/opencor/opencor/tree/mast
    #endif
    ...
 
-``Compiler_PLUGIN`` (or, more generally, ``<PluginName>_PLUGIN``) is automatically defined, if at all, at build time, and is used to determine the value of ``COMPILER_EXPORT`` (or, more generally, the value of ``<PLUGINNAME>_EXPORT``), which can then be used as follows without having to worry whether the function or class should be imported or exported:
+``Compiler_PLUGIN`` (or, more generally, ``<PluginName>_PLUGIN``) is automatically defined, if at all, at build time, and is used to determine the value of ``COMPILER_EXPORT`` (or, more generally, the value of ``<PLUGINNAME>_EXPORT``), which can then be used as follows without having to worry about whether the function or class should be imported or exported:
 
 .. code-block:: c++
 
