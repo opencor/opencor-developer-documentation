@@ -27,7 +27,7 @@ Category
 Our plugin is part of the `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/>`__ category, which means that its code can be found under |SampleTools|_.
 
 .. |SampleTools| replace:: ``[OpenCOR]/src/plugins/sample/SampleTools/``
-.. _SampleTools: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleTools/
+.. _SampleTools: https://github.com/opencor/opencor/tree/master/src/plugins/sample/SampleTools/
 
 Interfaces
 ----------
@@ -36,7 +36,7 @@ Unlike for the :ref:`Sample <develop_plugins_sample>` plugin, we want our plugin
 This means that it needs to implement some :ref:`interfaces <develop_plugins_index_interfaces>`.
 
 More specifically, we want our plugin to work from the command line, so we need to implement the `CLI <https://github.com/opencor/opencor/blob/master/src/plugins/cliinterface.inl>`__ interface.
-We also want our plugin to work through OpenCOR's ``Tools`` menu, which involves creating a menu item and making it available to OpenCOR, so that it can add it for us to its ``Tools`` menu.
+We also want our plugin to work through OpenCOR's ``Tools`` menu, which involves creating a menu item and making it available to OpenCOR, so that it can add it to its ``Tools`` menu.
 To do these, we need to implement both the `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiinterface.inl>`__ and `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interfaces.
 While we are at it, we might also internationalise our plugin, which means also implementing the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface.
 
@@ -75,7 +75,7 @@ Then, our plugin needs the `Core <https://github.com/opencor/opencor/tree/master
 Plugin information
 ------------------
 
-Our :ref:`plugin information <develop_plugins_index_pluginInformation>` can be found in |sampletoolsplugin.cpp|_, |sampletoolsplugin.h|_ and |sampletoolsplugin.json|_. Starting with |sampletoolsplugin.h|_, its contents is:
+Our :ref:`plugin information <develop_plugins_index_pluginInformation>` can be found in |sampletoolsplugin.cpp|_, |sampletoolsplugin.h|_, and |sampletoolsplugin.json|_. Starting with |sampletoolsplugin.h|_, its contents is:
 
 .. code-block:: c++
    :lineno-start: 28
@@ -281,7 +281,7 @@ After the `GUI <https://github.com/opencor/opencor/blob/master/src/plugins/guiin
 All that we need to do is (re)translate ``mAddTwoNumbersAction`` with the actual (French) translations in |SampleTools_fr.ts|_ (together with some other translations needed :ref:`below <develop_plugins_sampleTools_pluginSpecific>`).
 
 .. |SampleTools_fr.ts| replace:: ``SampleTools_fr.ts``
-.. _SampleTools_fr.ts: https://github.com/opencor/opencor/tree/master/src/plugins/sample/SampleTools/i18n/SampleTools_fr.ts
+.. _SampleTools_fr.ts: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleTools/i18n/SampleTools_fr.ts
 
 .. _develop_plugins_sampleTools_pluginInterface:
 
@@ -374,7 +374,7 @@ Finally, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src
    //==============================================================================
 
 The only method of interest to our plugin is ``initializePlugin()`` (lines 160-170), which is where we initialise ``mAddTwoNumbersAction``, among other things.
-All the other methods (``definesPluginInterfaces()``, ``pluginInterfacesOk()``, ``finalizePlugin()``, ``pluginsInitialized()``, ``loadSettings()``, ``saveSettings()`` and ``handleUrl()``) are left empty.
+All the other methods (``definesPluginInterfaces()``, ``pluginInterfacesOk()``, ``finalizePlugin()``, ``pluginsInitialized()``, ``loadSettings()``, ``saveSettings()``, and ``handleUrl()``) are left empty.
 
 .. _develop_plugins_sampleTools_pluginSpecific:
 
@@ -388,10 +388,10 @@ They are declared in the ``SampleToolsPlugin`` class in |sampletoolsplugin.h|_:
    :lineno-start: 64
 
    private:
-       QAction *mAddTwoNumbersAction;
+       QAction *mAddTwoNumbersAction = nullptr;
 
        void runHelpCommand();
-       int runAddCommand(const QStringList &pArguments);
+       bool runAddCommand(const QStringList &pArguments);
 
    private slots:
        void addTwoNumbers();
@@ -418,14 +418,14 @@ Their implementation can be found in |sampletoolsplugin.cpp|_:
 
    //==============================================================================
 
-   int SampleToolsPlugin::runAddCommand(const QStringList &pArguments)
+   bool SampleToolsPlugin::runAddCommand(const QStringList &pArguments)
    {
        // Make sure that we have the correct number of arguments
 
        if (pArguments.count() != 2) {
            runHelpCommand();
 
-           return -1;
+           return false;
        }
 
        // Make sure that the two arguments are valid numbers
@@ -437,7 +437,7 @@ Their implementation can be found in |sampletoolsplugin.cpp|_:
        if (!ok) {
            std::cout << "Sorry, but " << qPrintable(pArguments.first()) << " is not a valid number." << std::endl;
 
-           return -1;
+           return false;
        }
 
        double nb2 = pArguments.last().toDouble(&ok);
@@ -445,14 +445,14 @@ Their implementation can be found in |sampletoolsplugin.cpp|_:
        if (!ok) {
            std::cout << "Sorry, but " << qPrintable(pArguments.last()) << " is not a valid number." << std::endl;
 
-           return -1;
+           return false;
        }
 
        // Add the two numbers and output the result
 
        std::cout << qPrintable(pArguments.first()) << " + " << qPrintable(pArguments.last()) << " = " << Sample::add(nb1, nb2) << std::endl;
 
-       return 0;
+       return true;
    }
 
    //==============================================================================
