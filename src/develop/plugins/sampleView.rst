@@ -30,7 +30,7 @@ Category
 Our plugin is part of the `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/>`__ category, which means that its code can be found under |SampleView|_.
 
 .. |SampleView| replace:: ``[OpenCOR]/src/plugins/sample/SampleView/``
-.. _SampleView: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleView/
+.. _SampleView: https://github.com/opencor/opencor/tree/master/src/plugins/sample/SampleView/
 
 Interfaces
 ----------
@@ -73,9 +73,9 @@ As for the :ref:`Sample <develop_plugins_sample>` plugin, our plugin has a |CMak
 .. |CMakeLists.txt| replace:: ``CMakeLists.txt``
 .. _CMakeLists.txt: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleView/CMakeLists.txt
 
-The interfaces our plugin implements come with a ``.cpp`` file, so we reference them (lines 7, 8, 10 and 11).
+The interfaces our plugin implements come with a ``.cpp`` file, so we reference them (lines 7, 8, 10, and 11).
 Then, our plugin needs the `Core <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/>`__ plugin, so it is referenced (line 18) using the ``PLUGINS`` keyword (line 17).
-Our plugin provides OpenCOR with a test view, which is implemented using various files (lines 14 and 16).
+Our plugin provides OpenCOR with a view, which is implemented using various files (lines 14 and 16).
 One of those files is a ``.ui`` file, which is referenced using the ``UIS`` keyword (line 15).
 
 Plugin information
@@ -122,15 +122,13 @@ Starting with |sampleviewplugin.h|_, its contents is:
        Q_INTERFACES(OpenCOR::ViewInterface)
 
    public:
-       explicit SampleViewPlugin();
-
    #include "filehandlinginterface.inl"
    #include "i18ninterface.inl"
    #include "plugininterface.inl"
    #include "viewinterface.inl"
 
    private:
-       SampleViewWidget *mViewWidget;
+       SampleViewWidget *mViewWidget = nullptr;
 
        QString mFileName;
    };
@@ -151,7 +149,7 @@ Starting with |sampleviewplugin.h|_, its contents is:
 
 As mentioned above, our plugin implements some interfaces, which means that their header file is included (lines 28, 29, 31 and 32).
 It also means that our plugin class inherits from those interfaces (lines 49-51), as well as makes calls to the ``Q_INTERFACES()`` macro to let `Qt <https://qt.io/>`__ know which interfaces it implements (lines 57-60).
-Finally, we include the inline files (lines 65-68) that declare various methods that must be implemented by our plugin (see :ref:`below <develop_plugins_sampleView_interfacesImplementation>`).
+Finally, we include the inline files (lines 63-66) that declare various methods that must be implemented by our plugin (see :ref:`below <develop_plugins_sampleView_interfacesImplementation>`).
 (The rest of the class definition is specific to our plugin and is discussed :ref:`below <develop_plugins_sampleView_pluginSpecific>`.)
 
 The C function that is used by OpenCOR to retrieve some :ref:`basic information <develop_plugins_index_basicInformation>` about our plugin can be found in |sampleviewplugin.cpp|_:
@@ -185,7 +183,7 @@ The methods are grouped by interface and are ordered alphabetically.
 We start with the `File handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`__ interface:
 
 .. code-block:: c++
-   :lineno-start: 60
+   :lineno-start: 52
 
    //==============================================================================
    // File handling interface
@@ -295,16 +293,16 @@ We start with the `File handling <https://github.com/opencor/opencor/blob/master
    //==============================================================================
 
 Our plugin provides a view and, as such, should at least handle some of the `File handling <https://github.com/opencor/opencor/blob/master/src/plugins/filehandlinginterface.inl>`__ interface's methods.
-Here, we want our plugin to provide some information about the current file, so we do not need to implement ``importFile()`` (lines 64-71) ``saveFile()`` (lines 75-86), ``fileOpened()`` (lines 90-95), ``fileModified()`` (lines 111-116) and ``fileSaved()`` (lines 120-125).
+Here, we want our plugin to provide some information about the current file, so we do not need to implement ``importFile()`` (lines 56-63) ``saveFile()`` (lines 67-78), ``fileOpened()`` (lines 82-87), ``fileModified()`` (lines 103-108), and ``fileSaved()`` (lines 112-117).
 On the other hand, should the current file have its permissions changed or be renamed, then we want to update the information presented in our view.
-We do this by implementing the ``filePermissionsChanged()`` (lines 99-107) and ``fileReloaded()`` (lines 129-136) methods.
-The same holds true if the current file gets renamed, in which case we also want to update ``mFileName`` (see ``fileRenamed()``; lines 140-152).
-Finally, we want to reset ``mFileName`` if the current file gets closed (see ``fileClosed()``; lines 156-163).
+We do this by implementing the ``filePermissionsChanged()`` (lines 91-99) and ``fileReloaded()`` (lines 128-128) methods.
+The same holds true if the current file gets renamed, in which case we also want to update ``mFileName`` (see ``fileRenamed()``; lines 132-144).
+Finally, we want to reset ``mFileName`` if the current file gets closed (see ``fileClosed()``; lines 148-155).
 
 Next, we have the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface:
 
 .. code-block:: c++
-   :lineno-start: 165
+   :lineno-start: 157
 
    //==============================================================================
    // I18n interface
@@ -326,7 +324,7 @@ If some information is being shown for a file, then we ask our view to retransla
 After the `Internationalisation <https://github.com/opencor/opencor/blob/master/src/plugins/i18ninterface.inl>`__ interface, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interface:
 
 .. code-block:: c++
-   :lineno-start: 178
+   :lineno-start: 170
 
    //==============================================================================
    // Plugin interface
@@ -411,13 +409,13 @@ After the `Internationalisation <https://github.com/opencor/opencor/blob/master/
 
    //==============================================================================
 
-The only method of interest to our plugin is ``initializePlugin()`` (lines 204-214), which is where we initialise ``mViewWidget``, our view.
+The only method of interest to our plugin is ``initializePlugin()`` (lines 196-206), which is where we initialise ``mViewWidget``, our view.
 All the other methods (``definesPluginInterfaces()``, ``pluginInterfacesOk()``, ``finalizePlugin()``, ``pluginsInitialized()``, ``loadSettings()``, ``saveSettings()`` and ``handleUrl()``) are left empty.
 
 Finally, we have the `View <https://github.com/opencor/opencor/blob/master/src/plugins/viewinterface.inl>`__ interface:
 
 .. code-block:: c++
-   :lineno-start: 259
+   :lineno-start: 251
 
    //==============================================================================
    // View interface
@@ -505,10 +503,10 @@ Finally, we have the `View <https://github.com/opencor/opencor/blob/master/src/p
 
    //==============================================================================
 
-Our plugin provides a view, so OpenCOR needs to know about its name (see ``viewName()``; lines 325-330), its type (see ``viewMode()``; lines 263-268), the MIME types it supports (see ``viewMimeTypes()``; lines 272-277), the MIME type supported by a given file (see ``viewMimeType()``; lines 281-288), the default file extension it supports (see ``viewDefaultFileExtension()``; lines 292-297) and whether it needs a special tab icon (see ``fileTabIcon()``; lines 334-341).
-OpenCOR also needs to know the widget that is used for the view and this for a given file (see ``viewWidget()``; lines 301-310).
+Our plugin provides a view, so OpenCOR needs to know about its name (see ``viewName()``; lines 317-322), its type (see ``viewMode()``; lines 255-260), the MIME types it supports (see ``viewMimeTypes()``; lines 264-269), the MIME type supported by a given file (see ``viewMimeType()``; lines 273-280), the default file extension it supports (see ``viewDefaultFileExtension()``; lines 284-289), and whether it needs a special tab icon (see ``fileTabIcon()``; lines 326-333).
+OpenCOR also needs to know the widget that is used for the view and this for a given file (see ``viewWidget()``; lines 293-302).
 Note that our plugin uses only one view widget (and updates its contents based on the file that is currently active), but it might perfectly use one per file.
-Finally, our plugin needs to handle the case where a view widget is to be removed (see ``removeViewWidget()``; lines 314-321), which happens whenever a file gets closed.
+Finally, our plugin needs to handle the case where a view widget is to be removed (see ``removeViewWidget()``; lines 306-313), which happens whenever a file gets closed.
 
 .. _develop_plugins_sampleView_pluginSpecific:
 
@@ -598,8 +596,7 @@ The implementation of ``SampleViewWidget`` can be found in |sampleviewwidget.cpp
 
    SampleViewWidget::SampleViewWidget(QWidget *pParent) :
        ViewWidget(pParent),
-       mGui(new Ui::SampleViewWidget),
-       mFileName(QString())
+       mGui(new Ui::SampleViewWidget)
    {
        // Delete the layout that comes with ViewWidget
 
@@ -628,7 +625,7 @@ The implementation of ``SampleViewWidget`` can be found in |sampleviewwidget.cpp
        mGui->retranslateUi(this);
 
        // Update ourself too since some widgets will have been reset following the
-       // retranslation (e.g. mGui->fileNameValue)
+       // retranslation (e.g., mGui->fileNameValue)
 
        update(mFileName);
    }
@@ -674,4 +671,4 @@ The implementation of ``SampleViewWidget`` can be found in |sampleviewwidget.cpp
 .. |sampleviewwidget.cpp| replace:: ``sampleviewwidget.cpp``
 .. _sampleviewwidget.cpp: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleView/src/sampleviewwidget.cpp
 
-``retranslateUi()`` (lines 68-78) retranslates our view while ``widget()`` returns it (lines 82-89) and ``update()`` updates its contents (lines 93-111).
+``retranslateUi()`` (lines 67-77) retranslates our view while ``widget()`` returns it (lines 81-88) and ``update()`` updates its contents (lines 92-110).
