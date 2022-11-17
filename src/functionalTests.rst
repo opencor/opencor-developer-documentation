@@ -160,11 +160,11 @@ COMBINE archives
   - |no_master_sedml_file.omex|_
   - |two_master_sedml_files.omex|_
 
-.. |no_master_sedml_file.omex| replace:: ``[OpenCOR]/models/tests/combine/no_master_sedml_file.omex``
-.. _no_master_sedml_file.omex: opencor://openFile/https://raw.githubusercontent.com/opencor/opencor/master/models/tests/combine/no_master_sedml_file.omex
+.. |no_master_sedml_file.omex| replace:: ``[OpenCOR]/models/tests/combine/no_master_file.omex``
+.. _no_master_sedml_file.omex: opencor://openFile/https://raw.githubusercontent.com/opencor/opencor/master/models/tests/combine/no_master_file.omex
 
-.. |two_master_sedml_files.omex| replace:: ``[OpenCOR]/models/tests/combine/two_master_sedml_files.omex``
-.. _two_master_sedml_files.omex: opencor://openFile/https://raw.githubusercontent.com/opencor/opencor/master/models/tests/combine/two_master_sedml_files.omex
+.. |two_master_sedml_files.omex| replace:: ``[OpenCOR]/models/tests/combine/two_master_files.omex``
+.. _two_master_sedml_files.omex: opencor://openFile/https://raw.githubusercontent.com/opencor/opencor/master/models/tests/combine/two_master_files.omex
 
 - COMBINE archives:
 
