@@ -4,7 +4,7 @@
  Build, test and run
 =====================
 
-OpenCOR (and its corresponding :ref:`tests <develop_tests>`) can be built, tested and run either from the command line or using `Qt Creator <https://qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__.
+OpenCOR (and its corresponding :ref:`tests <develop_tests>`) can be built, tested and run either from the command line or using `Qt Creator <https://qt.io/product/development-tools>`__.
 By default, `Ninja <https://ninja-build.org/>`__ is used to build OpenCOR, but if it is not available, then `JOM <https://wiki.qt.io/Jom>`__ (on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__) or `Make <https://gnu.org/software/make>`__ (on `Linux <https://en.wikipedia.org/wiki/Linux>`__/`macOS <https://en.wikipedia.org/wiki/MacOS>`__) will be used.
 
 .. _buildTestAndRunFromTheCommandLine:
@@ -19,14 +19,14 @@ Various batch/VBScript files (``.bat`` \| ``.vbs``) and shell scripts are availa
 - |formatScript|_\[|formatBatch|_]: format the OpenCOR code;
 - |makeScript|_\[|makeBatch|_]: build a release version of OpenCOR;
 
-  **Note:** if you use ``make``, then OpenCOR will, by default, be built sequentially.
+  **Note:** if you use `Make <https://gnu.org/software/make>`__, then OpenCOR will, by default, be built sequentially.
   You can, however, specify a maximum number of jobs (``n``) to be run simultaneously by calling ``make -j [n]``.
   If no ``n`` value is provided, then as many jobs as possible will be run simultaneously.
 
 - |maketestsScript|_\[|maketestsBatch|_]: build a debug version of OpenCOR suitable for testing;
 - |runScript|_\[|runBatch|_ | |runVBScript|_]: run OpenCOR; and
 
-  **Note:** on Windows, if run OpenCOR from a console window by entering ``run``, then ``run.bat`` will be executed (rather than ``run.vbs``), offering you the opportunity to use OpenCOR as a `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ application.
+  **Note:** on Windows, if you run OpenCOR from a console window by entering ``run``, then ``run.bat`` will be executed (rather than ``run.vbs``), offering you the opportunity to use OpenCOR as a `CLI <https://en.wikipedia.org/wiki/Command-line_interface>`__ application.
   However, if you run OpenCOR by double clicking ``run.bat`` in, say, Windows Explorer, then a console window will quickly appear and disappear.
   To avoid this, use ``run.vbs``.
 
@@ -83,10 +83,10 @@ Various batch/VBScript files (``.bat`` \| ``.vbs``) and shell scripts are availa
 Using Qt Creator
 ----------------
 
-- Start `Qt Creator <https://qt.io/qt-features-libraries-apis-tools-and-ide/#ide>`__;
+- Start `Qt Creator <https://qt.io/product/development-tools>`__;
 - Open |cmakeFile|_ (by selecting the ``File`` | ``Open File or Project...`` menu or by pressing ``Ctrl``\ +\ ``O``;
 - Configure the project as you see fit and click on the ``Configure Project`` button;
-- Configure `CMake <https://cmake.org/>`__, if needed, by going to the ``Projects`` page and setting, for example, ``ENABLE_TESTS`` to ``ON``, and click on the ``Apply Configuration Changes`` button; and
+- Configure `CMake <https://cmake.org/>`__, if needed, by going to the ``Projects`` page and setting, for example, ``ENABLE_TESTS`` to ``ON``, and click on the ``Run CMake`` button; and
 - Build and run OpenCOR (by selecting the ``Build`` | ``Run`` menu or by pressing ``Ctrl``\ +\ ``R``).
 
 .. |cmakeFile| replace:: ``[OpenCOR]/CMakeLists.txt``
