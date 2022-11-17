@@ -7,12 +7,12 @@
 Tests can be created at the :ref:`plugins <develop_plugins_index>` level.
 Tests must:
 
-- Be located under the ``tests`` folder of a plugin folder (e.g. |tests|_ for the `Compiler <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/>`__ plugin);
+- Be located under the ``tests`` folder of a plugin folder (e.g., |tests|_ for the `Compiler <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/>`__ plugin);
 
-  .. |tests| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Compiler/tests``
-  .. _tests: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Compiler/tests
+  .. |tests| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Compiler/tests/``
+  .. _tests: https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/tests/
 
-- Consist of at least one set of ``.cpp`` and ``.h`` files (e.g. |tests.cpp|_ and |tests.h|_ for the `Compiler <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/>`__ plugin);
+- Consist of at least one set of ``.cpp`` and ``.h`` files (e.g., |tests.cpp|_ and |tests.h|_ for the `Compiler <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/>`__ plugin);
 
   .. |tests.cpp| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Compiler/tests/tests.cpp``
   .. _tests.cpp: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Compiler/tests/tests.cpp
@@ -20,7 +20,7 @@ Tests must:
   .. |tests.h| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Compiler/tests/tests.h``
   .. _tests.h: https://github.com/opencor/opencor/blob/master/src/plugins/miscellaneous/Compiler/tests/tests.h
 
-- Be listed under the ``TESTS`` header in the call to our `CMake <https://cmake.org/>`__ |add_plugin|_ macro of the plugin's ``CMakeLists.txt`` file (e.g. |CMakeLists.txt|_ for the `Compiler <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/>`__ plugin):
+- Be listed under the ``TESTS`` header in the call to our `CMake <https://cmake.org/>`__ |add_plugin|_ macro of the plugin's ``CMakeLists.txt`` file (e.g., |CMakeLists.txt|_ for the `Compiler <https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Compiler/>`__ plugin):
 
   .. code-block:: cmake
 
