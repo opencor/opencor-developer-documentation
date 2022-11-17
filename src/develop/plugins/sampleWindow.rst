@@ -30,7 +30,7 @@ Category
 Our plugin is part of the `Sample <https://github.com/opencor/opencor/tree/master/src/plugins/sample/>`__ category, which means that its code can be found under |SampleWindow|_.
 
 .. |SampleWindow| replace:: ``[OpenCOR]/src/plugins/sample/SampleWindow/``
-.. _SampleWindow: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleWindow/
+.. _SampleWindow: https://github.com/opencor/opencor/tree/master/src/plugins/sample/SampleWindow/
 
 Interfaces
 ----------
@@ -197,7 +197,7 @@ We start with the `Internationalisation <https://github.com/opencor/opencor/blob
 All that we need to do is (re)translate ``mSampleWindowAction`` with the actual (French) translations in |SampleWindow_fr.ts|_ (together with some other translations needed :ref:`below <develop_plugins_sampleWindow_pluginSpecific>`).
 
 .. |SampleWindow_fr.ts| replace:: ``SampleWindow_fr.ts``
-.. _SampleWindow_fr.ts: https://github.com/opencor/opencor/tree/master/src/plugins/sample/SampleWindow/i18n/SampleWindow_fr.ts
+.. _SampleWindow_fr.ts: https://github.com/opencor/opencor/blob/master/src/plugins/sample/SampleWindow/i18n/SampleWindow_fr.ts
 
 Next, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src/plugins/plugininterface.inl>`__ interface:
 
@@ -287,7 +287,7 @@ Next, we have the `Plugin <https://github.com/opencor/opencor/blob/master/src/pl
    //==============================================================================
 
 The only method of interest to our plugin is ``initializePlugin()`` (lines 90-99), which is where we initialise both ``mSampleWindowAction`` and ``mSampleWindowWindow``.
-All the other methods (``definesPluginInterfaces()``, ``pluginInterfacesOk()``, ``finalizePlugin()``, ``pluginsInitialized()``, ``loadSettings()``, ``saveSettings()`` and ``handleUrl()``) are left empty.
+All the other methods (``definesPluginInterfaces()``, ``pluginInterfacesOk()``, ``finalizePlugin()``, ``pluginsInitialized()``, ``loadSettings()``, ``saveSettings()``, and ``handleUrl()``) are left empty.
 
 Finally, we have the `Window <https://github.com/opencor/opencor/blob/master/src/plugins/windowinterface.inl>`__ interface:
 
