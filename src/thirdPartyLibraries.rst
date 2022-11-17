@@ -11,8 +11,8 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |CellMLAPI|_.
   - Licensing: `MPL v1.1 <https://opensource.org/licenses/MPL-1.1>`__, `GPL v2.0 <https://opensource.org/licenses/GPL-2.0>`__ (or later) and `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
 
-  .. |CellMLAPI| replace:: ``[OpenCOR]/src/plugins/thirdParty/CellMLAPI``
-  .. _CellMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/CellMLAPI
+  .. |CellMLAPI| replace:: ``[OpenCOR]/src/plugins/thirdParty/CellMLAPI/``
+  .. _CellMLAPI: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/CellMLAPI/
 
 - `diff-match-patch <https://code.google.com/p/google-diff-match-patch/>`__: a set of libraries that offer robust algorithms to perform the operations required for synchronising plain text.
 
@@ -21,24 +21,24 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
 
     **Note:** we use an `STL version <https://github.com/leutloff/diff-match-patch-cpp-stl>`__ of that library.
 
-  .. |diff-match-patch| replace:: ``[OpenCOR]/src/3rdparty/diff_match_patch``
-  .. _diff-match-patch: https://github.com/opencor/opencor/tree/master/src/3rdparty/diff_match_patch
+  .. |diff-match-patch| replace:: ``[OpenCOR]/src/3rdparty/diff_match_patch/``
+  .. _diff-match-patch: https://github.com/opencor/opencor/tree/master/src/3rdparty/diff_match_patch/
 
 - `ICU <https://icu.unicode.org/>`__ 56.1: a library that provides `Unicode <https://en.wikipedia.org/wiki/Unicode>`__ and Globalization support for software applications.
 
   - Location: |ICU|_.
   - Licensing: `Unicode <https://unicode.org/copyright.html#License>`__.
 
-  .. |ICU| replace:: ``[OpenCOR]/distrib/linux/icu``
-  .. _ICU: https://github.com/opencor/opencor/tree/master/distrib/linux/icu
+  .. |ICU| replace:: ``[OpenCOR]/src/3rdparty/linux/icu/``
+  .. _ICU: https://github.com/opencor/opencor/tree/master/src/3rdparty/linux/icu/
 
 - `ipykernel <https://pypi.org/project/ipykernel>`__ 5.1.2: the `IPython <https://ipython.org/>`__ kernel for `Jupyter <https://jupyter.org/>`__.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-  .. |PythonPackages| replace:: ``[OpenCOR]/src/plugins/thirdParty/PythonPackages``
-  .. _PythonPackages: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/PythonPackages
+  .. |PythonPackages| replace:: ``[OpenCOR]/src/plugins/thirdParty/PythonPackages/``
+  .. _PythonPackages: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/PythonPackages/
 
 - `IPython <https://ipython.org/>`__ 7.8.0: a command shell that provides a rich architecture for interactive computing.
 
@@ -65,56 +65,56 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |libBioSignalML|_.
   - Licensing: none.
 
-  .. |libBioSignalML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libBioSignalML``
-  .. _libBioSignalML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libBioSignalML
+  .. |libBioSignalML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libBioSignalML/``
+  .. _libBioSignalML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libBioSignalML/
 
 - `libgit2 <https://libgit2.org/>`__ 1.5.0: a portable, pure C implementation of the `Git <https://git-scm.com/>`__ core methods provided as a re-entrant linkable library with a solid API.
 
   - Location: |libgit2|_.
   - Licensing: `GPL v2.0 <https://opensource.org/licenses/GPL-2.0>`__ with linking exception.
 
-  .. |libgit2| replace:: ``[OpenCOR]/src/plugins/thirdParty/libgit2``
-  .. _libgit2: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libgit2
+  .. |libgit2| replace:: ``[OpenCOR]/src/plugins/thirdParty/libgit2/``
+  .. _libgit2: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libgit2/
 
 - `libNuML <https://github.com/NuML/NuML>`__ 1.1.6: a library for reading and writing `NuML <https://github.com/NuML/NuML>`__ models.
 
   - Location: |libNuML|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
 
-  .. |libNuML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libNuML``
-  .. _libNuML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libNuML
+  .. |libNuML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libNuML/``
+  .. _libNuML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libNuML/
 
 - `libSBML <https://github.com/sbmlteam/libsbml>`__ 5.19.0: a programming library to help you read, write, manipulate, translate and validate `SBML <https://sbml.org/>`__ files and data streams.
 
   - Location: |libSBML|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
 
-  .. |libSBML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libSBML``
-  .. _libSBML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libSBML
+  .. |libSBML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libSBML/``
+  .. _libSBML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libSBML/
 
 - `libSEDML <https://github.com/fbergmann/libSEDML>`__ 2.0.32: a library for reading and writing `SED-ML <https://sed-ml.github.io/>`__ files.
 
   - Location: |libSEDML|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-  .. |libSEDML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libSEDML``
-  .. _libSEDML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libSEDML
+  .. |libSEDML| replace:: ``[OpenCOR]/src/plugins/thirdParty/libSEDML/``
+  .. _libSEDML: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/libSEDML/
 
 - `LibXDiff <http://www.xmailserver.org/xdiff-lib.html>`__ 0.23: a library that implements basic and yet complete functionalities to create file differences/patches to both binary and text files.
 
   - Location: |LibXDiff|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__.
 
-  .. |LibXDiff| replace:: ``[OpenCOR]/src/plugins/thirdParty/LibXDiff``
-  .. _LibXDiff: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LibXDiff
+  .. |LibXDiff| replace:: ``[OpenCOR]/src/plugins/thirdParty/LibXDiff/``
+  .. _LibXDiff: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LibXDiff/
 
 - `LLVM <https://llvm.org/>`__\ +\ `Clang <https://clang.llvm.org/>`__ 14.0.6: a collection of modular and reusable compiler and toolchain technologies.
 
   - Location: |LLVM+Clang|_.
   - Licensing: `Apache v2.0 <https://opensource.org/licenses/Apache-2.0>`__ with LLVM Exceptions.
 
-  .. |LLVM+Clang| replace:: ``[OpenCOR]/src/plugins/thirdParty/LLVMClang``
-  .. _LLVM+Clang: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang
+  .. |LLVM+Clang| replace:: ``[OpenCOR]/src/plugins/thirdParty/LLVMClang/``
+  .. _LLVM+Clang: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang/
 
 - `lxml <https://lxml.de/>`__ 4.4.1: a Pythonic binding for the C libraries `libxml2 <https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home>`__ and `libxslt <https://gitlab.gnome.org/GNOME/libxslt/-/wikis/home>`__.
 
@@ -131,8 +131,8 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |Mesa|_.
   - Licensing: `MIT <https://opensource.org/licenses/MIT>`__.
 
-  .. |Mesa| replace:: ``[OpenCOR]/distrib/linux/mesa``
-  .. _Mesa: https://github.com/opencor/opencor/tree/master/distrib/linux/mesa
+  .. |Mesa| replace:: ``[OpenCOR]/src/3rdparty/linux/mesa/``
+  .. _Mesa: https://github.com/opencor/opencor/tree/master/src/3rdparty/linux/mesa/
 
 - `nbconvert <https://pypi.org/project/nbconvert>`__ 5.6.0: a tool that converts notebooks to various other formats via `Jinja <https://palletsprojects.com/p/jinja/>`__ templates.
 
@@ -154,48 +154,48 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |OAuth|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-  .. |OAuth| replace:: ``[OpenCOR]/src/plugins/thirdParty/OAuth``
-  .. _OAuth: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OAuth
+  .. |OAuth| replace:: ``[OpenCOR]/src/plugins/thirdParty/OAuth/``
+  .. _OAuth: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OAuth/
 
 - `OpenSSL <https://openssl.org/>`__ 1.1.1s: a toolkit implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS) protocols, as well as a full-strength general purpose cryptography library.
 
   - Location: |OpenSSL|_.
   - Licensing: `OpenSSL and SSLeay <https://openssl.org/source/license.html>`__, which are both `BSD <https://opensource.org/licenses/BSD-3-Clause>`__-style licenses.
 
-  .. |OpenSSL| replace:: ``[OpenCOR]/src/plugins/thirdParty/OpenSSL``
-  .. _OpenSSL: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OpenSSL
+  .. |OpenSSL| replace:: ``[OpenCOR]/src/plugins/thirdParty/OpenSSL/``
+  .. _OpenSSL: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OpenSSL/
 
 - `Oxygen <https://packages.ubuntu.com/kinetic/oxygen-icon-theme>`__ 5.98.0: icons used in various parts of OpenCOR.
 
   - Location: |OxygenImages|_.
   - Licensing: `LGPL v3.0 <https://opensource.org/licenses/LGPL-3.0>`__.
 
-  .. |OxygenImages| replace:: ``[OpenCOR]/res/oxygen``
-  .. _OxygenImages: https://github.com/opencor/opencor/tree/master/res/oxygen
+  .. |OxygenImages| replace:: ``[OpenCOR]/res/oxygen/``
+  .. _OxygenImages: https://github.com/opencor/opencor/tree/master/res/oxygen/
 
 - `Printable world flags <https://printableworldflags.com/flag-icon>`__: flag icons used in our Language menu.
 
   - Location: |PrintableWorldFlagsImages|_.
   - Licensing: none.
 
-  .. |PrintableWorldFlagsImages| replace:: ``[OpenCOR]/res/flags``
-  .. _PrintableWorldFlagsImages: https://github.com/opencor/opencor/tree/master/res/flags
+  .. |PrintableWorldFlagsImages| replace:: ``[OpenCOR]/res/flags/``
+  .. _PrintableWorldFlagsImages: https://github.com/opencor/opencor/tree/master/res/flags/
 
 - `Python <https://python.org/>`__ 3.7.5: a programming language that lets you work quickly and integrate systems more effectively.
 
   - Location: |Python|_.
   - Licensing: `PSF v2.0 <https://opensource.org/licenses/Python-2.0>`__.
 
-  .. |Python| replace:: ``[OpenCOR]/src/plugins/thirdParty/Python``
-  .. _Python: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Python
+  .. |Python| replace:: ``[OpenCOR]/src/plugins/thirdParty/Python/``
+  .. _Python: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Python/
 
 - `PythonQt <https://mevislab.github.io/pythonqt>`__ 3.2.2: a dynamic `Python <https://python.org/>`__ binding for the `Qt <https://qt.io/>`__ framework.
 
   - Location: |PythonQt|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__.
 
-  .. |PythonQt| replace:: ``[OpenCOR]/src/plugins/thirdParty/PythonQt``
-  .. _PythonQt: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/PythonQt
+  .. |PythonQt| replace:: ``[OpenCOR]/src/plugins/thirdParty/PythonQt/``
+  .. _PythonQt: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/PythonQt/
 
 - `qimage2ndarray <https://pypi.org/project/qimage2ndarray>`__ 1.8: a small `Python <https://python.org/>`__ extension for quickly converting between `QImage <https://doc.qt.io/qt-5/qimage.html>`__ and `numpy.ndarray <https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html>`__ (in both directions).
 
@@ -207,8 +207,8 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |QScintilla|_.
   - Licensing: `GPL v3.0 <https://opensource.org/licenses/GPL-3.0>`__.
 
-  .. |QScintilla| replace:: ``[OpenCOR]/src/plugins/thirdParty/QScintilla``
-  .. _QScintilla: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/QScintilla
+  .. |QScintilla| replace:: ``[OpenCOR]/src/plugins/thirdParty/QScintilla/``
+  .. _QScintilla: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/QScintilla/
 
 - `qtconsole <https://pypi.org/project/qtconsole>`__ 4.5.5: a rich `Qt <https://qt.io/>`__-based console for working with `Jupyter <https://jupyter.org/>`__ kernels, supporting rich media output, session export, and more.
 
@@ -220,16 +220,16 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |QtSingleApplication|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__ (or later).
 
-  .. |QtSingleApplication| replace:: ``[OpenCOR]/src/3rdparty/QtSingleApplication``
-  .. _QtSingleApplication: https://github.com/opencor/opencor/tree/master/src/3rdparty/QtSingleApplication
+  .. |QtSingleApplication| replace:: ``[OpenCOR]/src/3rdparty/QtSingleApplication/``
+  .. _QtSingleApplication: https://github.com/opencor/opencor/tree/master/src/3rdparty/QtSingleApplication/
 
 - `QtWebKit <https://github.com/qt/qtwebkit>`__ 5.212.0 Alpha 3: a `Qt <https://qt.io/>`__ port of `WebKit <https://webkit.org/>`__, a web browser engine.
 
   - Location: |QtWebKit|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__.
 
-  .. |QtWebKit| replace:: ``[OpenCOR]/src/3rdparty/QtWebKit``
-  .. _QtWebKit: https://github.com/opencor/opencor/tree/master/src/3rdparty/QtWebKit
+  .. |QtWebKit| replace:: ``[OpenCOR]/src/3rdparty/QtWebKit/``
+  .. _QtWebKit: https://github.com/opencor/opencor/tree/master/src/3rdparty/QtWebKit/
 
 - `Qwt <https://qwt.sourceforge.io/>`__ 6.2.0: a set of widgets and utility classes primarily aimed at programs with a technical background.
 
@@ -239,8 +239,8 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
     **Note:** we have contributed some code to the `MathML <https://w3.org/Math>`__ renderer, but it has yet to be fully incorporated in the `Qwt <https://qwt.sourceforge.net/>`__ project.
     So, in the meantime, we use `our version <https://github.com/uwerat/qwt-mml-dev>`__ of the `MathML <https://w3.org/Math>`__ renderer.
 
-  .. |Qwt| replace:: ``[OpenCOR]/src/plugins/thirdParty/Qwt``
-  .. _Qwt: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Qwt
+  .. |Qwt| replace:: ``[OpenCOR]/src/plugins/thirdParty/Qwt/``
+  .. _Qwt: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Qwt/
 
 - `SciPy <https://scipy.org/>`__ 1.3.1: a `Python <https://python.org/>`__-based ecosystem of open-source software for mathematics, science and engineering.
 
@@ -257,8 +257,8 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |SUNDIALS|_.
   - Licensing: `BSD 3-Clause <https://opensource.org/licenses/BSD-3-Clause>`__.
 
-  .. |SUNDIALS| replace:: ``[OpenCOR]/src/plugins/thirdParty/SUNDIALS``
-  .. _SUNDIALS: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/SUNDIALS
+  .. |SUNDIALS| replace:: ``[OpenCOR]/src/plugins/thirdParty/SUNDIALS/``
+  .. _SUNDIALS: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/SUNDIALS/
 
 - `traitlets <https://pypi.org/project/traitlets>`__ 4.3.2: a configuration system for `Python <https://python.org/>`__ applications.
 
@@ -272,8 +272,8 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
 
     **Note:** we only use (a slightly improved version of) |ctopff.xsl|_ to convert `Content MathML <https://w3.org/TR/MathML3/chapter4.html>`__ to `Presentation MathML <https://w3.org/TR/MathML2/chapter3.html>`__.
 
-  .. |web-xslt| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/res/web-xslt``
-  .. _web-xslt: https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/res/web-xslt
+  .. |web-xslt| replace:: ``[OpenCOR]/src/plugins/miscellaneous/Core/res/web-xslt/``
+  .. _web-xslt: https://github.com/opencor/opencor/tree/master/src/plugins/miscellaneous/Core/res/web-xslt/
 
   .. |ctopff.xsl| replace:: ``ctopff.xsl``
   .. _ctopff.xsl: https://github.com/davidcarlisle/web-xslt/blob/master/ctop/ctopff.xsl
@@ -283,13 +283,13 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   - Location: |Zinc|_.
   - Licensing: `MPL v2.0 <https://opensource.org/licenses/MPL-2.0>`__.
 
-  .. |Zinc| replace:: ``[OpenCOR]/src/plugins/thirdParty/Zinc``
-  .. _Zinc: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Zinc
+  .. |Zinc| replace:: ``[OpenCOR]/src/plugins/thirdParty/Zinc/``
+  .. _Zinc: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Zinc/
 
 - `zlib <https://zlib.net/>`__ 1.2.13: a massively spiffy yet delicately unobtrusive compression library.
 
   - Location: |zlib|_.
   - Licensing: `Zlib <https://opensource.org/licenses/Zlib>`__.
 
-  .. |zlib| replace:: ``[OpenCOR]/src/plugins/thirdParty/zlib``
-  .. _zlib: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/zlib
+  .. |zlib| replace:: ``[OpenCOR]/src/plugins/thirdParty/zlib/``
+  .. _zlib: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/zlib/
