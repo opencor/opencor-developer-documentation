@@ -4,7 +4,7 @@
  OpenCOR
 =========
 
-`OpenCOR <https://opencor.ws/>`__ is developed, built, tested, run and packaged on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__, `Linux <https://en.wikipedia.org/wiki/Linux>`__ and `macOS <https://en.wikipedia.org/wiki/MacOS>`__ (see our `supported platforms <https://opencor.ws/supportedPlatforms.html>`__ for more details).
+`OpenCOR <https://opencor.ws/>`__ is developed, built, tested, run, and packaged on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__, `Linux <https://en.wikipedia.org/wiki/Linux>`__, and `macOS <https://en.wikipedia.org/wiki/MacOS>`__ (see our `supported platforms <https://opencor.ws/supportedPlatforms.html>`__ for more details).
 Information on those different aspects can be found in the following pages:
 
 - :ref:`prerequisites`
