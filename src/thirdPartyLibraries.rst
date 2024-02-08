@@ -4,7 +4,10 @@
  Third-party libraries
 =======================
 
-OpenCOR uses various third-party libraries, all of which are listed below, together with the type of license(s) under which they are released, if any.
+OpenCOR and its Python bindings use various third-party libraries, all of which are listed below, together with the type of license(s) under which they are released, if any.
+
+OpenCOR
+-------
 
 - `CellML API <https://github.com/cellmlapi/cellml-api>`__: an interface to manipulate and process `CellML <https://cellml.org/>`__ documents.
 
@@ -31,34 +34,6 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
 
   .. |ICU| replace:: ``[OpenCOR]/src/3rdparty/linux/icu/``
   .. _ICU: https://github.com/opencor/opencor/tree/master/src/3rdparty/linux/icu/
-
-- `ipykernel <https://pypi.org/project/ipykernel>`__ 5.1.2: the `IPython <https://ipython.org/>`__ kernel for `Jupyter <https://jupyter.org/>`__.
-
-  - Location: |PythonPackages|_.
-  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
-
-  .. |PythonPackages| replace:: ``[OpenCOR]/src/plugins/thirdParty/PythonPackages/``
-  .. _PythonPackages: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/PythonPackages/
-
-- `IPython <https://ipython.org/>`__ 7.8.0: a command shell that provides a rich architecture for interactive computing.
-
-  - Location: |PythonPackages|_.
-  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
-
-- `ipywidgets <https://pypi.org/project/ipywidgets>`__ 7.5.1: interactive `HTML <https://html.spec.whatwg.org/multipage>`__ widgets for `Jupyter <https://jupyter.org/>`__ notebooks and the `IPython kernel <https://pypi.org/project/ipykernel>`__.
-
-  - Location: |PythonPackages|_.
-  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
-
-- `jupyter_console <https://pypi.org/project/jupyter_console>`__ 6.0.0: an `IPython <https://ipython.org/>`__-like terminal frontend for `Jupyter <https://jupyter.org/>`__ kernels in any language.
-
-  - Location: |PythonPackages|_.
-  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
-
-- `JupyterLab <https://pypi.org/project/jupyterlab>`__ 1.1.3: an extensible environment for interactive and reproducible computing, based on the `Jupyter <https://jupyter.org/>`__ Notebook and Architecture.
-
-  - Location: |PythonPackages|_.
-  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
 - libBioSignalML: a library for reading and writing BioSignalML documents.
 
@@ -116,16 +91,6 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |LLVM+Clang| replace:: ``[OpenCOR]/src/plugins/thirdParty/LLVMClang/``
   .. _LLVM+Clang: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/LLVMClang/
 
-- `lxml <https://lxml.de/>`__ 4.4.1: a Pythonic binding for the C libraries `libxml2 <https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home>`__ and `libxslt <https://gitlab.gnome.org/GNOME/libxslt/-/wikis/home>`__.
-
-  - Location: |PythonPackages|_.
-  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
-
-- `Matplotlib <https://matplotlib.org/>`__ 3.1.1: a `Python <https://python.org/>`__ 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
-
-  - Location: |PythonPackages|_.
-  - Licensing: `Matplotlib License <https://matplotlib.org/users/license.html>`__.
-
 - `Mesa <https://mesa3d.org/>`__ 22.2.2: a system for rendering interactive 3D graphics.
 
   - Location: |Mesa|_.
@@ -133,21 +98,6 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
 
   .. |Mesa| replace:: ``[OpenCOR]/src/3rdparty/linux/mesa/``
   .. _Mesa: https://github.com/opencor/opencor/tree/master/src/3rdparty/linux/mesa/
-
-- `nbconvert <https://pypi.org/project/nbconvert>`__ 5.6.0: a tool that converts notebooks to various other formats via `Jinja <https://palletsprojects.com/p/jinja/>`__ templates.
-
-  - Location: |PythonPackages|_.
-  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
-
-- `notebook <https://pypi.org/project/notebook>`__ 6.0.2: a web application that allows you to create and share documents that contain live code, equations, visualizations, and explanatory text.
-
-  - Location: |PythonPackages|_.
-  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
-
-- `NumPy <https://numpy.org/>`__ 1.17.2: the fundamental package for scientific computing with `Python <https://python.org/>`__.
-
-  - Location: |PythonPackages|_.
-  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
 - `OAuth 2.0 for Qt <https://github.com/pipacs/o2>`__ 1.0.2: a library that encapsulates the `OAuth <https://oauth.net/>`__ 1.0 and 2.0 client authentication flows, and the sending of authenticated `HTTP <https://w3.org/Protocols>`__ requests.
 
@@ -181,27 +131,6 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |PrintableWorldFlagsImages| replace:: ``[OpenCOR]/res/flags/``
   .. _PrintableWorldFlagsImages: https://github.com/opencor/opencor/tree/master/res/flags/
 
-- `Python <https://python.org/>`__ 3.7.5: a programming language that lets you work quickly and integrate systems more effectively.
-
-  - Location: |Python|_.
-  - Licensing: `PSF v2.0 <https://opensource.org/licenses/Python-2.0>`__.
-
-  .. |Python| replace:: ``[OpenCOR]/src/plugins/thirdParty/Python/``
-  .. _Python: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Python/
-
-- `PythonQt <https://mevislab.github.io/pythonqt>`__ 3.2.2: a dynamic `Python <https://python.org/>`__ binding for the `Qt <https://qt.io/>`__ framework.
-
-  - Location: |PythonQt|_.
-  - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__.
-
-  .. |PythonQt| replace:: ``[OpenCOR]/src/plugins/thirdParty/PythonQt/``
-  .. _PythonQt: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/PythonQt/
-
-- `qimage2ndarray <https://pypi.org/project/qimage2ndarray>`__ 1.8: a small `Python <https://python.org/>`__ extension for quickly converting between `QImage <https://doc.qt.io/qt-5/qimage.html>`__ and `numpy.ndarray <https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html>`__ (in both directions).
-
-  - Location: |PythonPackages|_.
-  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
-
 - `QScintilla <https://riverbankcomputing.com/software/qscintilla/intro>`__ 2.13.3: a `Qt <https://qt.io/>`__ port of the `Scintilla <https://scintilla.org/>`__ editing component.
 
   - Location: |QScintilla|_.
@@ -209,11 +138,6 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
 
   .. |QScintilla| replace:: ``[OpenCOR]/src/plugins/thirdParty/QScintilla/``
   .. _QScintilla: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/QScintilla/
-
-- `qtconsole <https://pypi.org/project/qtconsole>`__ 4.5.5: a rich `Qt <https://qt.io/>`__-based console for working with `Jupyter <https://jupyter.org/>`__ kernels, supporting rich media output, session export, and more.
-
-  - Location: |PythonPackages|_.
-  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
 - `QtSingleApplication <https://code.qt.io/cgit/qt-solutions/qt-solutions.git/tree/qtsingleapplication>`__: a class that ensures that only one instance of the `GUI <https://en.wikipedia.org/wiki/Graphical_user_interface>`__ version of OpenCOR can be run at any given time.
 
@@ -242,16 +166,6 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
   .. |Qwt| replace:: ``[OpenCOR]/src/plugins/thirdParty/Qwt/``
   .. _Qwt: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Qwt/
 
-- `SciPy <https://scipy.org/>`__ 1.3.1: a `Python <https://python.org/>`__-based ecosystem of open-source software for mathematics, science and engineering.
-
-  - Location: |PythonPackages|_.
-  - Licensing: `BSD 3-Clause <https://opensource.org/licenses/BSD-3-Clause>`__.
-
-- `Sphinx <https://pypi.org/project/Sphinx>`__ 2.2.0: a tool that makes it easy to create intelligent and beautiful documentation for `Python <https://python.org/>`__ projects (or other documents consisting of multiple `reStructuredText <https://en.wikipedia.org/wiki/ReStructuredText>`__ sources).
-
-  - Location: |PythonPackages|_.
-  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
-
 - `SUNDIALS <https://computing.llnl.gov/projects/sundials>`__ 6.4.1: a SUite of Non-linear and DIfferential/ALgebraic equation Solvers.
 
   - Location: |SUNDIALS|_.
@@ -259,11 +173,6 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
 
   .. |SUNDIALS| replace:: ``[OpenCOR]/src/plugins/thirdParty/SUNDIALS/``
   .. _SUNDIALS: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/SUNDIALS/
-
-- `traitlets <https://pypi.org/project/traitlets>`__ 4.3.2: a configuration system for `Python <https://python.org/>`__ applications.
-
-  - Location: |PythonPackages|_.
-  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
 - `web-xslt <https://github.com/davidcarlisle/web-xslt>`__: `XSLT <https://w3.org/TR/xslt>`__ and `JavaScript <https://en.wikipedia.org/wiki/JavaScript>`__ code intended mostly for manipulating `MathML <https://w3.org/Math>`__ and `OpenMath <https://openmath.github.io/>`__.
 
@@ -293,3 +202,100 @@ OpenCOR uses various third-party libraries, all of which are listed below, toget
 
   .. |zlib| replace:: ``[OpenCOR]/src/plugins/thirdParty/zlib/``
   .. _zlib: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/zlib/
+
+Python bindings
+---------------
+
+- `ipykernel <https://pypi.org/project/ipykernel>`__ 5.1.2: the `IPython <https://ipython.org/>`__ kernel for `Jupyter <https://jupyter.org/>`__.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+  .. |PythonPackages| replace:: ``[OpenCOR]/src/plugins/thirdParty/PythonPackages/``
+  .. _PythonPackages: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/PythonPackages/
+
+- `IPython <https://ipython.org/>`__ 7.8.0: a command shell that provides a rich architecture for interactive computing.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+- `ipywidgets <https://pypi.org/project/ipywidgets>`__ 7.5.1: interactive `HTML <https://html.spec.whatwg.org/multipage>`__ widgets for `Jupyter <https://jupyter.org/>`__ notebooks and the `IPython kernel <https://pypi.org/project/ipykernel>`__.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+- `jupyter_console <https://pypi.org/project/jupyter_console>`__ 6.0.0: an `IPython <https://ipython.org/>`__-like terminal frontend for `Jupyter <https://jupyter.org/>`__ kernels in any language.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+- `JupyterLab <https://pypi.org/project/jupyterlab>`__ 1.1.3: an extensible environment for interactive and reproducible computing, based on the `Jupyter <https://jupyter.org/>`__ Notebook and Architecture.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+- `lxml <https://lxml.de/>`__ 4.4.1: a Pythonic binding for the C libraries `libxml2 <https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home>`__ and `libxslt <https://gitlab.gnome.org/GNOME/libxslt/-/wikis/home>`__.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+- `Matplotlib <https://matplotlib.org/>`__ 3.1.1: a `Python <https://python.org/>`__ 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `Matplotlib License <https://matplotlib.org/users/license.html>`__.
+
+- `nbconvert <https://pypi.org/project/nbconvert>`__ 5.6.0: a tool that converts notebooks to various other formats via `Jinja <https://palletsprojects.com/p/jinja/>`__ templates.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+- `notebook <https://pypi.org/project/notebook>`__ 6.0.2: a web application that allows you to create and share documents that contain live code, equations, visualizations, and explanatory text.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+- `NumPy <https://numpy.org/>`__ 1.17.2: the fundamental package for scientific computing with `Python <https://python.org/>`__.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+- `Python <https://python.org/>`__ 3.7.5: a programming language that lets you work quickly and integrate systems more effectively.
+
+  - Location: |Python|_.
+  - Licensing: `PSF v2.0 <https://opensource.org/licenses/Python-2.0>`__.
+
+  .. |Python| replace:: ``[OpenCOR]/src/plugins/thirdParty/Python/``
+  .. _Python: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Python/
+
+- `PythonQt <https://mevislab.github.io/pythonqt>`__ 3.2.2: a dynamic `Python <https://python.org/>`__ binding for the `Qt <https://qt.io/>`__ framework.
+
+  - Location: |PythonQt|_.
+  - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__.
+
+  .. |PythonQt| replace:: ``[OpenCOR]/src/plugins/thirdParty/PythonQt/``
+  .. _PythonQt: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/PythonQt/
+
+- `qimage2ndarray <https://pypi.org/project/qimage2ndarray>`__ 1.8: a small `Python <https://python.org/>`__ extension for quickly converting between `QImage <https://doc.qt.io/qt-5/qimage.html>`__ and `numpy.ndarray <https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html>`__ (in both directions).
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+- `qtconsole <https://pypi.org/project/qtconsole>`__ 4.5.5: a rich `Qt <https://qt.io/>`__-based console for working with `Jupyter <https://jupyter.org/>`__ kernels, supporting rich media output, session export, and more.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+- `SciPy <https://scipy.org/>`__ 1.3.1: a `Python <https://python.org/>`__-based ecosystem of open-source software for mathematics, science and engineering.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 3-Clause <https://opensource.org/licenses/BSD-3-Clause>`__.
+
+- `Sphinx <https://pypi.org/project/Sphinx>`__ 2.2.0: a tool that makes it easy to create intelligent and beautiful documentation for `Python <https://python.org/>`__ projects (or other documents consisting of multiple `reStructuredText <https://en.wikipedia.org/wiki/ReStructuredText>`__ sources).
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+- `traitlets <https://pypi.org/project/traitlets>`__ 4.3.2: a configuration system for `Python <https://python.org/>`__ applications.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
