@@ -20,7 +20,7 @@ FetchContent_Declare(sphinx-theme
         ${SPHINX_THEME_DIR}
 )
 
-FetchContent_Populate(sphinx-theme)
+FetchContent_MakeAvailable(sphinx-theme)
 
 # Build the developer documentation for OpenCOR
 
