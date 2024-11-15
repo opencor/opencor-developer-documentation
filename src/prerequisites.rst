@@ -32,7 +32,7 @@ The following tools are required to develop, build , test, run, and package Open
 Additionally, you may also want to rely on the following optional tools:
 
 - `Ninja <https://ninja-build.org/>`__ 1.8.2 or later: a small build system with a focus on speed;
-- `buildcache <https://github.com/mbitsnbites/buildcache>`__: a compiler cache;
+- `buildcache <https://gitlab.com/bits-n-bites/buildcache>`__: a compiler cache;
 - `clcache <https://github.com/frerich/clcache>`__ (Windows only): a compiler cache;
 - `ccache <https://ccache.dev/>`__ (Linux/macOS only): a compiler cache;
 - `ClangFormat <https://clang.llvm.org/docs/ClangFormat.html>`__: a tool to format C/C++ code; and
