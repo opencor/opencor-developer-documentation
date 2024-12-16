@@ -8,6 +8,7 @@ Files are organised as follows:
 
 ::
 
+  .github                       // GitHub-specific
   build                         // Where OpenCOR is built
   cmake                         // Files used to build OpenCOR
   distrib                       // Files used to package OpenCOR
