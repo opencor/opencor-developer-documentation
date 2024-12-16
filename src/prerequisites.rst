@@ -7,11 +7,11 @@
 The following tools are required to develop, build , test, run, and package OpenCOR:
 
 - `Git <https://git-scm.com/>`__: a distributed version control system;
-- `CMake <https://cmake.org/>`__ 3.14 or later: a cross-platform build system;
+- `CMake <https://cmake.org/>`__ 3.22 or later: a cross-platform build system;
 - C++ toolchain: a set of C++ tools:
 
   - **Windows:** `Visual Studio Community 2019 <https://apps.microsoft.com/store/detail/visual-studio-community-2019/XP8CDJNZKFM06W>`__ ( ``Desktop development with C++`` with ``MSVC v142 - VS 2019 C++ x64/x86 build tools`` and ``Windows 10 SDK (10.0.19041.0)``);
-  - **Linux:** G++ and OpenGL (``g++``, ``libffi7``, ``libgl1-mesa-dev``, and ``libtinfo5`` packages, respectively) on Ubuntu 22.04 LTS; and
+  - **Linux:** G++ and OpenGL (``g++``, ``libgl1-mesa-dev`` and ``libtinfo5`` packages, respectively) on Ubuntu 20.04 LTS; and
   - **macOS:** `Xcode <https://developer.apple.com/xcode/>`__ 16 (including its `Command Line Tools <https://developer.apple.com/downloads/?q=Command%20Line%20Tools>`__).
 
 - `Qt <https://qt.io/>`__ 5.12 LTS: a cross-platform application and UI framework (`Qt Creator <https://qt.io/product/development-tools>`__ is its supporting IDE):
@@ -39,4 +39,4 @@ Additionally, you may also want to rely on the following optional tools:
 - `Clang-Tidy <https://clang.llvm.org/extra/clang-tidy/>`__: a `Clang <https://clang.llvm.org/>`__-based C++ linter tool;
 - `NSIS <https://nsis.sourceforge.io/>`__ 3.0 or later (Windows only): a program to create Windows installers.
 
-**Note:** the `HelpWindow plugin <https://opencor.ws/user/plugins/miscellaneous/helpWindow.html>`__ only gets built if `Python <https://www.python.org/>`__ 3.x is installed on your system, as well as the `Sphinx <https://pypi.org/project/Sphinx/>`__, `sphinx-copybutton <https://pypi.org/project/sphinx-copybutton/>`__, and `sphinx-inline-tabs <https://pypi.org/project/sphinx-inline-tabs/>`__ packages.
+**Note:** the `HelpWindow plugin <https://opencor.ws/user/plugins/miscellaneous/helpWindow.html>`__ only gets built if `Python <https://www.python.org/>`__ 3.12 is installed on your system, as well as the `Sphinx <https://pypi.org/project/Sphinx/>`__, `sphinx-copybutton <https://pypi.org/project/sphinx-copybutton/>`__, and `sphinx-inline-tabs <https://pypi.org/project/sphinx-inline-tabs/>`__ packages.
