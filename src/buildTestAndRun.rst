@@ -15,8 +15,8 @@ From the command line
 Various batch/VBScript files (``.bat`` \| ``.vbs``) and shell scripts are available on `Windows <https://en.wikipedia.org/wiki/Microsoft_Windows>`__ and `Linux <https://en.wikipedia.org/wiki/Linux>`__/`macOS <https://en.wikipedia.org/wiki/MacOS>`__, respectively:
 
 - |ciScript|_\[|ciBatch|_]: build and test everything, both in release and debug mode;
+- |cdScript|_\[|cdBatch|_]: build our documentation;
 - |cleanScript|_\[|cleanallScript|_][|cleanBatch|_]: clean (all) the OpenCOR environment;
-- |formatScript|_\[|formatBatch|_]: format the OpenCOR code;
 - |makeScript|_\[|makeBatch|_]: build a release version of OpenCOR;
 
   **Note:** if you use `Make <https://gnu.org/software/make>`__, then OpenCOR will, by default, be built sequentially.
@@ -38,6 +38,12 @@ Various batch/VBScript files (``.bat`` \| ``.vbs``) and shell scripts are availa
 .. |ciBatch| replace:: ``.bat``
 .. _ciBatch: https://github.com/opencor/opencor/blob/master/ci.bat
 
+.. |cdScript| replace:: ``[OpenCOR]/cd``
+.. _cdScript: https://github.com/opencor/opencor/blob/master/cd
+
+.. |cdBatch| replace:: ``.bat``
+.. _cdBatch: https://github.com/opencor/opencor/blob/master/cd.bat
+
 .. |cleanScript| replace:: ``[OpenCOR]/clean``
 .. _cleanScript: https://github.com/opencor/opencor/blob/master/clean
 
@@ -46,12 +52,6 @@ Various batch/VBScript files (``.bat`` \| ``.vbs``) and shell scripts are availa
 
 .. |cleanBatch| replace:: ``.bat``
 .. _cleanBatch: https://github.com/opencor/opencor/blob/master/clean.bat
-
-.. |formatScript| replace:: ``[OpenCOR]/format``
-.. _formatScript: https://github.com/opencor/opencor/blob/master/format
-
-.. |formatBatch| replace:: ``.bat``
-.. _formatBatch: https://github.com/opencor/opencor/blob/master/format.bat
 
 .. |makeScript| replace:: ``[OpenCOR]/make``
 .. _makeScript: https://github.com/opencor/opencor/blob/master/make
