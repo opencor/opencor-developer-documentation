@@ -115,7 +115,7 @@ OpenCOR
   .. |OpenSSL| replace:: ``[OpenCOR]/src/plugins/thirdParty/OpenSSL/``
   .. _OpenSSL: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/OpenSSL/
 
-- `Oxygen <https://packages.ubuntu.com/kinetic/oxygen-icon-theme>`__ 5.98.0: icons used in various parts of OpenCOR.
+- `Oxygen <https://packages.ubuntu.com/focal/oxygen-icon-theme>`__ 5.98.0: icons used in various parts of OpenCOR.
 
   - Location: |OxygenImages|_.
   - Licensing: `LGPL v3.0 <https://opensource.org/licenses/LGPL-3.0>`__.
@@ -123,7 +123,7 @@ OpenCOR
   .. |OxygenImages| replace:: ``[OpenCOR]/res/oxygen/``
   .. _OxygenImages: https://github.com/opencor/opencor/tree/master/res/oxygen/
 
-- `Printable world flags <https://printableworldflags.com/flag-icon>`__: flag icons used in our Language menu.
+- Printable world flags: flag icons used in our Language menu.
 
   - Location: |PrintableWorldFlagsImages|_.
   - Licensing: none.
@@ -206,7 +206,7 @@ OpenCOR
 Python bindings
 ---------------
 
-- `ipykernel <https://pypi.org/project/ipykernel>`__ 5.1.2: the `IPython <https://ipython.org/>`__ kernel for `Jupyter <https://jupyter.org/>`__.
+- `IPython Kernel <https://pypi.org/project/ipykernel>`__ 6.29.2: the `IPython <https://ipython.org/>`__ kernel for `Jupyter <https://jupyter.org/>`__.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
@@ -214,52 +214,62 @@ Python bindings
   .. |PythonPackages| replace:: ``[OpenCOR]/src/plugins/thirdParty/PythonPackages/``
   .. _PythonPackages: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/PythonPackages/
 
-- `IPython <https://ipython.org/>`__ 7.8.0: a command shell that provides a rich architecture for interactive computing.
+- `ipympl <https://matplotlib.org/ipympl/>`__ 0.9.3: enables using the interactive features of Matplotlib in Jupyter Notebooks, Jupyter Lab, Google Colab, VSCode notebooks.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `ipywidgets <https://pypi.org/project/ipywidgets>`__ 7.5.1: interactive `HTML <https://html.spec.whatwg.org/multipage>`__ widgets for `Jupyter <https://jupyter.org/>`__ notebooks and the `IPython kernel <https://pypi.org/project/ipykernel>`__.
+- `IPython <https://pypi.org/project/ipython/>`__ 8.21.0: a command shell that provides a rich architecture for interactive computing.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `jupyter_console <https://pypi.org/project/jupyter_console>`__ 6.0.0: an `IPython <https://ipython.org/>`__-like terminal frontend for `Jupyter <https://jupyter.org/>`__ kernels in any language.
+- `ipywidgets <https://pypi.org/project/ipywidgets>`__ 8.1.1: interactive `HTML <https://html.spec.whatwg.org/multipage>`__ widgets for `Jupyter <https://jupyter.org/>`__ notebooks and the `IPython kernel <https://pypi.org/project/ipykernel>`__.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `JupyterLab <https://pypi.org/project/jupyterlab>`__ 1.1.3: an extensible environment for interactive and reproducible computing, based on the `Jupyter <https://jupyter.org/>`__ Notebook and Architecture.
+- `Jupyter Client <https://pypi.org/project/jupyter-client/>`__ 6.6.3: a package that provides the Python API for starting, managing and communicating with `Jupyter <https://jupyter.org/>`__ kernels.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `lxml <https://lxml.de/>`__ 4.4.1: a Pythonic binding for the C libraries `libxml2 <https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home>`__ and `libxslt <https://gitlab.gnome.org/GNOME/libxslt/-/wikis/home>`__.
+- `Jupyter Console <https://pypi.org/project/jupyter_console>`__ 6.6.3: an `IPython <https://ipython.org/>`__-like terminal frontend for `Jupyter <https://jupyter.org/>`__ kernels in any language.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `Matplotlib <https://matplotlib.org/>`__ 3.1.1: a `Python <https://python.org/>`__ 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
+- `JupyterLab <https://jupyter.org/>`__ 4.0.12: an extensible environment for interactive and reproducible computing, based on the `Jupyter <https://jupyter.org/>`__ Notebook and Architecture.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+- `lxml <https://pypi.org/project/lxml/>`__ 5.1.0: a Pythonic binding for the C libraries `libxml2 <https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home>`__ and `libxslt <https://gitlab.gnome.org/GNOME/libxslt/-/wikis/home>`__.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+- `Matplotlib <https://matplotlib.org/>`__ 3.8.2: a `Python <https://python.org/>`__ 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
 
   - Location: |PythonPackages|_.
   - Licensing: `Matplotlib License <https://matplotlib.org/users/license.html>`__.
 
-- `nbconvert <https://pypi.org/project/nbconvert>`__ 5.6.0: a tool that converts notebooks to various other formats via `Jinja <https://palletsprojects.com/p/jinja/>`__ templates.
+- `nbconvert <https://pypi.org/project/nbconvert>`__ 7.14.2: a tool that converts notebooks to various other formats via `Jinja <https://palletsprojects.com/p/jinja/>`__ templates.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `notebook <https://pypi.org/project/notebook>`__ 6.0.2: a web application that allows you to create and share documents that contain live code, equations, visualizations, and explanatory text.
+- `Jupyter Notebook <https://jupyter-notebook.readthedocs.io/>`__ 7.0.7: a web application that allows you to create and share documents that contain live code, equations, visualizations, and explanatory text.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `NumPy <https://numpy.org/>`__ 1.17.2: the fundamental package for scientific computing with `Python <https://python.org/>`__.
+- `NumPy <https://numpy.org/>`__ 1.126.4: the fundamental package for scientific computing with `Python <https://python.org/>`__.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `Python <https://python.org/>`__ 3.7.5: a programming language that lets you work quickly and integrate systems more effectively.
+- `Python <https://python.org/>`__ 3.12.2: a programming language that lets you work quickly and integrate systems more effectively.
 
   - Location: |Python|_.
   - Licensing: `PSF v2.0 <https://opensource.org/licenses/Python-2.0>`__.
@@ -267,7 +277,7 @@ Python bindings
   .. |Python| replace:: ``[OpenCOR]/src/plugins/thirdParty/Python/``
   .. _Python: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/Python/
 
-- `PythonQt <https://mevislab.github.io/pythonqt>`__ 3.2.2: a dynamic `Python <https://python.org/>`__ binding for the `Qt <https://qt.io/>`__ framework.
+- `PythonQt <https://mevislab.github.io/pythonqt>`__ 3.4.2: a dynamic `Python <https://python.org/>`__ binding for the `Qt <https://qt.io/>`__ framework.
 
   - Location: |PythonQt|_.
   - Licensing: `LGPL v2.1 <https://opensource.org/licenses/LGPL-2.1>`__.
@@ -275,27 +285,32 @@ Python bindings
   .. |PythonQt| replace:: ``[OpenCOR]/src/plugins/thirdParty/PythonQt/``
   .. _PythonQt: https://github.com/opencor/opencor/tree/master/src/plugins/thirdParty/PythonQt/
 
-- `qimage2ndarray <https://pypi.org/project/qimage2ndarray>`__ 1.8: a small `Python <https://python.org/>`__ extension for quickly converting between `QImage <https://doc.qt.io/qt-5/qimage.html>`__ and `numpy.ndarray <https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html>`__ (in both directions).
+- `qimage2ndarray <https://github.com/hmeine/qimage2ndarray>`__ 1.10.0: a small `Python <https://python.org/>`__ extension for quickly converting between `QImage <https://doc.qt.io/qt-5/qimage.html>`__ and `numpy.ndarray <https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html>`__ (in both directions).
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `qtconsole <https://pypi.org/project/qtconsole>`__ 4.5.5: a rich `Qt <https://qt.io/>`__-based console for working with `Jupyter <https://jupyter.org/>`__ kernels, supporting rich media output, session export, and more.
+- `QtConsole <https://pypi.org/project/qtconsole>`__ 5.5.1: a rich `Qt <https://qt.io/>`__-based console for working with `Jupyter <https://jupyter.org/>`__ kernels, supporting rich media output, session export, and more.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `SciPy <https://scipy.org/>`__ 1.3.1: a `Python <https://python.org/>`__-based ecosystem of open-source software for mathematics, science and engineering.
+- `QtPy <https://github.com/spyder-ide/qtpy>`__ 2.4.1: a a small abstraction layer that lets you write applications using a single API call to either PyQt or PySide.
+
+  - Location: |PythonPackages|_.
+  - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
+
+- `SciPy <https://scipy.org/>`__ 1.12.0: a `Python <https://python.org/>`__-based ecosystem of open-source software for mathematics, science and engineering.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 3-Clause <https://opensource.org/licenses/BSD-3-Clause>`__.
 
-- `Sphinx <https://pypi.org/project/Sphinx>`__ 2.2.0: a tool that makes it easy to create intelligent and beautiful documentation for `Python <https://python.org/>`__ projects (or other documents consisting of multiple `reStructuredText <https://en.wikipedia.org/wiki/ReStructuredText>`__ sources).
+- `Sphinx <https://www.sphinx-doc.org/>`__ 7.2.6: a tool that makes it easy to create intelligent and beautiful documentation for `Python <https://python.org/>`__ projects (or other documents consisting of multiple `reStructuredText <https://en.wikipedia.org/wiki/ReStructuredText>`__ sources).
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
 
-- `traitlets <https://pypi.org/project/traitlets>`__ 4.3.2: a configuration system for `Python <https://python.org/>`__ applications.
+- `traitlets <https://traitlets.readthedocs.io/>`__ 5.14.1: a configuration system for `Python <https://python.org/>`__ applications.
 
   - Location: |PythonPackages|_.
   - Licensing: `BSD 2-Clause <https://opensource.org/licenses/BSD-2-Clause>`__.
