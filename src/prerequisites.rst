@@ -21,13 +21,13 @@ The following tools are required to develop, build , test, run, and package Open
   - |macOS|_.
 
   .. |Windows| replace:: **Windows**
-  .. _Windows: https://download.qt.io/official_releases/online_installers/qt-unified-windows-x64-online.exe
+  .. _Windows: https://download.qt.io/official_releases/online_installers/qt-online-installer-windows-x64-online.exe
 
   .. |Linux| replace:: **Linux**
-  .. _Linux: https://download.qt.io/official_releases/online_installers/qt-unified-linux-x64-online.run
+  .. _Linux: https://download.qt.io/official_releases/online_installers/qt-online-installer-linux-x64-online.run
 
   .. |macOS| replace:: **macOS**
-  .. _macOS: https://download.qt.io/official_releases/online_installers/qt-unified-mac-x64-online.dmg
+  .. _macOS: https://download.qt.io/official_releases/online_installers/qt-online-installer-mac-x64-online.dmg
 
 Additionally, you may also want to rely on the following optional tools:
 
